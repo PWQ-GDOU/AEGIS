@@ -1,0 +1,37 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | 
+    \\  /    A nd           | DEC Pelton Turbine Simulation
+     \\/     M anipulation  | Based on Xiao & Liang (2021, 2024)
+-------------------------------------------------------------------------------
+License: DEC PELTON 2024 Research Use Only
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+application     interFoam;
+
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         0.01;
+
+deltaT          7.89e-5;
+
+writeControl    adjustableRunTime;
+writeInterval   0.001;
+purgeWrite      0;
+writeFormat     ascii;
+writePrecision  6;
+
+adjustTimeStep  yes;
+maxCo           0.5;
+maxAlphaCo      0.3;
+maxDeltaT       2e-4;

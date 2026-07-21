@@ -1,0 +1,31 @@
+# Large files
+*.x_t
+*.zip
+*.exe
+*.msi
+*.deb
+
+# Output STL > 50MB
+dec_full_runner.stl
+dec_model_runner.stl
+
+# Temp
+temp_xt/
+tmp/
+__pycache__/
+*.pyc
+.DS_Store
+
+# WSL/CAD
+CAD_Assistant/
+CAD_Assistant_installer.exe
+
+# Server
+*.log
+nohup.out
+run_long.log
+run.log
+
+# IDE
+.vscode/
+.idea/

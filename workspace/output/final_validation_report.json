@@ -1,0 +1,29 @@
+{
+  "truth_model": {
+    "D1": 312.5,
+    "B2": 90.3,
+    "n_buckets": 21,
+    "D0": 35.2,
+    "n_jets": 6,
+    "效率最优": 91.72,
+    "效率额定": 91.61
+  },
+  "truth_full": {
+    "D1": 2630.0,
+    "B2": 760.0,
+    "n_buckets": 21,
+    "放射直径": 240,
+    "额定出力": 143.6,
+    "额定水头": 595.0,
+    "额定转速": 375.0
+  },
+  "scale": 8.416,
+  "reconstruction_errors": {
+    "D1_model_pct": 0.3,
+    "B2_model_pct": 0.4,
+    "D1_full_pct": 0.3,
+    "B2_full_pct": 0.4,
+    "scale_consistency_pct": 0.05648924084330652
+  },
+  "symmetry_detected": 20
+}

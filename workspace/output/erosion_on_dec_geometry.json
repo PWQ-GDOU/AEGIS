@@ -1,0 +1,18 @@
+{
+  "model_runner": {
+    "n_verts": 7329,
+    "impact_angle_range": [
+      0.12820475755108093,
+      90.0
+    ],
+    "risk_high_pct": 33.34697775958521
+  },
+  "full_runner": {
+    "n_verts": 23017,
+    "impact_angle_range": [
+      0.03424065317935058,
+      90.0
+    ],
+    "risk_high_pct": 19.928748316461746
+  }
+}

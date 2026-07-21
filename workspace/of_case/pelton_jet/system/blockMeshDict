@@ -1,0 +1,82 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     |
+    \\  /    A nd           |
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Background mesh for Pelton nozzle jet simulation
+// Simple rectangular domain around the jet region
+scale 0.001;  // m → mm conversion (STL is in mm)
+
+vertices
+(
+    (-100  -100  -200)   // 0
+    ( 100  -100  -200)   // 1
+    ( 100   100  -200)   // 2
+    (-100   100  -200)   // 3
+    (-100  -100   200)   // 4
+    ( 100  -100   200)   // 5
+    ( 100   100   200)   // 6
+    (-100   100   200)   // 7
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (30 30 60) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+    walls
+    {
+        type wall;
+        faces
+        (
+            (1 2 6 5)
+            (3 7 6 2)
+            (0 4 7 3)
+            (0 1 5 4)
+        );
+    }
+    atmosphere
+    {
+        type patch;
+        faces
+        (
+        );
+    }
+);
+
+mergePatchPairs
+(
+);

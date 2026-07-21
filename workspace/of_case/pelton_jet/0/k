@@ -1,0 +1,27 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | 
+    \\  /    A nd           | DEC Pelton Turbine Simulation
+     \\/     M anipulation  | Based on Xiao & Liang (2021, 2024)
+-------------------------------------------------------------------------------
+License: DEC PELTON 2024 Research Use Only
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+dimensions      [0 2 -2 0 0 0 0];
+internalField   uniform 42.69;
+boundaryField
+{
+    inlet       { type fixedValue; value uniform 42.69; }
+    outlet      { type zeroGradient; }
+    walls       { type kqRWallFunction; value uniform 42.69; }
+    atmosphere  { type inletOutlet; inletValue uniform 42.69; value uniform 42.69; }
+}
