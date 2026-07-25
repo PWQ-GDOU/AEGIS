@@ -1,0 +1,177 @@
+{
+  "material": {
+    "sigma_fatigue_limit_MPa": 150.0,
+    "N_ref": 10000000.0,
+    "m_SN": 5.0,
+    "note": "ZG0Cr13Ni4Mo, E=206GPa, nu=0.3 (from DEC stress test report)"
+  },
+  "fatigue_damage_per_hour": 4.4222219535732236e-08,
+  "pure_fatigue_life_h": 22613066.700371847,
+  "global_min_rul": {
+    "pure_erosion_h": 4.0,
+    "combined_h": 4.0,
+    "reduction_pct": 0.0
+  },
+  "load_schedule": {
+    "额定空转": 0.02,
+    "30MW": 0.03,
+    "40MW": 0.03,
+    "50MW": 0.04,
+    "60MW": 0.05,
+    "70MW": 0.06,
+    "80MW": 0.1,
+    "90MW": 0.1,
+    "100MW": 0.12,
+    "110MW": 0.12,
+    "120MW": 0.12,
+    "130MW": 0.11,
+    "140MW": 0.1
+  },
+  "stress_by_condition": {
+    "100MW": {
+      "sigma_a_MPa": 9.2,
+      "f_dom_Hz": 37.24
+    },
+    "110MW": {
+      "sigma_a_MPa": 10.616,
+      "f_dom_Hz": 37.24
+    },
+    "120MW": {
+      "sigma_a_MPa": 12.424,
+      "f_dom_Hz": 37.24
+    },
+    "130MW": {
+      "sigma_a_MPa": 12.36,
+      "f_dom_Hz": 37.24
+    },
+    "140MW": {
+      "sigma_a_MPa": 14.512,
+      "f_dom_Hz": 37.24
+    },
+    "30MW": {
+      "sigma_a_MPa": 8.933,
+      "f_dom_Hz": 12.68
+    },
+    "40MW": {
+      "sigma_a_MPa": 11.896,
+      "f_dom_Hz": 12.68
+    },
+    "50MW": {
+      "sigma_a_MPa": 7.776,
+      "f_dom_Hz": 37.24
+    },
+    "60MW": {
+      "sigma_a_MPa": 8.975,
+      "f_dom_Hz": 37.24
+    },
+    "70MW": {
+      "sigma_a_MPa": 10.529,
+      "f_dom_Hz": 37.24
+    },
+    "80MW": {
+      "sigma_a_MPa": 11.778,
+      "f_dom_Hz": 37.24
+    },
+    "90MW": {
+      "sigma_a_MPa": 14.178,
+      "f_dom_Hz": 37.24
+    },
+    "额定空转": {
+      "sigma_a_MPa": 0.934,
+      "f_dom_Hz": 6.34
+    }
+  },
+  "fatigue_detail": {
+    "额定空转": {
+      "sigma_a_MPa": 0.934,
+      "f_dom_Hz": 6.34,
+      "time_fraction": 0.02,
+      "Nf": 1.068370564980738e+18,
+      "D_per_h": 4.2726748093086035e-16
+    },
+    "30MW": {
+      "sigma_a_MPa": 8.933,
+      "f_dom_Hz": 12.68,
+      "time_fraction": 0.03,
+      "Nf": 13349642185630.115,
+      "D_per_h": 1.0258252475666345e-10
+    },
+    "40MW": {
+      "sigma_a_MPa": 11.896,
+      "f_dom_Hz": 12.68,
+      "time_fraction": 0.03,
+      "Nf": 3187509719458.5063,
+      "D_per_h": 4.2962692525770253e-10
+    },
+    "50MW": {
+      "sigma_a_MPa": 7.776,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.04,
+      "Nf": 26710070583898.96,
+      "D_per_h": 2.007692186044837e-10
+    },
+    "60MW": {
+      "sigma_a_MPa": 8.975,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.05,
+      "Nf": 13040192695340.17,
+      "D_per_h": 5.140414836350806e-10
+    },
+    "70MW": {
+      "sigma_a_MPa": 10.529,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.06,
+      "Nf": 5868412950719.749,
+      "D_per_h": 1.3707010852079588e-09
+    },
+    "80MW": {
+      "sigma_a_MPa": 11.778,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.1,
+      "Nf": 3350414544805.052,
+      "D_per_h": 4.001415293754364e-09
+    },
+    "90MW": {
+      "sigma_a_MPa": 14.178,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.1,
+      "Nf": 1325505198090.9626,
+      "D_per_h": 1.011418138480962e-08
+    },
+    "100MW": {
+      "sigma_a_MPa": 9.2,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.12,
+      "Nf": 11521715800999.11,
+      "D_per_h": 1.396292034785735e-09
+    },
+    "110MW": {
+      "sigma_a_MPa": 10.616,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.12,
+      "Nf": 5631858647054.418,
+      "D_per_h": 2.856548966905304e-09
+    },
+    "120MW": {
+      "sigma_a_MPa": 12.424,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.12,
+      "Nf": 2565364506385.773,
+      "D_per_h": 6.2711088268174456e-09
+    },
+    "130MW": {
+      "sigma_a_MPa": 12.36,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.11,
+      "Nf": 2632473096875.501,
+      "D_per_h": 5.60197177988385e-09
+    },
+    "140MW": {
+      "sigma_a_MPa": 14.512,
+      "f_dom_Hz": 37.24,
+      "time_fraction": 0.1,
+      "Nf": 1179831390247.535,
+      "D_per_h": 1.1362979584046554e-08
+    }
+  }
+}

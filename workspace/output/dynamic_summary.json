@@ -1,0 +1,23 @@
+{
+  "parameters": {
+    "h0_mm": 30.0,
+    "hmin_mm": 15.0,
+    "C_s": 1.31,
+    "dt_h": 2.0,
+    "n_steps": 120
+  },
+  "global_min_rul": {
+    "dynamic_h": 15.0,
+    "linear_h": 15.0,
+    "pct_diff": 1.7
+  },
+  "rul_ratio_stats": {
+    "median": 1.011,
+    "mean": 1.188,
+    "p5": 0.759,
+    "p95": 2.115
+  },
+  "failed_at_end_pct": 49.98,
+  "model": "dynamic: geometry recession + normal/angle/rate update every dt",
+  "vs_linear": "step12_degradation.py (constant rate)"
+}

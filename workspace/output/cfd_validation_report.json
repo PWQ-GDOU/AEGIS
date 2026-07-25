@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "method": "CFD_velocity_Oka_model_vs_GPR",
+  "n_cfd_valid": 17377,
+  "n_matched": 1052,
+  "spearman_rho": -0.046,
+  "spearman_pval": 0.13616151994683914,
+  "validation_pass": false
+}

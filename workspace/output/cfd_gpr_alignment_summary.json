@@ -1,0 +1,16 @@
+{
+  "method": "anisotropic per-axis affine alignment + nearest-neighbor",
+  "cfd_note": "laminar simpleFoam, simplified inlet, NOT precise ground truth — directional check only",
+  "scale_factors": [
+    1.3592833472946504,
+    1.3663276620850209,
+    0.916339958531125
+  ],
+  "n_cfd_points": 38593,
+  "n_gpr_points": 154180,
+  "n_valid_matches": 146471,
+  "median_nn_distance_mm": 64.0,
+  "spearman_rho_abs_p_vs_E_final": -0.2187,
+  "spearman_pval": 0.0,
+  "top10pct_iou": 0.0
+}

@@ -1,0 +1,28 @@
+{
+  "model_runner": {
+    "n_verts": 135217,
+    "impact_angle_med": 14.599023287020104,
+    "risk_high_pct": 13.097465555366558,
+    "E_oka_max": 48.32038201054633
+  },
+  "full_runner": {
+    "n_verts": 1024023,
+    "impact_angle_med": 14.761842278842487,
+    "risk_high_pct": 7.9332202499357924,
+    "E_oka_max": 12.904960830734199
+  },
+  "cross_scale_spearman_rho": 0.9999879987278646,
+  "parameters": {
+    "H_m": 595.0,
+    "C_s": 1.31,
+    "Dp_um": 150.0,
+    "Hv_GPa": 2.6
+  },
+  "bug_fixes_applied": [
+    "F1_N_BUCKETS=21",
+    "F2_Tabakoff_angle",
+    "F3_Oka_Dp_injectable",
+    "F4_velocity_z_nonlinear",
+    "F5_H=595m"
+  ]
+}

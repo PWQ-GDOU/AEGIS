@@ -1,0 +1,68 @@
+# ============================================================
+# AEGIS - Large binary files (excluded from all branches)
+# ============================================================
+
+# STL geometry files (large)
+output/dec_full_runner.stl
+output/dec_full_runner_local.stl
+output/dec_full_runner_local_m.stl
+output/dec_full_runner_original.stl
+output/full_runner_*.stl
+output/full_runner_comsol*.stl
+output/model_runner_comsol*.stl
+output/dec_model_runner_original.stl
+output/dec_single_bucket*.stl
+output/erosion_final_heatmap.stl
+output/rul_heatmap.stl
+output/uncertainty_heatmap.stl
+
+# Large NPZ data arrays
+output/vertices_full.npz
+output/vertices_full_gpr.npz
+output/vertices_full_mansouri.npz
+output/vertices_full_gpr_m.npz
+output/vertices_full_geo.npz
+output/vertices_model.npz
+output/rul_map.npz
+output/dynamic_rul_map.npz
+output/combined_rul_map.npz
+output/dynamic_degradation_curves.npz
+output/degradation_curves.npz
+output/particle_hits.npz
+
+# Trained GPR models (large pkl)
+output/gpr_model.pkl
+output/gpr_final_model.pkl
+output/gpr_mansouri_model.pkl
+
+# Large CFD raw/foam field files
+output/cfd_*.foam
+output/mrf_cfd_*.foam
+output/bucket_wss*.raw
+output/bucket_p*.raw
+output/bucket_U*.raw
+output/mrf_wallShearStress_bucket.raw
+output/cfd_full_*.txt
+output/cfd_500_*.txt
+output/full_*.raw
+output/cfd_wss.npz
+output/cfd_aligned_tmp.npz
+output/centreline_k_omega_p_U.xy
+
+# CAD Assistant (not project related)
+CAD_Assistant/
+CAD_Assistant.exe
+CAD_Assistant.zip
+CAD_Assistant_installer.exe
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

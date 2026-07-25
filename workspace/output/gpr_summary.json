@@ -1,0 +1,37 @@
+{
+  "n_vertices_total": 1024023,
+  "n_inducing_points": 3000,
+  "kernel_optimized": "0.71**2 * RBF(length_scale=0.248) + WhiteKernel(noise_level=0.5)",
+  "log_marginal_likelihood": -4042.8663443765586,
+  "training_time_s": 81.41,
+  "prediction_time_s": 96.93,
+  "log_correction": {
+    "min": -0.4915830605414999,
+    "max": 1.2355203155547299,
+    "mean": 0.05518866276242709,
+    "std": 0.13656804295998365
+  },
+  "correction_factor": {
+    "min": 0.6116573367537698,
+    "max": 3.4401680280463767,
+    "mean": 1.0672286757648284
+  },
+  "E_final": {
+    "min_mm3kg": 0.18448153268296408,
+    "max_mm3kg": 14.111487260119988,
+    "mean_mm3kg": 4.121762723686811
+  },
+  "uncertainty_sigma_E": {
+    "mean": 0.7907901388869409,
+    "p95": 1.631783842574017
+  },
+  "validation": {
+    "holdout_n": 1021023,
+    "holdout_mae": 0.16045186220950725,
+    "holdout_rmse": 0.2500956834391213,
+    "holdout_spearman_rho": 0.508136847870241,
+    "E_final_vs_Oka_spearman_rho": 0.9723507905188554
+  },
+  "label_strategy": "log_ensemble_rank_vs_oka_rank (P1: no measured data)",
+  "non_negative_guarantee": "E_final = E_oka * exp(f_GPR) > 0 always"
+}

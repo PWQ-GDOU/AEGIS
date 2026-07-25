@@ -1,0 +1,9 @@
+{
+  "lagrangian_particle_tracking": {
+    "n_hits": 416,
+    "rho_abs_Vp": 0.1609,
+    "pval_abs": 0.0009876935814383302,
+    "rho_rel_Vp": 0.177,
+    "pval_rel": 0.0002852810727340605
+  }
+}

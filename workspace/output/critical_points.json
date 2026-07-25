@@ -1,0 +1,152 @@
+[
+  {
+    "vertex_id": 41687,
+    "xyz_mm": [
+      -1232.28,
+      -443.18,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1487,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 880143,
+    "xyz_mm": [
+      1302.53,
+      -135.38,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1486,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 81176,
+    "xyz_mm": [
+      -1046.91,
+      -786.71,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1486,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 205883,
+    "xyz_mm": [
+      -768.51,
+      -1060.34,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1486,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 612629,
+    "xyz_mm": [
+      349.85,
+      -1261.95,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1377,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 2358,
+    "xyz_mm": [
+      -1308.16,
+      -60.27,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1212,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 483717,
+    "xyz_mm": [
+      -157.86,
+      1300.0,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1212,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 855984,
+    "xyz_mm": [
+      1284.57,
+      254.56,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1212,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 315011,
+    "xyz_mm": [
+      -534.02,
+      1195.72,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1212,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  },
+  {
+    "vertex_id": 685809,
+    "xyz_mm": [
+      601.89,
+      1163.03,
+      -401.25
+    ],
+    "Vp_ms": 52.6,
+    "E_final": 0.0,
+    "dhdt_mm_per_h": 1.1211,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "risk_level": 3
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "cfd_model": "single-bucket focused jet, 240mm circular inlet, kOmegaSST, 500 iter",
+  "note": "Spearman correlation is rank-based and scale-invariant; absolute pressure values unreliable (all-Neumann tendency), wss physically bounded",
+  "jet_centerline_confirmed": {
+    "Vjet_at_x0_ms": 104.8,
+    "stagnation_x_mm": 310,
+    "max_pressure_Pa_equiv": 10483,
+    "flow_reversal_at_x_mm": 350
+  },
+  "zones": {
+    "baseline": {
+      "n": 135051,
+      "zone": "全域 (基准)",
+      "rho_p": 0.0191,
+      "rho_tau": -0.0506,
+      "top10_iou_tau": 0.0529
+    },
+    "impact_zone": {
+      "n": 2327,
+      "zone": "直接冲击区 r≤90mm x≤325mm",
+      "rho_p": 0.4667,
+      "rho_tau": 0.6907,
+      "top10_iou_tau": 0.1904
+    },
+    "stagnation": {
+      "n": 2328,
+      "zone": "滞止扩展区 r≤60mm x≤800mm",
+      "rho_p": 0.6438,
+      "rho_tau": 0.3331,
+      "top10_iou_tau": 0.0447
+    },
+    "extended": {
+      "n": 12594,
+      "zone": "扩展冲击区 r≤120mm x≤500mm",
+      "rho_p": 0.3162,
+      "rho_tau": 0.3843,
+      "top10_iou_tau": 0.2293
+    }
+  },
+  "best_result": "direct impact zone (r_yz<=90mm, x_local<=325mm): rho_tau=0.691",
+  "physical_interpretation": "In the jet direct-impact footprint, CFD wall-shear-stress spatial rank is positively correlated with Mansouri erosion rate spatial rank (rho=0.691), consistent with both models predicting higher impact intensity in the concave bucket cup. Outside the impact footprint, correlation drops to near-zero because Mansouri assumes uniform impingement (all 21 buckets uniformly wetted) while CFD correctly shows only 1 bucket intercepting the jet at any instant."
+}

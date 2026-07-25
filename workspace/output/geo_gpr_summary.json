@@ -1,0 +1,18 @@
+{
+  "kernel": "geodesic_RBF (mesh-Dijkstra)",
+  "n_training": 2000,
+  "hyperparams": {
+    "sigma_f": 0.31260083835692715,
+    "length_scale_mm": 0.04956693202257157,
+    "sigma_n": 0.007058596892547664
+  },
+  "validation": {
+    "holdout_spearman": 0.6010663710193281,
+    "E_final_vs_Oka_spearman": 0.9087050929899565
+  },
+  "geo_vs_rbf": {
+    "spearman_vs_rbf": 0.9110011035405521,
+    "edge_smoothness_geo": 0.36591213941574097,
+    "edge_smoothness_rbf": 0.36177852749824524
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "parameters": {
+    "h0_mm": 30.0,
+    "hmin_mm": 15.0,
+    "C_s_kg_m3": 1.31,
+    "eta_impact": 1.0,
+    "hours_per_year_sediment": 2880.0
+  },
+  "global_min_life": {
+    "vertex_id": 41687,
+    "rul_mean_h": 13.0,
+    "rul_mean_yr": 0.0,
+    "rul_lower_h": 11.0,
+    "rul_lower_yr": 0.0
+  },
+  "thickness_rate_mm_per_h": {
+    "min": 2.9685e-13,
+    "max": 1.1487,
+    "mean": 0.10318
+  },
+  "failed_fraction_at_end": {
+    "time_h": 30000.0,
+    "pct": 69.9
+  },
+  "model": "linear degradation h(t)=h0 - (dh/dt)*t (v1, constant-rate)",
+  "note": "h0/h_min 为工程缺省值，待 DEC 图纸确认；速率恒定假设未考虑磨损后几何/冲击角变化"
+}

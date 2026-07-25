@@ -1,0 +1,15 @@
+{
+  "pipeline": "Mansouri (2015) analytic formula — no GPR approximation",
+  "uncertainty": "std of 4-model normalized ensemble (Oka/Finnie/Tabakoff/Mansouri)",
+  "self_consistency": {
+    "rho": 1.0,
+    "nRMSE": 0.0,
+    "iou": 1.0
+  },
+  "E_final_stats": {
+    "min": 1.6761664333250898e-17,
+    "max": 3.6097572974036974e-05,
+    "median": 6.000170617245445e-07
+  },
+  "sigma_norm_median": 0.1101
+}

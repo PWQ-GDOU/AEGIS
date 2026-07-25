@@ -1,0 +1,18 @@
+{
+  "model_truth": "Mansouri (2015)",
+  "model_predicted": "GPR retrained on Mansouri targets (step23)",
+  "n_vertices": 154180,
+  "n_inducing": 4000,
+  "metrics": {
+    "spearman_rho": 0.6037,
+    "pearson_r": 0.5443,
+    "nRMSE": 0.1907,
+    "mean_rel_err_pct": 111.26,
+    "top10pct_iou": 0.3425
+  },
+  "targets_met": {
+    "spearman_rho_gt_0.85": false,
+    "iou_gt_0.40": false,
+    "nRMSE_lt_0.10": false
+  }
+}

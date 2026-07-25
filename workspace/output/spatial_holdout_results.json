@@ -1,0 +1,68 @@
+{
+  "method": "4-fold spatial hold-out by z-coordinate quartile",
+  "features": [
+    "Vp [m/s]",
+    "alpha [deg]"
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "n_test": 227369,
+      "spearman_rho": 0.576,
+      "nRMSE": 0.3689,
+      "mean_rel_err_pct": 118.34,
+      "top10pct_iou": 0.0,
+      "targets_met": {
+        "rho_gt_0.85": false,
+        "nRMSE_lt_0.10": false,
+        "iou_gt_0.40": false
+      }
+    },
+    {
+      "fold": 1,
+      "n_test": 227398,
+      "spearman_rho": 0.7122,
+      "nRMSE": 0.2181,
+      "mean_rel_err_pct": 65.31,
+      "top10pct_iou": 0.1659,
+      "targets_met": {
+        "rho_gt_0.85": false,
+        "nRMSE_lt_0.10": false,
+        "iou_gt_0.40": false
+      }
+    },
+    {
+      "fold": 2,
+      "n_test": 227380,
+      "spearman_rho": 0.888,
+      "nRMSE": 0.1298,
+      "mean_rel_err_pct": 88.79,
+      "top10pct_iou": 0.1921,
+      "targets_met": {
+        "rho_gt_0.85": true,
+        "nRMSE_lt_0.10": false,
+        "iou_gt_0.40": false
+      }
+    },
+    {
+      "fold": 3,
+      "n_test": 227408,
+      "spearman_rho": 0.7936,
+      "nRMSE": 0.1476,
+      "mean_rel_err_pct": 182.59,
+      "top10pct_iou": 0.2589,
+      "targets_met": {
+        "rho_gt_0.85": false,
+        "nRMSE_lt_0.10": false,
+        "iou_gt_0.40": false
+      }
+    }
+  ],
+  "aggregate": {
+    "rho_mean": 0.7425,
+    "rho_std": 0.1145,
+    "nRMSE_mean": 0.2161,
+    "iou_mean": 0.1542,
+    "all_folds_rho_gt_0.85": false
+  }
+}

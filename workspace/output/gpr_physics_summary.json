@@ -1,0 +1,27 @@
+{
+  "Vp+alpha": {
+    "spearman_rho": 0.9994,
+    "pearson_r": 0.9963,
+    "nRMSE": 0.018,
+    "mean_rel_err_pct": 3.96,
+    "top10pct_iou": 0.9698,
+    "targets_met": {
+      "rho_gt_0.85": true,
+      "iou_gt_0.40": true,
+      "nRMSE_lt_0.10": true
+    }
+  },
+  "Vp+alpha+xyz": {
+    "spearman_rho": 0.9956,
+    "pearson_r": 0.9724,
+    "nRMSE": 0.1282,
+    "mean_rel_err_pct": 51.32,
+    "top10pct_iou": 0.8622,
+    "targets_met": {
+      "rho_gt_0.85": true,
+      "iou_gt_0.40": true,
+      "nRMSE_lt_0.10": false
+    }
+  },
+  "self_consistency_rho": 1.0
+}

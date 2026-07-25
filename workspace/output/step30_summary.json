@@ -1,0 +1,21 @@
+{
+  "n_particles": 2000,
+  "n_hits": 438,
+  "particle_diameter_m": 5e-05,
+  "Vp_stats": {
+    "min": 2.6715762630383306,
+    "max": 170.10948722295453,
+    "median": 47.8268958875511
+  },
+  "alpha_stats": {
+    "min": 0.014872770981819166,
+    "max": 86.5757312844746,
+    "median": 5.695028309213534
+  },
+  "validation": {
+    "spearman_rho_same_dim": 0.1609,
+    "pval": 0.0009876940701642348,
+    "top10_iou": 0.1053,
+    "n_valid": 416
+  }
+}

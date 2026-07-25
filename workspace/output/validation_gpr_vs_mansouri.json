@@ -1,0 +1,19 @@
+{
+  "model_truth": "Mansouri (2015) Wear 332-333:1090-1097",
+  "model_predicted": "GPR (step11_gpr_correction.py)",
+  "n_vertices": 154180,
+  "metrics": {
+    "spearman_rho": 0.6893,
+    "pearson_r": 0.6776,
+    "nRMSE": 0.2417,
+    "mean_rel_err_pct": 1049.96,
+    "p50_rel_err_pct": 278.39,
+    "p95_rel_err_pct": 3853.89,
+    "top10pct_iou": 0.3872
+  },
+  "targets_met": {
+    "spearman_rho_gt_0.85": false,
+    "iou_gt_0.40": false,
+    "nRMSE_lt_0.10": false
+  }
+}
