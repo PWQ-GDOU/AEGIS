@@ -41,13 +41,21 @@ output/mrf_cfd_*.foam
 output/bucket_wss*.raw
 output/bucket_p*.raw
 output/bucket_U*.raw
-output/mrf_wallShearStress_bucket.raw
+output/mrf*_bucket.raw
+output/mrf*_wallShearStress*.raw
+output/mrf*_p_bucket.raw
+output/mrf*_U_bucket.raw
+output/new_*_bucket.raw
 output/cfd_full_*.txt
 output/cfd_500_*.txt
 output/full_*.raw
 output/cfd_wss.npz
 output/cfd_aligned_tmp.npz
 output/centreline_k_omega_p_U.xy
+output/runner_wss.npz
+output/walls_cfd.npz
+output/walls_pressure.npz
+output/walls_wss.npz
 
 # CAD Assistant (not project related)
 CAD_Assistant/

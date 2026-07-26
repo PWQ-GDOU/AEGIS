@@ -7,17 +7,17 @@
     "n_steps": 120
   },
   "global_min_rul": {
-    "dynamic_h": 15.0,
-    "linear_h": 15.0,
-    "pct_diff": 1.7
+    "dynamic_h": 16.0,
+    "linear_h": 13.0,
+    "pct_diff": 21.7
   },
   "rul_ratio_stats": {
-    "median": 1.011,
-    "mean": 1.188,
-    "p5": 0.759,
-    "p95": 2.115
+    "median": 1.0,
+    "mean": 1.112,
+    "p5": 0.642,
+    "p95": 1.909
   },
-  "failed_at_end_pct": 49.98,
+  "failed_at_end_pct": 34.15,
   "model": "dynamic: geometry recession + normal/angle/rate update every dt",
   "vs_linear": "step12_degradation.py (constant rate)"
 }

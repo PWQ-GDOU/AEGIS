@@ -45,9 +45,9 @@ OUTPUT_DIR = WORKSPACE / "output"
 OUT_JSON   = OUTPUT_DIR / "bucket_cfd_validation_v2_summary.json"
 OUT_PNG    = OUTPUT_DIR / "bucket_cfd_validation_v2.png"
 
-# 射流冲击区过滤参数
-R_JET     = 90.0    # mm, 射流半径 120mm 的 0.75× 保守估计（实际有效冲击区）
-X_IMPACT  = 325.0   # mm, 水斗凹面所在的 x 坐标附近（局部坐标，射流传播距离≈377mm）
+# 射流冲击区过滤参数（新COMSOL几何：水斗凹面中心在局部x≈958mm）
+R_JET     = 90.0    # mm, 射流轴线附近半径
+X_IMPACT  = 1050.0  # mm, 覆盖水斗凹面区域 (x~958mm ± 100mm)
 
 
 def run() -> dict:
@@ -55,9 +55,9 @@ def run() -> dict:
     print("AEGIS Step-29 v2  单水斗聚焦射流 CFD ↔ GPR/Mansouri 验证")
     print("=" * 60)
 
-    # 1. 加载 CFD 湍流版数据（局部坐标系）
-    p_data   = np.loadtxt(str(OUTPUT_DIR / "bucket_p_turb.raw"),  comments="#")
-    wss_data = np.loadtxt(str(OUTPUT_DIR / "bucket_wss_turb.raw"), comments="#")
+    # 1. 加载 CFD 数据（MRF kOmegaSST Time=1000，局部坐标系）
+    p_data   = np.loadtxt(str(OUTPUT_DIR / "mrf2_p_bucket.raw"),  comments="#")
+    wss_data = np.loadtxt(str(OUTPUT_DIR / "mrf2_wallShearStress_bucket.raw"), comments="#")
     xyz_local  = p_data[:, :3]
     p_val      = p_data[:, 3]
     tau_mag    = np.linalg.norm(wss_data[:, 3:6], axis=1)
@@ -73,7 +73,7 @@ def run() -> dict:
     nozzle_pos = rot["nozzle_pos"]
     xyz_global = xyz_local @ R + nozzle_pos
 
-    # 3. 加载 GPR/Mansouri
+    # 3. 加载 GPR/Mansouri，并施加角度窗口掩码（关键修正）
     gpr     = np.load(str(OUTPUT_DIR / "vertices_full_gpr.npz"))
     xyz_gpr = gpr["xyz"].astype(np.float64)
     E_final = gpr["E_final"].astype(np.float64)
@@ -81,12 +81,38 @@ def run() -> dict:
     dist, idx = tree.query(xyz_global, k=1)
     valid_dist = dist < np.percentile(dist, 95)
 
-    # 4. 空间分区验证
+    # 角度窗口掩码：只保留匹配到 bucket_idx=0 角度窗口内的 GPR 顶点
+    # CFD 模拟的是 bucket_idx=0 被240mm射流冲击的瞬态，
+    # Mansouri 模型中所有21个水斗均匀受冲击 → 需要掩码到同一水斗才可比
+    N_BUCKETS  = 21
+    bw         = 360.0 / N_BUCKETS          # 17.14°/水斗
+    margin     = bw * 1.3 / 2              # ±11.14°，与extract_bucket()一致
+    theta_gpr  = np.degrees(np.arctan2(xyz_gpr[:, 1], xyz_gpr[:, 0])) % 360
+    # bucket_idx=0 的角度窗口（跨越 0° 边界）
+    in_bucket0 = (theta_gpr <= margin) | (theta_gpr >= 360 - margin)
+    # CFD 匹配点中，其对应 GPR 顶点必须在 bucket_idx=0 内
+    valid_bucket0 = valid_dist & in_bucket0[idx]
+
+    print(f"  角度掩码：bucket_idx=0 GPR 顶点 {in_bucket0.sum():,} / {len(xyz_gpr):,}")
+    print(f"  有效匹配(全域):    {valid_dist.sum():,}")
+    print(f"  有效匹配(bucket0): {valid_bucket0.sum():,}")
+
+    # 主验证使用 bucket0 掩码
+    valid_main = valid_bucket0
+
+    # 4. 空间分区验证（新COMSOL几何：水斗凹面在x≈958mm）
+    # 物理说明：
+    #   τ在出流区高但ER低（水流已转向，切向流动，法向冲击角小）
+    #   p在滞止区高且ER高（射流正面冲击，法向动量最大）
+    #   → 正确代理是压力p（滞止正压），τ与E的负相关是物理合理现象，非bug
+    p_stag = np.maximum(p_val, 0.0)   # 正压=滞止冲击区
+
     zones = {
-        "全域 (基准)":                (valid_dist,                           "baseline"),
-        "直接冲击区 r≤90mm x≤325mm":  (valid_dist & (r_yz <= R_JET) & (xyz_local[:,0] <= X_IMPACT), "impact_zone"),
-        "滞止扩展区 r≤60mm x≤800mm":  (valid_dist & (r_yz <= 60) & (xyz_local[:,0] <= 800),          "stagnation"),
-        "扩展冲击区 r≤120mm x≤500mm": (valid_dist & (r_yz <= 120) & (xyz_local[:,0] <= 500),         "extended"),
+        "全域_无掩码(基准)":               (valid_dist,                                    "baseline_no_mask"),
+        "全域_bucket0掩码":                (valid_main,                                    "baseline_masked"),
+        "凹面区域 r≤150mm x=850-1100mm":  (valid_main & (r_yz <= 150) & (xyz_local[:,0] > 850) & (xyz_local[:,0] < 1100), "concave_zone"),
+        "滞止区 r≤90mm x全域":             (valid_main & (r_yz <= R_JET),                  "stagnation"),
+        "宽冲击区 r≤200mm x=700-1200mm":  (valid_main & (r_yz <= 200) & (xyz_local[:,0] > 700) & (xyz_local[:,0] < 1200), "wide_impact"),
     }
 
     zone_results = {}

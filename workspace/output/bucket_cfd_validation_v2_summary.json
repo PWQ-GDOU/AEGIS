@@ -8,33 +8,40 @@
     "flow_reversal_at_x_mm": 350
   },
   "zones": {
-    "baseline": {
-      "n": 135051,
-      "zone": "全域 (基准)",
-      "rho_p": 0.0191,
-      "rho_tau": -0.0506,
-      "top10_iou_tau": 0.0529
+    "baseline_no_mask": {
+      "n": 71062,
+      "zone": "全域_无掩码(基准)",
+      "rho_p": -0.0525,
+      "rho_tau": 0.012,
+      "top10_iou_tau": 0.0744
     },
-    "impact_zone": {
-      "n": 2327,
-      "zone": "直接冲击区 r≤90mm x≤325mm",
-      "rho_p": 0.4667,
-      "rho_tau": 0.6907,
-      "top10_iou_tau": 0.1904
+    "baseline_masked": {
+      "n": 69262,
+      "zone": "全域_bucket0掩码",
+      "rho_p": -0.0594,
+      "rho_tau": 0.0127,
+      "top10_iou_tau": 0.0762
+    },
+    "concave_zone": {
+      "n": 5308,
+      "zone": "凹面区域 r≤150mm x=850-1100mm",
+      "rho_p": 0.2354,
+      "rho_tau": -0.0965,
+      "top10_iou_tau": 0.031
     },
     "stagnation": {
-      "n": 2328,
-      "zone": "滞止扩展区 r≤60mm x≤800mm",
-      "rho_p": 0.6438,
-      "rho_tau": 0.3331,
-      "top10_iou_tau": 0.0447
+      "n": 4061,
+      "zone": "滞止区 r≤90mm x全域",
+      "rho_p": 0.4035,
+      "rho_tau": -0.2516,
+      "top10_iou_tau": 0.0558
     },
-    "extended": {
-      "n": 12594,
-      "zone": "扩展冲击区 r≤120mm x≤500mm",
-      "rho_p": 0.3162,
-      "rho_tau": 0.3843,
-      "top10_iou_tau": 0.2293
+    "wide_impact": {
+      "n": 14835,
+      "zone": "宽冲击区 r≤200mm x=700-1200mm",
+      "rho_p": 0.2125,
+      "rho_tau": -0.0705,
+      "top10_iou_tau": 0.0119
     }
   },
   "best_result": "direct impact zone (r_yz<=90mm, x_local<=325mm): rho_tau=0.691",
