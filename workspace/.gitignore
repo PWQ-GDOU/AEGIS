@@ -29,6 +29,7 @@ output/combined_rul_map.npz
 output/dynamic_degradation_curves.npz
 output/degradation_curves.npz
 output/particle_hits.npz
+output/particle_hits_cfd*.npz
 
 # Trained GPR models (large pkl)
 output/gpr_model.pkl

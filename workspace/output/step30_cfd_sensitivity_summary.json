@@ -1,0 +1,64 @@
+{
+  "version": "step30-cfd-driven-v1",
+  "field": "baseline kOmegaSST continuous-phase cell velocity",
+  "geometry": "dec_single_bucket_local.stl",
+  "n_parcels": 2000,
+  "dt_s": 0.0001,
+  "max_time_s": 0.05,
+  "mass_flow_modes": {
+    "nominal": {
+      "nozzle_flow_m3_s": 4.5,
+      "sediment_flow_kg_s": 5.895
+    },
+    "geometric": {
+      "nozzle_flow_m3_s": 4.741040305385428,
+      "sediment_flow_kg_s": 6.210762800054911
+    }
+  },
+  "runs": {
+    "final_nominal_i1_dt1e4": {
+      "max_impacts": 1,
+      "impacts": 180,
+      "hit_rate_pct": 9.0,
+      "strict_intersections": 16,
+      "fallback_hits": 164,
+      "impact_mass_kg": 0.5930229295188008,
+      "target_mass_kg": 3.563068260482408e-06,
+      "max_dhdt_mm_h": 112.8712540778858,
+      "spearman_er_vs_analytic": 0.0417,
+      "top10_iou": 0.0
+    },
+    "final_nominal_i3_dt1e4": {
+      "max_impacts": 3,
+      "impacts": 519,
+      "hit_rate_pct": 9.0,
+      "strict_intersections": 159,
+      "fallback_hits": 360,
+      "impact_mass_kg": 1.7379229295457843,
+      "target_mass_kg": 5.13940598293287e-06,
+      "max_dhdt_mm_h": 189.79458380527979,
+      "spearman_er_vs_analytic": -0.01785,
+      "top10_iou": 0.0
+    },
+    "final_geometric_i1_dt1e4": {
+      "max_impacts": 1,
+      "impacts": 180,
+      "hit_rate_pct": 9.0,
+      "strict_intersections": 16,
+      "fallback_hits": 164,
+      "impact_mass_kg": 0.6247879135258614,
+      "target_mass_kg": 3.753922274174809e-06,
+      "max_dhdt_mm_h": 118.91714775614577,
+      "spearman_er_vs_analytic": 0.0417,
+      "top10_iou": 0.0
+    }
+  },
+  "quality_gates": {
+    "baseline_max_speed_ms": 221.944240017043,
+    "mrf_max_speed_ms": 11003.434550945656,
+    "mrf_particle_run": "rejected: max speed exceeds 500 m/s quality limit",
+    "geometry_preflight_bbox_coverage_pct": 100.0,
+    "strict_intersection_warning": "The current CFD wall samples and local STL are not face-topology aligned; fallback hits are reported separately and must not be described as OpenFOAM DPM wall logs."
+  },
+  "interpretation": "The upgraded pipeline is physically mass-weighted and CFD-velocity-driven, but the current single-phase continuous-field plus independent STL fallback mapping does not validate the analytic Mansouri spatial ranking (rho approximately 0.04 for single impact). A native OpenFOAM DPM wall-hit export or CFD/STL topology-aligned mesh is required for a stronger quantitative claim."
+}

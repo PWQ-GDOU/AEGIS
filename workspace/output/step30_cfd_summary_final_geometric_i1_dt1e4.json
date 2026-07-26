@@ -1,0 +1,160 @@
+{
+  "version": "step30-cfd-driven-v1",
+  "model_scope": "steady single-phase OpenFOAM continuous velocity field + one-way particle post-processing; no kinematicCloud wall log",
+  "cfd": {
+    "variant": "baseline",
+    "prefix": "cfd_",
+    "n_cells": 722342,
+    "center_bounds_mm": [
+      [
+        5.00713,
+        -179.249,
+        -417.539
+      ],
+      [
+        1397.66,
+        179.064,
+        417.505
+      ]
+    ],
+    "speed_stats_ms": {
+      "min": 0.012670124618633392,
+      "max": 221.944240017043,
+      "median": 25.884041900215642
+    }
+  },
+  "geometry": {
+    "stl": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\dec_single_bucket_local.stl",
+    "n_vertices": 31282,
+    "n_faces": 61405,
+    "surface_area_m2": 1.815974401753815,
+    "bounds_mm": [
+      [
+        43.299007415771484,
+        -172.66065979003906,
+        -404.2342834472656
+      ],
+      [
+        1345.6756591796875,
+        172.2771759033203,
+        400.22369384765625
+      ]
+    ],
+    "preflight": {
+      "wall_points": 142160,
+      "bbox_tolerance_mm": 50.0,
+      "wall_points_in_stl_bbox_plus_tolerance_pct": 100.0,
+      "nearest_face_center_distance_mm": {
+        "median": 6.239356418312248,
+        "p95": 114.54486409701211,
+        "max": 185.14613717921952
+      },
+      "warning": "CFD wall samples are independent surface samples; nearest face-centre distance is a coverage diagnostic, not a topology mapping."
+    }
+  },
+  "parameters": {
+    "n_parcels": 2000,
+    "n_injected": 2000,
+    "max_impacts": 1,
+    "seed": 42,
+    "dt_s": 0.0001,
+    "max_time_s": 0.05,
+    "output_tag": "final_geometric_i1_dt1e4",
+    "include_gravity": false,
+    "e_normal": 0.8,
+    "e_tangent": 0.9,
+    "diameter_distribution": {
+      "type": "Rosin-Rammler",
+      "min_m": 1e-06,
+      "max_m": 0.00023,
+      "d50_m": 5e-05,
+      "exponent": 1.5
+    },
+    "rho_particle_kg_m3": 2650.0,
+    "max_accepted_cfd_speed_ms": 500.0,
+    "mass_flow_mode": "geometric",
+    "nozzle_flow_m3_s": 4.741040305385428,
+    "sediment_flow_kg_s": 6.210762800054911,
+    "injection_window_s": 1.0,
+    "observation_window_s": 1.0,
+    "rho_wall_kg_m3": 7800.0,
+    "rho_wall_alternative_kg_m3": 7850.0
+  },
+  "tracking": {
+    "n_impacts": 180,
+    "intersection_hits": 16,
+    "fallback_hits": 164,
+    "hit_parcels": 180,
+    "hit_rate_parcels_pct": 9.0,
+    "max_speed_seen_ms": 218.57200625088888,
+    "termination_counts": {
+      "no_wall_hit": 523,
+      "outside_domain": 1297,
+      "max_impacts": 180
+    },
+    "hit_stats": {
+      "Vp_ms": {
+        "min": 5.909530987703455,
+        "max": 129.11494094200862,
+        "median": 38.109845881493484
+      },
+      "alpha_deg": {
+        "min": 0.07165898361718359,
+        "max": 84.92682622791605,
+        "median": 8.628152307861878
+      },
+      "diameter_m": {
+        "min": 3.1214484061042265e-06,
+        "max": 0.00020887836984921025,
+        "median": 4.891972242818863e-05
+      },
+      "ER_mansouri": {
+        "min": 1.7257650857587845e-17,
+        "max": 4.840966974960538e-05,
+        "median": 1.1599113700701742e-08
+      }
+    },
+    "total_injection_mass_kg": 6.210762800054911,
+    "impact_mass_kg": 0.6247879135258614
+  },
+  "face_erosion": {
+    "exposed_faces": 174,
+    "surface_faces": 61405,
+    "total_target_mass_kg": 3.753922274174809e-06,
+    "ER_face_stats": {
+      "max": 4.840966974960538e-05,
+      "median_exposed": 1.1032965033842833e-08
+    },
+    "mass_flux_max_kg_m2_s": 63667.52605925877,
+    "dhdt_max_mm_h": 118.91714775614577
+  },
+  "validation": {
+    "mask": "bucket0 angular window + 95th-percentile model nearest-neighbour distance + exposed STL faces",
+    "n_faces_compared": 173,
+    "cfd_ER_vs_analytic_Mansouri": {
+      "n": 173,
+      "spearman_rho": 0.0417,
+      "spearman_p": 0.5859308492073279,
+      "pearson_r": -0.06722,
+      "pearson_p": 0.3795635433430577,
+      "nrmse_normalized": 0.31404,
+      "top10_iou": 0.0
+    },
+    "cfd_dhdt_vs_analytic_Mansouri_rate": {
+      "n": 173,
+      "spearman_rho": 0.04718,
+      "spearman_p": 0.5376047934432047,
+      "pearson_r": -0.01898,
+      "pearson_p": 0.8042626591676001,
+      "nrmse_normalized": 0.26926,
+      "top10_iou": 0.0
+    }
+  },
+  "units": {
+    "position": "mm local / global",
+    "velocity": "m/s",
+    "ER": "kg target per kg sediment",
+    "face_area": "m2",
+    "dhdt": "mm/h"
+  }
+}
