@@ -17,15 +17,20 @@ def main() -> None:
 
     mesh = {
         "triangles_mm": tri,
+        "collision_triangles_mm": tri,
         "face_centers_mm": tri.mean(axis=1),
         "face_radii_mm": np.array([1.0]),
         "face_normals": np.array([[0.0, 0.0, 1.0]]),
+        "collision_face_normals": np.array([[0.0, 0.0, 1.0]]),
+        "collision_face_ids": np.array([0]),
+        "parent_face_ids": np.array([0]),
     }
     tree = cKDTree(mesh["face_centers_mm"])
     fallback = s.find_segment_hit(
         np.array([0.2, 0.2, 1.0]), np.array([0.2, 0.2, 0.2]), mesh, tree, 0.3
     )
     assert fallback is not None and fallback[3] == "fallback"
+    assert fallback[0] == 0 and fallback[4] == 0
     assert np.allclose(fallback[2], [0.2, 0.2, 0.0])
 
     reflected = s.reflect_velocity(
@@ -62,6 +67,33 @@ def main() -> None:
         assert np.isfinite(field["U_ms"]).all()
     assert s.load_cfd_velocity_field(s.OUTPUT_DIR, "baseline")["speed_stats_ms"]["max"] < 500.0
     assert s.load_cfd_velocity_field(s.OUTPUT_DIR, "mrf")["speed_stats_ms"]["max"] > 500.0
+
+    from step30_cfd_topology import load_topology_artifact, validate_topology_arrays
+    native = load_topology_artifact()
+    assert native["backend"] == "cfd_topology"
+    assert native["face_id_namespace"] == "openfoam_bucket_patch"
+    assert native["n_parent_faces"] == 74803
+    assert len(native["collision_triangles_mm"]) == 179568
+    assert np.all(native["face_area_m2"] > 0.0)
+    assert np.allclose(np.linalg.norm(native["face_normals"], axis=1), 1.0, atol=1e-4)
+    assert native["collision_face_ids"].min() == 0
+    assert native["collision_face_ids"].max() == 74802
+
+    rot = dict(np.load(str(s.OUTPUT_DIR / "jet_rotation.npz")))
+    gpr = dict(np.load(str(s.OUTPUT_DIR / "vertices_full_gpr.npz")))
+    mapped = s._sample_model_on_faces(native, gpr, rot)
+    assert np.median(mapped["model_dist_mm"]) < 10.0
+    assert np.percentile(mapped["model_dist_mm"], 95) < 15.0
+
+    try:
+        validate_topology_arrays(
+            np.zeros((3, 3)), np.array([[0, 1, 2]]), np.array([1]),
+            np.zeros((1, 3)), np.array([[0.0, 0.0, 1.0]]), np.array([1.0]),
+        )
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("out-of-range parent face ID was not rejected")
 
     print("step30 CFD regression tests passed")
 

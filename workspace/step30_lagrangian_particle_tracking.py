@@ -49,7 +49,9 @@ RHO_WALL = 7800.0  # kg/m3; SS316 engineering value used by step12
 class TrackingConfig:
     """Numerical and physical settings for one reproducible run."""
 
-    cfd_variant: str = "baseline"
+    cfd_variant: str = "native_baseline"
+    collision_backend: str = "auto"
+    topology_path: str = "output/bucket_topology.npz"
     output_tag: str = "latest"
     n_parcels: int = 2000
     n_injected: int = 2000
@@ -144,17 +146,24 @@ def load_cfd_velocity_field(output_dir: Path, variant: str = "baseline") -> dict
     """Load and validate cell centres and velocity for baseline or MRF CFD."""
     if variant == "baseline":
         prefix = "cfd_"
+        field_time = "500"
+        paths = {key: output_dir / f"{prefix}{key}.foam" for key in ("Cx", "Cy", "Cz", "U")}
     elif variant == "mrf":
         prefix = "mrf_cfd_"
+        field_time = "500"
+        paths = {key: output_dir / f"{prefix}{key}.foam" for key in ("Cx", "Cy", "Cz", "U")}
+    elif variant == "native":
+        prefix = "native_1000_"
+        field_time = "1000"
+        native_dir = output_dir / "native_bucket"
+        paths = {key: native_dir / f"{prefix}{key}.foam" for key in ("Cx", "Cy", "Cz", "U")}
+    elif variant == "native_baseline":
+        prefix = "native_baseline_500_"
+        field_time = "500"
+        native_dir = output_dir / "native_bucket"
+        paths = {key: native_dir / f"{prefix}{key}.foam" for key in ("Cx", "Cy", "Cz", "U")}
     else:
-        raise ValueError("cfd_variant must be 'baseline' or 'mrf'")
-
-    paths = {
-        "Cx": output_dir / f"{prefix}Cx.foam",
-        "Cy": output_dir / f"{prefix}Cy.foam",
-        "Cz": output_dir / f"{prefix}Cz.foam",
-        "U": output_dir / f"{prefix}U.foam",
-    }
+        raise ValueError("cfd_variant must be 'baseline', 'mrf', 'native', or 'native_baseline'")
     missing = [str(p) for p in paths.values() if not p.exists()]
     if missing:
         raise FileNotFoundError("Missing CFD field(s): " + ", ".join(missing))
@@ -175,6 +184,7 @@ def load_cfd_velocity_field(output_dir: Path, variant: str = "baseline") -> dict
         "U_ms": U,
         "variant": variant,
         "prefix": prefix,
+        "field_time": field_time,
         "n_cells": int(len(cell_centers)),
         "center_bounds_mm": [cell_centers.min(axis=0).tolist(), cell_centers.max(axis=0).tolist()],
         "speed_stats_ms": {
@@ -227,11 +237,22 @@ def load_local_stl(path: Path) -> dict:
         "vertices_mm": xyz,
         "faces": faces,
         "triangles_mm": tri,
+        "collision_triangles_mm": tri,
         "face_centers_mm": centers,
         "face_normals": normals,
         "face_area_mm2": area_mm2,
         "face_area_m2": area_mm2 * 1e-6,
         "face_radii_mm": radii,
+        "collision_face_centers_mm": centers,
+        "collision_face_normals": normals,
+        "collision_face_ids": np.arange(len(tri), dtype=np.int64),
+        "parent_face_ids": np.arange(len(tri), dtype=np.int64),
+        "n_parent_faces": int(len(tri)),
+        "backend": "stl",
+        "face_id_namespace": "stl_processed_face",
+        "mesh_signature": "stl_processed",
+        "patch_name": "bucket_stl",
+        "time_name": "unknown",
         "collision_broadphase_radius_mm": broadphase_radius,
         "regular_face_indices": regular_idx,
         "large_face_indices": large_idx,
@@ -240,6 +261,22 @@ def load_local_stl(path: Path) -> dict:
         "bounds_mm": [xyz.min(axis=0).tolist(), xyz.max(axis=0).tolist()],
         "surface_area_m2": float(area_mm2.sum() * 1e-6),
     }
+
+
+def load_collision_geometry(cfg: TrackingConfig) -> dict:
+    """Load native CFD topology or the explicitly requested STL backend."""
+    backend = cfg.collision_backend
+    topology_path = WORKSPACE / cfg.topology_path
+    if backend == "auto":
+        backend = "cfd_topology" if topology_path.exists() else "stl"
+    if backend == "cfd_topology":
+        if not topology_path.exists():
+            raise FileNotFoundError(f"native topology artifact is missing: {topology_path}")
+        from step30_cfd_topology import load_topology_artifact
+        return load_topology_artifact(topology_path)
+    if backend == "stl":
+        return load_local_stl(OUTPUT_DIR / "dec_single_bucket_local.stl")
+    raise ValueError("collision_backend must be 'auto', 'cfd_topology', or 'stl'")
 
 
 def geometry_preflight(stl: dict, wall_xyz: np.ndarray, tolerance_mm: float = 50.0) -> dict:
@@ -397,7 +434,7 @@ def find_segment_hit(
     mesh: dict,
     face_tree: cKDTree,
     fallback_distance_mm: float,
-) -> tuple[int, float, np.ndarray, str] | None:
+) -> tuple[int, float, np.ndarray, str, int] | None:
     """Find the first triangle hit; label proximity fallback separately."""
     segment = end - start
     mid = 0.5 * (start + end)
@@ -417,20 +454,23 @@ def find_segment_hit(
     if not candidates:
         return None
     candidates = np.asarray(candidates, dtype=np.int64)
-    tri = mesh["triangles_mm"][candidates]
+    tri = mesh["collision_triangles_mm"][candidates]
     hit, t = segment_triangle_intersection(start, end, tri)
     if hit.any():
         local = np.flatnonzero(hit)[np.argmin(t[hit])]
-        return int(candidates[local]), float(t[local]), start + float(t[local]) * segment, "intersection"
+        collision_index = int(candidates[local])
+        face_id = int(mesh.get("collision_face_ids", mesh.get("parent_face_ids"))[collision_index])
+        return face_id, float(t[local]), start + float(t[local]) * segment, "intersection", collision_index
 
     # A parcel can step over a very thin/open STL triangle. Keep this count
     # separate from strict intersections so diagnostics cannot hide it.
     d2 = _point_triangle_distance(end, tri)
     local = int(np.argmin(d2))
     if np.sqrt(d2[local]) <= fallback_distance_mm:
-        face_id = int(candidates[local])
-        projected = _closest_point_on_triangle(end, mesh["triangles_mm"][face_id])
-        return face_id, 1.0, projected, "fallback"
+        collision_index = int(candidates[local])
+        face_id = int(mesh.get("collision_face_ids", mesh.get("parent_face_ids"))[collision_index])
+        projected = _closest_point_on_triangle(end, mesh["collision_triangles_mm"][collision_index])
+        return face_id, 1.0, projected, "fallback", collision_index
     return None
 
 
@@ -454,8 +494,8 @@ def aggregate_face_impacts(
     rho_wall: float = RHO_WALL,
 ) -> dict:
     """Aggregate ER, sediment flux and thickness loss per STL face."""
-    mass = np.bincount(face_ids, weights=parcel_mass_kg, minlength=n_faces)
-    target_mass = np.bincount(face_ids, weights=parcel_mass_kg * er, minlength=n_faces)
+    mass = np.asarray(np.bincount(face_ids, weights=parcel_mass_kg, minlength=n_faces), dtype=np.float64)
+    target_mass = np.asarray(np.bincount(face_ids, weights=parcel_mass_kg * er, minlength=n_faces), dtype=np.float64)
     er_face = np.divide(target_mass, mass, out=np.zeros_like(target_mass), where=mass > 0)
     mass_flux = np.divide(mass, face_area_m2 * observation_window_s, out=np.zeros_like(mass), where=face_area_m2 > 0)
     dhdt = 3.6e6 * np.divide(target_mass, rho_wall * face_area_m2 * observation_window_s, out=np.zeros_like(target_mass), where=face_area_m2 > 0)
@@ -519,7 +559,7 @@ def _run_tracking(cfg: TrackingConfig, output_dir: Path, stl: dict, cfd: dict, r
     centers = cfd["cell_centers_mm"]
     U = cfd["U_ms"]
     tree_u = cKDTree(centers)
-    tree_face = cKDTree(stl["face_centers_mm"])
+    tree_face = stl["regular_face_tree"]
     bounds = np.asarray(cfd["center_bounds_mm"], dtype=np.float64)
     R = np.asarray(np.load(str(output_dir / "jet_rotation.npz"))["R"], dtype=np.float64)
     gravity_local = np.array([0.0, 0.0, -9.81]) @ R.T
@@ -569,21 +609,27 @@ def _run_tracking(cfg: TrackingConfig, output_dir: Path, stl: dict, cfd: dict, r
             max_speed_seen = max(max_speed_seen, float(np.linalg.norm(vel_new)))
             hit = find_segment_hit(start, end, stl, tree_face, cfg.face_fallback_distance_mm)
             if hit is not None:
-                face_id, t_hit, hit_pos, hit_kind = hit
+                face_id, t_hit, hit_pos, hit_kind, collision_index = hit
                 speed = float(np.linalg.norm(vel_new))
-                normal = stl["face_normals"][face_id].copy()
+                normal = stl["collision_face_normals"][collision_index].copy()
                 incident = vel_new / max(speed, 1e-30)
                 # Orient the normal against incoming motion before reflecting;
                 # this keeps the post-impact parcel on the fluid side.
                 if np.dot(incident, normal) > 0.0:
                     normal = -normal
-                alpha = float(np.degrees(np.arcsin(np.clip(abs(np.dot(incident, normal)), 0.0, 1.0))))
+                alpha = float(np.clip(
+                    np.degrees(np.arcsin(np.clip(abs(np.dot(incident, normal)), 0.0, 1.0))),
+                    0.5,
+                    89.5,
+                ))
                 er = float(mansouri_er(np.array([speed]), np.array([alpha]))[0])
                 impact_rows.append({
                     "parcel_id": parcel_id,
                     "impact_index": n_impacts,
                     "time_s": (step + t_hit) * cfg.dt_s,
                     "face_id": face_id,
+                    "parent_face_id": face_id,
+                    "collision_triangle_id": collision_index,
                     "position_local_mm": hit_pos,
                     "velocity_ms": vel_new.copy(),
                     "Vp_ms": speed,
@@ -643,6 +689,8 @@ def _rows_to_arrays(rows: list[dict]) -> dict:
             "impact_index": np.empty(0, dtype=np.int16),
             "time_s": np.empty(0, dtype=np.float64),
             "face_id": np.empty(0, dtype=np.int64),
+            "parent_face_id": np.empty(0, dtype=np.int64),
+            "collision_triangle_id": np.empty(0, dtype=np.int64),
             "position_local_mm": np.empty((0, 3), dtype=np.float64),
             "velocity_ms": np.empty((0, 3), dtype=np.float64),
             "Vp_ms": np.empty(0, dtype=np.float64),
@@ -658,6 +706,8 @@ def _rows_to_arrays(rows: list[dict]) -> dict:
         "impact_index": np.array([r["impact_index"] for r in rows], dtype=np.int16),
         "time_s": np.array([r["time_s"] for r in rows], dtype=np.float64),
         "face_id": np.array([r["face_id"] for r in rows], dtype=np.int64),
+        "parent_face_id": np.array([r["parent_face_id"] for r in rows], dtype=np.int64),
+        "collision_triangle_id": np.array([r["collision_triangle_id"] for r in rows], dtype=np.int64),
         "position_local_mm": np.array([r["position_local_mm"] for r in rows], dtype=np.float64),
         "velocity_ms": np.array([r["velocity_ms"] for r in rows], dtype=np.float64),
         "Vp_ms": np.array([r["Vp_ms"] for r in rows], dtype=np.float64),
@@ -681,6 +731,11 @@ def run(cfg: TrackingConfig | None = None) -> dict:
     print("=" * 70)
     print(f"  CFD={cfg.cfd_variant}  parcels={cfg.n_parcels}  max_impacts={cfg.max_impacts}  mass_flow={cfg.mass_flow_mode}")
 
+    native_variants = {"native", "native_baseline"}
+    if cfg.collision_backend == "cfd_topology" and cfg.cfd_variant not in native_variants:
+        raise ValueError("cfd_topology backend requires a native same-mesh CFD variant")
+    if cfg.collision_backend == "auto" and (WORKSPACE / cfg.topology_path).exists() and cfg.cfd_variant not in native_variants:
+        raise ValueError("native topology artifact exists; use a native CFD variant or explicitly select --collision-backend stl")
     cfd = load_cfd_velocity_field(OUTPUT_DIR, cfg.cfd_variant)
     if cfd["speed_stats_ms"]["max"] > cfg.max_accepted_cfd_speed_ms:
         raise ValueError(
@@ -688,12 +743,19 @@ def run(cfg: TrackingConfig | None = None) -> dict:
             f"exceeds quality limit {cfg.max_accepted_cfd_speed_ms:.1f} m/s; "
             "inspect MRF export before particle tracking."
         )
-    wall_xyz = load_wall_points(OUTPUT_DIR / "bucket_wss_turb.raw")
-    stl_path = OUTPUT_DIR / "dec_single_bucket_local.stl"
-    stl = load_local_stl(stl_path)
-    preflight = geometry_preflight(stl, wall_xyz)
-    print(f"[PT] CFD cells={cfd['n_cells']:,}, STL faces={len(stl['faces']):,}, area={stl['surface_area_m2']:.3f} m2")
-    print(f"[PT] wall coverage in STL bbox(+50mm)={preflight['wall_points_in_stl_bbox_plus_tolerance_pct']:.1f}%")
+    stl = load_collision_geometry(cfg)
+    if stl["backend"] == "cfd_topology":
+        wall_xyz = stl["face_centers_mm"]
+        preflight = {
+            "status": "native_topology",
+            "wall_points": int(len(wall_xyz)),
+            "wall_points_in_stl_bbox_plus_tolerance_pct": 100.0,
+            "warning": "collision and face aggregation use the same native OpenFOAM bucket patch topology",
+        }
+    else:
+        wall_xyz = load_wall_points(OUTPUT_DIR / "bucket_wss_turb.raw")
+        preflight = geometry_preflight(stl, wall_xyz)
+    print(f"[PT] CFD cells={cfd['n_cells']:,}, backend={stl['backend']}, parent faces={stl['n_parent_faces']:,}, area={stl['surface_area_m2']:.3f} m2")
 
     rng = np.random.default_rng(cfg.seed)
     tracked = _run_tracking(cfg, OUTPUT_DIR, stl, cfd, rng)
@@ -702,7 +764,7 @@ def run(cfg: TrackingConfig | None = None) -> dict:
     print(f"[PT] impacts={n_impacts:,} (intersection={tracked['intersection_count']:,}, fallback={tracked['fallback_count']:,})")
 
     aggregate = aggregate_face_impacts(
-        len(stl["faces"]), stl["face_area_m2"], stl["face_centers_mm"], stl["face_normals"],
+        stl["n_parent_faces"], stl["face_area_m2"], stl["face_centers_mm"], stl["face_normals"],
         arrays["face_id"], arrays["ER_mansouri"], arrays["parcel_mass_kg"], cfg.observation_window_s,
     )
 
@@ -714,9 +776,12 @@ def run(cfg: TrackingConfig | None = None) -> dict:
     bucket_width = 360.0 / 21.0
     bucket_margin = bucket_width * 1.3 / 2.0
     bucket0 = (theta <= bucket_margin) | (theta >= 360.0 - bucket_margin)
-    common = bucket0 & (model["model_dist_mm"] <= np.percentile(model["model_dist_mm"], 95))
+    distance_median = float(np.median(model["model_dist_mm"]))
+    distance_p95 = float(np.percentile(model["model_dist_mm"], 95))
+    registration_ok = distance_median <= 10.0 and distance_p95 <= 15.0
+    common = bucket0 & (model["model_dist_mm"] <= 15.0)
     exposed = aggregate["face_mass_kg"] > 0
-    compare_mask = common & exposed
+    compare_mask = common & exposed if registration_ok else np.zeros_like(exposed)
     metrics_er = _metric_pair(aggregate["ER_mass_ratio_face"], model["ER_truth"], compare_mask)
     metrics_flux = _metric_pair(aggregate["dhdt_face_mm_h"], model_dhdt, compare_mask)
 
@@ -738,9 +803,14 @@ def run(cfg: TrackingConfig | None = None) -> dict:
         model_ER_truth_face=model["ER_truth"].astype(np.float32),
         model_E_final_face=model["E_final"].astype(np.float32),
         model_dhdt_face_mm_h=model_dhdt.astype(np.float32),
+        gpr_index=model["model_idx"].astype(np.int64),
+        registration_distance_mm=model["model_dist_mm"].astype(np.float32),
         model_dist_mm=model["model_dist_mm"].astype(np.float32),
         bucket0_face=bucket0,
         compare_mask=compare_mask,
+        collision_backend=np.array(stl["backend"]),
+        face_id_namespace=np.array(stl["face_id_namespace"]),
+        mesh_signature=np.array(stl["mesh_signature"]),
     )
 
     fig, axes = plt.subplots(1, 3, figsize=(16, 5))
@@ -780,21 +850,31 @@ def run(cfg: TrackingConfig | None = None) -> dict:
             hit_stats[key] = {"min": float(val.min()), "max": float(val.max()), "median": float(np.median(val))}
 
     exposed_er = aggregate["ER_mass_ratio_face"][exposed]
+    speed_warning_limit = 3.0 * cfg.jet_speed_ms
     cfd_summary = {
         "variant": cfd["variant"],
         "prefix": cfd["prefix"],
+        "field_time": cfd["field_time"],
         "n_cells": cfd["n_cells"],
         "center_bounds_mm": cfd["center_bounds_mm"],
         "speed_stats_ms": cfd["speed_stats_ms"],
+        "quality_status": "warning_velocity_outliers" if cfd["speed_stats_ms"]["max"] > speed_warning_limit else "passed",
+        "velocity_warning_limit_ms": speed_warning_limit,
     }
     summary = {
         "version": "step30-cfd-driven-v1",
         "model_scope": "steady single-phase OpenFOAM continuous velocity field + one-way particle post-processing; no kinematicCloud wall log",
         "cfd": cfd_summary,
         "geometry": {
-            "stl": str(stl_path),
+            "collision_backend": stl["backend"],
+            "face_id_namespace": stl["face_id_namespace"],
+            "mesh_signature": stl["mesh_signature"],
+            "patch_name": stl["patch_name"],
+            "source_time": stl["time_name"],
+            "field_time": cfd["field_time"],
             "n_vertices": int(len(stl["vertices_mm"])),
-            "n_faces": int(len(stl["faces"])),
+            "n_collision_triangles": int(len(stl["collision_triangles_mm"])),
+            "n_parent_faces": int(stl["n_parent_faces"]),
             "surface_area_m2": stl["surface_area_m2"],
             "bounds_mm": stl["bounds_mm"],
             "preflight": preflight,
@@ -802,6 +882,8 @@ def run(cfg: TrackingConfig | None = None) -> dict:
         "parameters": {
             "n_parcels": cfg.n_parcels,
             "n_injected": cfg.n_injected,
+            "collision_backend": stl["backend"],
+            "cfd_variant": cfg.cfd_variant,
             "max_impacts": cfg.max_impacts,
             "seed": cfg.seed,
             "dt_s": cfg.dt_s,
@@ -835,14 +917,21 @@ def run(cfg: TrackingConfig | None = None) -> dict:
         },
         "face_erosion": {
             "exposed_faces": int(exposed.sum()),
-            "surface_faces": int(len(stl["faces"])),
+            "surface_faces": int(stl["n_parent_faces"]),
             "total_target_mass_kg": float(aggregate["face_target_mass_kg"].sum()),
             "ER_face_stats": {"max": float(aggregate["ER_mass_ratio_face"].max()), "median_exposed": float(np.median(exposed_er)) if exposed.any() else 0.0},
             "mass_flux_max_kg_m2_s": float(aggregate["sediment_mass_flux_face_kg_m2_s"].max()),
             "dhdt_max_mm_h": float(aggregate["dhdt_face_mm_h"].max()),
         },
         "validation": {
-            "mask": "bucket0 angular window + 95th-percentile model nearest-neighbour distance + exposed STL faces",
+            "registration_status": "passed" if registration_ok else "failed",
+            "registration_distance_mm": {
+                "median": distance_median,
+                "p95": distance_p95,
+                "max": float(model["model_dist_mm"].max()),
+            },
+            "registration_threshold_mm": {"median": 10.0, "p95": 15.0},
+            "mask": "bucket0 angular window + registration distance<=15mm + exposed native parent faces",
             "n_faces_compared": int(compare_mask.sum()),
             "cfd_ER_vs_analytic_Mansouri": metrics_er,
             "cfd_dhdt_vs_analytic_Mansouri_rate": metrics_flux,
@@ -856,13 +945,16 @@ def run(cfg: TrackingConfig | None = None) -> dict:
 
 def _parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="CFD-driven particle-wall Mansouri erosion")
-    parser.add_argument("--cfd", choices=["baseline", "mrf"], default="baseline")
+    parser.add_argument("--cfd", choices=["baseline", "mrf", "native", "native_baseline"], default="native_baseline")
+    parser.add_argument("--collision-backend", choices=["auto", "cfd_topology", "stl"], default="auto")
+    parser.add_argument("--topology", default="output/bucket_topology.npz")
     parser.add_argument("--tag", default="latest", help="output tag; latest uses canonical filenames")
     parser.add_argument("--parcels", type=int, default=2000)
     parser.add_argument("--max-impacts", type=int, default=3)
     parser.add_argument("--mass-flow", choices=["nominal", "geometric"], default="nominal")
     parser.add_argument("--max-time", type=float, default=0.05)
     parser.add_argument("--dt", type=float, default=1e-5)
+    parser.add_argument("--max-cfd-speed", type=float, default=500.0)
     parser.add_argument("--gravity", action="store_true")
     return parser.parse_args()
 
@@ -871,6 +963,8 @@ if __name__ == "__main__":
     args = _parse_args()
     run(TrackingConfig(
         cfd_variant=args.cfd,
+        collision_backend=args.collision_backend,
+        topology_path=args.topology,
         output_tag=args.tag,
         n_parcels=args.parcels,
         n_injected=args.parcels,
@@ -878,5 +972,6 @@ if __name__ == "__main__":
         mass_flow_mode=args.mass_flow,
         max_time_s=args.max_time,
         dt_s=args.dt,
+        max_accepted_cfd_speed_ms=args.max_cfd_speed,
         include_gravity=args.gravity,
     ))

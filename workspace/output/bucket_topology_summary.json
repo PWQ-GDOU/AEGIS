@@ -1,0 +1,30 @@
+{
+  "version": "step30-native-openfoam-topology-v1",
+  "source_vtp": "output\\native_bucket\\bucket_1000.vtp",
+  "patch_name": "bucket",
+  "time": "1000",
+  "coordinate_units": "mm",
+  "n_points": 90816,
+  "n_parent_faces": 74803,
+  "n_collision_triangles": 179568,
+  "surface_area_m2": 1.3182751117906186,
+  "bounds_mm": [
+    [
+      420.4020080566406,
+      -180.0,
+      -418.385986328125
+    ],
+    [
+      1400.0,
+      180.01499938964844,
+      390.6109924316406
+    ]
+  ],
+  "mesh_signature": "4bdb5e5a2203663a9d9c13dd384a7de471225aa1c145582b60e1a436621c877f",
+  "degenerate_triangles_removed": 0,
+  "triangle_size_mm": {
+    "median": 2.742025583233991,
+    "p95": 5.071894802006889,
+    "max": 5.987681161764154
+  }
+}

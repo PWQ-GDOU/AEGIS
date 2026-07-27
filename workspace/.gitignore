@@ -30,6 +30,8 @@ output/dynamic_degradation_curves.npz
 output/degradation_curves.npz
 output/particle_hits.npz
 output/particle_hits_cfd*.npz
+output/bucket_topology.npz
+output/native_bucket/
 
 # Trained GPR models (large pkl)
 output/gpr_model.pkl

@@ -2,59 +2,65 @@
   "version": "step30-cfd-driven-v1",
   "model_scope": "steady single-phase OpenFOAM continuous velocity field + one-way particle post-processing; no kinematicCloud wall log",
   "cfd": {
-    "variant": "baseline",
-    "prefix": "cfd_",
-    "n_cells": 722342,
+    "variant": "native_baseline",
+    "prefix": "native_baseline_500_",
+    "field_time": "500",
+    "n_cells": 424161,
     "center_bounds_mm": [
       [
-        5.00713,
-        -179.249,
-        -417.539
+        10.0,
+        -178.993,
+        -418.957
       ],
       [
-        1397.66,
-        179.064,
-        417.505
+        1397.51,
+        179.357,
+        415.005
       ]
     ],
     "speed_stats_ms": {
-      "min": 0.012670124618633392,
-      "max": 221.944240017043,
-      "median": 25.884041900215642
-    }
+      "min": 0.0966728578338822,
+      "max": 214.46848948080927,
+      "median": 39.18101937349384
+    },
+    "quality_status": "passed",
+    "velocity_warning_limit_ms": 314.4
   },
   "geometry": {
-    "stl": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\dec_single_bucket_local.stl",
-    "n_vertices": 31282,
-    "n_faces": 61405,
-    "surface_area_m2": 1.815974401753815,
+    "collision_backend": "cfd_topology",
+    "face_id_namespace": "openfoam_bucket_patch",
+    "mesh_signature": "4bdb5e5a2203663a9d9c13dd384a7de471225aa1c145582b60e1a436621c877f",
+    "patch_name": "bucket",
+    "source_time": "1000",
+    "field_time": "500",
+    "n_vertices": 90816,
+    "n_collision_triangles": 179568,
+    "n_parent_faces": 74803,
+    "surface_area_m2": 1.3182751111731363,
     "bounds_mm": [
       [
-        43.299007415771484,
-        -172.66065979003906,
-        -404.2342834472656
+        420.4020080566406,
+        -180.0,
+        -418.385986328125
       ],
       [
-        1345.6756591796875,
-        172.2771759033203,
-        400.22369384765625
+        1400.0,
+        180.01499938964844,
+        390.6109924316406
       ]
     ],
     "preflight": {
-      "wall_points": 142160,
-      "bbox_tolerance_mm": 50.0,
+      "status": "native_topology",
+      "wall_points": 74803,
       "wall_points_in_stl_bbox_plus_tolerance_pct": 100.0,
-      "nearest_face_center_distance_mm": {
-        "median": 6.239356418312248,
-        "p95": 114.54486409701211,
-        "max": 185.14613717921952
-      },
-      "warning": "CFD wall samples are independent surface samples; nearest face-centre distance is a coverage diagnostic, not a topology mapping."
+      "warning": "collision and face aggregation use the same native OpenFOAM bucket patch topology"
     }
   },
   "parameters": {
     "n_parcels": 2000,
     "n_injected": 2000,
+    "collision_backend": "cfd_topology",
+    "cfd_variant": "native_baseline",
     "max_impacts": 1,
     "seed": 42,
     "dt_s": 0.0001,
@@ -81,73 +87,85 @@
     "rho_wall_alternative_kg_m3": 7850.0
   },
   "tracking": {
-    "n_impacts": 180,
-    "intersection_hits": 16,
-    "fallback_hits": 164,
-    "hit_parcels": 180,
-    "hit_rate_parcels_pct": 9.0,
-    "max_speed_seen_ms": 218.57200625088888,
+    "n_impacts": 461,
+    "intersection_hits": 3,
+    "fallback_hits": 458,
+    "hit_parcels": 461,
+    "hit_rate_parcels_pct": 23.05,
+    "max_speed_seen_ms": 193.6846733742484,
     "termination_counts": {
-      "no_wall_hit": 523,
-      "outside_domain": 1297,
-      "max_impacts": 180
+      "outside_domain": 1257,
+      "max_impacts": 461,
+      "no_wall_hit": 277,
+      "low_speed": 3,
+      "outside_cfd_field": 2
     },
     "hit_stats": {
       "Vp_ms": {
-        "min": 5.909530987703455,
-        "max": 129.11494094200862,
-        "median": 38.109845881493484
+        "min": 3.828833642720165,
+        "max": 116.2662794953529,
+        "median": 52.84580752162142
       },
       "alpha_deg": {
-        "min": 0.07165898361718359,
-        "max": 84.92682622791605,
-        "median": 8.628152307861878
+        "min": 0.5,
+        "max": 68.15544572079808,
+        "median": 5.217933907072779
       },
       "diameter_m": {
-        "min": 3.1214484061042265e-06,
-        "max": 0.00020887836984921025,
-        "median": 4.891972242818863e-05
+        "min": 1e-06,
+        "max": 0.00022924288379081806,
+        "median": 5.122127444821229e-05
       },
       "ER_mansouri": {
-        "min": 1.7257650857587845e-17,
-        "max": 4.840966974960538e-05,
-        "median": 1.1599113700701742e-08
+        "min": 1.750629639221862e-17,
+        "max": 4.102249132932893e-05,
+        "median": 3.30334515420222e-09
       }
     },
     "total_injection_mass_kg": 5.8950000000000005,
-    "impact_mass_kg": 0.5930229295188008
+    "impact_mass_kg": 1.7764827145606434
   },
   "face_erosion": {
-    "exposed_faces": 174,
-    "surface_faces": 61405,
-    "total_target_mass_kg": 3.563068260482408e-06,
+    "exposed_faces": 430,
+    "surface_faces": 74803,
+    "total_target_mass_kg": 1.0860456922276723e-06,
     "ER_face_stats": {
-      "max": 4.840966974960538e-05,
-      "median_exposed": 1.1032965033842833e-08
+      "max": 4.102249132932893e-05,
+      "median_exposed": 3.1909695626108143e-09
     },
-    "mass_flux_max_kg_m2_s": 60430.590927737925,
-    "dhdt_max_mm_h": 112.8712540778858
+    "mass_flux_max_kg_m2_s": 7006.795116340935,
+    "dhdt_max_mm_h": 11.987673797265717
   },
   "validation": {
-    "mask": "bucket0 angular window + 95th-percentile model nearest-neighbour distance + exposed STL faces",
-    "n_faces_compared": 173,
+    "registration_status": "passed",
+    "registration_distance_mm": {
+      "median": 3.297908708358922,
+      "p95": 5.1105568898450215,
+      "max": 6.495202113533899
+    },
+    "registration_threshold_mm": {
+      "median": 10.0,
+      "p95": 15.0
+    },
+    "mask": "bucket0 angular window + registration distance<=15mm + exposed native parent faces",
+    "n_faces_compared": 414,
     "cfd_ER_vs_analytic_Mansouri": {
-      "n": 173,
-      "spearman_rho": 0.0417,
-      "spearman_p": 0.5859308492073279,
-      "pearson_r": -0.06722,
-      "pearson_p": 0.3795635433430577,
-      "nrmse_normalized": 0.31404,
-      "top10_iou": 0.0
+      "n": 414,
+      "spearman_rho": 0.00924,
+      "spearman_p": 0.8513888890214065,
+      "pearson_r": -0.09597,
+      "pearson_p": 0.051016961051183835,
+      "nrmse_normalized": 0.34981,
+      "top10_iou": 0.03659
     },
     "cfd_dhdt_vs_analytic_Mansouri_rate": {
-      "n": 173,
-      "spearman_rho": 0.04718,
-      "spearman_p": 0.5376047934432047,
-      "pearson_r": -0.01898,
-      "pearson_p": 0.8042626591676001,
-      "nrmse_normalized": 0.26926,
-      "top10_iou": 0.0
+      "n": 414,
+      "spearman_rho": 0.01716,
+      "spearman_p": 0.7278129234021707,
+      "pearson_r": -0.05988,
+      "pearson_p": 0.22406666164679476,
+      "nrmse_normalized": 0.32065,
+      "top10_iou": 0.06329
     }
   },
   "units": {
