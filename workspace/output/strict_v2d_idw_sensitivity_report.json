@@ -1,0 +1,66 @@
+{
+  "status": "failed",
+  "gates": {
+    "first_parcel_jaccard_min": 0.99,
+    "first_parent_face_agreement_min": 0.99,
+    "hit_count_relative_max": 0.01,
+    "target_mass_relative_max": 0.05,
+    "erosion_p99_relative_max": 0.05
+  },
+  "runs": {
+    "strict_v2d_idw_n500_dt1e5": {
+      "impacts": 122,
+      "first_hits": 42,
+      "parcels": 42,
+      "target_mass_kg": 6.257923246266728e-07,
+      "erosion_p99_mm_h": 16.331514358520508,
+      "impact_mass_kg": 3.533848835760144,
+      "Vp_mass_weighted": 44.22725881737496,
+      "angle_mass_weighted": 4.1611175815684485
+    },
+    "strict_v2d_idw_n500_dt5e6": {
+      "impacts": 119,
+      "first_hits": 41,
+      "parcels": 41,
+      "target_mass_kg": 5.70445536141051e-07,
+      "erosion_p99_mm_h": 12.364401817321777,
+      "impact_mass_kg": 3.487696328380508,
+      "Vp_mass_weighted": 43.71335731771674,
+      "angle_mass_weighted": 4.18466967571961
+    },
+    "strict_v2d_idw_n500_dt2p5e6": {
+      "impacts": 119,
+      "first_hits": 41,
+      "parcels": 41,
+      "target_mass_kg": 4.7040177264534577e-07,
+      "erosion_p99_mm_h": 12.391526222229004,
+      "impact_mass_kg": 3.487696328380508,
+      "Vp_mass_weighted": 43.79857855400274,
+      "angle_mass_weighted": 4.171592231950845
+    }
+  },
+  "pairs": {
+    "strict_v2d_idw_n500_dt1e5__strict_v2d_idw_n500_dt5e6": {
+      "first_parcel_jaccard": 0.9761904761904762,
+      "first_parent_face_agreement": 0.8536585365853658,
+      "first_triangle_agreement": 0.7317073170731707,
+      "hit_count_relative": 0.025210084033613446,
+      "target_mass_kg_relative": 0.09702379101786239,
+      "erosion_p99_mm_h_relative": 0.3208495323761677,
+      "impact_mass_kg_relative": 0.013232948925076551,
+      "Vp_mass_weighted_relative": 0.011756166334310283,
+      "angle_mass_weighted_relative": 0.0056281847735355625
+    },
+    "strict_v2d_idw_n500_dt5e6__strict_v2d_idw_n500_dt2p5e6": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 0.8048780487804879,
+      "first_triangle_agreement": 0.7073170731707317,
+      "hit_count_relative": 0.0,
+      "target_mass_kg_relative": 0.21267726720734978,
+      "erosion_p99_mm_h_relative": 0.0021889478681462525,
+      "impact_mass_kg_relative": 0.0,
+      "Vp_mass_weighted_relative": 0.00194575347190594,
+      "angle_mass_weighted_relative": 0.00313488065027132
+    }
+  }
+}

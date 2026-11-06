@@ -1,0 +1,12 @@
+{
+  "version": "step30-particle-convergence-v5",
+  "analysis_role": "confirmation",
+  "status": "blocked",
+  "numerical_stability_status": "blocked",
+  "spatial_accuracy_status": "blocked",
+  "reason": "discovery report is not a hash-valid v5 candidate record",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "report_sha256": "4d955ca1a8c3f16c914fb706e54a201e4af6bc6436b88fa611d7c3d9e2c17fa7"
+}

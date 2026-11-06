@@ -1,0 +1,251 @@
+{
+  "version": "si-unit-provenance-v2",
+  "openfoam_version": "2412",
+  "source_case": "remote_artifacts/wenquan/pelton_bucket_jet_si_omega697",
+  "source_time": "3000",
+  "artifact_manifest": {
+    "file": "native_si_manifest_3000.json",
+    "version": "step30-native-si-manifest-v1"
+  },
+  "source_coordinate_units": "m",
+  "internal_coordinate_units": "mm",
+  "coordinate_scale_to_mm": 1000.0,
+  "velocity_units": "m/s",
+  "pressure_field_units": "m2/s2 (kinematic pressure)",
+  "reference_density_kg_m3": 1000.0,
+  "turbulence_units": {
+    "k": "m2/s2",
+    "omega": "1/s"
+  },
+  "wall_shear_stress_field_units": "m2/s2 (kinematic wall shear stress)",
+  "topology": {
+    "artifact": "bucket_topology_si.npz",
+    "artifact_version": "step30-native-openfoam-topology-v2",
+    "mesh_signature_algorithm": "sha256-source-units-points-triangles-parent-ids-v2",
+    "mesh_signature": "739047925a62c9a521978fdf55fb07d96dbf6ad459b194e88d70875083aa7533",
+    "patch_name": "bucket",
+    "n_parent_faces": 74802,
+    "n_collision_triangles": 179562,
+    "surface_area_m2": 1.318275465252782,
+    "bounds_mm": [
+      [
+        420.40301513671875,
+        -180.0,
+        -418.3860168457031
+      ],
+      [
+        1400.0,
+        180.01499938964844,
+        390.6109924316406
+      ]
+    ],
+    "polyMesh_signature": {
+      "algorithm": "sha256-filename-content-boundary-faces-neighbour-owner-points-v1",
+      "signature": "2b3a7d8af8230bbd09e0ac795795dc76aac4bc67affafc53514b220779044981"
+    }
+  },
+  "fields": {
+    "n_cells": 424146,
+    "U_speed_ms": {
+      "min": 0.10025633849070341,
+      "p01": 2.9779225815821095,
+      "median": 37.23167441917351,
+      "p95": 85.78222865173635,
+      "p99": 108.20905122712786,
+      "max": 183.70238009065096,
+      "finite": true,
+      "n": 424146
+    },
+    "p_kinematic_m2_s2": {
+      "min": -18889.7,
+      "p01": -2580.3585,
+      "median": 2882.47,
+      "p95": 5024.4675,
+      "p99": 5552.126499999999,
+      "max": 6090.12,
+      "finite": true,
+      "n": 424146
+    },
+    "p_Pa_at_rho_1000": {
+      "min": -18889700.0,
+      "p01": -2580358.5,
+      "median": 2882470.0,
+      "p95": 5024467.5,
+      "p99": 5552126.5,
+      "max": 6090120.0,
+      "finite": true,
+      "n": 424146
+    },
+    "k_m2_s2": {
+      "min": 0.202802,
+      "p01": 4.4045925,
+      "median": 73.4427,
+      "p95": 301.818,
+      "p99": 410.4838999999998,
+      "max": 1405.01,
+      "finite": true,
+      "n": 424146
+    },
+    "omega_s-1": {
+      "min": 447.647,
+      "p01": 699.5767,
+      "median": 6630.924999999999,
+      "p95": 34776.350000000006,
+      "p99": 63460.65999999996,
+      "max": 335301.0,
+      "finite": true,
+      "n": 424146
+    },
+    "bucket_wallShearStress_kinematic_m2_s2": {
+      "min": 0.010450618746720215,
+      "p01": 0.1433237690705688,
+      "median": 4.805155360007879,
+      "p95": 14.472866783519063,
+      "p99": 20.443118067329628,
+      "max": 91.24380389730582,
+      "finite": true,
+      "n": 74802
+    },
+    "bucket_wallShearStress_Pa_at_rho_1000": {
+      "min": 10.450618746720215,
+      "p01": 143.3237690705688,
+      "median": 4805.155360007879,
+      "p95": 14472.866783519063,
+      "p99": 20443.11806732963,
+      "max": 91243.80389730583,
+      "finite": true,
+      "n": 74802
+    },
+    "bucket_wall_faces": 74802
+  },
+  "physical_inputs": {
+    "jet_velocity_ms": [
+      104.8,
+      0.0,
+      0.0
+    ],
+    "jet_speed_ms": 104.8,
+    "jet_radius_m": 0.12,
+    "jet_diameter_m": 0.24,
+    "water_kinematic_viscosity_m2_s": 1e-06,
+    "reynolds_number": 25152000.0,
+    "dynamic_pressure_Pa_at_rho_1000": 5491519.999999999,
+    "turbulence_intensity": 0.05,
+    "turbulence_length_scale_m": 0.016800000003009432,
+    "inlet_k_m2_s2": 41.1864,
+    "inlet_omega_s-1": 697.44025,
+    "blockMesh_scale": 0.001,
+    "status": "passed"
+  },
+  "physical_checks": {
+    "max_speed_quality_limit_ms": 500.0,
+    "max_speed_quality_status": true,
+    "bucket_face_count_matches_topology": true,
+    "all_field_values_finite": true
+  },
+  "convergence": {
+    "final_initial_residuals": {
+      "Ux": 1.52531e-05,
+      "Uy": 2.55613e-05,
+      "Uz": 1.97633e-05,
+      "p_first_corrector": 0.00113991,
+      "omega": 5.86247e-06,
+      "k": 1.06645e-05
+    },
+    "final_continuity": {
+      "local": 3.30166e-05,
+      "global": -2.32903e-06,
+      "cumulative": -0.00191765
+    },
+    "strict_residual_control_met": false,
+    "solver_log": "simpleFoam_3000.log",
+    "end_time": "3000",
+    "residual_control_threshold": 0.0001,
+    "field_change": {
+      "previous_time": "2900",
+      "field_relative_l2": {
+        "U": 0.02082525512800279,
+        "p": 0.00480668755456322,
+        "k": 0.006733080235320488,
+        "omega": 0.013082890485147018
+      },
+      "bulk_speed_relative_change_pct": {
+        "median": 0.007742182405707846,
+        "p95": 0.03366668903677964,
+        "p99": 0.010802980885972382,
+        "max": 0.0009891236918782213
+      },
+      "max_bulk_speed_relative_change_pct": 0.03366668903677964
+    },
+    "status": "bounded_statistical_plateau_strict_residual_control_not_met"
+  },
+  "mesh": {
+    "status": "Mesh OK",
+    "points": 537771,
+    "faces": 1370272,
+    "cells": 424146,
+    "max_skewness": 3.49579
+  },
+  "source_files": {
+    "bucket_vtp": {
+      "file": "bucket_3000_si.vtp",
+      "sha256": "3a7243246049bec6a6a126bc4732a3de760ad4a8e2579eeda3e41dd5f52c2c9c"
+    },
+    "polyMesh_boundary": {
+      "file": "polyMesh_boundary_3000.txt",
+      "sha256": "994d816a6356b6c94688c6ce28a0eab012811110a48d4a4cec5a8147d6f8a6b3"
+    },
+    "controlDict": {
+      "file": "controlDict_3000",
+      "sha256": "a20b944bf10dd18fb7052bcd5cb18c6ded4bd194d1d2db2efae886f934ca6fba"
+    },
+    "fvSolution": {
+      "file": "fvSolution_3000",
+      "sha256": "29ad7f8ed6842516eb35e65ace61bab79c7b168184e75d94cc37f2490b000848"
+    },
+    "blockMeshDict": {
+      "file": "blockMeshDict",
+      "sha256": "2bab6b078604b62d1bcee1a2207c9ae331a7de0fe000dc5ff79df1ac28fc03bb"
+    },
+    "snappyHexMeshDict": {
+      "file": "snappyHexMeshDict",
+      "sha256": "0cd2a7dcae7095ec3f811848de45e2d73f75409c4932a9bdbac923b330ddc764"
+    },
+    "topoSetDict": {
+      "file": "topoSetDict",
+      "sha256": "309afb15f8d5d289cc6c96d4c4d85d4861e7cde0f6a33ccab52267cf0255630e"
+    },
+    "transportProperties": {
+      "file": "transportProperties",
+      "sha256": "21769d91940dcdd438303f185a7c90bdb319a2308fc5fc8304bbf2eb0d2e258a"
+    },
+    "turbulenceProperties": {
+      "file": "turbulenceProperties",
+      "sha256": "6df384d904139243910d0b7d485ad2168c0166ffe09c511cc0f2f9cc4c12098c"
+    },
+    "initial_U": {
+      "file": "initial_U",
+      "sha256": "d279f4e6e32b1e10a259d84ef4bc55a286d1b5868e93103b885115d38d8697ff"
+    },
+    "initial_k": {
+      "file": "initial_k",
+      "sha256": "54bfa3d681c6915777de1901c8868c062e08edf58d8fdc654db2a00b14d76a31"
+    },
+    "initial_omega": {
+      "file": "initial_omega",
+      "sha256": "e9fc68c2f5635b2b848bb108b8cc4c74cfa14f34f22e792191138bee9693a3c3"
+    },
+    "solver_log": {
+      "file": "simpleFoam_3000.log",
+      "sha256": "1bf88b4f19741897454afdf34f8a001ade6ab635ad58b3c591f8af5ed6ce7333"
+    },
+    "checkMesh_log": {
+      "file": "checkMesh_3000.log",
+      "sha256": "787f4bf6343d5b4cecac54b5b1cbad096670f3d7fdb350837a9c51296e7be28f"
+    }
+  },
+  "si_stl": {
+    "file": "dec_full_runner_local_si.stl",
+    "sha256": "a27be332b508d1ee7c7707bbdbb18547360a78c618b61282f2cc4560040d3f3e"
+  }
+}

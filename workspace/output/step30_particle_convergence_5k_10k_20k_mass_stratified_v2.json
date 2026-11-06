@@ -1,0 +1,1019 @@
+{
+  "version": "step30-particle-seed-convergence-v2",
+  "status": "failed",
+  "evaluation_status": "failed",
+  "action": "stop_at_preregistered_max_scale_investigate_spatial_instability",
+  "gates": {
+    "pooled_erosion_ess_min": 200.0,
+    "max_parcel_fraction_max": 0.05,
+    "ci_relative_half_width_max": 0.1,
+    "spearman_median_min": 0.9,
+    "spearman_p10_min": 0.8,
+    "hotspot_iou_median_min": 0.8,
+    "scale_relative_change_max": 0.05,
+    "spatial_js_divergence_max": 0.05
+  },
+  "statistical_methods": {
+    "seed_interval": "empirical central 2.5/97.5 percentiles across seed estimates; descriptive, not a confidence interval for the population mean",
+    "spatial_rank_and_hotspot": "pairwise comparisons on the frozen 8x8x8 topology macro partition",
+    "scale_change": "maximum paired-seed relative change between adjacent scales"
+  },
+  "identity": {
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "field_time": "0.8684190921",
+    "solver_semantics": {
+      "application": "pimpleFoam",
+      "mode": "urans",
+      "field_statistic": "time_mean",
+      "tracking_velocity_object": "UMean",
+      "averaging_window": {
+        "start_time": "0.7844336016",
+        "end_time": "0.8684190921",
+        "sample_count": 20523
+      }
+    },
+    "implementation_hashes": {
+      "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+      "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+      "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+    },
+    "input_hashes": {
+      "analytic_reference_transform": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47",
+      "vertices_full_gpr": "c16cf9cec94e7d4215d0ebc88b53e8c7e05d1f50f8ec214bb61411ec735a5862"
+    },
+    "parameters": {
+      "collision_backend": "cfd_topology",
+      "collision_policy": "strict_v2",
+      "collision_algorithm_version": "v2",
+      "cfd_variant": "native_si",
+      "max_impacts": 3,
+      "dt_s": 1e-05,
+      "max_time_s": 0.05,
+      "particle_cfl": 0.25,
+      "cfd_velocity_interpolation": "idw_k8_v1",
+      "particle_integrator": "midpoint_exponential_v2",
+      "strict_max_substep_s": 1e-05,
+      "min_substep_s": 1e-08,
+      "max_query_distance_mm": 80.0,
+      "face_fallback_distance_mm": 1.5,
+      "hit_epsilon_mm": 0.05,
+      "min_speed_ms": 0.5,
+      "max_collision_events_per_step": 8,
+      "include_gravity": false,
+      "e_normal": 0.8,
+      "e_tangent": 0.9,
+      "diameter_distribution": {
+        "type": "Rosin-Rammler",
+        "min_m": 1e-06,
+        "max_m": 0.00023,
+        "d50_m": 5e-05,
+        "exponent": 1.5,
+        "sampling_contract": "mass_stratified_v1"
+      },
+      "psd_sampling": "mass_stratified_v1",
+      "rho_particle_kg_m3": 2650.0,
+      "max_accepted_cfd_speed_ms": 500.0,
+      "mass_flow_mode": "nominal",
+      "nozzle_flow_m3_s": 4.5,
+      "sediment_flow_kg_s": 5.8950000000000005,
+      "injection_window_s": 1.0,
+      "observation_window_s": 1.0,
+      "rho_wall_kg_m3": 7800.0,
+      "rho_wall_alternative_kg_m3": 7850.0
+    }
+  },
+  "spatial_partition": {
+    "version": "step30-particle-spatial-macro-bins-v1",
+    "axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "bins_per_axis": [
+      8,
+      8,
+      8
+    ],
+    "bounds_source": "frozen_topology_face_centres",
+    "bounds_min_mm": [
+      43.6404914855957,
+      -187.50767517089844,
+      -406.0339050292969
+    ],
+    "bounds_max_mm": [
+      421.3157043457031,
+      171.93922424316406,
+      401.87481689453125
+    ],
+    "contract_sha256": "3354c46bc921ffd5fedb73cf93a146643ca1df33c41d808935a5c00d3a709f42"
+  },
+  "scales": {
+    "5000": {
+      "n_runs": 5,
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "runs": [
+        {
+          "n_parcels": 5000,
+          "seed": 42,
+          "n_impacts": 259,
+          "first_hit_parcels": 158,
+          "first_hit_rate": 0.0316,
+          "first_hit_mass_fraction": 0.031599999999999996,
+          "target_mass_kg": 1.483366735368798e-06,
+          "Vp_mass_weighted": 38.97684406936943,
+          "angle_mass_weighted": 22.87705785018858,
+          "hit_faces": 231,
+          "direct_coverage": 0.0010548523206751054,
+          "erosion_ess": 32.87975842149056,
+          "max_parcel_contribution_kg": 1.2751087534114287e-07,
+          "max_parcel_fraction": 0.08596045191431614,
+          "top5_fraction": 0.29575593350538454,
+          "top10_fraction": 0.4659932943589414
+        },
+        {
+          "n_parcels": 5000,
+          "seed": 141421,
+          "n_impacts": 335,
+          "first_hit_parcels": 202,
+          "first_hit_rate": 0.0404,
+          "first_hit_mass_fraction": 0.04039999999999999,
+          "target_mass_kg": 2.379168424442546e-06,
+          "Vp_mass_weighted": 37.55436094560398,
+          "angle_mass_weighted": 24.655279427808374,
+          "hit_faces": 297,
+          "direct_coverage": 0.00135623869801085,
+          "erosion_ess": 51.05881971933789,
+          "max_parcel_contribution_kg": 1.3574223300233773e-07,
+          "max_parcel_fraction": 0.05705448672120382,
+          "top5_fraction": 0.21135535484454218,
+          "top10_fraction": 0.3547644018217047
+        },
+        {
+          "n_parcels": 5000,
+          "seed": 161803,
+          "n_impacts": 310,
+          "first_hit_parcels": 192,
+          "first_hit_rate": 0.0384,
+          "first_hit_mass_fraction": 0.0384,
+          "target_mass_kg": 2.1079646680061725e-06,
+          "Vp_mass_weighted": 37.47085734115316,
+          "angle_mass_weighted": 24.061867665781318,
+          "hit_faces": 283,
+          "direct_coverage": 0.0012923082543335707,
+          "erosion_ess": 49.50855839721269,
+          "max_parcel_contribution_kg": 1.4852586028014771e-07,
+          "max_parcel_fraction": 0.07045936861232609,
+          "top5_fraction": 0.2137089295557243,
+          "top10_fraction": 0.3494185224811951
+        },
+        {
+          "n_parcels": 5000,
+          "seed": 271828,
+          "n_impacts": 267,
+          "first_hit_parcels": 170,
+          "first_hit_rate": 0.034,
+          "first_hit_mass_fraction": 0.033999999999999996,
+          "target_mass_kg": 2.445690356689912e-06,
+          "Vp_mass_weighted": 40.17440776540536,
+          "angle_mass_weighted": 25.295112006093383,
+          "hit_faces": 239,
+          "direct_coverage": 0.001091384002776408,
+          "erosion_ess": 24.013632981834565,
+          "max_parcel_contribution_kg": 2.554838663027082e-07,
+          "max_parcel_fraction": 0.10446288236541468,
+          "top5_fraction": 0.38454907407329586,
+          "top10_fraction": 0.5374987586783231
+        },
+        {
+          "n_parcels": 5000,
+          "seed": 314159,
+          "n_impacts": 294,
+          "first_hit_parcels": 180,
+          "first_hit_rate": 0.036,
+          "first_hit_mass_fraction": 0.036,
+          "target_mass_kg": 2.5317756077944625e-06,
+          "Vp_mass_weighted": 38.43155257669809,
+          "angle_mass_weighted": 25.688347732327667,
+          "hit_faces": 270,
+          "direct_coverage": 0.0012329442709189545,
+          "erosion_ess": 32.52299125787088,
+          "max_parcel_contribution_kg": 2.477255451638297e-07,
+          "max_parcel_fraction": 0.09784656481588594,
+          "top5_fraction": 0.3021251750706148,
+          "top10_fraction": 0.44400336500871823
+        }
+      ],
+      "pooled_erosion_ess": 167.93718680418095,
+      "pooled_max_parcel_fraction": 0.023336195157127065,
+      "pairwise": [
+        {
+          "seeds": [
+            42,
+            141421
+          ],
+          "spearman": 0.6857699644877191,
+          "hotspot_iou": 0.6
+        },
+        {
+          "seeds": [
+            42,
+            161803
+          ],
+          "spearman": 0.7272149029878672,
+          "hotspot_iou": 0.6
+        },
+        {
+          "seeds": [
+            42,
+            271828
+          ],
+          "spearman": 0.7251047812689431,
+          "hotspot_iou": 0.3333333333333333
+        },
+        {
+          "seeds": [
+            42,
+            314159
+          ],
+          "spearman": 0.7877367453601927,
+          "hotspot_iou": 0.6
+        },
+        {
+          "seeds": [
+            141421,
+            161803
+          ],
+          "spearman": 0.5968286099865048,
+          "hotspot_iou": 0.6
+        },
+        {
+          "seeds": [
+            141421,
+            271828
+          ],
+          "spearman": 0.6136454017062207,
+          "hotspot_iou": 0.3333333333333333
+        },
+        {
+          "seeds": [
+            141421,
+            314159
+          ],
+          "spearman": 0.7018027025167958,
+          "hotspot_iou": 0.6
+        },
+        {
+          "seeds": [
+            161803,
+            271828
+          ],
+          "spearman": 0.6732210583181665,
+          "hotspot_iou": 0.6
+        },
+        {
+          "seeds": [
+            161803,
+            314159
+          ],
+          "spearman": 0.7184321165674505,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            271828,
+            314159
+          ],
+          "spearman": 0.7288988984485818,
+          "hotspot_iou": 0.5
+        }
+      ],
+      "spearman_median": 0.7101174095421232,
+      "spearman_p10": 0.6119637225342491,
+      "hotspot_iou_median": 0.6,
+      "confidence_intervals": {
+        "first_hit_mass_fraction": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 0.036079999999999994,
+          "low": 0.03183999999999999,
+          "high": 0.04019999999999999,
+          "relative_half_width": 0.11585365853658537
+        },
+        "target_mass_kg": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 2.189593158460378e-06,
+          "low": 1.5458265286325354e-06,
+          "high": 2.5231670826840075e-06,
+          "relative_half_width": 0.22317857321464535
+        },
+        "Vp_mass_weighted": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 38.521604539646006,
+          "low": 37.47920770159824,
+          "high": 40.05465139580177,
+          "relative_half_width": 0.03342856203656977
+        },
+        "angle_mass_weighted": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 24.515532936439868,
+          "low": 22.995538831747854,
+          "high": 25.64902415970424,
+          "relative_half_width": 0.054118450837596255
+        }
+      },
+      "gates": {
+        "minimum_seeds": true,
+        "pooled_erosion_ess": false,
+        "max_parcel_fraction": true,
+        "ci_relative_half_width": false,
+        "spearman_median": false,
+        "spearman_p10": false,
+        "hotspot_iou_median": false
+      },
+      "passed": false
+    },
+    "10000": {
+      "n_runs": 5,
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "runs": [
+        {
+          "n_parcels": 10000,
+          "seed": 42,
+          "n_impacts": 512,
+          "first_hit_parcels": 336,
+          "first_hit_rate": 0.0336,
+          "first_hit_mass_fraction": 0.0336,
+          "target_mass_kg": 1.8301137930003808e-06,
+          "Vp_mass_weighted": 38.742569636203555,
+          "angle_mass_weighted": 24.03891004578456,
+          "hit_faces": 448,
+          "direct_coverage": 0.002045774197672932,
+          "erosion_ess": 49.86019722493519,
+          "max_parcel_contribution_kg": 1.3266384313614344e-07,
+          "max_parcel_fraction": 0.07248939583581103,
+          "top5_fraction": 0.23660031533518525,
+          "top10_fraction": 0.3613384504832679
+        },
+        {
+          "n_parcels": 10000,
+          "seed": 141421,
+          "n_impacts": 553,
+          "first_hit_parcels": 350,
+          "first_hit_rate": 0.035,
+          "first_hit_mass_fraction": 0.034999999999999996,
+          "target_mass_kg": 2.509361799456888e-06,
+          "Vp_mass_weighted": 40.55621343459733,
+          "angle_mass_weighted": 23.020471354043632,
+          "hit_faces": 488,
+          "direct_coverage": 0.0022284326081794437,
+          "erosion_ess": 68.28379750712683,
+          "max_parcel_contribution_kg": 1.3921760818466626e-07,
+          "max_parcel_fraction": 0.05547928887586354,
+          "top5_fraction": 0.18275477187818764,
+          "top10_fraction": 0.29066749307934964
+        },
+        {
+          "n_parcels": 10000,
+          "seed": 161803,
+          "n_impacts": 586,
+          "first_hit_parcels": 375,
+          "first_hit_rate": 0.0375,
+          "first_hit_mass_fraction": 0.0375,
+          "target_mass_kg": 2.2458136782443678e-06,
+          "Vp_mass_weighted": 38.01947191080315,
+          "angle_mass_weighted": 25.03093807855881,
+          "hit_faces": 496,
+          "direct_coverage": 0.002264964290280746,
+          "erosion_ess": 88.75421590457374,
+          "max_parcel_contribution_kg": 6.858105556122412e-08,
+          "max_parcel_fraction": 0.0305372864533546,
+          "top5_fraction": 0.13935949023065108,
+          "top10_fraction": 0.24376460662664462
+        },
+        {
+          "n_parcels": 10000,
+          "seed": 271828,
+          "n_impacts": 586,
+          "first_hit_parcels": 369,
+          "first_hit_rate": 0.0369,
+          "first_hit_mass_fraction": 0.036899999999999995,
+          "target_mass_kg": 2.2185150918570057e-06,
+          "Vp_mass_weighted": 37.80002031361729,
+          "angle_mass_weighted": 23.792140679312308,
+          "hit_faces": 502,
+          "direct_coverage": 0.002292363051856723,
+          "erosion_ess": 61.14806162764136,
+          "max_parcel_contribution_kg": 1.3852677637832379e-07,
+          "max_parcel_fraction": 0.06244121449755813,
+          "top5_fraction": 0.20405920078812265,
+          "top10_fraction": 0.31003183721590033
+        },
+        {
+          "n_parcels": 10000,
+          "seed": 314159,
+          "n_impacts": 556,
+          "first_hit_parcels": 331,
+          "first_hit_rate": 0.0331,
+          "first_hit_mass_fraction": 0.03309999999999999,
+          "target_mass_kg": 1.9443006392356586e-06,
+          "Vp_mass_weighted": 38.8696519411835,
+          "angle_mass_weighted": 21.67691709043688,
+          "hit_faces": 493,
+          "direct_coverage": 0.002251264909492758,
+          "erosion_ess": 61.00865170770241,
+          "max_parcel_contribution_kg": 9.099267607792681e-08,
+          "max_parcel_fraction": 0.04679969462766115,
+          "top5_fraction": 0.1967529747542382,
+          "top10_fraction": 0.31629749803631535
+        }
+      ],
+      "pooled_erosion_ess": 322.0822208100731,
+      "pooled_max_parcel_fraction": 0.012952758478022417,
+      "pairwise": [
+        {
+          "seeds": [
+            42,
+            141421
+          ],
+          "spearman": 0.5892951702157785,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            42,
+            161803
+          ],
+          "spearman": 0.46207205512736366,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            42,
+            271828
+          ],
+          "spearman": 0.4275447811895012,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            42,
+            314159
+          ],
+          "spearman": 0.627045375375452,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            141421,
+            161803
+          ],
+          "spearman": 0.49209790543746235,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            141421,
+            271828
+          ],
+          "spearman": 0.48262902422503595,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            141421,
+            314159
+          ],
+          "spearman": 0.703259214878501,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            161803,
+            271828
+          ],
+          "spearman": 0.5670682254400714,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            161803,
+            314159
+          ],
+          "spearman": 0.5424176244583244,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            271828,
+            314159
+          ],
+          "spearman": 0.5979640175754231,
+          "hotspot_iou": 1.0
+        }
+      ],
+      "spearman_median": 0.554742924949198,
+      "spearman_p10": 0.4586193277335774,
+      "hotspot_iou_median": 1.0,
+      "confidence_intervals": {
+        "first_hit_mass_fraction": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 0.035219999999999994,
+          "low": 0.03314999999999999,
+          "high": 0.03744,
+          "relative_half_width": 0.06090289608177186
+        },
+        "target_mass_kg": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 2.14962100035886e-06,
+          "low": 1.8415324776239086e-06,
+          "high": 2.4830069873356358e-06,
+          "relative_half_width": 0.14920642048171254
+        },
+        "Vp_mass_weighted": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 38.79758544728096,
+          "low": 37.82196547333587,
+          "high": 40.38755728525595,
+          "relative_half_width": 0.033063807738838075
+        },
+        "angle_mass_weighted": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 23.51187544962724,
+          "low": 21.811272516797555,
+          "high": 24.931735275281383,
+          "relative_half_width": 0.06635929075860472
+        }
+      },
+      "gates": {
+        "minimum_seeds": true,
+        "pooled_erosion_ess": true,
+        "max_parcel_fraction": true,
+        "ci_relative_half_width": false,
+        "spearman_median": false,
+        "spearman_p10": false,
+        "hotspot_iou_median": true
+      },
+      "passed": false
+    },
+    "20000": {
+      "n_runs": 5,
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "runs": [
+        {
+          "n_parcels": 20000,
+          "seed": 42,
+          "n_impacts": 1017,
+          "first_hit_parcels": 644,
+          "first_hit_rate": 0.0322,
+          "first_hit_mass_fraction": 0.0322,
+          "target_mass_kg": 2.027563561978551e-06,
+          "Vp_mass_weighted": 39.645052543498075,
+          "angle_mass_weighted": 23.375368430226423,
+          "hit_faces": 810,
+          "direct_coverage": 0.0036988328127568635,
+          "erosion_ess": 128.00782406596042,
+          "max_parcel_contribution_kg": 5.38343171480538e-08,
+          "max_parcel_fraction": 0.026551235219189437,
+          "top5_fraction": 0.1009957996623561,
+          "top10_fraction": 0.17648813473252012
+        },
+        {
+          "n_parcels": 20000,
+          "seed": 141421,
+          "n_impacts": 1034,
+          "first_hit_parcels": 661,
+          "first_hit_rate": 0.03305,
+          "first_hit_mass_fraction": 0.03305,
+          "target_mass_kg": 1.6877509386196235e-06,
+          "Vp_mass_weighted": 37.368276700685875,
+          "angle_mass_weighted": 24.23856598562739,
+          "hit_faces": 825,
+          "direct_coverage": 0.0037673297166968055,
+          "erosion_ess": 147.3594965183367,
+          "max_parcel_contribution_kg": 5.714272911677757e-08,
+          "max_parcel_fraction": 0.033857323196532,
+          "top5_fraction": 0.10932525816288667,
+          "top10_fraction": 0.17072009894946272
+        },
+        {
+          "n_parcels": 20000,
+          "seed": 161803,
+          "n_impacts": 1044,
+          "first_hit_parcels": 649,
+          "first_hit_rate": 0.03245,
+          "first_hit_mass_fraction": 0.03245,
+          "target_mass_kg": 1.6758008537183516e-06,
+          "Vp_mass_weighted": 37.71675235872027,
+          "angle_mass_weighted": 23.292630369342806,
+          "hit_faces": 833,
+          "direct_coverage": 0.0038038613987981078,
+          "erosion_ess": 132.949684747654,
+          "max_parcel_contribution_kg": 5.649800101007682e-08,
+          "max_parcel_fraction": 0.033714030502804276,
+          "top5_fraction": 0.1125311490435835,
+          "top10_fraction": 0.18196565856035188
+        },
+        {
+          "n_parcels": 20000,
+          "seed": 271828,
+          "n_impacts": 1114,
+          "first_hit_parcels": 699,
+          "first_hit_rate": 0.03495,
+          "first_hit_mass_fraction": 0.034949999999999995,
+          "target_mass_kg": 2.0559194064366306e-06,
+          "Vp_mass_weighted": 38.52147077108692,
+          "angle_mass_weighted": 24.538393128560745,
+          "hit_faces": 863,
+          "direct_coverage": 0.003940855206677992,
+          "erosion_ess": 169.02157691055353,
+          "max_parcel_contribution_kg": 3.809251052896975e-08,
+          "max_parcel_fraction": 0.01852821190390003,
+          "top5_fraction": 0.07738401313748039,
+          "top10_fraction": 0.13667703837651274
+        },
+        {
+          "n_parcels": 20000,
+          "seed": 314159,
+          "n_impacts": 1146,
+          "first_hit_parcels": 710,
+          "first_hit_rate": 0.0355,
+          "first_hit_mass_fraction": 0.03549999999999999,
+          "target_mass_kg": 2.1571004500445016e-06,
+          "Vp_mass_weighted": 37.80842759377003,
+          "angle_mass_weighted": 25.07541084106468,
+          "hit_faces": 854,
+          "direct_coverage": 0.0038997570643140266,
+          "erosion_ess": 172.23922035303514,
+          "max_parcel_contribution_kg": 4.977432239662816e-08,
+          "max_parcel_fraction": 0.023074642792958927,
+          "top5_fraction": 0.08391563101057528,
+          "top10_fraction": 0.14536638660737342
+        }
+      ],
+      "pooled_erosion_ess": 740.335060289952,
+      "pooled_max_parcel_fraction": 0.005949804731250932,
+      "pairwise": [
+        {
+          "seeds": [
+            42,
+            141421
+          ],
+          "spearman": 0.4090511915377327,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            42,
+            161803
+          ],
+          "spearman": 0.4123032216125602,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            42,
+            271828
+          ],
+          "spearman": 0.45031069010029867,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            42,
+            314159
+          ],
+          "spearman": 0.35120964719771697,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            141421,
+            161803
+          ],
+          "spearman": 0.5459580003460371,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            141421,
+            271828
+          ],
+          "spearman": 0.6365511240691396,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            141421,
+            314159
+          ],
+          "spearman": 0.6216455709962273,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            161803,
+            271828
+          ],
+          "spearman": 0.5680915597599322,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            161803,
+            314159
+          ],
+          "spearman": 0.48657666506418196,
+          "hotspot_iou": 1.0
+        },
+        {
+          "seeds": [
+            271828,
+            314159
+          ],
+          "spearman": 0.607940789350061,
+          "hotspot_iou": 1.0
+        }
+      ],
+      "spearman_median": 0.5162673327051095,
+      "spearman_p10": 0.40326703710373113,
+      "hotspot_iou_median": 1.0,
+      "confidence_intervals": {
+        "first_hit_mass_fraction": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 0.03362999999999999,
+          "low": 0.032225,
+          "high": 0.03544499999999999,
+          "relative_half_width": 0.04787392209336893
+        },
+        "target_mass_kg": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 1.920827042159532e-06,
+          "low": 1.6769958622084788e-06,
+          "high": 2.1469823456837146e-06,
+          "relative_half_width": 0.12233961547803993
+        },
+        "Vp_mass_weighted": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 38.211995993552236,
+          "low": 37.403124266489314,
+          "high": 39.53269436625696,
+          "relative_half_width": 0.027865203640853833
+        },
+        "angle_mass_weighted": {
+          "method": "empirical_central_95pct_seed_interval",
+          "interpretation": "descriptive seed spread; not a confidence interval for the population mean",
+          "sample_count": 5,
+          "mean": 24.10407375096441,
+          "low": 23.300904175431167,
+          "high": 25.021709069814285,
+          "relative_half_width": 0.03569531258827708
+        }
+      },
+      "gates": {
+        "minimum_seeds": true,
+        "pooled_erosion_ess": true,
+        "max_parcel_fraction": true,
+        "ci_relative_half_width": false,
+        "spearman_median": false,
+        "spearman_p10": false,
+        "hotspot_iou_median": true
+      },
+      "passed": false
+    }
+  },
+  "scale_comparisons": [
+    {
+      "scales": [
+        5000,
+        10000
+      ],
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "target_mass_relative_change_max": 0.23204069379220313,
+      "spatial_js_divergence_max": 0.10853714061891653,
+      "gates": {
+        "target_mass_relative_change": false,
+        "spatial_js_divergence": false
+      },
+      "passed": false
+    },
+    {
+      "scales": [
+        10000,
+        20000
+      ],
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "target_mass_relative_change_max": 0.32741825471922353,
+      "spatial_js_divergence_max": 0.06010953198789765,
+      "gates": {
+        "target_mass_relative_change": false,
+        "spatial_js_divergence": false
+      },
+      "passed": false
+    }
+  ],
+  "decision_scale": 20000,
+  "preregistered_max_scale": 20000,
+  "decision_failures": [
+    "n=20000:ci_relative_half_width",
+    "n=20000:spearman_median",
+    "n=20000:spearman_p10",
+    "scale=10000->20000:target_mass_relative_change",
+    "scale=10000->20000:spatial_js_divergence"
+  ],
+  "failures": [
+    "n=5000:pooled_erosion_ess",
+    "n=5000:ci_relative_half_width",
+    "n=5000:spearman_median",
+    "n=5000:spearman_p10",
+    "n=5000:hotspot_iou_median",
+    "n=10000:ci_relative_half_width",
+    "n=10000:spearman_median",
+    "n=10000:spearman_p10",
+    "n=20000:ci_relative_half_width",
+    "n=20000:spearman_median",
+    "n=20000:spearman_p10",
+    "scale=5000->10000:target_mass_relative_change",
+    "scale=5000->10000:spatial_js_divergence",
+    "scale=10000->20000:target_mass_relative_change",
+    "scale=10000->20000:spatial_js_divergence"
+  ],
+  "n_runs": 15,
+  "artifact_inputs": [
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\ab23c9351d214592884eb1ebc5f214af3da37507ee9bf408a125c5ddae6e53fc\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\ab23c9351d214592884eb1ebc5f214af3da37507ee9bf408a125c5ddae6e53fc\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\ab23c9351d214592884eb1ebc5f214af3da37507ee9bf408a125c5ddae6e53fc\\particle_run_manifest.json",
+      "npz_sha256": "eefe240697668a972966f82c23a6a9ff104d5a3fe15a43b0acd3a39defa25520",
+      "summary_sha256": "14d99f878787b45514e3b8376b6889f85b6fd886c16a706b61799b37da2713b4",
+      "manifest_sha256": "62fcf751a71daa37e7cbeb25024bd21af3e53436370b62a0da27e95dfaedcc5d"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\78363e7589403ac502e651b57cb5a8eddb37b400fe12e838e65833edd29a3d1b\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\78363e7589403ac502e651b57cb5a8eddb37b400fe12e838e65833edd29a3d1b\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\78363e7589403ac502e651b57cb5a8eddb37b400fe12e838e65833edd29a3d1b\\particle_run_manifest.json",
+      "npz_sha256": "23e8519db524ad56284513ed7801dd9584975081deb4fc0cdf74ec48f0996c2c",
+      "summary_sha256": "203f84035d401c0c6387f180c0506997d32183b572343988ae0e72cf1e8b0947",
+      "manifest_sha256": "b38eb12f94e2c3bf91f4310d7447b9d354f99a76330fc75c270403dda4618e9e"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\456cdde22b3216fe2b14edd36b6a94f28e50bdbe10e6c7c44fedc33f02422ef7\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\456cdde22b3216fe2b14edd36b6a94f28e50bdbe10e6c7c44fedc33f02422ef7\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\456cdde22b3216fe2b14edd36b6a94f28e50bdbe10e6c7c44fedc33f02422ef7\\particle_run_manifest.json",
+      "npz_sha256": "e1262a482890dd205600db2073036fdc24e1f29f6c12711274632057f7e04d26",
+      "summary_sha256": "f9baba689809241a555c00ef0abd2e9d76ec5e6d0f3ce522e52807f7d9f672f1",
+      "manifest_sha256": "f3cd046bb08fd454b522f702a6f29645cf8a4ff5ca44e76ffad386bbe23c6cbd"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\48c52056225ccb4e9ba8f16e8f180e27ea9ef529c7306645588bef30517dcf41\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\48c52056225ccb4e9ba8f16e8f180e27ea9ef529c7306645588bef30517dcf41\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\48c52056225ccb4e9ba8f16e8f180e27ea9ef529c7306645588bef30517dcf41\\particle_run_manifest.json",
+      "npz_sha256": "e59f0fe3d71c8120c393a6059a6a3349769de9d803721755ba031d627ed655ff",
+      "summary_sha256": "cc05db8ccedfb44878e971c900bf3ff15f3bed4f5e827bc0af2ac81601d76e19",
+      "manifest_sha256": "e9b69efc95b8525334bad6fa39e512bcbd40ccec8889c5425df227fd512fed69"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\da9bddf96dba5a6347dfabebf3803f0c5b589b1f3a6790737bf71a361171b6a0\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\da9bddf96dba5a6347dfabebf3803f0c5b589b1f3a6790737bf71a361171b6a0\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\da9bddf96dba5a6347dfabebf3803f0c5b589b1f3a6790737bf71a361171b6a0\\particle_run_manifest.json",
+      "npz_sha256": "75cf80bf97855a458d7be6d1cf715bbbffc96d6bcd064b5074ea9c7723bb4759",
+      "summary_sha256": "42266d2ad59f33f7028f112b964828bae316d75977b206f2c6a171968b14ba42",
+      "manifest_sha256": "cd126a6d1fed8563c7153172c35602d8f740cd06dc75632d084a2fd54020e491"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\92cef092535ff3890fe042ee0ede0d7a9b0e0ec52195a5a69180f012753e85c7\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\92cef092535ff3890fe042ee0ede0d7a9b0e0ec52195a5a69180f012753e85c7\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\92cef092535ff3890fe042ee0ede0d7a9b0e0ec52195a5a69180f012753e85c7\\particle_run_manifest.json",
+      "npz_sha256": "07d662b937ab5d53854de5388a63cf0f4585e84fe36cde71dd6d00a58941940e",
+      "summary_sha256": "8543937df6a9fe641070d3c92f0fc0db0e63c768f7051bf1d24b47362d953ae8",
+      "manifest_sha256": "73d3f6b38378518e0d5eb89b228b9d12ae48a3c8b2833985c60d18e90c848467"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\2884d28ba0f66d6dd6fab840b533ca2b63f385dbaea238557d0895760f94407e\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\2884d28ba0f66d6dd6fab840b533ca2b63f385dbaea238557d0895760f94407e\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\2884d28ba0f66d6dd6fab840b533ca2b63f385dbaea238557d0895760f94407e\\particle_run_manifest.json",
+      "npz_sha256": "d7874164832bc5cdc510123fdfb4ec2a5ad2a5581d39c5211ec7c40bdbfc2a77",
+      "summary_sha256": "80e485576dc9fe04207f7ae51fd70099da3f784767ba5473b44999ab76d4bc4c",
+      "manifest_sha256": "84f8372e7b5f6b109e831ede6ef633bc993f3c1dfc08110ef310e41fde094acc"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\8c84b400f9b2ecb14d4e3fed98eb15b58cb1f2df438d38717523ebcb51b29b9d\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\8c84b400f9b2ecb14d4e3fed98eb15b58cb1f2df438d38717523ebcb51b29b9d\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\8c84b400f9b2ecb14d4e3fed98eb15b58cb1f2df438d38717523ebcb51b29b9d\\particle_run_manifest.json",
+      "npz_sha256": "cd6bb83ece12d1921f0657ec8f8a2a8370c5324f96f7d9a18d44056c530c345c",
+      "summary_sha256": "7f11ea79380fffa64d639d310933bf7cc38d4075b07228a9515a79e94ae6e20b",
+      "manifest_sha256": "518b55850725da444a322fbdd59fcc6e953c9350221773ae9308e8d941a5504e"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\adb12f220f10843940acc9df403c7c78323c17e691c7f11728c54c98f47d2abd\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\adb12f220f10843940acc9df403c7c78323c17e691c7f11728c54c98f47d2abd\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\adb12f220f10843940acc9df403c7c78323c17e691c7f11728c54c98f47d2abd\\particle_run_manifest.json",
+      "npz_sha256": "ec0e1c6e38e17ec2f51971b6e2d81e151a676e7a944f7798dc5104c40c9dcac3",
+      "summary_sha256": "e4737d0b8b325faea79bee1fbaf5dca2dd8971c65afd12c2a8540d4427989c4d",
+      "manifest_sha256": "c3b58e770aac9cb1e9652fa167e773f4050c52678a97347c3f18d108857a1488"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e\\particle_run_manifest.json",
+      "npz_sha256": "2fd47c72ac85e69806887fb22434a7e514efc17a39b1f170ca7209fe3da01447",
+      "summary_sha256": "e641aabfe47f37ffce9eebe22cdbe9421b88aae22a86cc6d4dbba53266b9b38b",
+      "manifest_sha256": "9ab4c5ccbbc2c65c39991ecc39ffc726640a7b18e76908245cacc81e954ef511"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6\\particle_run_manifest.json",
+      "npz_sha256": "10ea9394e276eeacdbdfe3c7a32ce692a124b7ba39d3c87da385097c3b064abf",
+      "summary_sha256": "0f73daae54944410875653790552bb1877838fd692962368b114edae689320bd",
+      "manifest_sha256": "4c8dcf44192e75dc4c07459ced60774fcc76473942d763dad60eaf7a0edb3388"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc\\particle_run_manifest.json",
+      "npz_sha256": "4bcfcd4d7376f639c908b88dbfe15e2f7108b6bafc7b08b5ffb83dbb1341fd49",
+      "summary_sha256": "7d11bca88c8db8721425cf277c1efc0190ac07bf070420ebe09b9ca47dd9422b",
+      "manifest_sha256": "8713fcb425d8260b78a01e0336d81fbf1aaee520dbfe6d252d42e2a251048d57"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b\\particle_run_manifest.json",
+      "npz_sha256": "2e10b3f257e459297aa3fe8fce66758acbb908762c218ec9c071114bd0333db6",
+      "summary_sha256": "3ecf4d9deb2b734cad18acf125c2c917b05918563f0e17f7f041402515c58227",
+      "manifest_sha256": "2f2e6ef99af703c526515687adfec5f9107c2bcfbfcf1e446ed16edd460fb2e1"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a\\particle_run_manifest.json",
+      "npz_sha256": "213c83dc76ec9313997ddce0f9ef2a0a9bbfadb5948be06ba95c01661b00d8a4",
+      "summary_sha256": "f40a3882d74815a337eeaaa25ecfcedc58cb8a490559f1c5999f1c8a037e8493",
+      "manifest_sha256": "c17361b36ed5ac1017b650ab7c9c98b9d204596dc52b09eed6196cd82cae720f"
+    },
+    {
+      "npz_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79\\particle_hits.npz",
+      "summary_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79\\summary.json",
+      "manifest_path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79\\particle_run_manifest.json",
+      "npz_sha256": "21e9d755ff93bb2028f4b74407254dc653d1cd9ce2c8e9c0d83015e2f862bcc5",
+      "summary_sha256": "1ba741bec1521b64b630a2f7e0180b3fe07412b86c6f1ada3e840d9fe47e9f86",
+      "manifest_sha256": "482026898f161d5cc8b7e0b45026a64d3b5122b683936846a6112e71b61596c8"
+    }
+  ],
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "provenance_note": "particle statistical convergence only; not physical erosion accuracy",
+  "report_sha256": "6b0f20794af7ec6ed84ee133c186e29af528f8896e5eb46d8286de790356c885"
+}

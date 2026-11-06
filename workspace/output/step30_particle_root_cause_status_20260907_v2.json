@@ -1,0 +1,129 @@
+{
+  "version": "step30-particle-root-cause-status-v2",
+  "created_date": "2026-09-07",
+  "status": "root_cause_partially_isolated",
+  "execution_policy": {
+    "local_numerical_execution": false,
+    "remote_target": "dcu_cpu",
+    "work_drive": "H:"
+  },
+  "evidence_sources": {
+    "data_audit": {
+      "local_copy": "workspace/output/remote_returns/particle_data_audit_20260908_v1/step30_particle_data_audit_20260908_v1.json",
+      "remote_sha256": "4ebe3bd4b2910f474edd0804e91e9666e69298f6e5690a0ac839e5aeec815c66",
+      "local_sha256_verified_against_remote": true,
+      "source_scope": "35 immutable runs; per-run artifact and summary consistency plus configuration grouping"
+    },
+    "deterministic_replay": {
+      "job_id": "step30_deterministic_replay_20260907_v2",
+      "remote_report_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_deterministic_replay/step30_deterministic_replay_20260907_v2/replay_report.json",
+      "report_retrieval_status": "pending_ssh_recovery",
+      "remote_stdout_observed_status": "passed",
+      "scope": "two isolated replicas, current tracker, seed 57721, 1000 parcels"
+    }
+  },
+  "confirmed_findings": [
+    {
+      "id": "F1_individual_artifact_integrity",
+      "status": "passed",
+      "detail": "All 35 audited immutable runs passed required-file, manifest-hash, summary/NPZ length, impact-mass, target-mass, strict fallback, and strict hit-ratio checks."
+    },
+    {
+      "id": "F2_historical_root_is_mixed",
+      "status": "blocking_for_cross_run_comparison",
+      "detail": "The run root contains four separate configuration/implementation groups. The root-level audit is failed by design because those groups must not be pooled."
+    },
+    {
+      "id": "F3_clean_historical_group",
+      "status": "eligible_for_replay_only",
+      "detail": "The five-run 20k group with seeds 57721, 104729, 130363, 161027, 196613 has zero individual audit errors and one shared physical-config signature.",
+      "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c",
+      "historical_implementation_hashes": {
+        "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+        "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+        "particle_tracking": "b58d2d3eb2b6d2dbf42f5fc19f6f4778dbc41ae0c77857b326bc15197fd372d5"
+      }
+    },
+    {
+      "id": "F4_current_code_determinism",
+      "status": "passed_at_smoke_scale",
+      "detail": "Two independent remote replicas with the current tracker produced byte-identical particle_hits.npz, summary.json, and particle_run_manifest.json.",
+      "seed": 57721,
+      "n_parcels": 1000,
+      "byte_equal": {
+        "particle_hits_npz": true,
+        "summary_json": true,
+        "particle_run_manifest_json": true
+      },
+      "sha256": {
+        "particle_hits_npz": "389dfb5e1fd5cf726bbddba4d34671aa31c80377071d90a81a9a89f184142dfa",
+        "summary_json": "a3300b90aa2db27e1a1bde34d42950ae133e2e41e6373b51cf29e12c11971906",
+        "particle_run_manifest_json": "3257a37281f17dd1f515c736cbed37e94322d423856a85286995f44d3a4c19ae"
+      },
+      "limitation": "This excludes nondeterminism at the tested scale; it does not prove particle spatial convergence or physical accuracy."
+    },
+    {
+      "id": "F5_sparse_support_and_performance_amplification",
+      "status": "confirmed_diagnostic",
+      "detail": "The clean five-run historical group has low effective impact support and very high collision-candidate diagnostic overhead.",
+      "metrics": {
+        "hit_parcel_rate": 0.03596,
+        "substeps_per_parcel": 2057.06528,
+        "near_miss_to_impact_ratio": 811.5183301175232
+      },
+      "interpretation": "The spatial field is supported by a small fraction of parcels, while strict collision processing spends substantial work on near-miss candidate checks. This combination can produce both high spatial variance and unacceptable runtime."
+    },
+    {
+      "id": "F6_current_tracker_version_differs_from_historical_group",
+      "status": "blocking_for_exact_historical_replay",
+      "detail": "Current DCU tracker hash is 8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3, while the clean historical group used b58d2d3eb2b6d2dbf42f5fc19f6f4778dbc41ae0c77857b326bc15197fd372d5."
+    }
+  ],
+  "root_cause_conclusion": {
+    "primary": "sparse strict physical hit support drives spatial Monte Carlo variance",
+    "secondary": "strict tracking path has large near-miss and substep runtime overhead",
+    "excluded_as_primary_at_smoke_scale": "nondeterministic random-number or parallel execution behavior",
+    "still_unresolved": [
+      "CFD-to-analytic reference spatial registration discrepancy",
+      "collision triangle/parent-face physical mapping discrepancy",
+      "whether current-code tracker version change alters hit support relative to historical groups"
+    ]
+  },
+  "next_experiments": [
+    {
+      "order": 1,
+      "experiment": "current-code performance-only collision diagnostic A/B",
+      "design": "same seed and inputs; compare strict run with exact near-miss distance diagnostic disabled or sampled, while preserving strict intersection acceptance",
+      "success_metric": "same hit arrays and summary physics fields; lower runtime and no change in accepted intersections"
+    },
+    {
+      "order": 2,
+      "experiment": "current-code fixed-seed parameter replay",
+      "design": "one factor at a time over strict_max_substep, dt, interpolation and integrator",
+      "success_metric": "trajectory/impact stability separated from runtime effect"
+    },
+    {
+      "order": 3,
+      "experiment": "CFD-to-reference registration audit",
+      "design": "independent m/mm, transform, wall-sample, normal-angle and UMean semantics audit before spatial scoring",
+      "success_metric": "nonzero matched-face mask with declared registration thresholds"
+    },
+    {
+      "order": 4,
+      "experiment": "only after 1-3: new current-code discovery/confirmation",
+      "design": "fresh artifact set, one implementation hash, pre-registered hit-support target and timeout based on remote smoke benchmark",
+      "success_metric": "active-face and declared-resolution JS <= 0.05; raw parent-face result reported separately"
+    }
+  ],
+  "gates_unchanged": {
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "particle_convergence_gate": "failed"
+  },
+  "score_change": {
+    "conservative_score": 62.4471,
+    "changed": false,
+    "reason": "Determinism and data integrity are prerequisites; spatial JS and physical registration gates remain failed or blocked."
+  }
+}

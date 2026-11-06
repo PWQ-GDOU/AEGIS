@@ -1,0 +1,123 @@
+{
+  "version": "step30-correlation-diagnostics-v1",
+  "status": "passed",
+  "accuracy_gate": false,
+  "inputs": {
+    "hits": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c3d50c39a0df680d9c79b3b7aaa73712f54b7588b5d53b94489c45e7b4d81aab\\particle_hits.npz",
+    "hits_sha256": "b580beaa43644861931ae61b96135586ba19fe617d218920411d45a868e96f9a",
+    "summary": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c3d50c39a0df680d9c79b3b7aaa73712f54b7588b5d53b94489c45e7b4d81aab\\summary.json",
+    "summary_sha256": "7887e6d2fbab995a272f5498670ff025fde6bbc6101d997a22f2f54448e5532c",
+    "n_faces": 218988,
+    "n_impacts": 32
+  },
+  "counts": {
+    "exposed_faces": 32,
+    "zero_faces": 218956,
+    "exposed_fraction": 0.00014612672840520942
+  },
+  "formula_self_consistency": {
+    "n": 32,
+    "mask_fraction": 1.0,
+    "spearman_rho": 1.0,
+    "spearman_p": 0.0,
+    "kendall_tau": 1.0,
+    "kendall_p": 7.600781509709488e-36,
+    "pearson_r": 1.0,
+    "pearson_p": 0.0,
+    "nrmse_log1p": 0.0,
+    "top10_iou": 1.0,
+    "bootstrap_ci95": [
+      0.9999999999999998,
+      1.0
+    ]
+  },
+  "comparisons": [
+    {
+      "comparison": "event_stored_vs_recalculated",
+      "n": 32,
+      "mask_fraction": 1.0,
+      "spearman_rho": 1.0,
+      "spearman_p": 0.0,
+      "kendall_tau": 1.0,
+      "kendall_p": 7.600781509709488e-36,
+      "pearson_r": 1.0,
+      "pearson_p": 0.0,
+      "nrmse_log1p": 0.0,
+      "top10_iou": 1.0,
+      "bootstrap_ci95": [
+        0.9999999999999998,
+        1.0
+      ]
+    },
+    {
+      "comparison": "dynamic_face_vs_stored_dynamic_face",
+      "n": 218988,
+      "mask_fraction": 1.0,
+      "spearman_rho": 1.0,
+      "spearman_p": 0.0,
+      "kendall_tau": 0.9999999999999998,
+      "kendall_p": 0.0,
+      "pearson_r": 0.9999999999999936,
+      "pearson_p": 0.0,
+      "nrmse_log1p": 3.2336550252340594e-08,
+      "top10_iou": 1.0,
+      "bootstrap_ci95": [
+        0.9999999999999998,
+        1.0
+      ]
+    },
+    {
+      "comparison": "dynamic_face_vs_static_analytic_all_faces",
+      "n": 218988,
+      "mask_fraction": 1.0,
+      "spearman_rho": 0.008609069025842981,
+      "spearman_p": 5.607067366166285e-05,
+      "kendall_tau": 0.007029002759588109,
+      "kendall_p": 5.61288027148696e-05,
+      "pearson_r": 0.0009103111737483866,
+      "pearson_p": 0.670116391503534,
+      "nrmse_log1p": 1.235789646753902,
+      "top10_iou": 0.10006941019599247,
+      "bootstrap_ci95": [
+        0.004573830599834478,
+        0.012678913049545186
+      ]
+    },
+    {
+      "comparison": "dynamic_face_vs_static_analytic_exposed_only",
+      "n": 32,
+      "mask_fraction": 0.00014612672840520942,
+      "spearman_rho": -0.14662756598240467,
+      "spearman_p": 0.4232518408040482,
+      "kendall_tau": -0.15725806451612906,
+      "kendall_p": 0.21365159966146846,
+      "pearson_r": -0.28840983904419165,
+      "pearson_p": 0.10941913496219685,
+      "nrmse_log1p": 3.23597605481946,
+      "top10_iou": 0.0,
+      "bootstrap_ci95": [
+        -0.5935717695358311,
+        0.2638432371016636
+      ]
+    },
+    {
+      "comparison": "dynamic_formula_face_vs_static_analytic_all_faces",
+      "n": 218988,
+      "mask_fraction": 1.0,
+      "spearman_rho": 0.008609069025842981,
+      "spearman_p": 5.607067366166285e-05,
+      "kendall_tau": 0.007029002759588109,
+      "kendall_p": 5.61288027148696e-05,
+      "pearson_r": 0.0009103111737483866,
+      "pearson_p": 0.670116391503534,
+      "nrmse_log1p": 1.235789646753902,
+      "top10_iou": 0.10006941019599247,
+      "bootstrap_ci95": [
+        0.004573830599834478,
+        0.012678913049545186
+      ]
+    }
+  ],
+  "interpretation": "Dynamic collision quantities and static analytic fields are reported separately. Correlation diagnostics do not establish measured erosion accuracy and do not pass the official <5% gate.",
+  "report_sha256": "f6dd8957001331385742b9e00e3839cfbf3a031271087a89b1ba6fb593fc2c07"
+}

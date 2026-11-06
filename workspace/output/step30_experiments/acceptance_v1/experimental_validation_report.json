@@ -1,0 +1,193 @@
+{
+  "version": "step30-experimental-validation-report-v1",
+  "status": "passed",
+  "reports": [
+    {
+      "path": "workspace/output\\step30_experiments\\acceptance_v1\\material_synthetic\\step30-material_erosion-summary.json",
+      "status": "synthetic",
+      "experiment": "step30-material-erosion-experiment-v1",
+      "mode": "synthetic",
+      "comparison": {
+        "observed_mass_loss_mg": {
+          "hotspot": {
+            "intersection": 1,
+            "iou": 1.0,
+            "observed_count": 1,
+            "observed_threshold": 12.652406514417507,
+            "percentile": 90.0,
+            "predicted_count": 1,
+            "predicted_threshold": 12.65897852065507,
+            "union": 1
+          },
+          "independent_validation_set": false,
+          "maximum_depth_error": {
+            "absolute": 0.061698396915183196,
+            "relative": 0.0038093673184748877,
+            "signed": 0.061698396915183196
+          },
+          "metrics_sha256": "f294a6a75f335930e03612d33bde225d2f16f4a53c0eedd92672965a07d9ac48",
+          "n": 8,
+          "observed": {
+            "maximum_depth": 16.196494524420046,
+            "total": 42.24844372805307
+          },
+          "official_accuracy_gate": false,
+          "predicted": {
+            "maximum_depth": 16.25819292133523,
+            "total": 42.477448505230555
+          },
+          "provenance_note": "synthetic result; not official accuracy",
+          "quality": {
+            "gates": null,
+            "passed": true
+          },
+          "residual_distribution": {
+            "mae": 0.041317808390756564,
+            "max": 0.1138138536078559,
+            "p50": 0.021014816032444594,
+            "p95": 0.10916617301213916,
+            "rmse": 0.059021077250713386
+          },
+          "signed_bias": 0.028625597147185308,
+          "status": "synthetic",
+          "total_error": {
+            "absolute": 0.22900477717748657,
+            "relative": 0.005420431073190676,
+            "signed": 0.22900477717748657
+          },
+          "total_quantity_error": {
+            "absolute": 0.22900477717748657,
+            "relative": 0.005420431073190676,
+            "signed": 0.22900477717748657
+          },
+          "value_units": "mm",
+          "version": "step30-error-metrics-v1"
+        }
+      }
+    },
+    {
+      "path": "workspace/output\\step30_experiments\\acceptance_v1\\bucket_synthetic\\step30-bucket_model-summary.json",
+      "status": "synthetic",
+      "experiment": "step30-bucket-model-experiment-v1",
+      "mode": "synthetic",
+      "comparison": {
+        "hotspot": {
+          "intersection": 14,
+          "iou": 1.0,
+          "observed_count": 14,
+          "observed_threshold": 0.6240860181169348,
+          "percentile": 90.0,
+          "predicted_count": 14,
+          "predicted_threshold": 0.6228079613053554,
+          "union": 14
+        },
+        "independent_validation_set": false,
+        "maximum_depth_error": {
+          "absolute": 3.9641126772349544e-05,
+          "relative": 4.024747493873642e-05,
+          "signed": 3.9641126772349544e-05
+        },
+        "metrics_sha256": "56035a08a8796b7c9d99c4705f89b1f754bfa46ce89090ca1d7823b5ff9e1b51",
+        "n": 140,
+        "observed": {
+          "maximum_depth": 0.9849345041568486,
+          "total": 34.71556754283459
+        },
+        "official_accuracy_gate": false,
+        "predicted": {
+          "maximum_depth": 0.9849741452836209,
+          "total": 34.75390110946648
+        },
+        "provenance_note": "synthetic result; not official accuracy",
+        "quality": {
+          "gates": null,
+          "passed": true
+        },
+        "residual_distribution": {
+          "mae": 0.0059775944116799195,
+          "max": 0.02090430465460147,
+          "p50": 0.004788565486220538,
+          "p95": 0.015818772062002197,
+          "rmse": 0.0076800748989296185
+        },
+        "signed_bias": 0.000273811190227809,
+        "status": "synthetic",
+        "total_error": {
+          "absolute": 0.03833356663189136,
+          "relative": 0.0011042183477079158,
+          "signed": 0.03833356663189136
+        },
+        "total_quantity_error": {
+          "absolute": 0.03833356663189136,
+          "relative": 0.0011042183477079158,
+          "signed": 0.03833356663189136
+        },
+        "value_units": "mm",
+        "version": "step30-error-metrics-v1"
+      }
+    },
+    {
+      "path": "workspace/output\\step30_experiments\\acceptance_v1\\field_synthetic\\step30-field_validation-summary.json",
+      "status": "synthetic",
+      "experiment": "step30-field-validation-v1",
+      "mode": "synthetic",
+      "comparison": {
+        "hotspot": {
+          "intersection": 14,
+          "iou": 1.0,
+          "observed_count": 14,
+          "observed_threshold": 0.6240860181169348,
+          "percentile": 90.0,
+          "predicted_count": 14,
+          "predicted_threshold": 0.6228079613053554,
+          "union": 14
+        },
+        "independent_validation_set": false,
+        "maximum_depth_error": {
+          "absolute": 3.9641126772349544e-05,
+          "relative": 4.024747493873642e-05,
+          "signed": 3.9641126772349544e-05
+        },
+        "metrics_sha256": "56035a08a8796b7c9d99c4705f89b1f754bfa46ce89090ca1d7823b5ff9e1b51",
+        "n": 140,
+        "observed": {
+          "maximum_depth": 0.9849345041568486,
+          "total": 34.71556754283459
+        },
+        "official_accuracy_gate": false,
+        "predicted": {
+          "maximum_depth": 0.9849741452836209,
+          "total": 34.75390110946648
+        },
+        "provenance_note": "synthetic result; not official accuracy",
+        "quality": {
+          "gates": null,
+          "passed": true
+        },
+        "residual_distribution": {
+          "mae": 0.0059775944116799195,
+          "max": 0.02090430465460147,
+          "p50": 0.004788565486220538,
+          "p95": 0.015818772062002197,
+          "rmse": 0.0076800748989296185
+        },
+        "signed_bias": 0.000273811190227809,
+        "status": "synthetic",
+        "total_error": {
+          "absolute": 0.03833356663189136,
+          "relative": 0.0011042183477079158,
+          "signed": 0.03833356663189136
+        },
+        "total_quantity_error": {
+          "absolute": 0.03833356663189136,
+          "relative": 0.0011042183477079158,
+          "signed": 0.03833356663189136
+        },
+        "value_units": "mm",
+        "version": "step30-error-metrics-v1"
+      }
+    }
+  ],
+  "official_accuracy_gate": false,
+  "note": "Synthetic outputs validate the software path only; measured accuracy requires independent measured data and all <5% gates."
+}

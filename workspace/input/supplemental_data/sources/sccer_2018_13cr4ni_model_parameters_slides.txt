@@ -1,0 +1,131 @@
+           Towards Multiscale Numerical Simulations of
+                    Pelton Turbine Erosion
+Sebastián Leguizamón, Ebrahim Jahanbakhsh, Audrey Maertens, Siamak Alimirzazadeh, François Avellan
+              Introduction and Motivation
+           Hydraulic turbomachines                                                                                         50 cm
+           Components prone to erosion                                                                                          50 µm
+
+           Quantitative prediction tool: design and operation
+
+                                                                     C. Vessaz, Ph. D. thesis EPFL No. 6470
+
+
+
+
+     Bieudron Pelton Turbine                                         K. Winkler, Understanding hydro-abrasive erosion
+                                                                     for sustainable solutions, Hydro Vision India (2011)
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion                                                                  1/9
+           Multiscale Modeling of the Erosion Process
+         The erosion process is multiscale
+         Two existing simulation approaches
+         A third approach is possible
+
+
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion   2/92
+           Multiscale Model of Erosion
+ Microscale
+   o   Steady-state erosion ratio f(αi , Cj)
+   o   Restitution coefficients f(αi , Cj)
+
+
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion   3/92
+           Multiscale Model of Erosion
+ Microscale
+   o   Steady-state erosion ratio f(αi , Cj)
+   o   Restitution coefficients f(αi , Cj)
+
+
+
+                                Sequential
+                                coupling
+
+
+ Macroscale
+   o    Impact condition distributions
+   o    Sediment flux against the surface
+   o    Erosion distribution
+   o    Global erosion rate
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion   3/92
+            Validation Test Case: Copper Erosion
+   Erosion profile at 90° impingement                                               Erosion ratio
+
+
+
+
+           S. Leguizamón et al., A multiscale model for impact erosion simulation
+               using the finite volume particle method, Wear 392-393 (2017)
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion                                  4/92
+           Material Characterization of Stainless Steel 13Cr-4Ni
+  Split-Hopkinson bar tests
+   Several strain rates
+   Deduce true stress and strain
+   Temperature measurement
+
+
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion   5/9
+           Material Characterization: Johnson-Cook Model Fitting
+       Genetic algorithm to find optimum fit of model parameters
+       Significant experimental spread, but good results: 4.1% standard deviation
+
+
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion                   6/9
+           Prototype-Scale Pelton Bucket Multiscale Erosion Simulation
+   B2 = 0.38 [m]
+   Djet = 140 [mm]
+   Vjet = 28.5 [m/s]
+   Real sediment size
+    distribution
+
+   1,000,000
+    sediments
+   1,460,000 particles
+    in total
+   24 GPUs at CSCS
+    in Lugano
+
+
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion       7/92
+           Prototype-Scale Pelton Bucket Multiscale Erosion Simulation
+
+
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion       8/92
+           Take-Away Message
+
+       The multiscale erosion model has been validated
+        for the copper case (Wear 392, 2017)
+       A material characterization for SS 13Cr-4Ni has
+        been performed
+       The code is ready for prototype-scale Pelton
+        erosion simulations
+       Currently performing validation on experimental
+        data provided by General Electric
+           Flat plate erosion by impinging jet
+           Industrial-scale Pelton turbine erosion
+
+
+
+
+Towards Multiscale Numerical Simulations of Pelton Turbine Erosion   9/92
+Acknowledgements
+                   Thank you for your kind attention
+
+
+
+
+                           Any questions?
+

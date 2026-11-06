@@ -1,0 +1,30 @@
+{
+  "version": "step30-independent-profile-reference-v1",
+  "status": "participant_built_synthetic_registered_profile",
+  "profile": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_independent_profile_reference_v1_20260909/profile.npz",
+    "sha256": "5971fcbaf782a2c581c8e67b746f49054d380807d134c6ce0b6c72f90861b244"
+  },
+  "registration": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_independent_profile_reference_v1_20260909/profile.json",
+    "sha256": "19948f04a9518cc9727aa1647369aa84394552d87495194d76b5b642c5e9be81"
+  },
+  "inputs": {
+    "domain_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/merged.npz",
+    "domain_sha256": "e809b6f372b3cb72a6880b966727686647f1117467fe828af98962a7469ebecc",
+    "region_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/participant_dec_region_field.npz",
+    "region_sha256": "04a6d0ab811ec1568282250160ed5c5d5659041713bd8ca1049a6b8fe5d5b093"
+  },
+  "n_faces": 218988,
+  "active_face_fraction": 0.4489013096608033,
+  "wear_depth_stats_mm": {
+    "p50": 0.002548374710650646,
+    "p95": 0.008011658063045402,
+    "max": 0.009218113408223655
+  },
+  "measured_truth": false,
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "manifest_sha256": "6a60934df564c611f9e0a4074976b682164e0472fde78ebc8f950d58612be715"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "step30-remote-safety-audit-v2",
+  "created_local_date": "2026-09-02",
+  "project_root": "",
+  "status": "safe_v2_ready_legacy_v1_still_active",
+  "local_policy": {
+    "numerical_execution": "forbidden",
+    "new_runtime_state_on_h_drive": true,
+    "current_v1_modified": false
+  },
+  "v2_controls": [
+    "server-only execution with explicit remote opt-in",
+    "scheduler-required by default and explicit direct-remote exception",
+    "direct-remote host lock",
+    "active Step30 process exclusion",
+    "fresh state root and non-nested artifact root",
+    "input file and directory SHA-256 inventory",
+    "scheduler or CPU-affinity worker bound",
+    "startup and runtime disk guard",
+    "hard process-group timeout",
+    "separate stdout and stderr with SHA-256",
+    "SIGTERM/SIGINT child cleanup",
+    "atomic fsync state persistence",
+    "strict resume checks for artifact, parameters, input and code hashes"
+  ],
+  "remote_verification": {
+    "host": "100.121.154.58",
+    "workspace": "remote_artifacts/PWQ/step30_cpu_v1/workspace",
+    "py_compile": "passed",
+    "shell_syntax": "passed",
+    "focused_unittest": "6 passed",
+    "no_scheduler_refusal": "passed_exit_64",
+    "active_v1_concurrency_refusal": "passed_exit_64",
+    "direct_remote_opt_in": "passed",
+    "visible_cpu_capacity": 192,
+    "free_bytes_at_check": 118920637841408,
+    "runner_sha256": "29a691f389722c73de07b2740036774a0fad319e2bdc916f44c9c8cf62aa48cf",
+    "safety_module_sha256": "66bb8a726c7fde0015bb34a8806f96c5860985b7057ad002fb1b2bd0e463a3ad"
+  },
+  "legacy_v1": {
+    "state_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_v5_highn_discovery_60000/run_status.json",
+    "status": "running",
+    "active_process_count": 6,
+    "completed_seed_count": 0,
+    "v2_controls_applied_retroactively": false,
+    "action": "monitor_only_to_preserve_existing_experiment"
+  },
+  "stop_condition": {
+    "zero_operational_risk_claim_allowed": false,
+    "reason": "legacy_v1 remains active without retroactive timeout and disk guard",
+    "next_safe_transition": "wait for v1 completion, then archive and inspect before any v2 launch"
+  },
+  "evidence_boundary": {
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "score_changed": false
+  }
+}

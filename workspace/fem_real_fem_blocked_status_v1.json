@@ -1,0 +1,24 @@
+{
+  "version": "step30-real-fem-blocked-status-v1",
+  "status": "blocked",
+  "fem_gate": "blocked",
+  "completed_inputs": {
+    "solver_provenance": "fem_tool_provenance_ccx219.json",
+    "single_bucket_step_export": "output/step30_fem_remote_export_v1/output/single_bucket_target_authoritative.step",
+    "step_surface_catalog": "output/step30_fem_remote_export_v1/step_surface_catalog.json",
+    "official_fem_evidence_manifest": "output/step30_fem_official_evidence_v1.json",
+    "selection_material_template": "templates/step30-fem-selection-material-intake-v1.json",
+    "s1_contract": "centrifugal_only_s1 implemented in step30_calculix_case.py"
+  },
+  "remaining_blockers": [
+    "independently confirmed ROOT_INTERFACE selection",
+    "independently confirmed WETTED_SURFACE selection",
+    "machine-readable AI5_04 CAD patch",
+    "frozen AI5 gauge direction(s)",
+    "independent STEP coordinate-unit confirmation",
+    "admissible material density source",
+    "S0-C/M/F structural mesh manifests bound to the confirmed selections",
+    "real S1-C/M/F solver result packages"
+  ],
+  "note": "Do not infer production ROOT/WETTED/AI5 selections from raw STEP surface tags. Use output/step30_fem_official_evidence_v1.json to bind the official AI5/E/nu evidence and templates/step30-fem-selection-material-intake-v1.json for the missing CAD selections, gauge directions, coordinate units, and material certificate before any real mesh or solver run is released."
+}

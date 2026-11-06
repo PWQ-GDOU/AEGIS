@@ -1,0 +1,25 @@
+{
+  "version": "step30-prediction-pin-envelope-v1",
+  "formal": false,
+  "test_only": false,
+  "canonical_commitment_digest": "REQUIRED_CANONICAL_COMMITMENT_SHA256",
+  "commitment_file_sha256": "REQUIRED_SERIALIZED_FILE_BYTES_SHA256",
+  "bindings": {
+    "protocol_sha256": "REQUIRED_DELIVERY_PROTOCOL_SHA256",
+    "truth_build_contract_sha256": "REQUIRED_TRUTH_BUILD_CONTRACT_SHA256",
+    "topology_v3_sha256": "REQUIRED_TOPOLOGY_V3_SHA256",
+    "evaluation_mask_sha256": "REQUIRED_EVALUATION_MASK_SHA256"
+  },
+  "issuer": {
+    "name": "REQUIRED_ISSUER_NAME",
+    "organization": "REQUIRED_INDEPENDENT_ORGANIZATION",
+    "independent_third_party": false
+  },
+  "received_at": "1970-01-01T00:00:00Z",
+  "receipt_id": "REQUIRED_THIRD_PARTY_RECEIPT_ID",
+  "signature_algorithm": "REQUIRED_ed25519_OR_rsa-pss-sha256_OR_ecdsa-sha256",
+  "signature": "REQUIRED_BASE64_SIGNATURE",
+  "certificate_pem": null,
+  "public_key_url": "https://REQUIRED_PUBLIC_KEY_LOCATION",
+  "envelope_sha256": "REQUIRED_ENVELOPE_SHA256"
+}

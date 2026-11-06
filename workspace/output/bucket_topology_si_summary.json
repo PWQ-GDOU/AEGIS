@@ -1,0 +1,35 @@
+{
+  "version": "step30-native-openfoam-topology-v2",
+  "mesh_signature_algorithm": "sha256-source-units-points-triangles-parent-ids-v2",
+  "source_vtp": "output\\native_bucket_si\\bucket_3000_si.vtp",
+  "source_vtp_sha256": "3a7243246049bec6a6a126bc4732a3de760ad4a8e2579eeda3e41dd5f52c2c9c",
+  "patch_name": "bucket",
+  "time": "3000",
+  "coordinate_units": "mm",
+  "source_coordinate_units": "m",
+  "internal_coordinate_units": "mm",
+  "coordinate_scale_to_mm": 1000.0,
+  "n_points": 90813,
+  "n_parent_faces": 74802,
+  "n_collision_triangles": 179562,
+  "surface_area_m2": 1.3182754653026914,
+  "bounds_mm": [
+    [
+      420.40300369262695,
+      -180.00000715255737,
+      -418.3860123157501
+    ],
+    [
+      1399.999976158142,
+      180.01499772071838,
+      390.6109929084778
+    ]
+  ],
+  "mesh_signature": "739047925a62c9a521978fdf55fb07d96dbf6ad459b194e88d70875083aa7533",
+  "degenerate_triangles_removed": 0,
+  "triangle_size_mm": {
+    "median": 2.743888271579498,
+    "p95": 5.074945853695559,
+    "max": 5.93817044484616
+  }
+}

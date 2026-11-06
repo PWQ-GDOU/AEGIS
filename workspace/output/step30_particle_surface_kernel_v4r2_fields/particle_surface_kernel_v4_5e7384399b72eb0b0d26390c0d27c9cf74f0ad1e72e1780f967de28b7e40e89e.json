@@ -1,0 +1,61 @@
+{
+  "version": "step30-particle-spatial-estimator-v4",
+  "evidence_status": "numerical_risk_map_only",
+  "spatial_accuracy_status": "blocked",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "kernel_contract": {
+    "version": "topology-local-area-normalized-gaussian-v1",
+    "adjacency_rule": "parent faces share at least one collision-triangle edge",
+    "kernel": "gaussian_hop_distance",
+    "bandwidth_hop_candidates": [
+      1,
+      2,
+      3
+    ],
+    "default_bandwidth_hops": 2,
+    "truncation_hops": 3,
+    "receiver_weight": "face_area_m2 * exp(-0.5 * (hop_distance / bandwidth_hops)^2)",
+    "normalization": "per-source finite neighbourhood; exact target-mass conservation",
+    "confidence": {
+      "minimum_support_mass_fraction_of_total": 1e-05,
+      "minimum_local_ess": 1.5
+    }
+  },
+  "kernel_contract_sha256": "24306fb754f97e6d3783c5526817cc05ca576841d36d3e3018a04e30f62dca29",
+  "bandwidth_hops": 2,
+  "topology_adjacency_sha256": "4d15ce84e22a447226e5dfdb45e61e48c3da3d57070164bde01fa5c0d6c599ee",
+  "input_bindings": {
+    "particle_hits_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e\\particle_hits.npz",
+    "particle_hits_sha256": "2fd47c72ac85e69806887fb22434a7e514efc17a39b1f170ca7209fe3da01447",
+    "summary_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e\\summary.json",
+    "summary_sha256": "e641aabfe47f37ffce9eebe22cdbe9421b88aae22a86cc6d4dbba53266b9b38b",
+    "run_manifest_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e\\particle_run_manifest.json",
+    "run_manifest_sha256": "9ab4c5ccbbc2c65c39991ecc39ffc726640a7b18e76908245cacc81e954ef511",
+    "artifact_manifest_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\artifact_set_manifest.json",
+    "artifact_manifest_sha256": "8f5debae923fb927447b4ce531fbe23d5785aba20aa8bfddbdb4cf2a0b3b5304",
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "particle_run_id": "5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "topology_path": "workspace\\output\\step30_acceptance_0.8684190921\\bucket_topology_v3_0.8684190921.npz",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f"
+  },
+  "field_hashes": {
+    "raw_face_target_mass_kg": "88dabf9a12b7d4e095d74e784b4e84f999e0def46ea987effdb19e8608ef9a53",
+    "raw_mass_per_area_kg_m2": "ab21538deadeecc9611701d5ceee3bfccc2249ee60dccf5738e9a384fbf2820a",
+    "surface_kernel_face_target_mass_kg": "b80eb8e2c4fe7e5c77bf5ad6c694d355f62490b7b6e956197eef9328fd3a3d93",
+    "surface_kernel_mass_per_area_kg_m2": "40fcad5b94acfab086c2b2c0d4618707f60f911a1bbe67be8a6abe6bd1807ede",
+    "local_support_mass_kg": "12674b0195b737d7fa1cea8d9a17bb1040a73993144cdf33979ee4cfa3e201a9",
+    "local_ess": "f0e626b5e9d20b3852af6d42f3ae08b4d54e1151498da12882ad8241a409f27d",
+    "confidence_mask": "4647a491a1807f08a4b49a4866dfc6365e8fe0084d286a20b6834388112f124d"
+  },
+  "limitations": [
+    "A topology-local kernel improves numerical regularity only.",
+    "No baseline/worn scan or independent spatial erosion truth is present.",
+    "No ROOT, WETTED, AI5 patch, gauge direction, or CAD semantic inference is used."
+  ],
+  "field_contract_sha256": "3cc6409aab79cf997e113bfbc0bd0469ab1ad541d0c099f9be1ac9911ad6b741",
+  "field_path": "workspace\\output\\step30_particle_surface_kernel_v4r2_fields\\particle_surface_kernel_v4_5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e.npz",
+  "field_sha256": "41c3452814424defc2b040a100ae8877d04422bcaa090a0d3cdfc6546a4db8bb",
+  "report_sha256": "8b3468d71d8bf551b031b1ce89c36f21b38a1f37ac7c9271b936d38ff351eefe"
+}

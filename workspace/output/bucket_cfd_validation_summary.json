@@ -1,6 +1,6 @@
 {
   "method": "single-bucket focused jet CFD (240mm circular inlet, kOmegaSST simpleFoam)",
-  "cfd_note": "formal result uses kOmegaSST turbulence model (Reâ‰ˆ2.5e7); wallShearStress used as bounded impact-load proxy; laminar trial discarded due to pressure pathology",
+  "cfd_note": "formal result uses kOmegaSST turbulence model (Re¡Ö2.5e7); wallShearStress used as bounded impact-load proxy; laminar trial discarded due to pressure pathology",
   "n_cfd_points": 142160,
   "n_gpr_points": 909555,
   "n_valid_matches": 135051,

@@ -1,0 +1,23 @@
+{
+  "version": "step30-independent-profile-reference-v1",
+  "status": "registered_synthetic_only",
+  "source_type": "local_synthetic_fixture",
+  "reference_role": "synthetic_pipeline_fixture",
+  "coordinate_system": "official_face_local_mm",
+  "face_id_namespace": "official_face_domain_index",
+  "domain_n_faces": 218988,
+  "domain_centers_sha256": "62aff1a51bb4260d31e93e30d0e9e8cf5e9f7fd47d8f3011bca7b661bbe9e31a",
+  "domain_areas_sha256": "a9f9e379df6a45aded7029ef4d861ddcd9da5b8042964245cb30f633d6116671",
+  "profile_npz_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_independent_profile_reference_v1_20260909/profile.npz",
+  "profile_npz_sha256": "5971fcbaf782a2c581c8e67b746f49054d380807d134c6ce0b6c72f90861b244",
+  "baseline_field": "baseline_depth_mm",
+  "worn_field": "worn_depth_mm",
+  "wear_field": "wear_depth_mm",
+  "units": "mm",
+  "construction": "geometry envelope times participant DEC activity support; fixed 0.012 mm nominal amplitude; deterministic bounded texture",
+  "independent_of_evaluated_model_maps": true,
+  "measured_truth": false,
+  "official_reference": false,
+  "claim_scope": "participant-built synthetic baseline/worn depth reference for conditional benchmark only",
+  "registration_sha256": "4b5d71edffac4f1d88c0a41af056d5361ce64374d0663b021ebb90a299b51032"
+}

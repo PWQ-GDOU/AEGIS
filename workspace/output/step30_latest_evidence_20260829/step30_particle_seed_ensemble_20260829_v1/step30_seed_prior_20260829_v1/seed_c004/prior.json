@@ -1,0 +1,188 @@
+{
+  "version": "step30-literature-prior-degradation-v1",
+  "status": "provisional",
+  "fem_gate": "blocked",
+  "real_fem_evidence": false,
+  "evidence_status": "literature_prior_exploratory",
+  "literature_sources": [
+    {
+      "id": "rai_2017_wear",
+      "citation": "Rai, Kumar and Staubli, Hydro-abrasive erosion in Pelton buckets: Classification and field study",
+      "journal": "Wear",
+      "year": 2017,
+      "doi": "10.1016/j.wear.2017.08.016",
+      "role": "field erosion classification and mechanism context"
+    },
+    {
+      "id": "rai_2019_analytical",
+      "citation": "Rai, Kumar and Staubli, Analytical modelling and mechanism of hydro-abrasive erosion in pelton buckets",
+      "journal": "Wear",
+      "year": 2019,
+      "doi": "10.1016/j.wear.2019.203003",
+      "role": "analytical erosion mechanism context"
+    },
+    {
+      "id": "leguizamon_2019_multiscale",
+      "citation": "Leguizamon et al., Multiscale Simulation of the Hydroabrasive Erosion of a Pelton Bucket: Bridging Scales to Improve the Accuracy",
+      "journal": "International Journal of Turbomachinery, Propulsion and Power",
+      "year": 2019,
+      "doi": "10.3390/ijtpp4020009",
+      "role": "prototype-scale multiscale particle/sediment model"
+    },
+    {
+      "id": "messa_2019_injector",
+      "citation": "Messa, Mandelli and Malavasi, Hydro-abrasive erosion in Pelton turbine injectors: A numerical study",
+      "journal": "Renewable Energy",
+      "year": 2019,
+      "doi": "10.1016/j.renene.2018.06.064",
+      "role": "Eulerian-Lagrangian erosion parameter sensitivity"
+    },
+    {
+      "id": "ge_2021_bucket",
+      "citation": "Ge et al., Experimental and Numerical studies on Opening and Velocity Influence on Sediment Erosion of Pelton Turbine Buckets",
+      "journal": "Renewable Energy",
+      "year": 2021,
+      "doi": "10.1016/j.renene.2021.04.072",
+      "role": "bucket erosion experiment/numerical comparison"
+    },
+    {
+      "id": "fahrni_2025_defects",
+      "citation": "Fahrni, Staubli and Casartelli, Efficiency Testing of Pelton Turbines with Artificial Defects—Part 1: Buckets",
+      "journal": "Energies",
+      "year": 2025,
+      "doi": "10.3390/en18112716",
+      "role": "defect geometry to efficiency-loss sensitivity"
+    }
+  ],
+  "input_bindings": {
+    "particle_hits_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/c004ee52c6451b437ae12bfbbcace4b98462bc5270680b31c6a57e0879c6d41c/particle_hits.npz",
+    "particle_hits_sha256": "c5219ef13df2d55df987570d236655232c91d194c55d691638f25a4d161729ea",
+    "stress_field_path": null,
+    "stress_field_sha256": null,
+    "n_hit_impacts": 1181,
+    "n_faces": 218988
+  },
+  "prior_contract": {
+    "density_kg_m3": {
+      "low": 7700.0,
+      "base": 7800.0,
+      "high": 7900.0
+    },
+    "hardness_gpa": {
+      "low": 3.0,
+      "base": 4.0,
+      "high": 5.0
+    },
+    "concentration_scale": {
+      "low": 0.5,
+      "base": 1.0,
+      "high": 2.0
+    },
+    "exposure_h": 1.0,
+    "density_role": "exploratory_sensitivity_only",
+    "ai5_used_for_calibration": false,
+    "official_material_certificate": false,
+    "official_cad_named_selections": false
+  },
+  "propagation": {
+    "seed": 20260832,
+    "n_draws": 256,
+    "density_draw_min_kg_m3": 7700.418145826365,
+    "density_draw_max_kg_m3": 7899.72546763472,
+    "hardness_draw_min_gpa": 3.016476645467054,
+    "hardness_draw_max_gpa": 4.998524690704566,
+    "concentration_draw_min": 0.5004676383733141,
+    "concentration_draw_max": 1.9874856861265766
+  },
+  "density_sensitivity": {
+    "low": {
+      "density_kg_m3": 7700.0,
+      "max_mansouri_mm_h": 0.0020309078972786665,
+      "mean_mansouri_mm_h": 3.622038775574765e-07
+    },
+    "base": {
+      "density_kg_m3": 7800.0,
+      "max_mansouri_mm_h": 0.002004870679229498,
+      "mean_mansouri_mm_h": 3.575602249838994e-07
+    },
+    "high": {
+      "density_kg_m3": 7900.0,
+      "max_mansouri_mm_h": 0.0019794926047325134,
+      "mean_mansouri_mm_h": 3.5303415302223584e-07
+    }
+  },
+  "model_summary": {
+    "oka": {
+      "status": "provisional",
+      "units": "mm/h",
+      "draw_summary": {
+        "p05_mm_h": 0.0,
+        "p50_mm_h": 0.0,
+        "p95_mm_h": 0.0,
+        "mean_mm_h": 1.7624581698620176e-06,
+        "max_mm_h": 0.009397217072546482,
+        "total_area_weighted_p05_mm3_h": 0.7062653552758389,
+        "total_area_weighted_mm3_h": 1.3690658854892024,
+        "total_area_weighted_p95_mm3_h": 2.4917969291722994
+      },
+      "p50_map_max_mm_h": 0.0047493018209934235,
+      "p95_map_max_mm_h": 0.008538663387298584
+    },
+    "finnie": {
+      "status": "provisional",
+      "units": "mm/h",
+      "draw_summary": {
+        "p05_mm_h": 0.0,
+        "p50_mm_h": 0.0,
+        "p95_mm_h": 0.0,
+        "mean_mm_h": 2.8680024821589674e-09,
+        "max_mm_h": 1.94786462088814e-05,
+        "total_area_weighted_p05_mm3_h": 0.001161044134332952,
+        "total_area_weighted_mm3_h": 0.0022292158680038516,
+        "total_area_weighted_p95_mm3_h": 0.0039309273647548625
+      },
+      "p50_map_max_mm_h": 1.0138653124158736e-05,
+      "p95_map_max_mm_h": 1.787817382137291e-05
+    },
+    "tabakoff": {
+      "status": "provisional",
+      "units": "mm/h",
+      "draw_summary": {
+        "p05_mm_h": 0.0,
+        "p50_mm_h": 0.0,
+        "p95_mm_h": 0.0,
+        "mean_mm_h": 7.446135105562942e-10,
+        "max_mm_h": 6.889028554724064e-06,
+        "total_area_weighted_p05_mm3_h": 0.0003055384630400314,
+        "total_area_weighted_mm3_h": 0.0005866367776190522,
+        "total_area_weighted_p95_mm3_h": 0.0010344563685585847
+      },
+      "p50_map_max_mm_h": 3.585745616874192e-06,
+      "p95_map_max_mm_h": 6.32298815617105e-06
+    },
+    "mansouri": {
+      "status": "provisional",
+      "units": "mm/h",
+      "draw_summary": {
+        "p05_mm_h": 0.0,
+        "p50_mm_h": 0.0,
+        "p95_mm_h": 0.0,
+        "mean_mm_h": 3.9767025175710234e-07,
+        "max_mm_h": 0.003951299004256725,
+        "total_area_weighted_p05_mm3_h": 0.16292141261518922,
+        "total_area_weighted_mm3_h": 0.311377929744708,
+        "total_area_weighted_p95_mm3_h": 0.5475234839516752
+      },
+      "p50_map_max_mm_h": 0.0020774772856384516,
+      "p95_map_max_mm_h": 0.003653012914583087
+    }
+  },
+  "exploratory_stress": null,
+  "limitations": [
+    "Literature priors are not DEC heat/batch material evidence.",
+    "The particle-hit artifact is reused as a fixed exploratory input; no AI5 trace is used for calibration.",
+    "The optional stress field is the existing analytical/parametric field and is not a CalculiX result.",
+    "No official erosion spatial truth or independent worn/baseline scan is asserted."
+  ],
+  "report_sha256": "36351e1107cbda689f5c7942fcec595dc44dc692d82a97a9ca8848230e0286f2"
+}

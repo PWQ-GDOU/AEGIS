@@ -1,0 +1,365 @@
+{
+  "version": "step30-supplemental-data-manifest-v1",
+  "created_date": "2026-08-30",
+  "status": "participant_built_evidence_ready_for_remote_validation",
+  "storage_policy": {
+    "workspace_root": "",
+    "local_c_drive_write_allowed": false,
+    "numerical_simulation_on_local_machine": false,
+    "remote_compute_policy": "DCU for CPU and user server for GPU"
+  },
+  "scope": {
+    "target_material": "ZG0Cr13Ni4Mo",
+    "nearest_public_material_prior": "13Cr-4Ni martensitic stainless steel",
+    "material_identity_warning": "13Cr-4Ni and ZG0Cr13Ni4Mo are a prior relationship, not a certificate-level identity",
+    "competition_reference_allowed": true,
+    "official_reference": false,
+    "measured_truth": false
+  },
+  "source_files": [
+    {
+      "source_id": "frontiers_2024_sediment_review",
+      "citation": {
+        "title": "Review on experimental investigation of sediment erosion in hydraulic turbines",
+        "authors": "Shrestha, Gurung, Chitrakar, Thapa, Neopane, Guo, Qian",
+        "journal": "Frontiers in Mechanical Engineering",
+        "year": 2024,
+        "volume": "10",
+        "article": "1526120",
+        "doi": "10.3389/fmech.2024.1526120"
+      },
+      "container_kind": "original_full_text",
+      "path": "input/supplemental_data/sources/frontiers_2024_sediment_erosion_review.pdf",
+      "sha256": "f7817eb068ec932d1bfe427fd59daf8f44708ed5fc716a4ef5278ae864a27fa2",
+      "bytes": 5600126,
+      "download_status": "downloaded_and_hash_bound",
+      "evidence_uses": [
+        {
+          "claim_id": "region_prior_pelton_vulnerable_zones",
+          "evidence_level": "qualitative",
+          "locator": "page 3, discussion of Pelton bucket erosion regions",
+          "claim": "cutout regions, splitter and near-outlet regions are vulnerable zones",
+          "allowed_use": "region ordering prior for participant DEC face mapping",
+          "forbidden_use": "direct DEC face-wise truth or dimensional transfer"
+        },
+        {
+          "claim_id": "quartz_hardness_prior",
+          "evidence_level": "qualitative_with_source_value",
+          "locator": "page 2, sediment hardness discussion",
+          "claim": "quartz and feldspar are described as hard sediment minerals with Mohs hardness approximately 7",
+          "allowed_use": "erodent hardness sensitivity range and test-material selection",
+          "forbidden_use": "substitute for measured PSD or mineralogy of the contest case"
+        },
+        {
+          "claim_id": "pelton_model_table_5",
+          "evidence_level": "secondary_quantitative",
+          "locator": "pages 25-28, Table 5 and continuation",
+          "claim": "the review tabulates Finnie, Bitter, Liu et al. and Rai et al. relations for Pelton test or field contexts, including 04Cr13Ni5Mo runner-bucket and 13Cr-4Ni bucket entries",
+          "allowed_use": "pre-registered model-combination prior and sensitivity envelope",
+          "forbidden_use": "claim that the tabulated coefficients are independently calibrated for DEC"
+        }
+      ]
+    },
+    {
+      "source_id": "han_2021_distribution_parts",
+      "citation": {
+        "title": "Investigation of the Erosion Characteristics in the Distribution Parts of Pelton Turbine",
+        "authors": "L. Han, Y. Wang, G. F. Zhang, X. Z. Wei",
+        "journal": "Journal of Applied Fluid Mechanics",
+        "year": 2021,
+        "volume": "14",
+        "issue": "6",
+        "pages": "1809-1816",
+        "doi": "10.47176/jafm.14.06.32868"
+      },
+      "container_kind": "original_full_text",
+      "path": "input/supplemental_data/sources/jafm_2021_13cr4ni_pelton_erosion.pdf",
+      "sha256": "05ef3d27c40ec6e622f1ec587ba8e624291c24c71de6777b13effaabb524456c",
+      "bytes": 1352562,
+      "download_status": "downloaded_and_hash_bound",
+      "evidence_uses": [
+        {
+          "claim_id": "particle_size_transport_prior",
+          "evidence_level": "quantitative",
+          "locator": "pages 4-8, particle-size cases and Figs. 9-11",
+          "claim": "the study compares spherical particles of 0.1, 0.5 and 1.0 mm and reports different following behavior and erosion patterns",
+          "allowed_use": "PSD scenario design and particle-transport sensitivity",
+          "forbidden_use": "transfer of its nozzle/needle erosion field to DEC bucket faces"
+        },
+        {
+          "claim_id": "han_operating_point",
+          "evidence_level": "quantitative",
+          "locator": "page 7, conclusion and operating-condition text",
+          "claim": "the modeled condition includes an 80 m head and normalized nozzle opening 0.55",
+          "allowed_use": "independent operating-point plausibility check",
+          "forbidden_use": "assertion that DEC has the same head or opening"
+        }
+      ]
+    },
+    {
+      "source_id": "rai_2017_iit_roorkee_thesis",
+      "citation": {
+        "title": "Hydro-Abrasive Erosion of Pelton Turbines",
+        "author": "Anant Kumar Rai",
+        "institution": "Alternate Hydro Energy Centre, Indian Institute of Technology Roorkee",
+        "year": 2017,
+        "document_type": "PhD thesis"
+      },
+      "container_kind": "original_thesis_extract",
+      "path": "input/supplemental_data/sources/iitr_13cr4ni_pelton_field_abstract.pdf",
+      "sha256": "0f3890f5f1d74c5a28346617fc9ba48819064656cff3788fb43246495b6c227c",
+      "bytes": 201270,
+      "download_status": "downloaded_and_hash_bound",
+      "evidence_uses": [
+        {
+          "claim_id": "rai_13cr4ni_material_set",
+          "evidence_level": "quantitative",
+          "locator": "pages iii-iv and thesis abstract summary",
+          "claim": "the work includes 13Cr-4Ni, 16Cr-5Ni and 16Cr-4Ni martensitic steels, bronze and coated variants, with optical 3D scanning and mass-loss measurements",
+          "allowed_use": "same-family material prior and independent measurement protocol design",
+          "forbidden_use": "material certificate for ZG0Cr13Ni4Mo"
+        },
+        {
+          "claim_id": "rai_lab_velocity_range",
+          "evidence_level": "quantitative",
+          "locator": "page iv of abstract summary",
+          "claim": "the reported laboratory erosion velocities include 32.11, 28.97, 25.62 and 22.05 m/s",
+          "allowed_use": "velocity sensitivity envelope and pilot design check",
+          "forbidden_use": "proof of DEC jet velocity"
+        },
+        {
+          "claim_id": "rai_scan_depth_prior",
+          "evidence_level": "quantitative",
+          "locator": "page iii of abstract summary",
+          "claim": "the abstract summary reports coated-bucket curved-zone erosion depth around 0.4 percent of bucket thickness",
+          "allowed_use": "broad depth-envelope sanity check only",
+          "forbidden_use": "direct DEC worn field or absolute depth truth"
+        }
+      ]
+    },
+    {
+      "source_id": "leguizamon_2018_multiscale_slides",
+      "citation": {
+        "title": "Towards Multiscale Numerical Simulations of Pelton Turbine Erosion",
+        "authors": "Sebastian Leguizamon, Ebrahim Jahanbakhsh, Audrey Maertens, Siamak Alimirzazadeh, Francois Avellan",
+        "year": 2018,
+        "document_type": "technical presentation"
+      },
+      "container_kind": "technical_presentation",
+      "path": "input/supplemental_data/sources/sccer_2018_13cr4ni_model_parameters_slides.pdf",
+      "sha256": "087b56721df19cb17d1b5174a4eb830bf88b887b2a1a9b51a1e53a6fedf04be8",
+      "bytes": 952112,
+      "download_status": "downloaded_and_hash_bound",
+      "evidence_uses": [
+        {
+          "claim_id": "prototype_pelton_setup_prior",
+          "evidence_level": "technical_report_quantitative",
+          "locator": "slides 7-9",
+          "claim": "the presentation reports a prototype-scale case with B2 0.38 m, jet diameter 140 mm, jet velocity 28.5 m/s, real sediment size distribution and 1.46 million particles",
+          "allowed_use": "scale, particle-count and GPU validation planning prior",
+          "forbidden_use": "DEC boundary condition or material calibration"
+        },
+        {
+          "claim_id": "13cr4ni_characterization_prior",
+          "evidence_level": "technical_report_qualitative",
+          "locator": "slides 5-6",
+          "claim": "13Cr-4Ni is characterized with Split-Hopkinson-bar data and a Johnson-Cook fit; the slide reports 4.1 percent standard deviation",
+          "allowed_use": "candidate constitutive-data provenance and uncertainty floor",
+          "forbidden_use": "formal FEM material card without the underlying raw test data"
+        }
+      ]
+    },
+    {
+      "source_id": "ruff_1978_solid_particle_erosion",
+      "citation": {
+        "title": "Erosion by solid particle impact",
+        "author": "A. W. Ruff",
+        "year": 1978,
+        "document_type": "government technical report"
+      },
+      "container_kind": "government_original_report",
+      "path": "input/supplemental_data/sources/govinfo_solid_particle_erosion_review.pdf",
+      "sha256": "22f915255ddd08ad60428353d4996eb90f6e9b4b4f90681c4a6fcab9e51621aa",
+      "bytes": 6319249,
+      "download_status": "downloaded_and_hash_bound",
+      "evidence_uses": [
+        {
+          "claim_id": "solid_particle_parameter_sensitivity",
+          "evidence_level": "quantitative_context",
+          "locator": "report discussion around printed pages 20-24 and 50-58",
+          "claim": "solid-particle erosion depends on particle velocity, attack angle, particle size, particle density and target hardness; the report discusses velocity and size effects for metallic targets",
+          "allowed_use": "uncertainty-factor design for model sensitivity",
+          "forbidden_use": "DEC-specific calibration or same-material truth"
+        },
+        {
+          "claim_id": "impact_velocity_measurement_requirement",
+          "evidence_level": "qualitative",
+          "locator": "report discussion around printed pages 70-76",
+          "claim": "particle impact velocity must be measured or calculated carefully because erosion rate can have a high velocity exponent",
+          "allowed_use": "input-quality requirement for remote particle replay",
+          "forbidden_use": "invented DEC velocity"
+        }
+      ]
+    },
+    {
+      "source_id": "sawant_2021_erosion_cfd_thesis",
+      "citation": {
+        "title": "Solid Particle Erosion Modelling using CFD techniques",
+        "author": "Alok Sawant",
+        "institution": "University of Warwick",
+        "year": 2021,
+        "document_type": "PhD thesis"
+      },
+      "container_kind": "original_thesis",
+      "path": "input/supplemental_data/sources/warwick_2021_solid_particle_erosion_cfd_thesis.pdf",
+      "sha256": "1e19dfdd3f79a7f7c78302186f41c5632a022368e96c85d8a51d91e3fcbfc818",
+      "bytes": 13573658,
+      "download_status": "downloaded_and_hash_bound",
+      "evidence_uses": [
+        {
+          "claim_id": "erosion_model_comparison_protocol",
+          "evidence_level": "methodology_quantitative_context",
+          "locator": "printed contents pp. 94-120 and model-comparison chapter",
+          "claim": "the thesis implements and compares Oka, Grant-Tabakoff and related erosion-model formulations against CFD particle-impact quantities",
+          "allowed_use": "pre-registered model-comparison and numerical sensitivity workflow",
+          "forbidden_use": "transfer of its SS316 or elbow calibration to DEC"
+        },
+        {
+          "claim_id": "rosin_rammler_psd_sensitivity",
+          "evidence_level": "qualitative_with_model_context",
+          "locator": "printed contents around pp. 112-120",
+          "claim": "the thesis compares constant particle size with Rosin-Rammler particle-size distributions and varies velocity, impact angle and feed rate",
+          "allowed_use": "PSD representation and uncertainty-propagation design",
+          "forbidden_use": "claim that the selected PSD is the DEC sediment PSD"
+        }
+      ]
+    },
+    {
+      "source_id": "cheng_2023_13cr4ni_mechanical_properties",
+      "citation": {
+        "title": "Investigation of High-Cycle Fatigue Properties of Wire Arc Additive Manufacturing 13Cr4Ni Martensitic Stainless Steel",
+        "authors": "Guangfu Cheng, Haichao Li, Haiyan Dai, Hongming Gao, Jianchao Pang",
+        "journal": "Metals",
+        "year": 2023,
+        "volume": "13",
+        "article": "1210",
+        "doi": "10.3390/metals13071210"
+      },
+      "container_kind": "original_full_text",
+      "path": "input/supplemental_data/sources/metals_2023_13cr4ni_mechanical_properties.pdf",
+      "sha256": "0780cf06f0e3ed9692f7c6d2d52d09bab7cb82877b8eae30fbdc5a052c510c9f",
+      "bytes": 8888577,
+      "download_status": "downloaded_and_hash_bound",
+      "evidence_uses": [
+        {
+          "claim_id": "13cr4ni_hardness_range_prior",
+          "evidence_level": "quantitative",
+          "locator": "pages 2 and 8, abstract and mechanical-properties discussion",
+          "claim": "the forged 13Cr4Ni specimen is reported at 280 HV and the WAAM specimen at 320 HV",
+          "allowed_use": "same-family hardness sensitivity interval for synthetic ZG0Cr13Ni4Mo reference",
+          "forbidden_use": "actual-batch hardness or cast-material certificate"
+        },
+        {
+          "claim_id": "13cr4ni_strength_prior",
+          "evidence_level": "quantitative",
+          "locator": "page 5, tensile-properties section",
+          "claim": "the forged specimen is reported at 685 MPa yield and 823 MPa ultimate tensile strength; the WAAM specimen is reported at 850 MPa yield and 927 MPa ultimate tensile strength",
+          "allowed_use": "exploratory material-envelope input and fatigue plausibility check",
+          "forbidden_use": "formal FEM card for ZG0Cr13Ni4Mo"
+        },
+        {
+          "claim_id": "13cr4ni_heat_treatment_context",
+          "evidence_level": "quantitative_context",
+          "locator": "page 3, specimen preparation",
+          "claim": "the study reports a 580 C x 2 h furnace heat-treatment step for the tested WAAM material",
+          "allowed_use": "material-protocol comparison only",
+          "forbidden_use": "assumption about the DEC casting heat treatment"
+        }
+      ]
+    }
+  ],
+  "data_products": {
+    "participant_default_scenarios": {
+      "status": "frozen_and_ready_for_remote_replay",
+      "path": "input/supplemental_data/step30_participant_default_scenarios_v1.json",
+      "source_type": "synthetic_participant_assumption",
+      "independent_measured_truth": false,
+      "purpose": "make all currently available priors explicit and reproducible without waiting for official data"
+    },
+    "region_prior": {
+      "status": "ready_as_qualitative_prior",
+      "inputs": ["frontiers_2024_sediment_review", "rai_2017_iit_roorkee_thesis"],
+      "output_contract": "participant_DEC_face_region_mapping",
+      "independence_rule": "must not use evaluated model output as truth"
+    },
+    "particle_psd_prior": {
+      "status": "partial",
+      "available": ["0.1 mm", "0.5 mm", "1.0 mm scenario cases"],
+      "missing": ["DEC-specific D10", "DEC-specific D50", "DEC-specific D90", "mineral fraction", "particle shape distribution"],
+      "next_acquisition": "measure or preregister quartz-sand PSD before any final amplitude replay"
+    },
+    "material_prior": {
+      "status": "ready_as_prior_not_certificate",
+      "available": ["13Cr-4Ni same-family erosion studies", "13Cr-4Ni scan and mass-loss protocol", "technical constitutive characterization context"],
+      "missing": ["ZG0Cr13Ni4Mo heat certificate", "heat treatment", "HV/HRC", "density", "elastic-plastic curve", "fracture or erosion calibration for the actual batch"]
+    },
+    "erosion_model_prior": {
+      "status": "ready_for_preregistered_comparison",
+      "models": ["Oka", "Finnie", "Tabakoff", "Mansouri", "Rai_Pelton_field_relation", "Liu_04Cr13Ni5Mo_runner_relation"],
+      "new_methodology_sources": ["ruff_1978_solid_particle_erosion", "sawant_2021_erosion_cfd_thesis"],
+      "guardrail": "published relations are sensitivity priors; they are not DEC truth and must remain leave-one-model-out from benchmark construction"
+    },
+    "baseline_worn_depth_field": {
+      "status": "participant_synthetic_reference_only",
+      "available": ["independent literature region prior", "five-seed particle support", "frozen material amplitude envelope"],
+      "missing": ["independent DEC-equivalent baseline/worn scan or contour dataset", "registered measured parent-face wear depth"],
+      "score_effect": "conditional competition score only; no official or measured accuracy claim"
+    },
+    "operating_condition_prior": {
+      "status": "partial",
+      "available": ["80 m and normalized opening 0.55 example", "22.05-32.11 m/s laboratory erosion velocity examples", "28.5 m/s prototype-scale presentation case"],
+      "missing": ["DEC nozzle count/opening mapping", "DEC jet velocity and discharge identity", "DEC sediment loading history", "DEC service duration"]
+    }
+  },
+  "not_yet_obtained": [
+    {
+      "item": "original primary PDF for Rai et al. 2020 Pelton 13Cr-4Ni equations",
+      "status": "search_required",
+      "reason": "the Frontiers Table 5 value is currently secondary quantitative evidence"
+    },
+    {
+      "item": "original primary PDF for Liu et al. 2019 04Cr13Ni5Mo runner relation",
+      "status": "search_required",
+      "reason": "the material is not identical to ZG0Cr13Ni4Mo and the review table is not enough for formal calibration"
+    },
+    {
+      "item": "DEC-specific quartz-sand D10/D50/D90 and mineralogy",
+      "status": "participant_measurement_required",
+      "reason": "public papers provide scenario values but not the contest sediment sample"
+    },
+    {
+      "item": "independent baseline/worn surface pair",
+      "status": "participant_acquisition_required",
+      "reason": "no paper can provide the DEC face-wise truth"
+    },
+    {
+      "item": "ZG0Cr13Ni4Mo batch-level certificate and erosion test data",
+      "status": "participant_experiment_required",
+      "reason": "same-family literature is not actual-batch evidence"
+    }
+  ],
+  "gate_effect": {
+    "competition_self_benchmark_gate": true,
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "physical_spatial_accuracy": "blocked_without_independent_measured_truth"
+  },
+  "validation_status": {
+    "manifest_requires_remote_validator": true,
+    "local_numeric_execution_performed": false,
+    "source_hashes_computed": true,
+    "quantitative_claims_require_page_locator": true,
+    "synthetic_and_measured_sources_separated": true
+  }
+}

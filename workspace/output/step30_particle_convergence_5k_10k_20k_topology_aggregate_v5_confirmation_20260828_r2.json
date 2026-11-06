@@ -1,0 +1,12 @@
+{
+  "version": "step30-particle-convergence-v5",
+  "analysis_role": "confirmation",
+  "status": "blocked",
+  "numerical_stability_status": "blocked",
+  "spatial_accuracy_status": "blocked",
+  "reason": "confirmation topology/partition identity differs from discovery",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "report_sha256": "c4a4a43ef2d827b17c0566f3c7fb025561a9a6ea76501cb40bff7cc295181ae6"
+}

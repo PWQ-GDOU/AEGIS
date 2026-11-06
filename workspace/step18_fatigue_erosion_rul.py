@@ -50,7 +50,7 @@ from step10_unified_pipeline import OUTPUT_DIR
 WORKSPACE = Path(__file__).parent
 
 # 动应力数据目录
-STRESS_DIR = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\DecPelton2024\DecPelton2024\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包\3-现场动应力试验实测数据\3.1-现场动应力实测数据")
+STRESS_DIR = Path(r"DecPelton2024/DecPelton2024\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包\3-现场动应力试验实测数据\3.1-现场动应力实测数据")
 
 OUT_NPZ  = OUTPUT_DIR / "combined_rul_map.npz"
 OUT_JSON = OUTPUT_DIR / "fatigue_summary.json"

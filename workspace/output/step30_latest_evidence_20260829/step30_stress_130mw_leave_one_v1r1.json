@@ -1,0 +1,228 @@
+{
+  "version": "step30-130mw-leave-one-stress-diagnostic-v1",
+  "status": "blocked",
+  "strict_scoring_status": "candidate_pass_pending_transcription_review",
+  "official_table_evidence_sha256": "635a462f8e3cf8a9c77d504f72f6c5172e71f0dcc0471cb58786203a1e441a74",
+  "official_table_double_review_completed": false,
+  "model": {
+    "model_scope": "official_table_leave_one_condition_out_diagnostic",
+    "held_out_condition": "130MW",
+    "held_out_not_in_training": true,
+    "dynamic_definition": "peak_to_peak_mpa",
+    "models_by_nozzle_count": {
+      "2": {
+        "status": "fit",
+        "feature": "mean_needle_opening_pct",
+        "training_conditions": [
+          "30MW",
+          "40MW"
+        ],
+        "training_power_mw": [
+          30,
+          40
+        ],
+        "slope_mpa_per_opening_pct": 0.49480483010390347,
+        "intercept_mpa": -2.833751755124964,
+        "fit_sha256": "a3a01c85f85fb6c818c9ded963eb1064d385e17a88dc1926c8cdbb41f9f20bc7"
+      },
+      "4": {
+        "status": "fit",
+        "feature": "mean_needle_opening_pct",
+        "training_conditions": [
+          "50MW",
+          "60MW",
+          "70MW",
+          "80MW",
+          "90MW"
+        ],
+        "training_power_mw": [
+          50,
+          60,
+          70,
+          80,
+          90
+        ],
+        "slope_mpa_per_opening_pct": 0.41783166417238843,
+        "intercept_mpa": 1.2457055073158927,
+        "fit_sha256": "b7abe31fce297eeec117491b38ea586abb3c05c82f1aaa03b4df48bdbf382fd5"
+      },
+      "6": {
+        "status": "fit",
+        "feature": "mean_needle_opening_pct",
+        "training_conditions": [
+          "100MW",
+          "110MW",
+          "120MW",
+          "140MW"
+        ],
+        "training_power_mw": [
+          100,
+          110,
+          120,
+          140
+        ],
+        "slope_mpa_per_opening_pct": 0.43783997666196534,
+        "intercept_mpa": -0.7519228258203656,
+        "fit_sha256": "b274510260ab90964bf561621b26ad3a6e00d93bcba726066c4bdecfad72965e"
+      }
+    },
+    "prediction": {
+      "condition": "130MW",
+      "nozzle_count": 6,
+      "mean_needle_opening_pct": 62.0675,
+      "predicted_peak_to_peak_mpa": 26.42370992564617,
+      "official_peak_to_peak_mpa": 25.31,
+      "relative_error": 0.04400276276752942,
+      "strict_relative_threshold": 0.05,
+      "strict_candidate_pass": true
+    },
+    "whole_table_independent_validation": false,
+    "qualification_note": "The same official table supplies model training conditions; this is a leave-one-condition-out diagnostic, not independent competition validation."
+  },
+  "raw_ai5_diagnostic": {
+    "status": "diagnostic_only",
+    "ai5_data_directory": "DecPelton2024\\DecPelton2024\\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包\\3-现场动应力试验实测数据\\3.1-现场动应力实测数据",
+    "records": [
+      {
+        "condition": "100MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 27.907492096806656,
+        "raw_peak_to_peak_mpa": 18.400444609999997,
+        "official_static_mean_mpa": 28.04,
+        "official_dynamic_peak_to_peak_mpa": 17.62,
+        "mean_difference_mpa": -0.1325079031933427,
+        "peak_to_peak_difference_mpa": 0.7804446099999964
+      },
+      {
+        "condition": "110MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 28.38770340610935,
+        "raw_peak_to_peak_mpa": 21.23169231,
+        "official_static_mean_mpa": 28.56,
+        "official_dynamic_peak_to_peak_mpa": 20.12,
+        "mean_difference_mpa": -0.17229659389064977,
+        "peak_to_peak_difference_mpa": 1.1116923099999987
+      },
+      {
+        "condition": "120MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 28.837677293700473,
+        "raw_peak_to_peak_mpa": 24.848695380000002,
+        "official_static_mean_mpa": 29.1,
+        "official_dynamic_peak_to_peak_mpa": 23.63,
+        "mean_difference_mpa": -0.26232270629952836,
+        "peak_to_peak_difference_mpa": 1.2186953800000033
+      },
+      {
+        "condition": "130MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 29.2597804424168,
+        "raw_peak_to_peak_mpa": 24.719233849999995,
+        "official_static_mean_mpa": 29.57,
+        "official_dynamic_peak_to_peak_mpa": 25.31,
+        "mean_difference_mpa": -0.3102195575831992,
+        "peak_to_peak_difference_mpa": -0.5907661500000039
+      },
+      {
+        "condition": "140MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 29.697215979437402,
+        "raw_peak_to_peak_mpa": 29.023449229999997,
+        "official_static_mean_mpa": 29.92,
+        "official_dynamic_peak_to_peak_mpa": 29.89,
+        "mean_difference_mpa": -0.2227840205625995,
+        "peak_to_peak_difference_mpa": -0.8665507700000035
+      },
+      {
+        "condition": "30MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 24.452070826608555,
+        "raw_peak_to_peak_mpa": 17.86554,
+        "official_static_mean_mpa": 24.19,
+        "official_dynamic_peak_to_peak_mpa": 16.81,
+        "mean_difference_mpa": 0.26207082660855363,
+        "peak_to_peak_difference_mpa": 1.0555400000000006
+      },
+      {
+        "condition": "40MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 24.901269296616483,
+        "raw_peak_to_peak_mpa": 23.792898460000004,
+        "official_static_mean_mpa": 24.69,
+        "official_dynamic_peak_to_peak_mpa": 25.62,
+        "mean_difference_mpa": 0.2112692966164822,
+        "peak_to_peak_difference_mpa": -1.8271015399999975
+      },
+      {
+        "condition": "50MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 25.337206859762283,
+        "raw_peak_to_peak_mpa": 15.552747699999998,
+        "official_static_mean_mpa": 25.24,
+        "official_dynamic_peak_to_peak_mpa": 14.06,
+        "mean_difference_mpa": 0.09720685976228438,
+        "peak_to_peak_difference_mpa": 1.4927476999999971
+      },
+      {
+        "condition": "60MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 25.96043774725832,
+        "raw_peak_to_peak_mpa": 17.94930924,
+        "official_static_mean_mpa": 25.79,
+        "official_dynamic_peak_to_peak_mpa": 16.89,
+        "mean_difference_mpa": 0.1704377472583225,
+        "peak_to_peak_difference_mpa": 1.059309240000001
+      },
+      {
+        "condition": "70MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 26.402201260419965,
+        "raw_peak_to_peak_mpa": 21.058823080000003,
+        "official_static_mean_mpa": 26.33,
+        "official_dynamic_peak_to_peak_mpa": 20.6,
+        "mean_difference_mpa": 0.07220126041996622,
+        "peak_to_peak_difference_mpa": 0.45882308000000194
+      },
+      {
+        "condition": "80MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 26.857876066030105,
+        "raw_peak_to_peak_mpa": 23.55682154,
+        "official_static_mean_mpa": 26.88,
+        "official_dynamic_peak_to_peak_mpa": 24.16,
+        "mean_difference_mpa": -0.022123933969893983,
+        "peak_to_peak_difference_mpa": -0.6031784599999988
+      },
+      {
+        "condition": "90MW",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 27.499145760079244,
+        "raw_peak_to_peak_mpa": 28.35558,
+        "official_static_mean_mpa": 27.48,
+        "official_dynamic_peak_to_peak_mpa": 28.78,
+        "mean_difference_mpa": 0.019145760079243956,
+        "peak_to_peak_difference_mpa": -0.42442000000000135
+      },
+      {
+        "condition": "rated_noload",
+        "status": "diagnostic_only",
+        "raw_mean_mpa": 22.771450784992076,
+        "raw_peak_to_peak_mpa": 1.8675969199999969,
+        "official_static_mean_mpa": 22.31,
+        "official_dynamic_peak_to_peak_mpa": 2.21,
+        "mean_difference_mpa": 0.4614507849920777,
+        "peak_to_peak_difference_mpa": -0.3424030800000031
+      }
+    ],
+    "raw_data_used_for_strict_scoring": false
+  },
+  "formal_evidence_status": "ineligible_pending_double_transcription_review",
+  "official_accuracy_gate": false,
+  "fem_gate": "blocked",
+  "limitations": [
+    "130 MW is excluded from the six-nozzle model fit.",
+    "This is not whole-table blind validation because neighbouring official rows train the fit.",
+    "Raw AI5 time-series extrema remain diagnostic-only."
+  ],
+  "report_sha256": "026c793627f6e811036b6eb02df5a4d6797d72741dd6e4a5fc10847d9456d809"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "step30-remote-job-manifest-v1",
+  "created_utc": "2026-08-28T07:28:44Z",
+  "project_root_local": "",
+  "execution_policy": {
+    "local_numerical_execution": false,
+    "approved_targets": ["dcu_cpu", "user_gpu"],
+    "official_accuracy_gate": false,
+    "fem_gate": "blocked"
+  },
+  "target": "dcu_cpu",
+  "scheduler": {
+    "kind": "REQUIRED after DCU login: slurm or pbs",
+    "partition_or_queue": "REQUIRED after DCU login; create concise name under PWQ workspace",
+    "account": "OPTIONAL",
+    "constraint": "OPTIONAL"
+  },
+  "connection": {
+    "host": "100.121.154.58",
+    "ssh_user": "mgr",
+    "remote_root": "REQUIRED: PWQ/step30_<job_id>",
+    "auth_reference": "external_only; do not store secrets here"
+  },
+  "workload": {
+    "kind": "particle_confirmation",
+    "code_entrypoint": "workspace/step30_particle_confirmation_parallel_v1.py",
+    "code_sha256": "REQUIRED: hash computed from the transferred archive",
+    "inputs": [
+      {
+        "path": "workspace/output/step30_acceptance_0.8684190921/bucket_topology_v3_0.8684190921.npz",
+        "sha256": "REQUIRED"
+      },
+      {
+        "path": "workspace/output/native_bucket_si_urans_0.8684190921",
+        "sha256": "REQUIRED: directory manifest hash"
+      },
+      {
+        "path": "workspace/output/authoritative_bucket_reference_transform_v1.json",
+        "sha256": "REQUIRED"
+      }
+    ],
+    "parameters": {
+      "parcels": 20000,
+      "seeds": [57721, 104729, 130363, 161027, 196613],
+      "field_time": "0.8684190921",
+      "collision_policy": "strict_v2",
+      "collision_backend": "cfd_topology",
+      "psd_sampling": "mass_stratified_v1"
+    }
+  },
+  "result": {
+    "local_return_root": "workspace/output/remote_returns/REQUIRED_JOB_ID",
+    "job_id": "PENDING",
+    "status": "not_submitted",
+    "stdout": "PENDING",
+    "stderr": "PENDING",
+    "exit_code": null,
+    "outputs": []
+  }
+}

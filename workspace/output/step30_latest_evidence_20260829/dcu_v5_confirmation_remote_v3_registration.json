@@ -1,0 +1,54 @@
+{
+  "schema": "step30-remote-result-registration-v1",
+  "registered_at": "2026-08-28",
+  "job_id": "step30_cpu_confirmation_20260828_v2",
+  "server": {
+    "alias": "dcu_cpu",
+    "host": "100.121.154.58",
+    "remote_user": "wenquan",
+    "scheduler": "none",
+    "execution_target": "dcu_cpu"
+  },
+  "remote_result_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_v5_aggregate_confirmation_remote_v3",
+  "local_result_path": "external_workspaces/step30_remote_control_v1/returns/step30_cpu_confirmation_20260828_v2/step30_v5_aggregate_confirmation_remote_v3",
+  "report": {
+    "file": "report.json",
+    "file_sha256": "e050379cb87183af204225031b13284f99aefa5b3e2bd016003e138156f6b4e0",
+    "report_sha256": "2096814758931f5c0628ae35d7a390d397ea54428456a330ed1a42f9644310e9",
+    "status": "numerically_stable_coarse_risk_map",
+    "analysis_role": "confirmation",
+    "numerical_stability_status": "numerically_stable_coarse_risk_map",
+    "spatial_accuracy_status": "blocked",
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked"
+  },
+  "contract": {
+    "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+    "partition_sha256": "3cce7b2b8c7307fbe0ff1efd55de35105e878fc0bad9b818f579afade10d04c9",
+    "estimator_sha256": "a52826cf4239622ee3e35fe37076fc8944b03848a5f95495f3665263ebfd43de",
+    "evaluator_sha256": "7e8d0c8f0f9a518e44878ea24c890f276dfd9a5ae7c00e94f730cf80666d4f6e"
+  },
+  "confirmation": {
+    "n_parcels": 20000,
+    "seeds": [57721, 104729, 130363, 161027, 196613],
+    "fallback_hits": 0,
+    "weighted_spearman_median": 0.9261474053065877,
+    "weighted_spearman_p10": 0.8451409815582548,
+    "mass_hotspot_iou_median": 1.0,
+    "spatial_js_divergence_max": 0.020149749035341783,
+    "mean_target_mass_kg": 2.10999919011535e-06,
+    "relative_standard_error": 0.0356919488001632
+  },
+  "provenance": {
+    "discovery_report_sha256": "7966133d82ac9ac9111715867fa7da7daf526ae4d2eb0817d28cfa418a15c370",
+    "identity_compatibility": "performance_only_tracker_hash_change",
+    "allowed_nonphysical_changes": [
+      "strict_immutable_run_identity.parameters.execution_target",
+      "strict_immutable_run_identity.implementation_hashes.particle_tracking"
+    ],
+    "hash_validation": "11_of_11_result_files_match_remote_sha256_manifest",
+    "formal_evidence_status": "ineligible"
+  }
+}

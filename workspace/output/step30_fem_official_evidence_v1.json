@@ -1,0 +1,465 @@
+{
+  "version": "step30-fem-evidence-intake-v1",
+  "status": "blocked",
+  "fem_gate": "blocked",
+  "evidence_taxonomy": {
+    "source_type": "external_measured",
+    "reference_role": "external_measured_calibration",
+    "official_reference": false,
+    "interpretation": "DEC field measurement package; admissible as independent measured AI5 evidence only after a CAD patch and gauge direction are supplied"
+  },
+  "official_package_root": "DecPelton2024/\DecPelton2024",
+  "artifacts": [
+    {
+      "role": "official_dynamic_stress_report",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.2-ת�ֶ�Ӧ�����鱨��.pdf",
+      "sha256": "ea63c63c39f01ca3e484b1b145a54fbf6a2707cc1b94c688a214d6d7c973c22c",
+      "bytes": 1719093
+    },
+    {
+      "role": "official_dynamic_stress_data_note",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.3-ת�ֶ�Ӧ����������˵��.pdf",
+      "sha256": "5e2ffec6c886460e18107b4ab810943ff055967bbc495bae23fc6f4b4b910b16",
+      "bytes": 120704
+    },
+    {
+      "role": "official_geometry_data_note",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/2-���ת����άʵ������/2.2-150MW�����ʽ���������ת����άʵ������_�ļ�˵��.pdf",
+      "sha256": "b62e6ceae57d40efb248c0ab3d0379a19dce85ae698649e29228a7d734832c5e",
+      "bytes": 500695
+    },
+    {
+      "role": "official_ai5_trace_01",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/100MW.txt",
+      "sha256": "af79563eff54b402ae0aa5dc5c2bce9dbcdad566f3e5da8e594d40fef51781f2",
+      "bytes": 23622
+    },
+    {
+      "role": "official_ai5_trace_02",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/110MW.txt",
+      "sha256": "f4fc5b8d9fcd2b4c3783fd4f3113f592de4785650c507935f43d01855c8cdd7a",
+      "bytes": 23579
+    },
+    {
+      "role": "official_ai5_trace_03",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/120MW.txt",
+      "sha256": "02bec3036f8532ebcbec152af34410e36f79a22f469e4907c01fe44b844b934f",
+      "bytes": 23595
+    },
+    {
+      "role": "official_ai5_trace_04",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/130MW.txt",
+      "sha256": "6ccb56a4f0b6566b13923db43d7e3ec0293e4f27da1d32f04d9c2c2cfc8abbb7",
+      "bytes": 23627
+    },
+    {
+      "role": "official_ai5_trace_05",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/140MW.txt",
+      "sha256": "96a70ba6510b6f50418132d3404569ee1a0861bb21167715bfd1e6074c2d7a47",
+      "bytes": 23606
+    },
+    {
+      "role": "official_ai5_trace_06",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/30MW.txt",
+      "sha256": "cbc9fbf0dd8fa52e0e91aa6281bd6a0828b7ea6a5d9ccc4991770b46ec6504e6",
+      "bytes": 23583
+    },
+    {
+      "role": "official_ai5_trace_07",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/40MW.txt",
+      "sha256": "00ad9cae7d718ddc6d9ab4b49b090f360be6a6fb3cad0c9a8ce9cfb531eb6988",
+      "bytes": 23624
+    },
+    {
+      "role": "official_ai5_trace_08",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/50MW.txt",
+      "sha256": "215e998e92dd00518ee2101555fd83b4cdb8249f83739807ca5b28cd0a24d7d9",
+      "bytes": 23576
+    },
+    {
+      "role": "official_ai5_trace_09",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/60MW.txt",
+      "sha256": "a18d06dd684b1151cbd42b9e6e9ea7c1ce1ad7a25462e227d0d715e6bcf27953",
+      "bytes": 23618
+    },
+    {
+      "role": "official_ai5_trace_10",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/70MW.txt",
+      "sha256": "d70bb349360b6c1999054d3c3ae4dfd6401ecec6ec32333ff54aab8e0814fba3",
+      "bytes": 23616
+    },
+    {
+      "role": "official_ai5_trace_11",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/80MW.txt",
+      "sha256": "9ed9713e4c2afad57006526e3532efd27ae80d9412e508a0279ea7f51132ad51",
+      "bytes": 23558
+    },
+    {
+      "role": "official_ai5_trace_12",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/90MW.txt",
+      "sha256": "6c2d2fcac6b7e27de9a3a59f945fdefb800f6088c862d5e2ef32898724b0da3b",
+      "bytes": 23614
+    },
+    {
+      "role": "official_ai5_trace_13",
+      "path": "DEC PELTON 2024-150MW�����ʽ������ת���з��������ݰ�/3-�ֳ���Ӧ������ʵ������/3.1-�ֳ���Ӧ��ʵ������/���ת.txt",
+      "sha256": "6d25d87bc46ff5ca655555d3fcabf74d8f1addb524841e37b76c1b2a792a7872",
+      "bytes": 23560
+    }
+  ],
+  "claims": {
+    "ai5_channel": {
+      "status": "passed",
+      "value": "AI5-04",
+      "source_roles": [
+        "official_ai5_trace_01",
+        "official_dynamic_stress_data_note"
+      ]
+    },
+    "ai5_physical_location": {
+      "status": "passed",
+      "value": "4# bucket root, on the water-divider extension line, selected as the simulated maximum-stress location",
+      "source_roles": [
+        "official_dynamic_stress_report"
+      ],
+      "report_pages": [
+        3
+      ],
+      "numeric_cad_coordinates": null
+    },
+    "sampling": {
+      "status": "passed",
+      "value": 1000.0,
+      "units": "Hz",
+      "source_roles": [
+        "official_dynamic_stress_data_note"
+      ]
+    },
+    "stress_units": {
+      "status": "passed",
+      "value": "MPa",
+      "source_roles": [
+        "official_ai5_trace_01"
+      ]
+    },
+    "runner_speed_s1": {
+      "status": "passed",
+      "value": 375.0,
+      "units": "rpm",
+      "source_roles": [
+        "official_dynamic_stress_report"
+      ],
+      "report_pages": [
+        4
+      ]
+    },
+    "young_modulus": {
+      "status": "passed",
+      "value": 206000000000.0,
+      "units": "Pa",
+      "source_roles": [
+        "official_dynamic_stress_report",
+        "official_dynamic_stress_data_note"
+      ],
+      "report_pages": [
+        3
+      ]
+    },
+    "poisson_ratio": {
+      "status": "passed",
+      "value": 0.3,
+      "units": "1",
+      "source_roles": [
+        "official_dynamic_stress_report",
+        "official_dynamic_stress_data_note"
+      ],
+      "report_pages": [
+        3
+      ]
+    },
+    "material_density": {
+      "status": "blocked",
+      "value": null,
+      "units": "kg/m3"
+    }
+  },
+  "measurements": {
+    "status": "measured",
+    "n_conditions": 13,
+    "records": [
+      {
+        "condition": "100MW",
+        "source_file": "100MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 27.907492096806653,
+        "min_mpa": 17.83797231,
+        "max_mpa": 36.23841692,
+        "half_peak_to_peak_amplitude_mpa": 9.200222304999999
+      },
+      {
+        "condition": "110MW",
+        "source_file": "110MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 28.38770340610933,
+        "min_mpa": 16.68759231,
+        "max_mpa": 37.91928462,
+        "half_peak_to_peak_amplitude_mpa": 10.615846155
+      },
+      {
+        "condition": "120MW",
+        "source_file": "120MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 28.837677293700505,
+        "min_mpa": 15.67185231,
+        "max_mpa": 40.52054769,
+        "half_peak_to_peak_amplitude_mpa": 12.424347690000001
+      },
+      {
+        "condition": "130MW",
+        "source_file": "130MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 29.259780442416783,
+        "min_mpa": 15.56386615,
+        "max_mpa": 40.2831,
+        "half_peak_to_peak_amplitude_mpa": 12.359616924999997
+      },
+      {
+        "condition": "140MW",
+        "source_file": "140MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 29.697215979437384,
+        "min_mpa": 14.27305846,
+        "max_mpa": 43.29650769,
+        "half_peak_to_peak_amplitude_mpa": 14.511724614999999
+      },
+      {
+        "condition": "30MW",
+        "source_file": "30MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 24.45207082660861,
+        "min_mpa": 17.85411692,
+        "max_mpa": 35.71965692,
+        "half_peak_to_peak_amplitude_mpa": 8.93277
+      },
+      {
+        "condition": "40MW",
+        "source_file": "40MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 24.90126929661648,
+        "min_mpa": 16.17918923,
+        "max_mpa": 39.97208769,
+        "half_peak_to_peak_amplitude_mpa": 11.896449230000002
+      },
+      {
+        "condition": "50MW",
+        "source_file": "50MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 25.337206859762254,
+        "min_mpa": 18.02302615,
+        "max_mpa": 33.57577385,
+        "half_peak_to_peak_amplitude_mpa": 7.776373849999999
+      },
+      {
+        "condition": "60MW",
+        "source_file": "60MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 25.9604377472583,
+        "min_mpa": 17.25539538,
+        "max_mpa": 35.20470462,
+        "half_peak_to_peak_amplitude_mpa": 8.97465462
+      },
+      {
+        "condition": "70MW",
+        "source_file": "70MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 26.402201260419993,
+        "min_mpa": 16.41145846,
+        "max_mpa": 37.47028154,
+        "half_peak_to_peak_amplitude_mpa": 10.529411540000002
+      },
+      {
+        "condition": "80MW",
+        "source_file": "80MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 26.857876066030112,
+        "min_mpa": 15.89909538,
+        "max_mpa": 39.45591692,
+        "half_peak_to_peak_amplitude_mpa": 11.77841077
+      },
+      {
+        "condition": "90MW",
+        "source_file": "90MW.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 27.499145760079216,
+        "min_mpa": 13.83700154,
+        "max_mpa": 42.19258154,
+        "half_peak_to_peak_amplitude_mpa": 14.17779
+      },
+      {
+        "condition": "rated_noload",
+        "source_file": "���ת.txt",
+        "n_samples": 1262,
+        "time_units": "s",
+        "stress_units": "MPa",
+        "time_start_s": 0.0,
+        "time_end_s": 1.261,
+        "sample_interval_s": 0.001,
+        "sample_frequency_hz": 1000.0,
+        "mean_mpa": 22.771450784992023,
+        "min_mpa": 22.20189231,
+        "max_mpa": 24.06948923,
+        "half_peak_to_peak_amplitude_mpa": 0.9337984599999984
+      }
+    ],
+    "amplitude_definition": "half_peak_to_peak_of_raw_trace; independent field measurement summary, not an FEM target for calibration"
+  },
+  "geometry_provenance": {
+    "version": "step30-fem-geometry-conversion-v2",
+    "status": "step_available_named_selections_blocked",
+    "source": {
+      "full_runner_x_t_sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313",
+      "remote_source_copy_sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313"
+    },
+    "remote_export": {
+      "single_bucket_step_sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d",
+      "single_bucket_stl_sha256": "dd1b87aa34064641679e58cff1859efb927782cb713a42a419eb13aeb65e8834",
+      "single_bucket_parasolid_sha256": "7e7a8ad6168112ba91c4e4f75c51fc71ef29ce3a0cc2fd8b8877fc37857b9b2c",
+      "export_script_sha256": "b6dcb108a380fe7c8e9d9f89e9d55e8caea2357e6267caa9ed9c1a741778dcaa",
+      "export_log_sha256": "7b912a9df53b0bca56798c76e7d97c80ccf4a04471a706ea8428d4c08f2e30db",
+      "probe_log_sha256": "7c8c23681b39ed92f5c893338b238f587c817d4d901f618c0fbbe51c78e88c82"
+    },
+    "gmsh_step_probe": {
+      "status": "passed",
+      "n_volumes": 1,
+      "n_surfaces": 30,
+      "geometry_role": "single_bucket_solid_ready_for_downstream_meshing"
+    },
+    "remaining_blockers": [
+      "no independently confirmed ROOT_INTERFACE selection",
+      "no independently confirmed WETTED_SURFACE selection",
+      "no machine-readable AI5_04 patch and gauge directions",
+      "no admissible material density source"
+    ],
+    "fem_gate": "blocked",
+    "note": "STEP geometry is now available locally; structural naming and AI5 evidence remain blocked.",
+    "path": "workspace/output/step30_fem_remote_export_v1/fem_geometry_conversion_v2.json",
+    "sha256": "a571b1c27f890650e3864ef08d234164b971ced5102e4509f2ab758f0e464457"
+  },
+  "remaining_blockers": [
+    {
+      "id": "ROOT_INTERFACE",
+      "status": "blocked",
+      "required": "independently confirmed CAD face/node selection for the bucket-runner attachment interface",
+      "reason": "no named selection or independently confirmed face set is present in the official package or recovered COMSOL export"
+    },
+    {
+      "id": "WETTED_SURFACE",
+      "status": "blocked",
+      "required": "independently confirmed wetted face set with root closure excluded",
+      "reason": "the STEP catalog contains only geometric surface tags; tags are not physical selections"
+    },
+    {
+      "id": "AI5_04_CAD_PATCH",
+      "status": "blocked",
+      "required": "numeric CAD patch/point bound to the source STEP",
+      "reason": "the official report gives physical location semantics but no numeric CAD coordinates or face/node identity"
+    },
+    {
+      "id": "AI5_04_GAUGE_DIRECTIONS",
+      "status": "blocked",
+      "required": "one or two frozen unit directions and their coordinate frame",
+      "reason": "the report identifies a 90-degree strain gauge but does not provide a machine-readable direction vector"
+    },
+    {
+      "id": "MATERIAL_DENSITY",
+      "status": "blocked",
+      "required": "official design/material certificate bound to grade/heat/batch and density in kg/m3",
+      "reason": "the official package supports E=206 GPa and nu=0.3 but no admissible runner material density source"
+    },
+    {
+      "id": "STEP_COORDINATE_UNITS",
+      "status": "blocked",
+      "required": "independent numeric unit probe for the recovered STEP coordinates",
+      "reason": "COMSOL export declares meters, while the catalog magnitudes are mm-scale; the scale has not been independently frozen"
+    }
+  ],
+  "acquisition_plan": {
+    "cad_selection_package": "Export a named-selection/face-list report from the source STEP in COMSOL, NX, Ansys, or equivalent. Include source STEP SHA-256, coordinate units, entity dimension/tags, and a screenshot or CAD selection log for ROOT_INTERFACE, WETTED_SURFACE, AI5_04, and MATERIAL_DOMAIN.",
+    "ai5_patch_package": "Provide numeric AI5 patch coordinates in the STEP frame, patch face/node IDs, gauge coordinate frame, and one/two unit direction vectors. Include the source report/CAD artifact hash and confirm AI5 nodes are outside fixed root nodes.",
+    "density_package": "Provide the runner material certificate or design record with grade, heat/batch identity, density in kg/m3, and source hash. Do not use water density or the synthetic 7850 kg/m3 default.",
+    "unit_probe": "Run an independent STEP bounding-box/volume probe with a known dimensional reference and freeze whether the solver mesh input is m or mm."
+  },
+  "manifest_sha256": "5419df48cd6488977fc128430cce4035466a31b7f603bc5ce44e51405bb2c114"
+}

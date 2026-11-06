@@ -1,0 +1,151 @@
+{
+  "version": "step30-material-trial-source-manifest-v2",
+  "schema_version": "step30-material-trial-source-manifest-v2",
+  "status": "blocked",
+  "blocked_reason": "No real measured material trial package, mill certificate, or instrument calibration files are present.",
+  "formal": false,
+  "study_phase": "not_started",
+  "minimum_independent_groups": 3,
+  "recommended_formal_groups": 5,
+  "split_contract": {
+    "scheme": "identity_only_union_group_holdout",
+    "partitions": [
+      "train",
+      "calibration",
+      "independent_test"
+    ],
+    "hard_group_fields": [
+      "asset_id",
+      "heat_id",
+      "material_batch",
+      "campaign_id",
+      "specimen_id"
+    ],
+    "measurement_labels_used": false,
+    "source_hashes_used": false
+  },
+  "required_trial_template": {
+    "trial_id": "REQUIRED",
+    "run_id": "REQUIRED",
+    "asset_id": "REQUIRED",
+    "asset_type": "pelton_bucket_or_coupon",
+    "material_identity_known": true,
+    "mixed_heat": false,
+    "campaign_id": "REQUIRED",
+    "specimen_id": "REQUIRED",
+    "status": "measured",
+    "provenance": {
+      "origin": "laboratory_measurement",
+      "campaign_id": "MUST_EQUAL_TRIAL_CAMPAIGN_ID",
+      "organization": "REQUIRED",
+      "acquisition_method": "REQUIRED",
+      "acquired_at": "REQUIRED_ISO8601"
+    },
+    "source": {
+      "path": "REQUIRED_RAW_CSV_JSON_OR_NPZ",
+      "sha256": "REQUIRED_SHA256",
+      "bytes": 0,
+      "status": "measured",
+      "kind": "trial_data"
+    },
+    "morphology_source": {
+      "path": "REQUIRED_RAW_NPY_NPZ_CSV_OR_JSON",
+      "sha256": "REQUIRED_SHA256",
+      "bytes": 0,
+      "status": "measured",
+      "kind": "height_field"
+    },
+    "morphology_config": {
+      "input_kind": "height_field",
+      "height_unit": "mm",
+      "spacing_x": 0.1,
+      "spacing_y": 0.1,
+      "spacing_unit": "mm",
+      "threshold": 0.01,
+      "threshold_unit": "mm",
+      "height_uncertainty": 0.001,
+      "uncertainty_unit": "mm"
+    },
+    "material": {
+      "grade": "REQUIRED_ASSET_MATERIAL_GRADE",
+      "heat_id": "REQUIRED",
+      "material_batch": "REQUIRED",
+      "certificate": {
+        "path": "REQUIRED_MACHINE_READABLE_JSON_CERTIFICATE",
+        "sha256": "REQUIRED_SHA256",
+        "bytes": 0,
+        "status": "measured",
+        "kind": "material_certificate"
+      },
+      "chemistry": {
+        "unit": "wt_pct",
+        "values": {
+          "REQUIRED_ELEMENT": 0.0
+        }
+      },
+      "heat_treatment": "REQUIRED",
+      "coating_status": "REQUIRED_EXPLICIT_STATUS",
+      "weld_status": "REQUIRED_EXPLICIT_STATUS",
+      "hardness": {
+        "value": 0.0,
+        "uncertainty": 0.0,
+        "unit": "HV_or_GPa",
+        "source": "measured",
+        "is_default": false,
+        "measurement_id": "REQUIRED",
+        "instrument_id": "REQUIRED_CALIBRATED_HARDNESS_TESTER"
+      },
+      "density": {
+        "value_kg_m3": 0.0,
+        "uncertainty_kg_m3": 0.0,
+        "source": "measured_or_certificate"
+      }
+    },
+    "instruments": [
+      {
+        "instrument_id": "REQUIRED",
+        "kind": "balance_or_hardness_tester_or_profilometer",
+        "model": "REQUIRED",
+        "serial_number": "REQUIRED",
+        "calibrated_at": "REQUIRED_ISO8601",
+        "valid_until": "REQUIRED_ISO8601",
+        "calibration": {
+          "path": "REQUIRED_CALIBRATION_FILE",
+          "sha256": "REQUIRED_SHA256",
+          "bytes": 0,
+          "status": "measured",
+          "kind": "calibration_certificate"
+        }
+      }
+    ],
+    "conditions": {
+      "speed_m_s": 0.0,
+      "impact_angle_deg": 0.0,
+      "psd_d10_um": 0.0,
+      "psd_d50_um": 0.0,
+      "psd_d90_um": 0.0,
+      "sediment_mass_kg": 0.0,
+      "exposure_s": 0.0,
+      "exposed_area_mm2": 0.0
+    },
+    "units": {}
+  },
+  "metric_contract": {
+    "maximum_error_fraction": 0.05,
+    "pass_rule": "all preregistered independent-test values <= 0.05",
+    "fail_rule": "any preregistered independent-test value > 0.05",
+    "metrics": [
+      "wear_volume_mm3",
+      "mass_loss_g",
+      "wear_depth_mm",
+      "roughness_ra_um",
+      "pit_volume_mm3",
+      "pit_max_depth_um"
+    ]
+  },
+  "independent_material_gate": false,
+  "official_reference": false,
+  "official_accuracy": false,
+  "official_reference_gate": false,
+  "official_accuracy_gate": false
+}

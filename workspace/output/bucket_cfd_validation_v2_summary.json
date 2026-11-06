@@ -10,35 +10,35 @@
   "zones": {
     "baseline_no_mask": {
       "n": 71062,
-      "zone": "å…¨åŸŸ_æ— æ©ç (åŸºå‡†)",
+      "zone": "È«Óò_ÎŞÑÚÂë(»ù×¼)",
       "rho_p": -0.0525,
       "rho_tau": 0.012,
       "top10_iou_tau": 0.0744
     },
     "baseline_masked": {
       "n": 69262,
-      "zone": "å…¨åŸŸ_bucket0æ©ç ",
+      "zone": "È«Óò_bucket0ÑÚÂë",
       "rho_p": -0.0594,
       "rho_tau": 0.0127,
       "top10_iou_tau": 0.0762
     },
     "concave_zone": {
       "n": 5308,
-      "zone": "å‡¹é¢åŒºåŸŸ râ‰¤150mm x=850-1100mm",
+      "zone": "°¼ÃæÇøÓò r¡Ü150mm x=850-1100mm",
       "rho_p": 0.2354,
       "rho_tau": -0.0965,
       "top10_iou_tau": 0.031
     },
     "stagnation": {
       "n": 4061,
-      "zone": "æ»æ­¢åŒº râ‰¤90mm xå…¨åŸŸ",
+      "zone": "ÖÍÖ¹Çø r¡Ü90mm xÈ«Óò",
       "rho_p": 0.4035,
       "rho_tau": -0.2516,
       "top10_iou_tau": 0.0558
     },
     "wide_impact": {
       "n": 14835,
-      "zone": "å®½å†²å‡»åŒº râ‰¤200mm x=700-1200mm",
+      "zone": "¿í³å»÷Çø r¡Ü200mm x=700-1200mm",
       "rho_p": 0.2125,
       "rho_tau": -0.0705,
       "top10_iou_tau": 0.0119

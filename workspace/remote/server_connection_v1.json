@@ -1,0 +1,46 @@
+{
+  "schema": "step30-server-connection-v1",
+  "recorded_local_time": "2026-08-28T15:28:44+08:00",
+  "tailscale": true,
+  "local_project_root": "",
+  "local_control_root": "external_workspaces/step30_remote_control_v1",
+  "dcu_cpu": {
+    "host": "100.121.154.58",
+    "ssh_user": "wenquan",
+    "os": "Linux 5.15.0-78-generic",
+    "connectivity": "tcp_22_reachable",
+    "authentication": "authenticated_password_external_only",
+    "scheduler": "none_detected",
+    "required_remote_root": "PWQ/step30_cpu_v1",
+    "required_workspace": "PWQ/step30_cpu_v1/workspace",
+    "required_venv": "PWQ/step30_cpu_v1/.venv",
+    "numerical_jobs_submitted": true,
+    "completed_jobs": ["step30_cpu_confirmation_20260828_v2"]
+  },
+  "user_gpu": {
+    "host": "100.92.47.51",
+    "ssh_user": "user",
+    "os": "Linux 6.8.0-124-generic",
+    "connectivity": "authenticated",
+    "python": "Python 3.12.3",
+    "venv": "available",
+    "scheduler": "none_detected",
+    "workspace": "remote_artifacts/user/PWQ/step30_gpu_v1",
+    "venv": "remote_artifacts/user/PWQ/step30_gpu_v1/.venv",
+    "gpu": {
+      "model": "NVIDIA GeForce RTX 2080 Ti",
+      "count": 4,
+      "driver": "580.159.03",
+      "memory_each": "11264 MiB"
+    },
+    "validated_gpu_backend": false,
+    "numerical_jobs_submitted": false
+  },
+  "policy": {
+    "local_numerical_execution": false,
+    "dcu_cpu_only_for_current_cpu_tracker": true,
+    "user_gpu_blocked_until_backend_validation": true,
+    "official_accuracy_gate": false,
+    "fem_gate": "blocked"
+  }
+}

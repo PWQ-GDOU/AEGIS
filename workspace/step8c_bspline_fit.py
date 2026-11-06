@@ -16,7 +16,7 @@ from scipy.special import comb
 import trimesh, json, time, warnings
 warnings.filterwarnings('ignore')
 
-OUTPUT_DIR = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\workspace\output")
+OUTPUT_DIR = Path(r"workspace/output")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DEC_MODEL_STL = OUTPUT_DIR / "dec_model_runner.stl"  

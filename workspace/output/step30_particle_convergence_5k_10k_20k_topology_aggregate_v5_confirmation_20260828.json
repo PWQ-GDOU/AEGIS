@@ -1,0 +1,12 @@
+{
+  "version": "step30-particle-convergence-v5",
+  "analysis_role": "confirmation",
+  "status": "blocked",
+  "numerical_stability_status": "blocked",
+  "spatial_accuracy_status": "blocked",
+  "reason": "run must contain immutable particle_hits.npz and summary.json: workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\4b852eb72d6ab48e259a51dfbe4573934b8e0dde1e7fe51a24924e8ae8914389",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "report_sha256": "1006adcdc0c3dc2945dc27ca6a20bf1076d02368c299db46b176deee99938bfe"
+}

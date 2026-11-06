@@ -1,0 +1,79 @@
+{
+  "version": "step30-particle-spatial-estimator-v5",
+  "evidence_status": "exploratory_method_development",
+  "numerical_stability_status": "requires_independent_confirmation",
+  "spatial_accuracy_status": "blocked",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "aggregation_contract": {
+    "version": "topology-connected-bfs-face-budget-v1",
+    "adjacency_rule": "parent faces share at least one collision-triangle edge",
+    "partition_rule": "canonical ascending-parent-face seed; breadth-first expansion over unassigned topology neighbours; fixed maximum parent-face budget",
+    "candidate_max_parent_faces_per_aggregate": [
+      4096,
+      8192,
+      16384
+    ],
+    "default_max_parent_faces_per_aggregate": 16384,
+    "selected_scale_interpretation": "coarse topology-connected numerical screening scale for sparse particle impacts; not a physical erosion-resolution claim",
+    "normalization": "sum target mass within each connected aggregate, then redistribute to member faces in proportion to face area; exact total-mass conservation",
+    "confidence": {
+      "minimum_support_mass_fraction_of_total": 1e-05,
+      "minimum_aggregate_contribution_ess": 3.0
+    }
+  },
+  "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+  "topology_adjacency_sha256": "4d15ce84e22a447226e5dfdb45e61e48c3da3d57070164bde01fa5c0d6c599ee",
+  "partition": {
+    "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+    "max_parent_faces_per_aggregate": 16384,
+    "n_parent_faces": 218988,
+    "n_aggregates": 18,
+    "aggregate_id_sha256": "ec0e7646fa280fe8140751af97c6cc5ed7f7fbcad4cce3c1f6bf019fa6a0f48a",
+    "aggregate_face_count_sha256": "721c43c87236917db22b872530f420be70df58eadd483d48645f13481c618a7b",
+    "aggregate_area_m2_sha256": "606d423bede1877f9ede69f4619d38ee12922ba68c96cd9376d28a20ed64d8f3",
+    "partition_sha256": "3cce7b2b8c7307fbe0ff1efd55de35105e878fc0bad9b818f579afade10d04c9"
+  },
+  "input_bindings": {
+    "particle_hits_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6\\particle_hits.npz",
+    "particle_hits_sha256": "10ea9394e276eeacdbdfe3c7a32ce692a124b7ba39d3c87da385097c3b064abf",
+    "summary_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6\\summary.json",
+    "summary_sha256": "0f73daae54944410875653790552bb1877838fd692962368b114edae689320bd",
+    "run_manifest_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6\\particle_run_manifest.json",
+    "run_manifest_sha256": "4c8dcf44192e75dc4c07459ced60774fcc76473942d763dad60eaf7a0edb3388",
+    "artifact_manifest_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\artifact_set_manifest.json",
+    "artifact_manifest_sha256": "8f5debae923fb927447b4ce531fbe23d5785aba20aa8bfddbdb4cf2a0b3b5304",
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "particle_run_id": "9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "topology_path": "workspace\\output\\step30_acceptance_0.8684190921\\bucket_topology_v3_0.8684190921.npz",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f"
+  },
+  "field_hashes": {
+    "raw_face_target_mass_kg": "23475f85c5d3d632bae36b89de5362c8316f46be7a56deb6c7c16d458b605e58",
+    "raw_mass_per_area_kg_m2": "94c9ecada3ce56d4afa5c3605cd58cda0c44a0213c60a7fa68e76ddfb36c73c7",
+    "aggregate_target_mass_kg": "5d54f165ab795d19341ef9d8cd7dd15d9718e20c40b04d75818137232e6a6ce5",
+    "aggregate_area_m2": "606d423bede1877f9ede69f4619d38ee12922ba68c96cd9376d28a20ed64d8f3",
+    "aggregate_mass_per_area_kg_m2": "430c9d68baf072f83cc8bfd2b8c8c46d1c9b09723fc4e658bd4dd91af995dd7a",
+    "aggregate_local_support_mass_kg": "ee16e5984694888b0a09e952fe446d82b8830b39d8768450ab6ff7008854b729",
+    "aggregate_local_ess": "cf0bd32f0a6b7c3fc5aade2cd49c2d49226245faf517a0f33b77065de9b95b4f",
+    "aggregate_contribution_count": "fd3d69f0d5aaa26657674a421d5d020ed8a226a5ab27c1d376813760d430ae35",
+    "aggregate_confidence_mask": "95a449d8742ea77b23f82d94585ce8b240c0500de8383e9b4c856b2aeebbbc27",
+    "surface_aggregate_face_target_mass_kg": "3514d06ca9d105d28a7a27d6431393c36a9f580893c001a6d0e5e4d93cef654e",
+    "surface_aggregate_mass_per_area_kg_m2": "52363834397583f4dbbfe225eb6eb8bdab8e2ea4652e1791b134fbd5bfab71a1",
+    "local_support_mass_kg": "27d04c60e7fbecb5560d928af80abeb2a4c39ed4686999232e82d1027625760b",
+    "local_ess": "a3328aa32a84d480f5da11fd93ad8ec89a0c8750cbe356939a41eb070c9f5022",
+    "confidence_mask": "135cda49a871d2e70cde836b4411f02f01851a79333be72c398639ae7b76aabd",
+    "contribution_resolution": "20496ca6aded360bf4daf519833ae01e5f39eb82aa52537f186e9ba97edcb0b6"
+  },
+  "limitations": [
+    "The aggregate partition uses native CFD topology only; it does not infer CAD semantics.",
+    "The map is a coarse numerical screening product, not a worn-surface spatial validation.",
+    "The current development runs cannot also serve as independent confirmation data."
+  ],
+  "field_contract_sha256": "bef403a332f28c5a96a1aceaee7728d32bfaff7b1a748b665dd65b88408839ff",
+  "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r1\\particle_surface_aggregate_v5_9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6.npz",
+  "field_sha256": "9173d9867a650e037f17bce132e479631a0de6acb8a8c00fd71732303b94f177",
+  "report_sha256": "3b88cceaeb129f60da45f6ac2ebcd6dd240cf85f1dea8b21dd77c345f232d190"
+}

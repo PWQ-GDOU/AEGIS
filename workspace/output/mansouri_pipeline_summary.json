@@ -1,5 +1,5 @@
 {
-  "pipeline": "Mansouri (2015) analytic formula â€” no GPR approximation",
+  "pipeline": "Mansouri (2015) analytic formula ¡ª no GPR approximation",
   "uncertainty": "std of 4-model normalized ensemble (Oka/Finnie/Tabakoff/Mansouri)",
   "self_consistency": {
     "rho": 1.0,

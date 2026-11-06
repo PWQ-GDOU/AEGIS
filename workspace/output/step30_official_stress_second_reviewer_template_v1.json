@@ -1,0 +1,30 @@
+{
+  "version": "step30-official-stress-second-reviewer-template-v1",
+  "purpose": "Independent blind transcription of official stress tables 3-1 and 3-3",
+  "reviewer_id": "REQUIRED_SECOND_INDEPENDENT_REVIEWER_ID",
+  "reviewer_name": "REQUIRED",
+  "reviewed_at": "REQUIRED_ISO8601",
+  "source_binding": {
+    "pdf_sha256": "ea63c63c39f01ca3e484b1b145a54fbf6a2707cc1b94c688a214d6d7c973c22c",
+    "pages": [4, 5],
+    "tables": ["3-1", "3-3"],
+    "instruction": "Transcribe directly from the cited PDF pages without consulting the first transcription."
+  },
+  "review_scope": "table_3_1_and_3_3",
+  "review_result": "completed_match_or_mismatch",
+  "transcribed_rows": [],
+  "comparison_to_primary": {
+    "performed_by_reviewer": true,
+    "comparison_method": "independent transcription compared after submission",
+    "all_rows_match": "REQUIRED_BOOLEAN",
+    "mismatch_rows": []
+  },
+  "attestation": {
+    "independent_from_primary_reviewer": "REQUIRED_BOOLEAN",
+    "did_not_use_primary_transcription_before_submission": "REQUIRED_BOOLEAN",
+    "signed_or_recorded_by_reviewer": "REQUIRED"
+  },
+  "status": "pending",
+  "strict_scoring_eligible": false,
+  "notes": null
+}

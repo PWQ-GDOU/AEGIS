@@ -1,0 +1,288 @@
+{
+  "version": "step30-zg0cr13ni4mo-water-sand-pilot-preregistration-v1",
+  "status": "preregistered_pending_execution_evidence",
+  "study_phase": "single_heat_measured_pilot",
+  "material_identity": {
+    "grade": "ZG0Cr13Ni4Mo",
+    "same_material_rule": "Mill/heat certificate must state exactly ZG0Cr13Ni4Mo; 04Cr13Ni5Mo is not automatically equivalent.",
+    "certificate_required_before_exposure": true,
+    "chemistry_required_before_exposure": true,
+    "heat_treatment_required_before_exposure": true,
+    "hardness_hv_required_before_exposure": true,
+    "density_required_before_exposure": true
+  },
+  "test_rig": {
+    "type": "controlled_water_sand_jet",
+    "abrasive": "quartz_sand",
+    "psd_contract": {
+      "required_before_first_exposure": true,
+      "measurements": [
+        "D10_um",
+        "D50_um",
+        "D90_um"
+      ],
+      "fixed_for_all_12_coupons_after_measurement": true,
+      "status": "blocked_pending_measured_psd"
+    },
+    "exposure_contract": {
+      "cumulative_sediment_mass_kg_per_coupon": 1.0,
+      "setpoint_status": "frozen_preregistration_setpoint",
+      "not_a_measured_result": true
+    }
+  },
+  "design": {
+    "n_coupons": 12,
+    "speed_m_s": [
+      50.0,
+      90.0
+    ],
+    "impact_angle_deg": [
+      20.0,
+      45.0,
+      90.0
+    ],
+    "repeats_per_condition": 2,
+    "trials": [
+      {
+        "trial_id": "ZG13-50-45-R1",
+        "speed_m_s": 50.0,
+        "impact_angle_deg": 45.0,
+        "repeat": 1,
+        "blind_specimen_code": "PILOT-4C0A9688",
+        "run_order": 1,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-90-90-R2",
+        "speed_m_s": 90.0,
+        "impact_angle_deg": 90.0,
+        "repeat": 2,
+        "blind_specimen_code": "PILOT-534EB88A",
+        "run_order": 2,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-90-20-R2",
+        "speed_m_s": 90.0,
+        "impact_angle_deg": 20.0,
+        "repeat": 2,
+        "blind_specimen_code": "PILOT-577AE66B",
+        "run_order": 3,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-50-20-R2",
+        "speed_m_s": 50.0,
+        "impact_angle_deg": 20.0,
+        "repeat": 2,
+        "blind_specimen_code": "PILOT-73DF2715",
+        "run_order": 4,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-50-20-R1",
+        "speed_m_s": 50.0,
+        "impact_angle_deg": 20.0,
+        "repeat": 1,
+        "blind_specimen_code": "PILOT-79D39072",
+        "run_order": 5,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-50-45-R2",
+        "speed_m_s": 50.0,
+        "impact_angle_deg": 45.0,
+        "repeat": 2,
+        "blind_specimen_code": "PILOT-7B22F83F",
+        "run_order": 6,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-90-90-R1",
+        "speed_m_s": 90.0,
+        "impact_angle_deg": 90.0,
+        "repeat": 1,
+        "blind_specimen_code": "PILOT-86433893",
+        "run_order": 7,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-50-90-R2",
+        "speed_m_s": 50.0,
+        "impact_angle_deg": 90.0,
+        "repeat": 2,
+        "blind_specimen_code": "PILOT-869E9ED2",
+        "run_order": 8,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-50-90-R1",
+        "speed_m_s": 50.0,
+        "impact_angle_deg": 90.0,
+        "repeat": 1,
+        "blind_specimen_code": "PILOT-8BF76977",
+        "run_order": 9,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-90-20-R1",
+        "speed_m_s": 90.0,
+        "impact_angle_deg": 20.0,
+        "repeat": 1,
+        "blind_specimen_code": "PILOT-96155960",
+        "run_order": 10,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-90-45-R1",
+        "speed_m_s": 90.0,
+        "impact_angle_deg": 45.0,
+        "repeat": 1,
+        "blind_specimen_code": "PILOT-D64112B4",
+        "run_order": 11,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      },
+      {
+        "trial_id": "ZG13-90-45-R2",
+        "speed_m_s": 90.0,
+        "impact_angle_deg": 45.0,
+        "repeat": 2,
+        "blind_specimen_code": "PILOT-D9873FFC",
+        "run_order": 12,
+        "metrology_blind_to": [
+          "speed_m_s",
+          "impact_angle_deg",
+          "repeat",
+          "run_order"
+        ]
+      }
+    ],
+    "randomization_seed": 20260821,
+    "blinding": {
+      "specimen_codes_are_blinded_for_metrology": true,
+      "profilometry_scan_repeats_minimum": 3
+    }
+  },
+  "measurement_contract": {
+    "primary": [
+      "mass_loss_g",
+      "wear_volume_mm3",
+      "wear_depth_mm"
+    ],
+    "morphology": [
+      "roughness_ra_um",
+      "pit_morphology"
+    ],
+    "profilometry_scan_repeats_minimum": 3,
+    "required_raw_data": [
+      "balance_raw",
+      "three_dimensional_profile_raw",
+      "roughness_raw",
+      "pit_morphology_images_or_micrographs"
+    ],
+    "required_evidence_before_measurement_release": [
+      "mill_heat_certificate",
+      "chemistry_record",
+      "heat_treatment_record",
+      "hardness_hv_measurement",
+      "density_measurement_or_certificate",
+      "instrument_calibration_files",
+      "specimen_photos",
+      "raw_file_sha256_for_every_measurement"
+    ]
+  },
+  "required_instrument_kinds": [
+    "balance",
+    "hardness_tester",
+    "profilometer",
+    "psd_analyzer"
+  ],
+  "model_comparison_commitment": {
+    "models": [
+      "oka",
+      "finnie",
+      "tabakoff",
+      "mansouri"
+    ],
+    "comparison_rule": "Run all frozen models through the same ingest/replay-compatible metrics; do not choose a winner from pilot data before the comparison is replayed.",
+    "prediction_commitment": "After pilot raw files are immutable, predictions may be replayed only with this frozen model list and raw-data hashes.",
+    "implementation": {
+      "path": "workspace\\step30_material_model_calibration.py",
+      "sha256": "187d7e917ad52ee950ff48503e1565bb5c345297374c3c1c1d078fbb7d094398"
+    },
+    "post_measurement_change_allowed": false
+  },
+  "v2_ingest_replay_bridge": {
+    "source_manifest_version": "step30-material-trial-source-manifest-v2",
+    "ingest_module": "step30_material_trial_ingest.py",
+    "replay_module": "step30_material_trial_replay.py",
+    "single_heat_behavior": "A completed pilot may be reported as measured_pilot, but v2 independent replay remains blocked because one heat/batch is one hard identity group.",
+    "upgrade_requirement": "At least 3 independent heat/batch groups are required for a pilot split; 5 independent groups are recommended before formal candidate status."
+  },
+  "execution_gate": "blocked_pending_certificate_psd_calibration_and_raw_measurement_evidence",
+  "independent_material_gate": false,
+  "official_reference_gate": false,
+  "official_accuracy_gate": false,
+  "fem_gate": "blocked",
+  "limitations": [
+    "This artifact contains no measured wear result.",
+    "One furnace heat/batch cannot demonstrate independent material generalization.",
+    "The pilot does not confirm DEC geometry, ROOT/WETTED selections, or official erosion accuracy."
+  ],
+  "preregistration_sha256": "efbd082719732cd53cd540c787fdc060c073f3c795bfd6ffd01c1245b339c4b6"
+}

@@ -1,0 +1,30 @@
+{
+  "version": "step30-fem-geometry-conversion-v2",
+  "status": "step_available_named_selections_blocked",
+  "source": {
+    "full_runner_x_t_sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313",
+    "remote_source_copy_sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313"
+  },
+  "remote_export": {
+    "single_bucket_step_sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d",
+    "single_bucket_stl_sha256": "dd1b87aa34064641679e58cff1859efb927782cb713a42a419eb13aeb65e8834",
+    "single_bucket_parasolid_sha256": "7e7a8ad6168112ba91c4e4f75c51fc71ef29ce3a0cc2fd8b8877fc37857b9b2c",
+    "export_script_sha256": "b6dcb108a380fe7c8e9d9f89e9d55e8caea2357e6267caa9ed9c1a741778dcaa",
+    "export_log_sha256": "7b912a9df53b0bca56798c76e7d97c80ccf4a04471a706ea8428d4c08f2e30db",
+    "probe_log_sha256": "7c8c23681b39ed92f5c893338b238f587c817d4d901f618c0fbbe51c78e88c82"
+  },
+  "gmsh_step_probe": {
+    "status": "passed",
+    "n_volumes": 1,
+    "n_surfaces": 30,
+    "geometry_role": "single_bucket_solid_ready_for_downstream_meshing"
+  },
+  "remaining_blockers": [
+    "no independently confirmed ROOT_INTERFACE selection",
+    "no independently confirmed WETTED_SURFACE selection",
+    "no machine-readable AI5_04 patch and gauge directions",
+    "no admissible material density source"
+  ],
+  "fem_gate": "blocked",
+  "note": "STEP geometry is now available locally; structural naming and AI5 evidence remain blocked."
+}

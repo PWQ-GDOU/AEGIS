@@ -31,7 +31,53 @@ output/degradation_curves.npz
 output/particle_hits.npz
 output/particle_hits_cfd*.npz
 output/bucket_topology.npz
+output/bucket_topology_si.npz
 output/native_bucket/
+output/native_bucket_si/
+output/native_bucket_si_probe/
+output/native_bucket_si_urans_*/
+output/step30_acceptance_*/topology*.npz
+output/step30_acceptance_*/particle_*.log
+output/step30_runs/*/*/*/particle_hits.npz
+output/step30_runs/*/*/*/validation.png
+
+# Generated OpenFOAM SI case artifacts
+of_case/pelton_bucket_jet_si/0/
+of_case/pelton_bucket_jet_si/0.[0-9]*/
+of_case/pelton_bucket_jet_si/[1-9]*/
+of_case/pelton_bucket_jet_si/[1-9]*.[0-9]*/
+of_case/pelton_bucket_jet_si/[0-9]*[eE][+-][0-9]*/
+of_case/pelton_bucket_jet_si/[0-9]*[eE][0-9]*/
+of_case/pelton_bucket_jet_si/constant/polyMesh/
+of_case/pelton_bucket_jet_si/constant/triSurface/*.stl
+of_case/pelton_bucket_jet_si/constant/triSurface/*.vtp
+of_case/pelton_bucket_jet_si/VTK/
+of_case/pelton_bucket_jet_si/postProcessing/
+of_case/pelton_bucket_jet_si/step30_export/
+of_case/pelton_bucket_jet_si/si_stl.sha256
+of_case/pelton_bucket_jet_si/system/*.final.template
+of_case/pelton_bucket_jet_si/log.*
+
+# Generated authoritative open-boundary SI case artifacts
+of_case/pelton_bucket_open_si/0/
+of_case/pelton_bucket_open_si/0.[0-9]*/
+of_case/pelton_bucket_open_si/[1-9]*/
+of_case/pelton_bucket_open_si/[1-9]*.[0-9]*/
+of_case/pelton_bucket_open_si/[0-9]*[eE][+-][0-9]*/
+of_case/pelton_bucket_open_si/[0-9]*[eE][0-9]*/
+of_case/pelton_bucket_open_si/constant/polyMesh/
+of_case/pelton_bucket_open_si/processor*/
+of_case/pelton_bucket_open_si/VTK/
+of_case/pelton_bucket_open_si/postProcessing*/
+of_case/pelton_bucket_open_si/step30_export_*/
+of_case/pelton_bucket_open_si/log.*
+of_case/pelton_bucket_open_si/*.solver.rc
+of_case/pelton_bucket_open_si/*.driver.rc
+of_case/pelton_bucket_open_si/*.pid
+of_case/pelton_bucket_open_si/urans_average.*_time
+of_case/pelton_bucket_open_si/urans_live_gate_*.json
+of_case/pelton_bucket_open_si/urans_time_mean_validation_*.json
+of_case/pelton_bucket_open_si/authoritative_si_stl.sha256
 
 # Trained GPR models (large pkl)
 output/gpr_model.pkl

@@ -1,0 +1,70 @@
+{
+  "version": "step30-participant-benchmark-inputs-v1",
+  "status": "conditional_participant_benchmark_inputs_ready",
+  "n_independent_pairs": 10,
+  "n_faces": 218988,
+  "domain": {
+    "centers_sha256": "62aff1a51bb4260d31e93e30d0e9e8cf5e9f7fd47d8f3011bca7b661bbe9e31a",
+    "areas_sha256": "a9f9e379df6a45aded7029ef4d861ddcd9da5b8042964245cb30f633d6116671"
+  },
+  "seed_reports": [
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_00.json",
+      "sha256": "a2e8570e35e62d0b376bac4637ca480b74c612445c7fef0899994de7023826da"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_01.json",
+      "sha256": "7e5c74f6056d1e652beca222047976f37ce827c5cf5b7410b68842bb22d012ed"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_02.json",
+      "sha256": "272f33b865cf7b8fede631b1350b2547f8a9ebd161c4297655766c9851237b7d"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_03.json",
+      "sha256": "e72e9c7895e92812e9822ef0cbca0a2bf471f76fee207440d9e25b800efb2c4a"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_04.json",
+      "sha256": "c5ef1cc8cf92bb30775a5d38d4f8e954764846e3b6b054a22acebc8c4ef20ae1"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_05.json",
+      "sha256": "518df93b4d70eb4377789c1c3fe322a8ed65af93726cae8cff8a418992623f8d"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_06.json",
+      "sha256": "4c5bad3e1ce9d69ba05ec13485942cd2a0b488995d143bc86e11c57dbf59097d"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_07.json",
+      "sha256": "45a698445d31b679413ac9a9167fb9c112ceeccc18edd62c5fe3b16d033f97c0"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_08.json",
+      "sha256": "10c1eccfa82df83e54a8aca6b24d8531e3975d8fe587b159eccf6ac15846ee25"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/seed_09.json",
+      "sha256": "5fee5002b340c32798d2346b424891e01acbbfe6f395734a70248ea6f48ee42f"
+    }
+  ],
+  "merged_report": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/merged.json",
+    "sha256": "d0144c87fa6bfcca7d3a11bdd8dc3833ccf9c6e891482e4a628ee4bf3d29c0cb"
+  },
+  "literature_reference": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/literature_reference.json",
+    "sha256": "5502db904f8ff6b75d253dfdc7015c431f70d92e80f61d5d82d2fc988dad1dc7"
+  },
+  "region_field": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/participant_dec_region_field.npz",
+    "sha256": "04a6d0ab811ec1568282250160ed5c5d5659041713bd8ca1049a6b8fe5d5b093"
+  },
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "measured_truth": false,
+  "claim_scope": "conditional participant-built benchmark only",
+  "manifest_sha256": "a14f245a97f3306572a49924cd9f8094cd46c1cd2e691badf605bfc3d13f5b01"
+}

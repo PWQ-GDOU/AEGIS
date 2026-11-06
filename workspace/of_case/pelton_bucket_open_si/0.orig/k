@@ -1,0 +1,10 @@
+FoamFile { version 2.0; format ascii; class volScalarField; object k; }
+dimensions [0 2 -2 0 0 0 0];
+internalField uniform 1e-6;
+boundaryField {
+    inletFace { type inletOutlet; inletValue uniform 1e-6; value uniform 1e-6; }
+    outletFace { type inletOutlet; inletValue uniform 1e-6; value uniform 1e-6; }
+    sides { type inletOutlet; inletValue uniform 1e-6; value uniform 1e-6; }
+    bucket { type kqRWallFunction; value uniform 1e-6; }
+    jetInlet { type fixedValue; value uniform 41.1864; }
+}

@@ -1,0 +1,2890 @@
+{
+  "version": "step30-participant-optimization-v1",
+  "status": "conditional",
+  "benchmark_kind": "competition_self_benchmark",
+  "competition_self_benchmark_gate": true,
+  "competition_self_benchmark_status": "conditional_participant_built_reference",
+  "competition_self_benchmark_score": 59.44063084867986,
+  "nominal_score": 79.44063084867985,
+  "conservative_score": 59.44063084867986,
+  "optimistic_score": 69.44063084867986,
+  "competition_self_benchmark_score_interval": {
+    "lower": 53.4704721854511,
+    "upper": 74.13549620420221
+  },
+  "score_components": {
+    "hotspot_iou": 0.35,
+    "ranking": 0.25,
+    "js_distribution": 0.2,
+    "absolute_amplitude": 0.2
+  },
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "reference_independence": "geometry_and_literature_reference_independent_of_model_fields",
+  "literature_region_weights": {
+    "splitter_like": 0.375,
+    "cutout_like": 0.3,
+    "brim_like": 0.05,
+    "bucket_base_or_side_like": 0.075,
+    "impact_zone_like": 0.2,
+    "residual_other": 0.0
+  },
+  "inputs": {
+    "face_domain": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/domain.npz",
+      "sha256": "444e72117430c811497c304dfbcc28445adccfd08bb63e2faf944ee538e2570c",
+      "n_faces": 218988
+    },
+    "merged_prior": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/merged/prior.json",
+      "sha256": "41c7daac2e89bafb8bd12b120cb3cc9e582530be6478d1d9be8a93390daf6e60",
+      "npz_sha256": "f208f97636f082a43c5278662212d91d5a2f67ac4925b23852f3f633838d35e4"
+    },
+    "seed_priors": [
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_825055/prior.json",
+        "sha256": "8b7be0ccb369e66efebd92e80f97671ebcf9fc0d893125a1cc7a513c12e0606b",
+        "npz_sha256": "353e7b498b346b70f75eda17fb528fd517f62b0a37bd8a2439764f6f9034ca26"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_c004/prior.json",
+        "sha256": "6e305933351393193c4918dd500d68375df6c615636b3f175119c4ec60b820fd",
+        "npz_sha256": "61b41f29d7684058f377bc905b30663c57a711a035de2ca504ef09df7bcd241d"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_9404/prior.json",
+        "sha256": "41c7daac2e89bafb8bd12b120cb3cc9e582530be6478d1d9be8a93390daf6e60",
+        "npz_sha256": "f208f97636f082a43c5278662212d91d5a2f67ac4925b23852f3f633838d35e4"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_85c57/prior.json",
+        "sha256": "6e4aa033e90796e33c29949d3ad5383bcb9ce0e1e50ff5c113f2007fa6acdf1b",
+        "npz_sha256": "231b5e06dff816729d0a10cdf8e9106ab871d295a3d3b8ebeac398a469ef3e0c"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_c15c/prior.json",
+        "sha256": "a43a1a6773b4bc6a7cba8206b69bc928927bd0a61f5259c560ba788bdcc8ccb7",
+        "npz_sha256": "6bb72f66857e5788b0a99f561c84cfbb6ada823adc00d4e2d780546bec45ae0f"
+      }
+    ],
+    "literature_reference": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/literature/reference.json",
+      "sha256": "4966292e1b4003330f195c47bee380566fcb8013f32eece3156df45243125e45"
+    }
+  },
+  "face_region_mapping": {
+    "version": "step30-participant-dec-face-region-mapping-v1",
+    "status": "participant_built",
+    "mapping_kind": "participant_DEC_face_region_mapping",
+    "official_reference": false,
+    "measured_truth": false,
+    "regions": [
+      {
+        "region_id": "splitter_like",
+        "face_count": 51191,
+        "area_m2": 0.20393831567389498,
+        "area_fraction": 0.21859254053809515,
+        "literature_support_fraction": 0.375
+      },
+      {
+        "region_id": "cutout_like",
+        "face_count": 42526,
+        "area_m2": 0.1933641432475497,
+        "area_fraction": 0.20725854865371202,
+        "literature_support_fraction": 0.3
+      },
+      {
+        "region_id": "brim_like",
+        "face_count": 33886,
+        "area_m2": 0.13906676383624017,
+        "area_fraction": 0.14905956789397098,
+        "literature_support_fraction": 0.05
+      },
+      {
+        "region_id": "bucket_base_or_side_like",
+        "face_count": 2212,
+        "area_m2": 0.011300910584736812,
+        "area_fraction": 0.012112950658382235,
+        "literature_support_fraction": 0.075
+      },
+      {
+        "region_id": "impact_zone_like",
+        "face_count": 89173,
+        "area_m2": 0.3852908687662193,
+        "area_fraction": 0.4129763922558396,
+        "literature_support_fraction": 0.2
+      },
+      {
+        "region_id": "residual_other",
+        "face_count": 0,
+        "area_m2": 0.0,
+        "area_fraction": 0.0,
+        "literature_support_fraction": 0.0
+      }
+    ],
+    "rules": {
+      "source": "official face centers only",
+      "surface_orientation": "deterministic PCA axes; no CAD tag or AI5/WETTED/ROOT semantics",
+      "splitter": "abs(lateral-0.5)<=0.16 and longitudinal>=0.35 and normal>=0.45",
+      "cutout": "longitudinal edge bands <=0.12 or >=0.88, excluding splitter",
+      "brim": "normal>=0.82, excluding splitter/cutout",
+      "bucket_base_or_side": "normal<=0.18, excluding higher-priority regions",
+      "impact_zone": "remaining non-residual faces"
+    },
+    "axis_metadata": {
+      "axis_order": [
+        "longitudinal",
+        "lateral",
+        "normal"
+      ],
+      "eigenvalues": [
+        52863.70689708231,
+        12241.069137376222,
+        4529.510377562155
+      ],
+      "axis_matrix_sha256": "57118a9aba1da4362067558d02fba8c95fa4481af68f0eec57d1c81b04638411",
+      "normalization": "principal-coordinate min-max over official face centers"
+    },
+    "claim_boundary": "participant geometry partition for competition self-benchmark; not official surface selection",
+    "mapping_sha256": "57257d3f9cf0b7518be368e416760ffca53bbfba57e3dfc1468fe41f18fcdce5"
+  },
+  "active_face_convergence": {
+    "n_seeds": 5,
+    "models": {
+      "oka": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.9971014492753624,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      },
+      "finnie": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.994927536231884,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      },
+      "tabakoff": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.9967391304347826,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      },
+      "mansouri": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.9978260869565218,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      }
+    },
+    "status": "active_face_convergence_screened"
+  },
+  "material_amplitude_calibration": {
+    "version": "step30-participant-material-amplitude-calibration-v1",
+    "status": "synthetic_material_reference",
+    "material": "ZG0Cr13Ni4Mo",
+    "source_layer": "literature_material_prior + ZG0Cr13Ni4Mo_preregistered_protocol",
+    "particle_mass_kg": 0.33607395,
+    "specific_wear_yield_mm3_per_kg": {
+      "low": 0.08,
+      "nominal": 0.16,
+      "high": 0.32
+    },
+    "material_prior": {
+      "density_kg_m3": {
+        "low": 7700.0,
+        "nominal": 7800.0,
+        "high": 7900.0
+      },
+      "hardness_gpa": {
+        "low": 3.0,
+        "nominal": 4.0,
+        "high": 5.0
+      },
+      "concentration_scale": {
+        "low": 0.5,
+        "nominal": 1.0,
+        "high": 2.0
+      }
+    },
+    "calibration_rows": [
+      {
+        "model": "oka",
+        "raw_volume_mm3_per_exposure": 1.221226005220902,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 0.04403102437232612
+      },
+      {
+        "model": "finnie",
+        "raw_volume_mm3_per_exposure": 0.002028929308474623,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 26.502565552875968
+      },
+      {
+        "model": "tabakoff",
+        "raw_volume_mm3_per_exposure": 0.000493506526722665,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 108.95870487690239
+      },
+      {
+        "model": "mansouri",
+        "raw_volume_mm3_per_exposure": 0.2726207506908286,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 0.19724042232200112
+      }
+    ],
+    "fit_rule": "scale each frozen five-seed merged model field to frozen nominal specific-wear target; no DEC score feedback",
+    "independent_measured_pilot": false,
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "calibration_sha256": "ee5bd8d667e027c99554eaf0725d60907281b8ab742e91acb681803318448688"
+  },
+  "baseline_worn_reference": {
+    "version": "step30-participant-baseline-worn-v1",
+    "status": "participant_built_synthetic",
+    "benchmark_kind": "competition_self_benchmark",
+    "baseline": "official face-domain geometry only; zero wear field",
+    "worn": "geometry-only participant depth field with literature regional weights",
+    "material": "ZG0Cr13Ni4Mo",
+    "exposure": {
+      "particle_mass_kg": 0.33607395,
+      "specific_wear_yield_mm3_per_kg": {
+        "low": 0.08,
+        "nominal": 0.16,
+        "high": 0.32
+      },
+      "target_volume_mm3": {
+        "low": 0.026885916000000003,
+        "nominal": 0.053771832000000006,
+        "high": 0.10754366400000001
+      },
+      "shape_integrated_volume_at_unit_depth_mm3": 8760.71375596656
+    },
+    "region_weights": {
+      "splitter_like": 0.375,
+      "cutout_like": 0.3,
+      "brim_like": 0.05,
+      "bucket_base_or_side_like": 0.075,
+      "impact_zone_like": 0.2,
+      "residual_other": 0.0
+    },
+    "literature_binding": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/literature/reference.json",
+      "sha256": "4966292e1b4003330f195c47bee380566fcb8013f32eece3156df45243125e45",
+      "support_fraction_source": "validated literature/reference.json"
+    },
+    "shape_rule": "literature region weight x lateral centrality x longitudinal flow factor, restricted to fixed 99th-percentile geometry-only hotspot core; depth scale is area-integrated to target material volume",
+    "hotspot_core": {
+      "quantile": 0.99,
+      "support_threshold": 0.35203382696103264,
+      "face_fraction": 0.010000547975231519,
+      "area_fraction": 0.009708720682300545,
+      "uses_model_fields": false
+    },
+    "axis_metadata": {
+      "axis_order": [
+        "longitudinal",
+        "lateral",
+        "normal"
+      ],
+      "eigenvalues": [
+        52863.70689708231,
+        12241.069137376222,
+        4529.510377562155
+      ],
+      "axis_matrix_sha256": "57118a9aba1da4362067558d02fba8c95fa4481af68f0eec57d1c81b04638411",
+      "normalization": "principal-coordinate min-max over official face centers"
+    },
+    "official_reference": false,
+    "measured_truth": false,
+    "independence": "does not read any model erosion field",
+    "claim_boundary": "participant-built baseline/worn reference; not measured surface truth",
+    "baseline_worn_sha256": "a24fb72d76647dec12c9521ee876e74e645f78d08380ce2c94c7dc9045510e75"
+  },
+  "model_combination": {
+    "version": "step30-preregistered-model-combination-v1",
+    "status": "preregistered",
+    "models": [
+      "oka",
+      "finnie",
+      "tabakoff",
+      "mansouri"
+    ],
+    "weights": {
+      "oka": 0.25,
+      "finnie": 0.25,
+      "tabakoff": 0.25,
+      "mansouri": 0.25
+    },
+    "combination": "fixed weighted arithmetic mean of material-calibrated seed-median fields",
+    "weight_sum": 1.0,
+    "selected_after_score": false,
+    "posthoc_weight_change_allowed": false,
+    "official_accuracy_gate": false,
+    "fem_gate": "blocked",
+    "combination_sha256": "f09aa10220848932a3c0f3ad1fb9db49bed77388d753b4805e1e66a978881b56"
+  },
+  "score_detail": {
+    "status": "cross_fitted_conditional",
+    "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+    "model_scores": {
+      "oka": {
+        "reference_independence": "leave_one_model_out",
+        "nominal": {
+          "score": 83.0677864457814,
+          "components": {
+            "hotspot_iou": 0.6364019582119904,
+            "ranking": 0.8667528540482679,
+            "js_distribution": 0.9562448278577523,
+            "absolute_amplitude": 0.9999999999999999
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.7841500620354872,
+            "medium": 0.5067056154432632,
+            "high": 0.6183501971572208
+          },
+          "ranking_raw": {
+            "full": 0.888416605466285,
+            "top_10_percent": 0.6432347015312194,
+            "top_20_percent": 0.6688658172921027
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.04375517214224768,
+          "prediction_volume_mm3_h": 0.053771832000000006,
+          "reference_volume_mm3_h": 0.053771832,
+          "relative_volume_error": 1.29043286155979e-16
+        },
+        "conservative": {
+          "score": 63.0677864457814,
+          "components": {
+            "hotspot_iou": 0.6364019582119904,
+            "ranking": 0.8667528540482679,
+            "js_distribution": 0.9562448278577523,
+            "absolute_amplitude": 0.0
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.7841500620354872,
+            "medium": 0.5067056154432632,
+            "high": 0.6183501971572208
+          },
+          "ranking_raw": {
+            "full": 0.888416605466285,
+            "top_10_percent": 0.6432347015312194,
+            "top_20_percent": 0.6688658172921027
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.04375517214224768,
+          "prediction_volume_mm3_h": 0.053771832000000006,
+          "reference_volume_mm3_h": 0.026885916,
+          "relative_volume_error": 1.0000000000000002
+        },
+        "optimistic": {
+          "score": 73.06778644578141,
+          "components": {
+            "hotspot_iou": 0.6364019582119904,
+            "ranking": 0.8667528540482679,
+            "js_distribution": 0.9562448278577523,
+            "absolute_amplitude": 0.5
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.7841500620354872,
+            "medium": 0.5067056154432632,
+            "high": 0.6183501971572208
+          },
+          "ranking_raw": {
+            "full": 0.888416605466285,
+            "top_10_percent": 0.6432347015312194,
+            "top_20_percent": 0.6688658172921027
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.04375517214224768,
+          "prediction_volume_mm3_h": 0.053771832000000006,
+          "reference_volume_mm3_h": 0.107543664,
+          "relative_volume_error": 0.49999999999999994
+        },
+        "score_interval": {
+          "lower": 63.0677864457814,
+          "upper": 83.0677864457814
+        }
+      },
+      "finnie": {
+        "reference_independence": "leave_one_model_out",
+        "nominal": {
+          "score": 75.8134752515783,
+          "components": {
+            "hotspot_iou": 0.48590146422801367,
+            "ranking": 0.8252250218374244,
+            "js_distribution": 0.9088149228831113,
+            "absolute_amplitude": 0.9999999999999993
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.6319707996013711,
+            "medium": 0.29896958971103865,
+            "high": 0.5267640033716311
+          },
+          "ranking_raw": {
+            "full": 0.7898071595504417,
+            "top_10_percent": 0.6078087087531703,
+            "top_20_percent": 0.5537342627209345
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.09118507711688872,
+          "prediction_volume_mm3_h": 0.053771832000000026,
+          "reference_volume_mm3_h": 0.05377183199999999,
+          "relative_volume_error": 6.452164307798951e-16
+        },
+        "conservative": {
+          "score": 55.81347525157832,
+          "components": {
+            "hotspot_iou": 0.48590146422801367,
+            "ranking": 0.8252250218374244,
+            "js_distribution": 0.9088149228831113,
+            "absolute_amplitude": 0.0
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.6319707996013711,
+            "medium": 0.29896958971103865,
+            "high": 0.5267640033716311
+          },
+          "ranking_raw": {
+            "full": 0.7898071595504417,
+            "top_10_percent": 0.6078087087531703,
+            "top_20_percent": 0.5537342627209345
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.09118507711688872,
+          "prediction_volume_mm3_h": 0.053771832000000026,
+          "reference_volume_mm3_h": 0.026885915999999996,
+          "relative_volume_error": 1.0000000000000013
+        },
+        "optimistic": {
+          "score": 65.81347525157832,
+          "components": {
+            "hotspot_iou": 0.48590146422801367,
+            "ranking": 0.8252250218374244,
+            "js_distribution": 0.9088149228831113,
+            "absolute_amplitude": 0.5000000000000003
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.6319707996013711,
+            "medium": 0.29896958971103865,
+            "high": 0.5267640033716311
+          },
+          "ranking_raw": {
+            "full": 0.7898071595504417,
+            "top_10_percent": 0.6078087087531703,
+            "top_20_percent": 0.5537342627209345
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.09118507711688872,
+          "prediction_volume_mm3_h": 0.053771832000000026,
+          "reference_volume_mm3_h": 0.10754366399999998,
+          "relative_volume_error": 0.49999999999999967
+        },
+        "score_interval": {
+          "lower": 55.81347525157832,
+          "upper": 75.8134752515783
+        }
+      },
+      "tabakoff": {
+        "reference_independence": "leave_one_model_out",
+        "nominal": {
+          "score": 84.13549620420218,
+          "components": {
+            "hotspot_iou": 0.6600102883269036,
+            "ranking": 0.8871617591608185,
+            "js_distribution": 0.9428046066870059,
+            "absolute_amplitude": 0.9999999999999993
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.7770005282652308,
+            "medium": 0.5211065419148808,
+            "high": 0.6819237948005993
+          },
+          "ranking_raw": {
+            "full": 0.903404902354366,
+            "top_10_percent": 0.687939796956853,
+            "top_20_percent": 0.731625855653692
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.05719539331299405,
+          "prediction_volume_mm3_h": 0.05377183200000002,
+          "reference_volume_mm3_h": 0.053771831999999985,
+          "relative_volume_error": 6.452164307798951e-16
+        },
+        "conservative": {
+          "score": 64.1354962042022,
+          "components": {
+            "hotspot_iou": 0.6600102883269036,
+            "ranking": 0.8871617591608185,
+            "js_distribution": 0.9428046066870059,
+            "absolute_amplitude": 0.0
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.7770005282652308,
+            "medium": 0.5211065419148808,
+            "high": 0.6819237948005993
+          },
+          "ranking_raw": {
+            "full": 0.903404902354366,
+            "top_10_percent": 0.687939796956853,
+            "top_20_percent": 0.731625855653692
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.05719539331299405,
+          "prediction_volume_mm3_h": 0.05377183200000002,
+          "reference_volume_mm3_h": 0.026885915999999992,
+          "relative_volume_error": 1.0000000000000013
+        },
+        "optimistic": {
+          "score": 74.13549620420221,
+          "components": {
+            "hotspot_iou": 0.6600102883269036,
+            "ranking": 0.8871617591608185,
+            "js_distribution": 0.9428046066870059,
+            "absolute_amplitude": 0.5000000000000003
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.7770005282652308,
+            "medium": 0.5211065419148808,
+            "high": 0.6819237948005993
+          },
+          "ranking_raw": {
+            "full": 0.903404902354366,
+            "top_10_percent": 0.687939796956853,
+            "top_20_percent": 0.731625855653692
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.05719539331299405,
+          "prediction_volume_mm3_h": 0.05377183200000002,
+          "reference_volume_mm3_h": 0.10754366399999997,
+          "relative_volume_error": 0.49999999999999967
+        },
+        "score_interval": {
+          "lower": 64.1354962042022,
+          "upper": 84.13549620420218
+        }
+      },
+      "mansouri": {
+        "reference_independence": "leave_one_model_out",
+        "nominal": {
+          "score": 73.4704721854511,
+          "components": {
+            "hotspot_iou": 0.47156332100388304,
+            "ranking": 0.8031471342078991,
+            "js_distribution": 0.8443538797558858,
+            "absolute_amplitude": 0.9999999999999998
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.5957085012981332,
+            "medium": 0.26972230568057426,
+            "high": 0.5492591560329416
+          },
+          "ranking_raw": {
+            "full": 0.7336753391410242,
+            "top_10_percent": 0.5317736541635476,
+            "top_20_percent": 0.553433811942822
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.1556461202441142,
+          "prediction_volume_mm3_h": 0.053771832000000026,
+          "reference_volume_mm3_h": 0.05377183200000001,
+          "relative_volume_error": 2.5808657231195794e-16
+        },
+        "conservative": {
+          "score": 53.4704721854511,
+          "components": {
+            "hotspot_iou": 0.47156332100388304,
+            "ranking": 0.8031471342078991,
+            "js_distribution": 0.8443538797558858,
+            "absolute_amplitude": 0.0
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.5957085012981332,
+            "medium": 0.26972230568057426,
+            "high": 0.5492591560329416
+          },
+          "ranking_raw": {
+            "full": 0.7336753391410242,
+            "top_10_percent": 0.5317736541635476,
+            "top_20_percent": 0.553433811942822
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.1556461202441142,
+          "prediction_volume_mm3_h": 0.053771832000000026,
+          "reference_volume_mm3_h": 0.026885916000000006,
+          "relative_volume_error": 1.0000000000000004
+        },
+        "optimistic": {
+          "score": 63.4704721854511,
+          "components": {
+            "hotspot_iou": 0.47156332100388304,
+            "ranking": 0.8031471342078991,
+            "js_distribution": 0.8443538797558858,
+            "absolute_amplitude": 0.5000000000000001
+          },
+          "weights": {
+            "hotspot_iou": 0.35,
+            "ranking": 0.25,
+            "js_distribution": 0.2,
+            "absolute_amplitude": 0.2
+          },
+          "band_iou": {
+            "low": 0.5957085012981332,
+            "medium": 0.26972230568057426,
+            "high": 0.5492591560329416
+          },
+          "ranking_raw": {
+            "full": 0.7336753391410242,
+            "top_10_percent": 0.5317736541635476,
+            "top_20_percent": 0.553433811942822
+          },
+          "active_face_fraction": 0.004109814236396515,
+          "active_face_count": 900,
+          "active_js_divergence": 0.1556461202441142,
+          "prediction_volume_mm3_h": 0.053771832000000026,
+          "reference_volume_mm3_h": 0.10754366400000002,
+          "relative_volume_error": 0.4999999999999999
+        },
+        "score_interval": {
+          "lower": 53.4704721854511,
+          "upper": 73.4704721854511
+        }
+      }
+    },
+    "seed_scores": {
+      "oka": {
+        "0": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 48.09692673221149,
+            "components": {
+              "hotspot_iou": 0.1728218244969385,
+              "ranking": 0.4948448876156742,
+              "js_distribution": 0.48385203422133993,
+              "absolute_amplitude": 0.9999999999999994
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3018965350983314,
+              "high": 0.21656893839248406
+            },
+            "ranking_raw": {
+              "full": -0.03598558692751491,
+              "top_10_percent": -0.022654424319814608,
+              "top_20_percent": 0.027709336941374813
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5161479657786601,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.053771832000000026,
+            "relative_volume_error": 5.161731446239158e-16
+          },
+          "conservative": {
+            "score": 28.096926732211525,
+            "components": {
+              "hotspot_iou": 0.1728218244969385,
+              "ranking": 0.4948448876156742,
+              "js_distribution": 0.48385203422133993,
+              "absolute_amplitude": 9.992007221626409e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3018965350983314,
+              "high": 0.21656893839248406
+            },
+            "ranking_raw": {
+              "full": -0.03598558692751491,
+              "top_10_percent": -0.022654424319814608,
+              "top_20_percent": 0.027709336941374813
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5161479657786601,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.026885916000000013,
+            "relative_volume_error": 0.999999999999999
+          },
+          "optimistic": {
+            "score": 38.0969267322115,
+            "components": {
+              "hotspot_iou": 0.1728218244969385,
+              "ranking": 0.4948448876156742,
+              "js_distribution": 0.48385203422133993,
+              "absolute_amplitude": 0.4999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3018965350983314,
+              "high": 0.21656893839248406
+            },
+            "ranking_raw": {
+              "full": -0.03598558692751491,
+              "top_10_percent": -0.022654424319814608,
+              "top_20_percent": 0.027709336941374813
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5161479657786601,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.10754366400000005,
+            "relative_volume_error": 0.5000000000000002
+          },
+          "score_interval": {
+            "lower": 28.096926732211525,
+            "upper": 48.09692673221149
+          }
+        },
+        "1": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 48.20104079347296,
+            "components": {
+              "hotspot_iou": 0.16476299445506898,
+              "ranking": 0.5055946409409487,
+              "js_distribution": 0.48972349820109184,
+              "absolute_amplitude": 0.9999999999999997
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29073978175710796,
+              "high": 0.20354920160809897
+            },
+            "ranking_raw": {
+              "full": -0.04232932688891153,
+              "top_10_percent": 0.07512862120634968,
+              "top_20_percent": 0.0007685513282545737
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5102765017989082,
+            "prediction_volume_mm3_h": 0.053771831999999985,
+            "reference_volume_mm3_h": 0.053771832000000006,
+            "relative_volume_error": 3.8712985846793693e-16
+          },
+          "conservative": {
+            "score": 28.201040793472988,
+            "components": {
+              "hotspot_iou": 0.16476299445506898,
+              "ranking": 0.5055946409409487,
+              "js_distribution": 0.48972349820109184,
+              "absolute_amplitude": 7.771561172376096e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29073978175710796,
+              "high": 0.20354920160809897
+            },
+            "ranking_raw": {
+              "full": -0.04232932688891153,
+              "top_10_percent": 0.07512862120634968,
+              "top_20_percent": 0.0007685513282545737
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5102765017989082,
+            "prediction_volume_mm3_h": 0.053771831999999985,
+            "reference_volume_mm3_h": 0.026885916000000003,
+            "relative_volume_error": 0.9999999999999992
+          },
+          "optimistic": {
+            "score": 38.20104079347297,
+            "components": {
+              "hotspot_iou": 0.16476299445506898,
+              "ranking": 0.5055946409409487,
+              "js_distribution": 0.48972349820109184,
+              "absolute_amplitude": 0.4999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29073978175710796,
+              "high": 0.20354920160809897
+            },
+            "ranking_raw": {
+              "full": -0.04232932688891153,
+              "top_10_percent": 0.07512862120634968,
+              "top_20_percent": 0.0007685513282545737
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5102765017989082,
+            "prediction_volume_mm3_h": 0.053771831999999985,
+            "reference_volume_mm3_h": 0.10754366400000001,
+            "relative_volume_error": 0.5000000000000002
+          },
+          "score_interval": {
+            "lower": 28.201040793472988,
+            "upper": 48.20104079347296
+          }
+        },
+        "2": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.26141418700133,
+            "components": {
+              "hotspot_iou": 0.172505155121685,
+              "ranking": 0.4740533248678584,
+              "js_distribution": 0.4686200318022947,
+              "absolute_amplitude": 0.9999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.30234626959746747,
+              "high": 0.2151691957675875
+            },
+            "ranking_raw": {
+              "full": -0.04677415633356772,
+              "top_10_percent": -0.08837182307912783,
+              "top_20_percent": -0.020534071380154135
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5313799681977053,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 1.2904328615597897e-16
+          },
+          "conservative": {
+            "score": 27.261414187001336,
+            "components": {
+              "hotspot_iou": 0.172505155121685,
+              "ranking": 0.4740533248678584,
+              "js_distribution": 0.4686200318022947,
+              "absolute_amplitude": 2.220446049250313e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.30234626959746747,
+              "high": 0.2151691957675875
+            },
+            "ranking_raw": {
+              "full": -0.04677415633356772,
+              "top_10_percent": -0.08837182307912783,
+              "top_20_percent": -0.020534071380154135
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5313799681977053,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 0.9999999999999998
+          },
+          "optimistic": {
+            "score": 37.26141418700133,
+            "components": {
+              "hotspot_iou": 0.172505155121685,
+              "ranking": 0.4740533248678584,
+              "js_distribution": 0.4686200318022947,
+              "absolute_amplitude": 0.4999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.30234626959746747,
+              "high": 0.2151691957675875
+            },
+            "ranking_raw": {
+              "full": -0.04677415633356772,
+              "top_10_percent": -0.08837182307912783,
+              "top_20_percent": -0.020534071380154135
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5313799681977053,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.5000000000000001
+          },
+          "score_interval": {
+            "lower": 27.261414187001336,
+            "upper": 47.26141418700133
+          }
+        },
+        "3": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 48.451223377178806,
+            "components": {
+              "hotspot_iou": 0.17238630957242296,
+              "ranking": 0.5094412215871335,
+              "js_distribution": 0.48408360012328333,
+              "absolute_amplitude": 0.9999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3004830367902893,
+              "high": 0.21667589192697953
+            },
+            "ranking_raw": {
+              "full": -0.05755467079366804,
+              "top_10_percent": 0.05121859874201648,
+              "top_20_percent": 0.06298340157445254
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5159163998767167,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.053771832,
+            "relative_volume_error": 1.29043286155979e-16
+          },
+          "conservative": {
+            "score": 28.45122337717881,
+            "components": {
+              "hotspot_iou": 0.17238630957242296,
+              "ranking": 0.5094412215871335,
+              "js_distribution": 0.48408360012328333,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3004830367902893,
+              "high": 0.21667589192697953
+            },
+            "ranking_raw": {
+              "full": -0.05755467079366804,
+              "top_10_percent": 0.05121859874201648,
+              "top_20_percent": 0.06298340157445254
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5159163998767167,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.026885916,
+            "relative_volume_error": 1.0000000000000002
+          },
+          "optimistic": {
+            "score": 38.45122337717881,
+            "components": {
+              "hotspot_iou": 0.17238630957242296,
+              "ranking": 0.5094412215871335,
+              "js_distribution": 0.48408360012328333,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3004830367902893,
+              "high": 0.21667589192697953
+            },
+            "ranking_raw": {
+              "full": -0.05755467079366804,
+              "top_10_percent": 0.05121859874201648,
+              "top_20_percent": 0.06298340157445254
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5159163998767167,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.107543664,
+            "relative_volume_error": 0.49999999999999994
+          },
+          "score_interval": {
+            "lower": 28.45122337717881,
+            "upper": 48.451223377178806
+          }
+        },
+        "4": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 48.22343163407854,
+            "components": {
+              "hotspot_iou": 0.16918083529787833,
+              "ranking": 0.49990893935355674,
+              "js_distribution": 0.49021894574069413,
+              "absolute_amplitude": 0.9999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2945852127682799,
+              "high": 0.21295729312535513
+            },
+            "ranking_raw": {
+              "full": -0.024699167107915487,
+              "top_10_percent": -0.040524843284683754,
+              "top_20_percent": 0.06467764651393955
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5097810542593059,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 2.5808657231195794e-16
+          },
+          "conservative": {
+            "score": 28.223431634078555,
+            "components": {
+              "hotspot_iou": 0.16918083529787833,
+              "ranking": 0.49990893935355674,
+              "js_distribution": 0.49021894574069413,
+              "absolute_amplitude": 5.551115123125783e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2945852127682799,
+              "high": 0.21295729312535513
+            },
+            "ranking_raw": {
+              "full": -0.024699167107915487,
+              "top_10_percent": -0.040524843284683754,
+              "top_20_percent": 0.06467764651393955
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5097810542593059,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 0.9999999999999994
+          },
+          "optimistic": {
+            "score": 38.223431634078544,
+            "components": {
+              "hotspot_iou": 0.16918083529787833,
+              "ranking": 0.49990893935355674,
+              "js_distribution": 0.49021894574069413,
+              "absolute_amplitude": 0.4999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2945852127682799,
+              "high": 0.21295729312535513
+            },
+            "ranking_raw": {
+              "full": -0.024699167107915487,
+              "top_10_percent": -0.040524843284683754,
+              "top_20_percent": 0.06467764651393955
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5097810542593059,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.5000000000000001
+          },
+          "score_interval": {
+            "lower": 28.223431634078555,
+            "upper": 48.22343163407854
+          }
+        }
+      },
+      "finnie": {
+        "0": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.97167939669457,
+            "components": {
+              "hotspot_iou": 0.18038084128000517,
+              "ranking": 0.48344341774726796,
+              "js_distribution": 0.47861322541063434,
+              "absolute_amplitude": 0.9999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3127081169530941,
+              "high": 0.2284344068869214
+            },
+            "ranking_raw": {
+              "full": -0.030683999588581447,
+              "top_10_percent": -0.022914594752407258,
+              "top_20_percent": -0.04574089917540345
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5213867745893657,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.053771832,
+            "relative_volume_error": 1.29043286155979e-16
+          },
+          "conservative": {
+            "score": 27.971679396694565,
+            "components": {
+              "hotspot_iou": 0.18038084128000517,
+              "ranking": 0.48344341774726796,
+              "js_distribution": 0.47861322541063434,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3127081169530941,
+              "high": 0.2284344068869214
+            },
+            "ranking_raw": {
+              "full": -0.030683999588581447,
+              "top_10_percent": -0.022914594752407258,
+              "top_20_percent": -0.04574089917540345
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5213867745893657,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.026885916,
+            "relative_volume_error": 1.0000000000000002
+          },
+          "optimistic": {
+            "score": 37.97167939669457,
+            "components": {
+              "hotspot_iou": 0.18038084128000517,
+              "ranking": 0.48344341774726796,
+              "js_distribution": 0.47861322541063434,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3127081169530941,
+              "high": 0.2284344068869214
+            },
+            "ranking_raw": {
+              "full": -0.030683999588581447,
+              "top_10_percent": -0.022914594752407258,
+              "top_20_percent": -0.04574089917540345
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5213867745893657,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.107543664,
+            "relative_volume_error": 0.49999999999999994
+          },
+          "score_interval": {
+            "lower": 27.971679396694565,
+            "upper": 47.97167939669457
+          }
+        },
+        "1": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.79931264629787,
+            "components": {
+              "hotspot_iou": 0.1731130317221177,
+              "ranking": 0.4889526340388786,
+              "js_distribution": 0.475827034252589,
+              "absolute_amplitude": 1.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3075123228076453,
+              "high": 0.21182677235870787
+            },
+            "ranking_raw": {
+              "full": -0.043152129680008165,
+              "top_10_percent": 0.030264247558186533,
+              "top_20_percent": -0.05339631364490666
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.524172965747411,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 0.0
+          },
+          "conservative": {
+            "score": 27.79931264629787,
+            "components": {
+              "hotspot_iou": 0.1731130317221177,
+              "ranking": 0.4889526340388786,
+              "js_distribution": 0.475827034252589,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3075123228076453,
+              "high": 0.21182677235870787
+            },
+            "ranking_raw": {
+              "full": -0.043152129680008165,
+              "top_10_percent": 0.030264247558186533,
+              "top_20_percent": -0.05339631364490666
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.524172965747411,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 1.0
+          },
+          "optimistic": {
+            "score": 37.799312646297864,
+            "components": {
+              "hotspot_iou": 0.1731130317221177,
+              "ranking": 0.4889526340388786,
+              "js_distribution": 0.475827034252589,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3075123228076453,
+              "high": 0.21182677235870787
+            },
+            "ranking_raw": {
+              "full": -0.043152129680008165,
+              "top_10_percent": 0.030264247558186533,
+              "top_20_percent": -0.05339631364490666
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.524172965747411,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.5
+          },
+          "score_interval": {
+            "lower": 27.79931264629787,
+            "upper": 47.79931264629787
+          }
+        },
+        "2": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 46.8674413575057,
+            "components": {
+              "hotspot_iou": 0.1753791029505297,
+              "ranking": 0.4635032035812289,
+              "js_distribution": 0.45707963323532186,
+              "absolute_amplitude": 0.9999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3112014052866012,
+              "high": 0.21493590356498787
+            },
+            "ranking_raw": {
+              "full": -0.04413419991601427,
+              "top_10_percent": -0.09478502998116431,
+              "top_20_percent": -0.08006154861544836
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5429203667646781,
+            "prediction_volume_mm3_h": 0.053771832000000026,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 2.5808657231195794e-16
+          },
+          "conservative": {
+            "score": 26.8674413575057,
+            "components": {
+              "hotspot_iou": 0.1753791029505297,
+              "ranking": 0.4635032035812289,
+              "js_distribution": 0.45707963323532186,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3112014052866012,
+              "high": 0.21493590356498787
+            },
+            "ranking_raw": {
+              "full": -0.04413419991601427,
+              "top_10_percent": -0.09478502998116431,
+              "top_20_percent": -0.08006154861544836
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5429203667646781,
+            "prediction_volume_mm3_h": 0.053771832000000026,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 1.0000000000000004
+          },
+          "optimistic": {
+            "score": 36.867441357505705,
+            "components": {
+              "hotspot_iou": 0.1753791029505297,
+              "ranking": 0.4635032035812289,
+              "js_distribution": 0.45707963323532186,
+              "absolute_amplitude": 0.5000000000000001
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3112014052866012,
+              "high": 0.21493590356498787
+            },
+            "ranking_raw": {
+              "full": -0.04413419991601427,
+              "top_10_percent": -0.09478502998116431,
+              "top_20_percent": -0.08006154861544836
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5429203667646781,
+            "prediction_volume_mm3_h": 0.053771832000000026,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.4999999999999999
+          },
+          "score_interval": {
+            "lower": 26.8674413575057,
+            "upper": 46.8674413575057
+          }
+        },
+        "3": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 48.23713937558185,
+            "components": {
+              "hotspot_iou": 0.18193249189529234,
+              "ranking": 0.4970314151024779,
+              "js_distribution": 0.4721858390842335,
+              "absolute_amplitude": 1.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3148908274566212,
+              "high": 0.23090664822925583
+            },
+            "ranking_raw": {
+              "full": -0.049077379657756215,
+              "top_10_percent": 0.04782054574083581,
+              "top_20_percent": -0.01655467546821211
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5278141609157665,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.053771832000000006,
+            "relative_volume_error": 0.0
+          },
+          "conservative": {
+            "score": 28.237139375581847,
+            "components": {
+              "hotspot_iou": 0.18193249189529234,
+              "ranking": 0.4970314151024779,
+              "js_distribution": 0.4721858390842335,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3148908274566212,
+              "high": 0.23090664822925583
+            },
+            "ranking_raw": {
+              "full": -0.049077379657756215,
+              "top_10_percent": 0.04782054574083581,
+              "top_20_percent": -0.01655467546821211
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5278141609157665,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.026885916000000003,
+            "relative_volume_error": 1.0
+          },
+          "optimistic": {
+            "score": 38.237139375581854,
+            "components": {
+              "hotspot_iou": 0.18193249189529234,
+              "ranking": 0.4970314151024779,
+              "js_distribution": 0.4721858390842335,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3148908274566212,
+              "high": 0.23090664822925583
+            },
+            "ranking_raw": {
+              "full": -0.049077379657756215,
+              "top_10_percent": 0.04782054574083581,
+              "top_20_percent": -0.01655467546821211
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5278141609157665,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.10754366400000001,
+            "relative_volume_error": 0.5
+          },
+          "score_interval": {
+            "lower": 28.237139375581847,
+            "upper": 48.23713937558185
+          }
+        },
+        "4": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.58648202947291,
+            "components": {
+              "hotspot_iou": 0.17484363987832582,
+              "ranking": 0.4798487792631477,
+              "js_distribution": 0.473536757607641,
+              "absolute_amplitude": 0.9999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3058679571024186,
+              "high": 0.2186629625325588
+            },
+            "ranking_raw": {
+              "full": -0.019413288862026836,
+              "top_10_percent": -0.05369747619715253,
+              "top_20_percent": -0.04779655936193462
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.526463242392359,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.053771832,
+            "relative_volume_error": 2.58086572311958e-16
+          },
+          "conservative": {
+            "score": 27.586482029472915,
+            "components": {
+              "hotspot_iou": 0.17484363987832582,
+              "ranking": 0.4798487792631477,
+              "js_distribution": 0.473536757607641,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3058679571024186,
+              "high": 0.2186629625325588
+            },
+            "ranking_raw": {
+              "full": -0.019413288862026836,
+              "top_10_percent": -0.05369747619715253,
+              "top_20_percent": -0.04779655936193462
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.526463242392359,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.026885916,
+            "relative_volume_error": 1.0000000000000004
+          },
+          "optimistic": {
+            "score": 37.58648202947292,
+            "components": {
+              "hotspot_iou": 0.17484363987832582,
+              "ranking": 0.4798487792631477,
+              "js_distribution": 0.473536757607641,
+              "absolute_amplitude": 0.5000000000000001
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3058679571024186,
+              "high": 0.2186629625325588
+            },
+            "ranking_raw": {
+              "full": -0.019413288862026836,
+              "top_10_percent": -0.05369747619715253,
+              "top_20_percent": -0.04779655936193462
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.526463242392359,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.107543664,
+            "relative_volume_error": 0.4999999999999999
+          },
+          "score_interval": {
+            "lower": 27.586482029472915,
+            "upper": 47.58648202947291
+          }
+        }
+      },
+      "tabakoff": {
+        "0": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.79700302351527,
+            "components": {
+              "hotspot_iou": 0.17786926988917254,
+              "ranking": 0.49063105557177233,
+              "js_distribution": 0.46529010940499627,
+              "absolute_amplitude": 0.9999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3013786224509501,
+              "high": 0.2322291872165675
+            },
+            "ranking_raw": {
+              "full": -0.028897017096749127,
+              "top_10_percent": -0.02643108075043334,
+              "top_20_percent": -0.000885568722183574
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5347098905950037,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 2.5808657231195794e-16
+          },
+          "conservative": {
+            "score": 27.797003023515288,
+            "components": {
+              "hotspot_iou": 0.17786926988917254,
+              "ranking": 0.49063105557177233,
+              "js_distribution": 0.46529010940499627,
+              "absolute_amplitude": 5.551115123125783e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3013786224509501,
+              "high": 0.2322291872165675
+            },
+            "ranking_raw": {
+              "full": -0.028897017096749127,
+              "top_10_percent": -0.02643108075043334,
+              "top_20_percent": -0.000885568722183574
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5347098905950037,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 0.9999999999999994
+          },
+          "optimistic": {
+            "score": 37.79700302351527,
+            "components": {
+              "hotspot_iou": 0.17786926988917254,
+              "ranking": 0.49063105557177233,
+              "js_distribution": 0.46529010940499627,
+              "absolute_amplitude": 0.4999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3013786224509501,
+              "high": 0.2322291872165675
+            },
+            "ranking_raw": {
+              "full": -0.028897017096749127,
+              "top_10_percent": -0.02643108075043334,
+              "top_20_percent": -0.000885568722183574
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5347098905950037,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.5000000000000001
+          },
+          "score_interval": {
+            "lower": 27.797003023515288,
+            "upper": 47.79700302351527
+          }
+        },
+        "1": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.886373719521046,
+            "components": {
+              "hotspot_iou": 0.17070884940553052,
+              "ranking": 0.49923169630159986,
+              "js_distribution": 0.47153857913937425,
+              "absolute_amplitude": 0.9999999999999997
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29906025291720606,
+              "high": 0.2130662952993855
+            },
+            "ranking_raw": {
+              "full": -0.040432567891411406,
+              "top_10_percent": 0.048964205030010664,
+              "top_20_percent": -0.01314145932900003
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5284614208606258,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.053771832000000026,
+            "relative_volume_error": 3.871298584679368e-16
+          },
+          "conservative": {
+            "score": 27.886373719521067,
+            "components": {
+              "hotspot_iou": 0.17070884940553052,
+              "ranking": 0.49923169630159986,
+              "js_distribution": 0.47153857913937425,
+              "absolute_amplitude": 7.771561172376096e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29906025291720606,
+              "high": 0.2130662952993855
+            },
+            "ranking_raw": {
+              "full": -0.040432567891411406,
+              "top_10_percent": 0.048964205030010664,
+              "top_20_percent": -0.01314145932900003
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5284614208606258,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.026885916000000013,
+            "relative_volume_error": 0.9999999999999992
+          },
+          "optimistic": {
+            "score": 37.886373719521046,
+            "components": {
+              "hotspot_iou": 0.17070884940553052,
+              "ranking": 0.49923169630159986,
+              "js_distribution": 0.47153857913937425,
+              "absolute_amplitude": 0.4999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29906025291720606,
+              "high": 0.2130662952993855
+            },
+            "ranking_raw": {
+              "full": -0.040432567891411406,
+              "top_10_percent": 0.048964205030010664,
+              "top_20_percent": -0.01314145932900003
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5284614208606258,
+            "prediction_volume_mm3_h": 0.053771832000000006,
+            "reference_volume_mm3_h": 0.10754366400000005,
+            "relative_volume_error": 0.5000000000000002
+          },
+          "score_interval": {
+            "lower": 27.886373719521067,
+            "upper": 47.886373719521046
+          }
+        },
+        "2": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.263269062823056,
+            "components": {
+              "hotspot_iou": 0.1733641244161117,
+              "ranking": 0.48083990162395734,
+              "js_distribution": 0.45872635838301057,
+              "absolute_amplitude": 0.9999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3032717109652825,
+              "high": 0.21682066228305258
+            },
+            "ranking_raw": {
+              "full": -0.04051491805679846,
+              "top_10_percent": -0.07713161586577394,
+              "top_20_percent": 0.0026859436663163316
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5412736416169894,
+            "prediction_volume_mm3_h": 0.05377183200000002,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 1.2904328615597897e-16
+          },
+          "conservative": {
+            "score": 27.26326906282306,
+            "components": {
+              "hotspot_iou": 0.1733641244161117,
+              "ranking": 0.48083990162395734,
+              "js_distribution": 0.45872635838301057,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3032717109652825,
+              "high": 0.21682066228305258
+            },
+            "ranking_raw": {
+              "full": -0.04051491805679846,
+              "top_10_percent": -0.07713161586577394,
+              "top_20_percent": 0.0026859436663163316
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5412736416169894,
+            "prediction_volume_mm3_h": 0.05377183200000002,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 1.0000000000000002
+          },
+          "optimistic": {
+            "score": 37.263269062823056,
+            "components": {
+              "hotspot_iou": 0.1733641244161117,
+              "ranking": 0.48083990162395734,
+              "js_distribution": 0.45872635838301057,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3032717109652825,
+              "high": 0.21682066228305258
+            },
+            "ranking_raw": {
+              "full": -0.04051491805679846,
+              "top_10_percent": -0.07713161586577394,
+              "top_20_percent": 0.0026859436663163316
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5412736416169894,
+            "prediction_volume_mm3_h": 0.05377183200000002,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.49999999999999994
+          },
+          "score_interval": {
+            "lower": 27.26326906282306,
+            "upper": 47.263269062823056
+          }
+        },
+        "3": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 48.55963870492312,
+            "components": {
+              "hotspot_iou": 0.1768670099219546,
+              "ranking": 0.5169514584032633,
+              "js_distribution": 0.4722753448786563,
+              "absolute_amplitude": 1.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3062294470051648,
+              "high": 0.224371582760699
+            },
+            "ranking_raw": {
+              "full": -0.04921055298216211,
+              "top_10_percent": 0.09873830174740139,
+              "top_20_percent": 0.052181001654340524
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5277246551213437,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 0.0
+          },
+          "conservative": {
+            "score": 28.559638704923117,
+            "components": {
+              "hotspot_iou": 0.1768670099219546,
+              "ranking": 0.5169514584032633,
+              "js_distribution": 0.4722753448786563,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3062294470051648,
+              "high": 0.224371582760699
+            },
+            "ranking_raw": {
+              "full": -0.04921055298216211,
+              "top_10_percent": 0.09873830174740139,
+              "top_20_percent": 0.052181001654340524
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5277246551213437,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 1.0
+          },
+          "optimistic": {
+            "score": 38.55963870492312,
+            "components": {
+              "hotspot_iou": 0.1768670099219546,
+              "ranking": 0.5169514584032633,
+              "js_distribution": 0.4722753448786563,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.3062294470051648,
+              "high": 0.224371582760699
+            },
+            "ranking_raw": {
+              "full": -0.04921055298216211,
+              "top_10_percent": 0.09873830174740139,
+              "top_20_percent": 0.052181001654340524
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5277246551213437,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.5
+          },
+          "score_interval": {
+            "lower": 28.559638704923117,
+            "upper": 48.55963870492312
+          }
+        },
+        "4": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 48.798714718017,
+            "components": {
+              "hotspot_iou": 0.17432124489320777,
+              "ranking": 0.512593360846976,
+              "js_distribution": 0.4941318562790167,
+              "absolute_amplitude": 0.9999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2980015929831059,
+              "high": 0.22496214169651743
+            },
+            "ranking_raw": {
+              "full": -0.015506327978973842,
+              "top_10_percent": 0.04671960256313063,
+              "top_20_percent": 0.044346890497699666
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5058681437209833,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.05377183199999999,
+            "relative_volume_error": 1.2904328615597902e-16
+          },
+          "conservative": {
+            "score": 28.798714718017003,
+            "components": {
+              "hotspot_iou": 0.17432124489320777,
+              "ranking": 0.512593360846976,
+              "js_distribution": 0.4941318562790167,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2980015929831059,
+              "high": 0.22496214169651743
+            },
+            "ranking_raw": {
+              "full": -0.015506327978973842,
+              "top_10_percent": 0.04671960256313063,
+              "top_20_percent": 0.044346890497699666
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5058681437209833,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.026885915999999996,
+            "relative_volume_error": 1.0000000000000002
+          },
+          "optimistic": {
+            "score": 38.798714718017,
+            "components": {
+              "hotspot_iou": 0.17432124489320777,
+              "ranking": 0.512593360846976,
+              "js_distribution": 0.4941318562790167,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2980015929831059,
+              "high": 0.22496214169651743
+            },
+            "ranking_raw": {
+              "full": -0.015506327978973842,
+              "top_10_percent": 0.04671960256313063,
+              "top_20_percent": 0.044346890497699666
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5058681437209833,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.10754366399999998,
+            "relative_volume_error": 0.49999999999999994
+          },
+          "score_interval": {
+            "lower": 28.798714718017003,
+            "upper": 48.798714718017
+          }
+        }
+      },
+      "mansouri": {
+        "0": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 46.96906214061286,
+            "components": {
+              "hotspot_iou": 0.16740571716677444,
+              "ranking": 0.4883001304286848,
+              "js_distribution": 0.4451179389529317,
+              "absolute_amplitude": 0.9999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2884300752904031,
+              "high": 0.21378707620992027
+            },
+            "ranking_raw": {
+              "full": -0.02493344523092155,
+              "top_10_percent": -0.05523668291325875,
+              "top_20_percent": 0.009970910716289067
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5548820610470683,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.053771832000000006,
+            "relative_volume_error": 1.29043286155979e-16
+          },
+          "conservative": {
+            "score": 26.969062140612866,
+            "components": {
+              "hotspot_iou": 0.16740571716677444,
+              "ranking": 0.4883001304286848,
+              "js_distribution": 0.4451179389529317,
+              "absolute_amplitude": 2.220446049250313e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2884300752904031,
+              "high": 0.21378707620992027
+            },
+            "ranking_raw": {
+              "full": -0.02493344523092155,
+              "top_10_percent": -0.05523668291325875,
+              "top_20_percent": 0.009970910716289067
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5548820610470683,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.026885916000000003,
+            "relative_volume_error": 0.9999999999999998
+          },
+          "optimistic": {
+            "score": 36.969062140612856,
+            "components": {
+              "hotspot_iou": 0.16740571716677444,
+              "ranking": 0.4883001304286848,
+              "js_distribution": 0.4451179389529317,
+              "absolute_amplitude": 0.4999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2884300752904031,
+              "high": 0.21378707620992027
+            },
+            "ranking_raw": {
+              "full": -0.02493344523092155,
+              "top_10_percent": -0.05523668291325875,
+              "top_20_percent": 0.009970910716289067
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5548820610470683,
+            "prediction_volume_mm3_h": 0.053771832,
+            "reference_volume_mm3_h": 0.10754366400000001,
+            "relative_volume_error": 0.5000000000000001
+          },
+          "score_interval": {
+            "lower": 26.969062140612866,
+            "upper": 46.96906214061286
+          }
+        },
+        "1": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.057016762399215,
+            "components": {
+              "hotspot_iou": 0.15910128675531449,
+              "ranking": 0.49811026374456796,
+              "js_distribution": 0.45178575661745046,
+              "absolute_amplitude": 1.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2840186193675989,
+              "high": 0.19328524089834453
+            },
+            "ranking_raw": {
+              "full": -0.03952301717056543,
+              "top_10_percent": 0.013728318280690401,
+              "top_20_percent": 0.014456281357282844
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5482142433825495,
+            "prediction_volume_mm3_h": 0.05377183199999999,
+            "reference_volume_mm3_h": 0.05377183199999999,
+            "relative_volume_error": 0.0
+          },
+          "conservative": {
+            "score": 27.057016762399215,
+            "components": {
+              "hotspot_iou": 0.15910128675531449,
+              "ranking": 0.49811026374456796,
+              "js_distribution": 0.45178575661745046,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2840186193675989,
+              "high": 0.19328524089834453
+            },
+            "ranking_raw": {
+              "full": -0.03952301717056543,
+              "top_10_percent": 0.013728318280690401,
+              "top_20_percent": 0.014456281357282844
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5482142433825495,
+            "prediction_volume_mm3_h": 0.05377183199999999,
+            "reference_volume_mm3_h": 0.026885915999999996,
+            "relative_volume_error": 1.0
+          },
+          "optimistic": {
+            "score": 37.05701676239922,
+            "components": {
+              "hotspot_iou": 0.15910128675531449,
+              "ranking": 0.49811026374456796,
+              "js_distribution": 0.45178575661745046,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2840186193675989,
+              "high": 0.19328524089834453
+            },
+            "ranking_raw": {
+              "full": -0.03952301717056543,
+              "top_10_percent": 0.013728318280690401,
+              "top_20_percent": 0.014456281357282844
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5482142433825495,
+            "prediction_volume_mm3_h": 0.05377183199999999,
+            "reference_volume_mm3_h": 0.10754366399999998,
+            "relative_volume_error": 0.5
+          },
+          "score_interval": {
+            "lower": 27.057016762399215,
+            "upper": 47.057016762399215
+          }
+        },
+        "2": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 45.991079145565145,
+            "components": {
+              "hotspot_iou": 0.16808830724213894,
+              "ranking": 0.46102052910348035,
+              "js_distribution": 0.4291237582251639,
+              "absolute_amplitude": 0.9999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29169039064368013,
+              "high": 0.21257453108273663
+            },
+            "ranking_raw": {
+              "full": -0.036191881576921325,
+              "top_10_percent": -0.14606937477851428,
+              "top_20_percent": -0.05161556902368244
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5708762417748361,
+            "prediction_volume_mm3_h": 0.053771832000000026,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 2.5808657231195794e-16
+          },
+          "conservative": {
+            "score": 25.99107914556515,
+            "components": {
+              "hotspot_iou": 0.16808830724213894,
+              "ranking": 0.46102052910348035,
+              "js_distribution": 0.4291237582251639,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29169039064368013,
+              "high": 0.21257453108273663
+            },
+            "ranking_raw": {
+              "full": -0.036191881576921325,
+              "top_10_percent": -0.14606937477851428,
+              "top_20_percent": -0.05161556902368244
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5708762417748361,
+            "prediction_volume_mm3_h": 0.053771832000000026,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 1.0000000000000004
+          },
+          "optimistic": {
+            "score": 35.99107914556515,
+            "components": {
+              "hotspot_iou": 0.16808830724213894,
+              "ranking": 0.46102052910348035,
+              "js_distribution": 0.4291237582251639,
+              "absolute_amplitude": 0.5000000000000001
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.29169039064368013,
+              "high": 0.21257453108273663
+            },
+            "ranking_raw": {
+              "full": -0.036191881576921325,
+              "top_10_percent": -0.14606937477851428,
+              "top_20_percent": -0.05161556902368244
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5708762417748361,
+            "prediction_volume_mm3_h": 0.053771832000000026,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.4999999999999999
+          },
+          "score_interval": {
+            "lower": 25.99107914556515,
+            "upper": 45.991079145565145
+          }
+        },
+        "3": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.55103959717004,
+            "components": {
+              "hotspot_iou": 0.1690683507119071,
+              "ranking": 0.5029579983957159,
+              "js_distribution": 0.4529848681180194,
+              "absolute_amplitude": 1.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2932588732551038,
+              "high": 0.21394617888061748
+            },
+            "ranking_raw": {
+              "full": -0.04989101531471502,
+              "top_10_percent": 0.016509708675425956,
+              "top_20_percent": 0.05112929701358436
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5470151318819806,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.05377183200000001,
+            "relative_volume_error": 0.0
+          },
+          "conservative": {
+            "score": 27.551039597170035,
+            "components": {
+              "hotspot_iou": 0.1690683507119071,
+              "ranking": 0.5029579983957159,
+              "js_distribution": 0.4529848681180194,
+              "absolute_amplitude": 0.0
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2932588732551038,
+              "high": 0.21394617888061748
+            },
+            "ranking_raw": {
+              "full": -0.04989101531471502,
+              "top_10_percent": 0.016509708675425956,
+              "top_20_percent": 0.05112929701358436
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5470151318819806,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.026885916000000006,
+            "relative_volume_error": 1.0
+          },
+          "optimistic": {
+            "score": 37.55103959717003,
+            "components": {
+              "hotspot_iou": 0.1690683507119071,
+              "ranking": 0.5029579983957159,
+              "js_distribution": 0.4529848681180194,
+              "absolute_amplitude": 0.5
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.2932588732551038,
+              "high": 0.21394617888061748
+            },
+            "ranking_raw": {
+              "full": -0.04989101531471502,
+              "top_10_percent": 0.016509708675425956,
+              "top_20_percent": 0.05112929701358436
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5470151318819806,
+            "prediction_volume_mm3_h": 0.05377183200000001,
+            "reference_volume_mm3_h": 0.10754366400000002,
+            "relative_volume_error": 0.5
+          },
+          "score_interval": {
+            "lower": 27.551039597170035,
+            "upper": 47.55103959717004
+          }
+        },
+        "4": {
+          "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+          "nominal": {
+            "score": 47.82044200393938,
+            "components": {
+              "hotspot_iou": 0.1640842082285884,
+              "ranking": 0.5037926284838227,
+              "js_distribution": 0.4741339501921612,
+              "absolute_amplitude": 0.9999999999999998
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.28137774551767536,
+              "high": 0.2108748791680899
+            },
+            "ranking_raw": {
+              "full": -0.017269425700479988,
+              "top_10_percent": -0.008072473663855079,
+              "top_20_percent": 0.04809767026727118
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5258660498078388,
+            "prediction_volume_mm3_h": 0.05377183199999999,
+            "reference_volume_mm3_h": 0.053771832000000006,
+            "relative_volume_error": 2.58086572311958e-16
+          },
+          "conservative": {
+            "score": 27.820442003939394,
+            "components": {
+              "hotspot_iou": 0.1640842082285884,
+              "ranking": 0.5037926284838227,
+              "js_distribution": 0.4741339501921612,
+              "absolute_amplitude": 5.551115123125783e-16
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.28137774551767536,
+              "high": 0.2108748791680899
+            },
+            "ranking_raw": {
+              "full": -0.017269425700479988,
+              "top_10_percent": -0.008072473663855079,
+              "top_20_percent": 0.04809767026727118
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5258660498078388,
+            "prediction_volume_mm3_h": 0.05377183199999999,
+            "reference_volume_mm3_h": 0.026885916000000003,
+            "relative_volume_error": 0.9999999999999994
+          },
+          "optimistic": {
+            "score": 37.820442003939384,
+            "components": {
+              "hotspot_iou": 0.1640842082285884,
+              "ranking": 0.5037926284838227,
+              "js_distribution": 0.4741339501921612,
+              "absolute_amplitude": 0.4999999999999999
+            },
+            "weights": {
+              "hotspot_iou": 0.35,
+              "ranking": 0.25,
+              "js_distribution": 0.2,
+              "absolute_amplitude": 0.2
+            },
+            "band_iou": {
+              "low": 0.0,
+              "medium": 0.28137774551767536,
+              "high": 0.2108748791680899
+            },
+            "ranking_raw": {
+              "full": -0.017269425700479988,
+              "top_10_percent": -0.008072473663855079,
+              "top_20_percent": 0.04809767026727118
+            },
+            "active_face_fraction": 0.012603430324949313,
+            "active_face_count": 2760,
+            "active_js_divergence": 0.5258660498078388,
+            "prediction_volume_mm3_h": 0.05377183199999999,
+            "reference_volume_mm3_h": 0.10754366400000001,
+            "relative_volume_error": 0.5000000000000001
+          },
+          "score_interval": {
+            "lower": 27.820442003939394,
+            "upper": 47.82044200393938
+          }
+        }
+      }
+    },
+    "nominal_score": 79.44063084867985,
+    "conservative_score": 59.44063084867986,
+    "optimistic_score": 69.44063084867986,
+    "score_interval": {
+      "lower": 53.4704721854511,
+      "upper": 74.13549620420221
+    },
+    "aggregation": "median across four held-out model scores; seed scores retained as independent diagnostics",
+    "material_targets_mm3": {
+      "low": 0.026885916000000003,
+      "nominal": 0.053771832000000006,
+      "high": 0.10754366400000001
+    }
+  },
+  "crossfit_region_factor": {
+    "mode": "neutral",
+    "values": "ones",
+    "reason": "unconfirmed PCA labels remain a mapping diagnostic; cross-fitted spatial score uses only leave-out particle support"
+  },
+  "geometry_only_reference_diagnostic": {
+    "nominal": {
+      "score": 29.50771034909114,
+      "components": {
+        "hotspot_iou": 0.12503231691188402,
+        "ranking": 0.20526317041803616,
+        "js_distribution": 0.0,
+        "absolute_amplitude": 0.999999999836215
+      },
+      "weights": {
+        "hotspot_iou": 0.35,
+        "ranking": 0.25,
+        "js_distribution": 0.2,
+        "absolute_amplitude": 0.2
+      },
+      "band_iou": {
+        "low": 0.0,
+        "medium": 0.375096950735652,
+        "high": 0.0
+      },
+      "ranking_raw": {
+        "full": -0.5824813042849546,
+        "top_10_percent": -0.6070580401309286,
+        "top_20_percent": -0.5788816330758997
+      },
+      "active_face_fraction": 0.014110362211628034,
+      "active_face_count": 3090,
+      "active_js_divergence": 1.0,
+      "prediction_volume_mm3_h": 0.05377183200000001,
+      "reference_volume_mm3_h": 0.05377183200880703,
+      "relative_volume_error": 1.637849648444969e-10
+    },
+    "conservative": {
+      "score": 9.507710358918244,
+      "components": {
+        "hotspot_iou": 0.12503231691188402,
+        "ranking": 0.20526317041803616,
+        "js_distribution": 0.0,
+        "absolute_amplitude": 3.275699711480229e-10
+      },
+      "weights": {
+        "hotspot_iou": 0.35,
+        "ranking": 0.25,
+        "js_distribution": 0.2,
+        "absolute_amplitude": 0.2
+      },
+      "band_iou": {
+        "low": 0.0,
+        "medium": 0.375096950735652,
+        "high": 0.0
+      },
+      "ranking_raw": {
+        "full": -0.5824813042849546,
+        "top_10_percent": -0.6070580401309286,
+        "top_20_percent": -0.5788816330758997
+      },
+      "active_face_fraction": 0.014110362211628034,
+      "active_face_count": 3090,
+      "active_js_divergence": 1.0,
+      "prediction_volume_mm3_h": 0.05377183200000001,
+      "reference_volume_mm3_h": 0.026885916004403515,
+      "relative_volume_error": 0.99999999967243
+    },
+    "optimistic": {
+      "score": 19.507710350728996,
+      "components": {
+        "hotspot_iou": 0.12503231691188402,
+        "ranking": 0.20526317041803616,
+        "js_distribution": 0.0,
+        "absolute_amplitude": 0.4999999999181075
+      },
+      "weights": {
+        "hotspot_iou": 0.35,
+        "ranking": 0.25,
+        "js_distribution": 0.2,
+        "absolute_amplitude": 0.2
+      },
+      "band_iou": {
+        "low": 0.0,
+        "medium": 0.375096950735652,
+        "high": 0.0
+      },
+      "ranking_raw": {
+        "full": -0.5824813042849546,
+        "top_10_percent": -0.6070580401309286,
+        "top_20_percent": -0.5788816330758997
+      },
+      "active_face_fraction": 0.014110362211628034,
+      "active_face_count": 3090,
+      "active_js_divergence": 1.0,
+      "prediction_volume_mm3_h": 0.05377183200000001,
+      "reference_volume_mm3_h": 0.10754366401761406,
+      "relative_volume_error": 0.5000000000818925
+    },
+    "score_interval": {
+      "lower": 9.507710358918244,
+      "upper": 19.507710350728996
+    }
+  },
+  "source_layers": {
+    "geometry": "official_geometry_as_face_domain_only",
+    "region": "participant_built_geometry_mapping_plus_literature_region_prior",
+    "material": "synthetic_material_reference_from_frozen_ZG0Cr13Ni4Mo_prior",
+    "particle": "five_seed_median_with_active_face_convergence_summary",
+    "prediction": "pre_registered_equal_weight_model_combination"
+  },
+  "scoring_policy": {
+    "official_data_absence_numeric_deduction": 0.0,
+    "participant_built_baseline_worn_allowed": true,
+    "participant_built_face_region_mapping_allowed": true,
+    "measured_truth_claimed": false
+  },
+  "claim_scope": "conditional competition score using participant-built baseline/worn field and participant DEC face mapping; not official or measured truth",
+  "limitations": [
+    "No laboratory baseline/worn scan was supplied; synthetic participant field remains the reference source.",
+    "No measured ZG0Cr13Ni4Mo batch was supplied; material calibration is prior-based.",
+    "PCA region labels are participant assumptions and require reproducible geometry review.",
+    "The official gates remain unchanged and cannot be inferred from the competition self-benchmark."
+  ],
+  "report_sha256": "33c2047e89b6f144f1b18b08e978b5a7412a2ad5e416c983d39476d6f33df26e"
+}

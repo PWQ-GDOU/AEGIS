@@ -1,0 +1,84 @@
+{
+  "version": "step30-zg0cr13ni4mo-amplitude-evidence-layer-v1",
+  "status": "conditional_estimated_prior",
+  "target_material": "ZG0Cr13Ni4Mo",
+  "exact_grade_measured_source_found": false,
+  "exact_grade_water_sand_amplitude_found": false,
+  "source_layers": [
+    {
+      "layer": "exact_grade_measured",
+      "status": "missing",
+      "allowed_use": "none",
+      "claim_boundary": "No exact-grade measured erosion amplitude may be claimed."
+    },
+    {
+      "layer": "nearest_material_family",
+      "status": "literature_prior",
+      "source_ids": [
+        "han_2021_distribution_parts",
+        "rai_2017_iit_roorkee_thesis",
+        "cheng_2023_13cr4ni_mechanical_properties"
+      ],
+      "material_label": "13Cr4Ni martensitic stainless steel or related runner material",
+      "allowed_use": "trend and bounded prior only",
+      "claim_boundary": "Not identical to certified ZG0Cr13Ni4Mo and not a measured DEC truth field."
+    },
+    {
+      "layer": "solid_particle_erosion_models",
+      "status": "literature_prior",
+      "source_ids": [
+        "frontiers_2024_sediment_review",
+        "ruff_1978_solid_particle_erosion",
+        "sawant_2021_erosion_cfd_thesis"
+      ],
+      "allowed_use": "model comparison and sensitivity envelope",
+      "claim_boundary": "Parameters remain outside exact-grade calibration unless independently measured."
+    },
+    {
+      "layer": "participant_estimate",
+      "status": "frozen_preregistered_estimate",
+      "specific_wear_yield_mm3_per_kg": {
+        "low": 0.08,
+        "nominal": 0.16,
+        "high": 0.32
+      },
+      "density_kg_m3": {
+        "low": 7700.0,
+        "nominal": 7800.0,
+        "high": 7900.0
+      },
+      "hardness_gpa": {
+        "low": 3.0,
+        "nominal": 4.0,
+        "high": 5.0
+      },
+      "concentration_scale": {
+        "low": 0.5,
+        "nominal": 1.0,
+        "high": 2.0
+      },
+      "allowed_use": "conditional participant-built benchmark sensitivity only",
+      "claim_boundary": "These values are estimates, not measured material amplitudes."
+    },
+    {
+      "layer": "measured_pilot",
+      "status": "not_started",
+      "required_before_upgrade": [
+        "mill_or_heat certificate",
+        "chemical composition",
+        "heat treatment",
+        "hardness and density measurements",
+        "measured sand PSD",
+        "mass loss and registered baseline/worn profiles",
+        "raw data hashes and calibration records"
+      ],
+      "allowed_use": "pilot calibration only after complete ingest"
+    }
+  ],
+  "fallback_rule": "Use the participant estimate only as a frozen sensitivity envelope; never relabel it as exact-grade measurement.",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "measured_truth": false,
+  "independent_material_gate": false
+}

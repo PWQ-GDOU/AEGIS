@@ -26,6 +26,54 @@ nohup.out
 run_long.log
 run.log
 
+# Local session/connection material (never commit credentials)
+workspace/SESSION_CONTEXT.md
+workspace/*SESSION_CONTEXT*.md
+workspace/remote/*connection*local*.json
+
+# Generated test and cache trees
+workspace/output/_*/
+workspace/output/_b_*
+workspace/output/test_log_tmp.txt
+workspace/output/step30_v5_confirmation_runs_v1/
+workspace/output/step30_v5_confirmation_parallel_v1/
+
 # IDE
 .vscode/
 .idea/
+
+# Local app/session state and accidental device-name files
+.paseo-local/
+.zcode/
+nul
+NUL
+workspace/NUL
+workspace/_probe*.txt
+
+# Report-render QA caches and local portability audit scratch files
+report_build/__pycache__/
+report_build/lo_profile/
+report_build/rendered/
+path_audit_remaining.txt
+
+# Reconstructed source archives and local CAD helper payloads
+DecPelton_extracted/
+参考文献/
+CAD_Assistant/
+CAD_Assistant.exe
+CAD_Assistant.zip
+
+# Local input archives and downloaded browser/source caches
+workspace/input_archive/
+workspace/input/supplemental_data/sources/*.html
+
+# Large derived model binaries
+workspace/output/*.pkl
+workspace/output/vertices_full_gpr.npz
+
+# High-volume exploratory render/run trees; keep their manifests and summaries
+workspace/output/step30_runs/
+workspace/output/step30_experiments/*/risk_maps/
+workspace/output/step30_exploratory_fem_envelope_v1/
+workspace/output/step30_exploratory_fem_envelope_v1r1/
+workspace/output/step30_exploratory_fem_envelope_v1r2/

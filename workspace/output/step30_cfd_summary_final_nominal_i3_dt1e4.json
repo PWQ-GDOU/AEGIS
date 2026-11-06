@@ -24,7 +24,7 @@
     }
   },
   "geometry": {
-    "stl": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\dec_single_bucket_local.stl",
+    "stl": "workspace/output/dec_single_bucket_local.stl",
     "n_vertices": 31282,
     "n_faces": 61405,
     "surface_area_m2": 1.815974401753815,

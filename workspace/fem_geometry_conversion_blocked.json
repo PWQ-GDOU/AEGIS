@@ -1,0 +1,50 @@
+{
+  "version": "step30-fem-geometry-conversion-v1",
+  "status": "blocked",
+  "source": {
+    "path": "DecPelton2024/DecPelton2024/DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包/2-真机转轮三维实体数据/2.1-150MW级冲击式国产化真机转轮三维实体数据.x_t",
+    "sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313",
+    "bytes": 45249094,
+    "format": "Parasolid text",
+    "cad_key": "D1247R2-RUNNERASS-20220929"
+  },
+  "attempts": [
+    {
+      "tool": "Gmsh Python 4.15.2",
+      "operation": "open Parasolid .x_t",
+      "status": "blocked",
+      "error": "Gmsh must be compiled with Parasolid support to read the source file"
+    },
+    {
+      "tool": "CAD Assistant bundled runtime",
+      "operation": "CLI import probe",
+      "status": "blocked",
+      "error": "The documented CLI accepts one FileToOpen; the attempted option order treated --noMeshing as the file, and the Unicode workspace path was decoded incorrectly. No STEP/BREP export command or output was produced."
+    }
+  ],
+  "existing_surface_stl": {
+    "path": "workspace/of_case/pelton_bucket_open_si/constant/triSurface/single_bucket_target_authoritative_local_m.stl",
+    "source_cad_sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313",
+    "role": "CFD surface/topology artifact only",
+    "structural_fem_eligible": false,
+    "reason": "triangulated STL has no independently confirmed ROOT_INTERFACE, WETTED_SURFACE, or AI5_04 CAD selections and cannot restore analytic solid topology"
+  },
+  "required_next_artifact": {
+    "format": "STEP/BREP solid export",
+    "source_binding": "must identify the source Parasolid SHA-256 above",
+    "required_confirmed_selections": [
+      "ROOT_INTERFACE",
+      "WETTED_SURFACE",
+      "AI5_04",
+      "MATERIAL_DOMAIN"
+    ],
+    "additional": [
+      "coordinate units",
+      "AI5-04 gauge direction(s)",
+      "AI5-04 CAD position",
+      "independent confirmation that AI5 is outside fixed root nodes"
+    ]
+  },
+  "fem_gate": "blocked",
+  "provenance_note": "No structural volume mesh or FEM case was generated from the triangulated STL."
+}

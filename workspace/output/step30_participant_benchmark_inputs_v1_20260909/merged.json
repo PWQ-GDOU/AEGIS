@@ -1,0 +1,50 @@
+{
+  "version": "step30-participant-benchmark-inputs-v1",
+  "status": "provisional",
+  "prior_contract": {
+    "ai5_used_for_calibration": false,
+    "official_material_certificate": false,
+    "official_reference": false,
+    "reference_role": "participant_merged_prior",
+    "topology_aggregation": "stable_surface_aggregate_v5",
+    "depth_units": "mm_per_h_prior_rate_scale"
+  },
+  "source": {
+    "source_type": "contest_provided_simulation",
+    "participant_built_reference": true,
+    "run_index": 10,
+    "hit_path": "participant-built mean of independent seed priors",
+    "hit_sha256": "db0211cb88a24d72f21d1a7c2f9724053b92f3b158fbc9ee503cfb128110cd64",
+    "field_path": "participant-built mean of stable topology fields",
+    "field_sha256": "e73f9ba041cfa9776ee0335fc4f34190121aa93287c27835a1de646ca6a928b5"
+  },
+  "domain": {
+    "n_faces": 218988,
+    "centers_sha256": "62aff1a51bb4260d31e93e30d0e9e8cf5e9f7fd47d8f3011bca7b661bbe9e31a",
+    "areas_sha256": "a9f9e379df6a45aded7029ef4d861ddcd9da5b8042964245cb30f633d6116671"
+  },
+  "model_maps": {
+    "oka": {
+      "field": "oka_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    },
+    "finnie": {
+      "field": "finnie_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    },
+    "tabakoff": {
+      "field": "tabakoff_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    },
+    "mansouri": {
+      "field": "mansouri_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    }
+  },
+  "independence": {
+    "model_evaluation": "leave_one_model_out_in_consumer",
+    "seed_evaluation": "leave_one_seed_out_in_consumer",
+    "measured_truth": false
+  },
+  "report_sha256": "7259ea670e1b45cdcf0afde70ba76220e4f6c726f810f879ae2d1dce0ba364d0"
+}

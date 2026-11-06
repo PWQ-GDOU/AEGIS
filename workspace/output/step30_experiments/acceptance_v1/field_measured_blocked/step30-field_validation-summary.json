@@ -1,0 +1,9 @@
+{
+  "blocked_reason": "invalid measured field input: field mode needs --depth-field or both --original-points and --worn-points",
+  "experiment": "field_validation",
+  "measurement_status": "not_available",
+  "mode": "measured",
+  "status": "blocked",
+  "truth_source": "none",
+  "version": "step30-experiment-manifest-v1"
+}

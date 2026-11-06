@@ -1,6 +1,6 @@
 {
   "method": "anisotropic per-axis affine alignment + nearest-neighbor",
-  "cfd_note": "laminar simpleFoam, simplified inlet, NOT precise ground truth â€” directional check only",
+  "cfd_note": "laminar simpleFoam, simplified inlet, NOT precise ground truth ¡ª directional check only",
   "scale_factors": [
     1.3592833472946504,
     1.3663276620850209,

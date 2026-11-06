@@ -1,0 +1,89 @@
+{
+  "comparison": {
+    "observed_mass_loss_mg": {
+      "hotspot": {
+        "intersection": 1,
+        "iou": 1.0,
+        "observed_count": 1,
+        "observed_threshold": 12.652406514417507,
+        "percentile": 90.0,
+        "predicted_count": 1,
+        "predicted_threshold": 12.65897852065507,
+        "union": 1
+      },
+      "independent_validation_set": false,
+      "maximum_depth_error": {
+        "absolute": 0.061698396915183196,
+        "relative": 0.0038093673184748877,
+        "signed": 0.061698396915183196
+      },
+      "metrics_sha256": "f294a6a75f335930e03612d33bde225d2f16f4a53c0eedd92672965a07d9ac48",
+      "n": 8,
+      "observed": {
+        "maximum_depth": 16.196494524420046,
+        "total": 42.24844372805307
+      },
+      "official_accuracy_gate": false,
+      "predicted": {
+        "maximum_depth": 16.25819292133523,
+        "total": 42.477448505230555
+      },
+      "provenance_note": "synthetic result; not official accuracy",
+      "quality": {
+        "gates": null,
+        "passed": true
+      },
+      "residual_distribution": {
+        "mae": 0.041317808390756564,
+        "max": 0.1138138536078559,
+        "p50": 0.021014816032444594,
+        "p95": 0.10916617301213916,
+        "rmse": 0.059021077250713386
+      },
+      "signed_bias": 0.028625597147185308,
+      "status": "synthetic",
+      "total_error": {
+        "absolute": 0.22900477717748657,
+        "relative": 0.005420431073190676,
+        "signed": 0.22900477717748657
+      },
+      "total_quantity_error": {
+        "absolute": 0.22900477717748657,
+        "relative": 0.005420431073190676,
+        "signed": 0.22900477717748657
+      },
+      "value_units": "mm",
+      "version": "step30-error-metrics-v1"
+    }
+  },
+  "condition_columns": [
+    "speed_ms",
+    "impact_angle_deg",
+    "particle_size_um"
+  ],
+  "error_metrics_interfaces": {
+    "observed_mass_loss_mg": {
+      "function": "calculate_error_metrics",
+      "implementation": "external_module",
+      "used": true
+    }
+  },
+  "manifest_version": "step30-experiment-manifest-v1",
+  "measurement_io_interface": {
+    "implementation": "fixed_seed_generator",
+    "used": false
+  },
+  "measurement_status": "known_synthetic_truth",
+  "mode": "synthetic",
+  "n_rows": 8,
+  "observation_kind": "mass_loss_mg",
+  "prediction_model": {
+    "density_mg_per_mm3": 7.85,
+    "formula": "E=12*(V/50)^2.2*(Dp/50)^0.35*sin(alpha)^1.2*(1+0.25*cos(alpha)^2)",
+    "name": "interpretable_power_angle_law"
+  },
+  "status": "synthetic",
+  "stress_used_as_erosion_truth": false,
+  "truth_source": "fixed_seed_generator",
+  "version": "step30-material-erosion-experiment-v1"
+}

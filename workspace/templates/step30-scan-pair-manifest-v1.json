@@ -1,0 +1,11 @@
+{
+  "version": "step30-scan-pair-manifest-v1",
+  "schema_version": "step30-scan-pair-manifest-v1",
+  "status": "blocked",
+  "formal_requested": false,
+  "created_at_utc": "1970-01-01T00:00:00Z",
+  "minimum_independent_groups": 3,
+  "recommended_formal_groups": 5,
+  "blocked_reason": "No real baseline/worn scan pairs and calibration certificates have been supplied.",
+  "scan_pairs": []
+}

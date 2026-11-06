@@ -1,0 +1,20 @@
+{
+  "version": "step30-material-profile-compare-v1",
+  "status": "blocked",
+  "physical_spatial_accuracy_status": "blocked_without_registered_measured_profile",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "prediction": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_physical_accuracy_ensemble_20260829_v2/ensemble.npz",
+    "sha256": "e6e06a183089e3e1e908d866206cf29ce8e8aba0d1612dba306c3c782ea23dcc"
+  },
+  "measured_profile": null,
+  "registration": null,
+  "comparison": null,
+  "blocking_reasons": [
+    "measured 3-D wear profile was not supplied",
+    "prediction-to-profile registration was not supplied"
+  ],
+  "report_sha256": "e6cd15d639386194cfda04da18bc38ed8254f336b1dd9f2fe7f2132964be8447"
+}

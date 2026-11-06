@@ -1,0 +1,58 @@
+{
+  "runs": {
+    "strict_v2c_n500_dt1e5": {
+      "impacts": 96,
+      "first_hits": 35,
+      "parcels": 35,
+      "target_mass_kg": 2.0915722487302446e-08,
+      "erosion_p99_mm_h": 0.06451454758644104,
+      "impact_mass_kg": 3.5507724592345555,
+      "Vp_mass_weighted": 45.85130812164689,
+      "angle_mass_weighted": 3.556609248852465
+    },
+    "strict_v2c_n500_dt5e6": {
+      "impacts": 96,
+      "first_hits": 34,
+      "parcels": 34,
+      "target_mass_kg": 3.735473086408092e-08,
+      "erosion_p99_mm_h": 0.1517370045185089,
+      "impact_mass_kg": 3.5211468153873,
+      "Vp_mass_weighted": 46.068060316256,
+      "angle_mass_weighted": 3.7779520648301683
+    },
+    "strict_v2c_n500_dt2p5e6": {
+      "impacts": 95,
+      "first_hits": 34,
+      "parcels": 34,
+      "target_mass_kg": 3.043877683239771e-08,
+      "erosion_p99_mm_h": 0.13304312527179718,
+      "impact_mass_kg": 3.514866843964733,
+      "Vp_mass_weighted": 46.05163311172959,
+      "angle_mass_weighted": 3.6374196995430563
+    }
+  },
+  "pairs": {
+    "strict_v2c_n500_dt1e5__strict_v2c_n500_dt5e6": {
+      "first_parcel_jaccard": 0.9714285714285714,
+      "first_parent_face_agreement": 0.8529411764705882,
+      "first_triangle_agreement": 0.7647058823529411,
+      "hit_count_rel": 0.0,
+      "target_mass_kg_rel": 0.44007835143006435,
+      "erosion_p99_mm_h_rel": 0.5748265375927364,
+      "impact_mass_kg_rel": 0.008413634932173978,
+      "Vp_mass_weighted_rel": 0.00470504278064056,
+      "angle_mass_weighted_rel": 0.05858804245777354
+    },
+    "strict_v2c_n500_dt5e6__strict_v2c_n500_dt2p5e6": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 0.9411764705882353,
+      "first_triangle_agreement": 0.8529411764705882,
+      "hit_count_rel": 0.010526315789473684,
+      "target_mass_kg_rel": 0.22720867102393463,
+      "erosion_p99_mm_h_rel": 0.1405099226925219,
+      "impact_mass_kg_rel": 0.0017866882875947686,
+      "Vp_mass_weighted_rel": 0.0003567127464633681,
+      "angle_mass_weighted_rel": 0.03863518012638632
+    }
+  }
+}

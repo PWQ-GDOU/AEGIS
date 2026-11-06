@@ -1,0 +1,4 @@
+operating_point,power_mw,head_m,flow_m3s,stress_mean_mpa,stress_amplitude_mpa,dominant_frequency_hz,wear_truth_role
+rated,143.6,595.0,27.0,28.1,12.6,37.2,context_only_not_erosion_truth
+50MW,50.0,570.0,11.2,25.8,10.4,37.2,context_only_not_erosion_truth
+30MW,30.0,540.0,7.4,24.5,8.9,12.7,context_only_not_erosion_truth

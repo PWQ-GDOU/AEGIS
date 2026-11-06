@@ -1,0 +1,9 @@
+{
+  "blocked_reason": "measured mode requires --input",
+  "experiment": "material_erosion",
+  "measurement_status": "not_available",
+  "mode": "measured",
+  "status": "blocked",
+  "truth_source": "none",
+  "version": "step30-experiment-manifest-v1"
+}

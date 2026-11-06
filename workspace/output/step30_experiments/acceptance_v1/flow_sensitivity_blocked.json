@@ -1,0 +1,38 @@
+{
+  "version": "step30-production-matrix-v1",
+  "created_at_utc": "2026-07-31T16:44:42.992339+00:00",
+  "experiment": "flow_sensitivity",
+  "status": "blocked",
+  "fixed_identity": {
+    "collision_policy": "strict_v2",
+    "collision_backend": "cfd_topology",
+    "cfd_variant": "native_si",
+    "tracking_velocity": "UMean",
+    "seed": 42,
+    "n_parcels": 500,
+    "dt_s": 1e-05,
+    "max_impacts": 3
+  },
+  "allowed_change": "flow_sensitivity",
+  "arms": [
+    {
+      "arm_id": "80.0",
+      "input_status": "blocked",
+      "reason": "independent native SI flow artifacts were not supplied",
+      "jet_speed_ms": 80.0
+    },
+    {
+      "arm_id": "104.8",
+      "input_status": "blocked",
+      "reason": "independent native SI flow artifacts were not supplied",
+      "jet_speed_ms": 104.8
+    },
+    {
+      "arm_id": "130.0",
+      "input_status": "blocked",
+      "reason": "independent native SI flow artifacts were not supplied",
+      "jet_speed_ms": 130.0
+    }
+  ],
+  "experiment_id": "c3420af941bb68af971733b93bfc7364293db8896c8366dd6e23bbe4a54251df"
+}

@@ -1,0 +1,68 @@
+{
+  "artifacts": [
+    {
+      "bytes": 3531,
+      "file": "step30-field_validation-summary.json",
+      "sha256": "949f2191f4e272d2a97a4d41f3d36bcdda2ae8345f4c94327e0a1c6e7ba15c9d"
+    },
+    {
+      "bytes": 321,
+      "file": "step30-field_validation-field_metadata_stress_context.csv",
+      "sha256": "ecbbe0627800993a8b6167adbc2906cebc4a49c4693705f2e66577bcdc88a61b"
+    },
+    {
+      "bytes": 3739,
+      "file": "step30-field_validation-arrays.npz",
+      "sha256": "47888a5219bc0d0d41e9aa00f40921a28d620669aa3f63faae37f488dffb8622"
+    }
+  ],
+  "experiment": "field_validation",
+  "measured_policy": "missing or invalid real data blocks; no fabricated measurements",
+  "mode": "synthetic",
+  "notes": [
+    "Metadata and stress are retained as context.",
+    "Stress is explicitly excluded from erosion truth construction.",
+    "Measured mode blocks on missing/invalid wear geometry."
+  ],
+  "output_dir": "workspace/output\\step30_experiments\\acceptance_v1\\field_synthetic",
+  "provided_inputs": [],
+  "required_inputs": [],
+  "seed": 42,
+  "status": "synthetic",
+  "support_interfaces": {
+    "step30_coordinate_registration": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_coordinate_registration.py"
+    },
+    "step30_error_metrics": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_error_metrics.py"
+    },
+    "step30_measurement_io": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_measurement_io.py"
+    }
+  },
+  "synthetic_policy": "synthetic values only when mode=synthetic",
+  "synthetic_truth": {},
+  "tables": {
+    "field_metadata_stress_context": {
+      "columns": [
+        "operating_point",
+        "power_mw",
+        "head_m",
+        "flow_m3s",
+        "stress_mean_mpa",
+        "stress_amplitude_mpa",
+        "dominant_frequency_hz",
+        "wear_truth_role"
+      ],
+      "file": "step30-field_validation-field_metadata_stress_context.csv",
+      "rows": 3
+    }
+  },
+  "version": "step30-experiment-manifest-v1"
+}

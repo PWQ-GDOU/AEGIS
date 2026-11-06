@@ -1,0 +1,60 @@
+{
+  "version": "step30-particle-performance-ab-v1",
+  "status": "failed",
+  "execution_target": "dcu_cpu",
+  "job_id": "step30_perf_ab_20260908_01",
+  "variants": {
+    "baseline": {
+      "strict_near_miss_distance_diagnostics": true,
+      "run_dir": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_particle_performance_ab/step30_perf_ab_20260908_01/baseline/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9a713296889dbabafb980d3d4a32657887549d46698f8bd99edc39b5b0c515d9",
+      "wall_time_seconds": 810.6,
+      "particle_hits_sha256": "11d8116fbc8dab26f07e9676d6b99ab1179e8f9b61d72918003dbc79201e2e03",
+      "tracking": {
+        "n_impacts": 6,
+        "intersection_hits": 6,
+        "fallback_hits": 0,
+        "hit_parcels": 2,
+        "total_injection_mass_kg": 5.8950000000000005,
+        "impact_mass_kg": 0.03537,
+        "substep_count": 2035710,
+        "termination_counts": {
+          "outside_domain": 982,
+          "no_wall_hit": 16,
+          "max_impacts": 2
+        },
+        "face_erosion_total": null
+      },
+      "near_miss_diagnostics": 5659
+    },
+    "optimized": {
+      "strict_near_miss_distance_diagnostics": false,
+      "run_dir": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_particle_performance_ab/step30_perf_ab_20260908_01/optimized/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/3423f4053d3e61953a7575c4a5af46000aac84fa4faf36bfb81cc45bff9e76b5",
+      "wall_time_seconds": 817.47,
+      "particle_hits_sha256": "839635100fb4a559e1e50a717c5ef6e4a3e2e5a0411c4d936a642b61b1cdf30d",
+      "tracking": {
+        "n_impacts": 6,
+        "intersection_hits": 6,
+        "fallback_hits": 0,
+        "hit_parcels": 2,
+        "total_injection_mass_kg": 5.8950000000000005,
+        "impact_mass_kg": 0.03537,
+        "substep_count": 2035710,
+        "termination_counts": {
+          "outside_domain": 982,
+          "no_wall_hit": 16,
+          "max_impacts": 2
+        },
+        "face_erosion_total": null
+      },
+      "near_miss_diagnostics": 0
+    }
+  },
+  "comparisons": {
+    "particle_hits_npz_byte_equal": false,
+    "accepted_physics_summary_equal": true,
+    "tracking_difference": {},
+    "wall_time_speedup": 0.9915960218723623,
+    "wall_time_reduction_fraction": -0.008475203552923766
+  },
+  "interpretation": "Performance-only candidate: accepted collision outputs are unchanged; near-miss distance bookkeeping is omitted in optimized mode. This does not prove particle spatial convergence or physical accuracy."
+}

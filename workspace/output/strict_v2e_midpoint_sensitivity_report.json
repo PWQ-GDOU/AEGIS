@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "gates": {
+    "first_parcel_jaccard_min": 0.99,
+    "first_parent_face_agreement_min": 0.99,
+    "hit_count_relative_max": 0.01,
+    "target_mass_relative_max": 0.05,
+    "erosion_p99_relative_max": 0.05
+  },
+  "runs": {
+    "strict_v2e_midpoint_n500_dt1e5": {
+      "impacts": 118,
+      "first_hits": 41,
+      "parcels": 41,
+      "target_mass_kg": 5.510847245204786e-07,
+      "erosion_p99_mm_h": 12.558835983276367,
+      "impact_mass_kg": 3.482735716640975,
+      "Vp_mass_weighted": 43.35123869201507,
+      "angle_mass_weighted": 4.6394054408596475
+    },
+    "strict_v2e_midpoint_n500_dt5e6": {
+      "impacts": 118,
+      "first_hits": 41,
+      "parcels": 41,
+      "target_mass_kg": 5.368180495679553e-07,
+      "erosion_p99_mm_h": 12.457429885864258,
+      "impact_mass_kg": 3.482735716640975,
+      "Vp_mass_weighted": 43.31477665795314,
+      "angle_mass_weighted": 4.69619722032586
+    },
+    "strict_v2e_midpoint_n500_dt2p5e6": {
+      "impacts": 118,
+      "first_hits": 41,
+      "parcels": 41,
+      "target_mass_kg": 5.33315073880658e-07,
+      "erosion_p99_mm_h": 12.47211742401123,
+      "impact_mass_kg": 3.482735716640975,
+      "Vp_mass_weighted": 43.268605885995136,
+      "angle_mass_weighted": 4.6816907484230335
+    }
+  },
+  "pairs": {
+    "strict_v2e_midpoint_n500_dt1e5__strict_v2e_midpoint_n500_dt5e6": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 0.9512195121951219,
+      "first_triangle_agreement": 0.9024390243902439,
+      "first_position_delta_mm": {
+        "median": 0.11266913882947925,
+        "p95": 0.8004466360558457,
+        "max": 3.2976293644805446
+      },
+      "hit_count_relative": 0.0,
+      "target_mass_kg_relative": 0.026576369710380448,
+      "erosion_p99_mm_h_relative": 0.008140210167040739,
+      "impact_mass_kg_relative": 0.0,
+      "Vp_mass_weighted_relative": 0.0008417920366960739,
+      "angle_mass_weighted_relative": 0.012093141919255314
+    },
+    "strict_v2e_midpoint_n500_dt5e6__strict_v2e_midpoint_n500_dt2p5e6": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 1.0,
+      "first_triangle_agreement": 1.0,
+      "first_position_delta_mm": {
+        "median": 0.03340106254980591,
+        "p95": 0.2776684928455409,
+        "max": 1.3675375819440763
+      },
+      "hit_count_relative": 0.0,
+      "target_mass_kg_relative": 0.006568304289259914,
+      "erosion_p99_mm_h_relative": 0.0011776298801273563,
+      "impact_mass_kg_relative": 0.0,
+      "Vp_mass_weighted_relative": 0.0010670732512079286,
+      "angle_mass_weighted_relative": 0.003098554065689465
+    }
+  }
+}

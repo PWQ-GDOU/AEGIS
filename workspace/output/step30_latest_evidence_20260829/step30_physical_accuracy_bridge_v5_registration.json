@@ -1,0 +1,42 @@
+{
+  "version": "step30-physical-accuracy-bridge-registration-v1",
+  "status": "exploratory_remote_evidence",
+  "execution_target": "dcu_cpu",
+  "remote_host": "100.121.154.58",
+  "remote_workspace": "remote_artifacts/PWQ/step30_cpu_v1",
+  "source_particle_run": "step30_cpu_confirmation_20260828_v2/seed_9404fdc3e8d12c9edf423d44e029b283a2aef3de385842195888c0a07f0d24de",
+  "source_particle_input": {
+    "n_hit_impacts": 1148,
+    "n_faces": 218988,
+    "prior_draws": 256,
+    "prior_seed": 20260829
+  },
+  "artifacts": {
+    "prior_report_sha256": "41c7daac2e89bafb8bd12b120cb3cc9e582530be6478d1d9be8a93390daf6e60",
+    "prior_npz_sha256": "f208f97636f082a43c5278662212d91d5a2f67ac4925b23852f3f633838d35e4",
+    "bridge_report_sha256": "5ee595c463c3791b0b444878ad04756dd5a4507eaad96cf0d15d7fbdb7b8e6a9",
+    "bridge_npz_sha256": "e25d3abfd8d63f48633517be9ba7c7f367ea9e03675049493c88a5fd48c86e75"
+  },
+  "verification": {
+    "focused_pytest": "2 passed",
+    "remote_full_regression": "4 passed",
+    "remote_py_compile": "passed",
+    "local_numeric_execution": false
+  },
+  "diagnostic": {
+    "model_diversity_status": "low_spatial_diversity_shared_particle_driver",
+    "model_spearman_median": 0.9999999849271388,
+    "model_spearman_min": 0.9999999674227477,
+    "hotspot_iou_median": 1.0,
+    "positive_support_iou": 1.0,
+    "shared_positive_support_fraction": 0.004109814236396515
+  },
+  "gate_status": {
+    "physical_spatial_accuracy_status": "blocked_without_independent_measured_truth",
+    "spatial_accuracy_status": "blocked",
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked"
+  },
+  "interpretation": "The artifact is a reproducible model-consensus screening map from a common particle-hit driver. It is not a baseline/worn scan comparison and cannot establish physical spatial accuracy."
+}

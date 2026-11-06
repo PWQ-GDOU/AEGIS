@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 from textwrap import dedent
 
-OUTPUT = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\workspace\of_case\pelton_jet")
+OUTPUT = Path(r"workspace/of_case\pelton_jet")
 OUTPUT.mkdir(parents=True, exist_ok=True)
 
 # ============================================================
@@ -405,7 +405,7 @@ print(f"""
    📁 {OUTPUT}
    
    📋 下一步:
-   1. 复制到WSL: cp -r /mnt/b/undertaking/学业/非专业相关/比赛/挑战杯/水轮机/workspace/of_case/pelton_jet ~/
+   1. 复制到WSL: cp -r workspace/of_case/pelton_jet ~/
    2. 生成网格: cd ~/pelton_jet && blockMesh
    3. 运行仿真: interFoam
 """)

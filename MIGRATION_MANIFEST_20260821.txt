@@ -1,0 +1,11 @@
+Step30 H-drive migration manifest
+Timestamp: 2026-08-21
+Project root:
+All listed source files were moved, not copied, when present.
+
+moved | VorCAST | historical_external/users/20132/.codex\attachments\2c98d9d0-ec42-4f22-b4a3-06448cfa57f9\pasted-text.txt | external_workspaces/VorCAST\zcode_workspace\codex_attachments\20260821\2c98d9d0-ec42-4f22-b4a3-06448cfa57f9-pasted-text.txt | 12569 | 85754bb96caaaca02d2535e6845dc3b7896a8aac50643ffa5054a3f17863db95
+moved | general | historical_external/users/20132/.codex\attachments\34031d39-6489-4cfe-af81-dcccef88b329\pasted-text.txt | external_workspaces/_codex_attachment_archive\20260821\34031d39-6489-4cfe-af81-dcccef88b329-pasted-text.txt | 14532 | b8c9fe7676d1118f584684955a2a72c900d533529b499c098b77bb25baf9bd23
+moved | general | historical_external/users/20132/.codex\attachments\df315d24-2b7d-4886-9a0a-dab6790162ef\pasted-text.txt | external_workspaces/_codex_attachment_archive\20260821\df315d24-2b7d-4886-9a0a-dab6790162ef-pasted-text.txt | 6183 | ce2fe846b6e98a294c6bdb3c47f00ccc4d1cd26a637b7691021b19cb697dff24
+moved | metadata | historical_external/users/20132/.codex\attachments\pasted-text-attachments.json | external_workspaces/_codex_attachment_archive\20260821\pasted-text-attachments.json | 11923 | c39d384bb50512a30ae4897c4eab45a15e3df020ff37bcb734b6c07414d75bb3
+
+The DEC attachment 99507a07-2f87-4684-a6a8-d44ab716c238/pasted-text.txt was already archived in workspace\input_archive\codex_attachments\99507a07-2f87-4684-a6a8-d44ab716c238\pasted-text.txt before this migration pass. SHA-256: 531b858b5875d8fbad3612e25ed80b0f3d4e9b7a19117a8062ce2d77ed70a0bc; bytes: 13918.

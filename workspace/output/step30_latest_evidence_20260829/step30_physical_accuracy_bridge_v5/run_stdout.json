@@ -1,0 +1,132 @@
+{
+  "version": "step30-physical-accuracy-bridge-v1",
+  "status": "provisional_physical_accuracy_bridge",
+  "physical_spatial_accuracy_status": "blocked_without_independent_measured_truth",
+  "spatial_accuracy_status": "blocked",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "claim_scope": "model-consensus screening and epistemic disagreement only",
+  "input_bindings": {
+    "prior_report": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_physical_accuracy_prior_20260829_v2/prior.json",
+    "prior_report_sha256": "41c7daac2e89bafb8bd12b120cb3cc9e582530be6478d1d9be8a93390daf6e60",
+    "prior_array_artifact": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_physical_accuracy_prior_20260829_v2/prior.npz",
+    "prior_array_artifact_sha256": "f208f97636f082a43c5278662212d91d5a2f67ac4925b23852f3f633838d35e4",
+    "measured_report": null,
+    "measured_report_sha256": null
+  },
+  "upstream_particle_input": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9404fdc3e8d12c9edf423d44e029b283a2aef3de385842195888c0a07f0d24de/particle_hits.npz",
+    "sha256": "e52d32b38225843ced483769e09e01719a7d95f6c58c2a6929e7ce0964c9f0d5",
+    "n_hit_impacts": 1148,
+    "n_faces": 218988,
+    "interpretation": "fixed common particle-hit driver shared by all four erosion laws"
+  },
+  "model_contract": {
+    "models": [
+      "oka",
+      "finnie",
+      "tabakoff",
+      "mansouri"
+    ],
+    "normalization": "each map divided by its facewise p95, then clipped at zero",
+    "consensus": "geometric mean of normalized model maps",
+    "disagreement": "coefficient of variation across normalized model maps",
+    "hotspot_quantile": 0.9,
+    "ai5_used_for_calibration": false
+  },
+  "model_agreement": {
+    "pairwise": [
+      {
+        "left": "oka",
+        "right": "finnie",
+        "spearman": 0.9999999883710706,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "oka",
+        "right": "tabakoff",
+        "spearman": 0.9999999909960672,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "oka",
+        "right": "mansouri",
+        "spearman": 0.9999999814832071,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "finnie",
+        "right": "tabakoff",
+        "spearman": 0.9999999970105102,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "finnie",
+        "right": "mansouri",
+        "spearman": 0.9999999674227477,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "tabakoff",
+        "right": "mansouri",
+        "spearman": 0.9999999789047331,
+        "hotspot_iou": 1.0
+      }
+    ],
+    "spearman_median": 0.9999999849271388,
+    "spearman_min": 0.9999999674227477,
+    "hotspot_iou_median": 1.0,
+    "hotspot_iou_min": 1.0,
+    "interpretation": "agreement is not validation against physical wear"
+  },
+  "model_diversity_diagnostic": {
+    "status": "low_spatial_diversity_shared_particle_driver",
+    "raw_p50_summary": {
+      "oka": {
+        "p50_map_mean": 1.4823100989154145e-06,
+        "p50_map_max": 0.005358477588742971,
+        "p50_positive_face_fraction": 0.004109814236396515
+      },
+      "finnie": {
+        "p50_map_mean": 2.456318215707064e-09,
+        "p50_map_max": 7.380488113994943e-06,
+        "p50_positive_face_fraction": 0.004109814236396515
+      },
+      "tabakoff": {
+        "p50_map_mean": 5.928946269737686e-10,
+        "p50_map_max": 3.675727157315123e-06,
+        "p50_positive_face_fraction": 0.004109814236396515
+      },
+      "mansouri": {
+        "p50_map_mean": 3.314134895240855e-07,
+        "p50_map_max": 0.002222714712843299,
+        "p50_positive_face_fraction": 0.004109814236396515
+      }
+    },
+    "positive_support_iou": 1.0,
+    "shared_positive_support_fraction": 0.004109814236396515,
+    "interpretation": "near-identical rankings mainly show common hit support; they do not demonstrate law-level spatial accuracy"
+  },
+  "field_summary": {
+    "n_faces": 218988,
+    "consensus_p05": 1.000000000000001e-12,
+    "consensus_p50": 1.000000000000001e-12,
+    "consensus_p95": 1.000000000000001e-12,
+    "disagreement_cv_p50": 0.0,
+    "disagreement_cv_p95": 0.0,
+    "high_disagreement_face_fraction": 0.0028768699654775605
+  },
+  "measured_truth": {
+    "status": "not_supplied",
+    "required_for_physical_accuracy": true,
+    "interpretation": "literature priors and model consensus cannot replace baseline/worn scans"
+  },
+  "limitations": [
+    "The four erosion laws share the same particle-hit input and are not independent physical measurements.",
+    "Normalization removes absolute-scale differences; the consensus field is a ranking aid, not calibrated depth.",
+    "No baseline/worn scan, independent material batch, or official AI5 spatial truth is asserted.",
+    "This report cannot open official_accuracy_gate, official_reference_gate, or fem_gate."
+  ],
+  "report_sha256": "c1b1352e9e17c0fa3593f9ccb48118ecc08acb9ca599326175f0694818f78595"
+}

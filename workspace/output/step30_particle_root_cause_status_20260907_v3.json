@@ -1,0 +1,150 @@
+{
+  "version": "step30-particle-root-cause-status-v3",
+  "created_date": "2026-09-07",
+  "status": "root_cause_partially_isolated",
+  "execution_policy": {
+    "local_numerical_execution": false,
+    "remote_target": "dcu_cpu",
+    "work_drive": "H:"
+  },
+  "evidence_sources": {
+    "data_audit": {
+      "local_copy": "workspace/output/remote_returns/particle_data_audit_20260908_v1/step30_particle_data_audit_20260908_v1.json",
+      "sha256": "4ebe3bd4b2910f474edd0804e91e9666e69298f6e5690a0ac839e5aeec815c66",
+      "scope": "35 immutable runs; individual integrity plus configuration grouping"
+    },
+    "deterministic_replay": {
+      "status": "passed",
+      "scope": "two isolated DCU replicas, seed 57721, 1000 parcels",
+      "limitation": "determinism does not establish spatial convergence or physical accuracy"
+    },
+    "performance_ab": {
+      "local_copy": "workspace/output/remote_returns/particle_performance_ab_latest/performance_ab_report.json",
+      "report_sha256": "4a1f3d1ac7b5e7d3605f74e0a2215e3f426c3cc9162e553e4092de6cf4faba66",
+      "semantic_audit": "workspace/output/remote_returns/particle_performance_ab_latest/semantic_audit.json",
+      "semantic_audit_sha256": "b4ab6660926cd36aa63a33b125ff60131445d670e54316c66cedbdcf43fe3b36"
+    },
+    "collision_profile": {
+      "local_copy": "workspace/output/remote_returns/particle_collision_profile_latest/summary_v2.json",
+      "summary_sha256": "5f13eb41b031898aeb3fa601e7a5c7bc1408ad7aefc728a52a29da47119b9239",
+      "scope": "100 parcels, seed 57721, strict-v2, collision-profile enabled"
+    }
+  },
+  "confirmed_findings": [
+    {
+      "id": "F1_individual_artifact_integrity",
+      "status": "passed",
+      "detail": "All 35 audited immutable runs passed file, manifest, length, mass, strict fallback, and strict hit-ratio checks."
+    },
+    {
+      "id": "F2_historical_run_pooling",
+      "status": "blocking_for_cross_run_comparison",
+      "detail": "The historical root contains four implementation/configuration groups and must not be pooled as one convergence series."
+    },
+    {
+      "id": "F3_current_code_determinism",
+      "status": "passed_at_smoke_scale",
+      "detail": "Independent DCU replicas produced byte-identical NPZ, summary, and manifest for the tested 1000-parcel replay."
+    },
+    {
+      "id": "F4_sparse_hit_support",
+      "status": "confirmed",
+      "metrics": {
+        "clean_20k_group_hit_parcel_rate": 0.03596,
+        "clean_20k_group_substeps_per_parcel": 2057.06528,
+        "clean_20k_group_near_miss_to_impact": 811.5183301175232,
+        "performance_ab_1000_parcel_impacts": 6,
+        "performance_ab_1000_parcel_hit_parcels": 2
+      },
+      "detail": "The spatial field is supported by very few accepted impacts, so active-face variance remains the primary convergence risk."
+    },
+    {
+      "id": "F5_near_miss_diagnostic_not_primary_runtime_bottleneck",
+      "status": "confirmed",
+      "detail": "Disabling exact near-miss distance diagnostics changed 5659 to 0 diagnostic events but did not change physical arrays or tracking summary and made the run 0.85 percent slower."
+    },
+    {
+      "id": "F6_strict_tracking_hot_path",
+      "status": "confirmed_by_profile",
+      "profile": {
+        "parcels": 100,
+        "substep_count": 221839,
+        "cfd_query_count": 443678,
+        "cfd_neighbor_count": 3549424,
+        "surface_tree_query_count": 221839,
+        "segment_query_count": 221839,
+        "axis_bbox_rejection_count": 131987,
+        "empty_candidate_count": 83814,
+        "candidate_raw_count": 1623132,
+        "candidate_unique_count": 1623132,
+        "triangle_test_count": 1623132,
+        "near_endpoint_candidate_count": 4714,
+        "distance_triangle_test_count": 4714
+      },
+      "detail": "The dominant work is repeated CFD sampling and strict swept-segment broadphase/triangle testing. Midpoint integration causes two CFD samples per strict substep; near-miss distance diagnostics are a small tail of the work."
+    },
+    {
+      "id": "F7_registration_and_validation_support",
+      "status": "partially_passed_but_low_support",
+      "detail": "The performance A/B had median registration distance 3.435 mm and p95 5.181 mm, but only five exposed faces entered the comparison mask. This is not enough to support spatial accuracy. Historical runs with zero compared faces remain blocked."
+    },
+    {
+      "id": "F8_npz_provenance_difference",
+      "status": "explained",
+      "detail": "Baseline and optimized NPZ containers and full canonical digests differ only through the expected particle_run_id provenance field; all physical arrays are equal."
+    }
+  ],
+  "root_cause_conclusion": {
+    "primary": "sparse accepted-impact support drives spatial Monte Carlo variance",
+    "secondary": "strict tracking spends most time on repeated CFD KD-tree samples and swept-segment candidate tests",
+    "excluded_as_primary": [
+      "random-number nondeterminism",
+      "parallel replay nondeterminism",
+      "near-miss point-to-triangle distance diagnostics"
+    ],
+    "unresolved": [
+      "whether dt or strict_max_substep can be relaxed without changing accepted impact support",
+      "whether nearest-cell interpolation is an acceptable performance/physics tradeoff",
+      "CFD-to-reference registration and normal/angle semantics for a larger active comparison mask",
+      "current-code hit-support convergence at the declared production particle count"
+    ]
+  },
+  "next_experiments": [
+    {
+      "order": 1,
+      "experiment": "fixed-seed one-factor tracking replay",
+      "factors": ["strict_max_substep", "dt", "idw_k8_v1 versus nearest_cell_v1", "midpoint_exponential_v2 versus frozen_exponential_v1"],
+      "required_outputs": ["wall time", "substeps", "impact count", "hit parcel ids", "face ids", "Vp", "alpha", "termination counts"],
+      "stop_rule": "reject any candidate that changes accepted physical impacts beyond the preregistered tolerance"
+    },
+    {
+      "order": 2,
+      "experiment": "broadphase candidate audit",
+      "design": "record candidate histograms and compare current center-radius broadphase against a conservative segment-AABB broadphase; no physical acceptance change allowed",
+      "success_metric": "lower triangle_test_count per substep with identical hit arrays"
+    },
+    {
+      "order": 3,
+      "experiment": "registration/data-processing audit",
+      "design": "verify m/mm transform, wall sample to native topology correspondence, active-face mask, normal orientation, and UMean time-mean semantics on an independent fixture",
+      "success_metric": "nonzero declared comparison mask with independent registration provenance"
+    },
+    {
+      "order": 4,
+      "experiment": "only after factors 1-3: current-code discovery/confirmation",
+      "design": "fresh implementation-homogeneous runs with predeclared active-face JS and ESS targets",
+      "success_metric": "active-face JS <= 0.05 and stable hit support at declared resolution"
+    }
+  ],
+  "gates_unchanged": {
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "particle_convergence_gate": "failed"
+  },
+  "score_change": {
+    "conservative_score": 62.4471,
+    "changed": false,
+    "reason": "The new evidence isolates runtime and data risks but does not establish independent spatial truth or active-face convergence."
+  }
+}

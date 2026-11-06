@@ -1,0 +1,89 @@
+{
+  "version": "step30-gpu-backend-probe-v1",
+  "status": "passed",
+  "probe_only": true,
+  "physics_backend_validated": false,
+  "competition_evidence_eligible": false,
+  "execution_target": "user_gpu",
+  "host": {
+    "hostname": "user",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+    "cupy": "14.2.0",
+    "cuda_runtime_version": 12090,
+    "device_count": 4
+  },
+  "workload": {
+    "elements": 1000000,
+    "arithmetic": "fixed float64 arange/scale/sum/dot/max; no RNG",
+    "elapsed_s": 1.9217267036437988
+  },
+  "devices": [
+    {
+      "device_id": 0,
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "compute_capability": "7.5",
+      "total_memory_bytes": 11539316736,
+      "free_memory_bytes_after_probe": 11322589184,
+      "result": [
+        500000500000.0,
+        62503062500.0,
+        4.16682291681875e+16,
+        125003.0
+      ],
+      "result_sha256": "5ee642649eac5ac1bb65de78bb29e4eb0896db787690e16866378d0d9d95b26e"
+    },
+    {
+      "device_id": 1,
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "compute_capability": "7.5",
+      "total_memory_bytes": 11539316736,
+      "free_memory_bytes_after_probe": 11330977792,
+      "result": [
+        500000500000.0,
+        62503062500.0,
+        4.16682291681875e+16,
+        125003.0
+      ],
+      "result_sha256": "5ee642649eac5ac1bb65de78bb29e4eb0896db787690e16866378d0d9d95b26e"
+    },
+    {
+      "device_id": 2,
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "compute_capability": "7.5",
+      "total_memory_bytes": 11539316736,
+      "free_memory_bytes_after_probe": 11330977792,
+      "result": [
+        500000500000.0,
+        62503062500.0,
+        4.16682291681875e+16,
+        125003.0
+      ],
+      "result_sha256": "5ee642649eac5ac1bb65de78bb29e4eb0896db787690e16866378d0d9d95b26e"
+    },
+    {
+      "device_id": 3,
+      "name": "NVIDIA GeForce RTX 2080 Ti",
+      "compute_capability": "7.5",
+      "total_memory_bytes": 11539316736,
+      "free_memory_bytes_after_probe": 11330977792,
+      "result": [
+        500000500000.0,
+        62503062500.0,
+        4.16682291681875e+16,
+        125003.0
+      ],
+      "result_sha256": "5ee642649eac5ac1bb65de78bb29e4eb0896db787690e16866378d0d9d95b26e"
+    }
+  ],
+  "cross_device_equal": true,
+  "source": {
+    "file": "step30_gpu_backend_probe_v1.py",
+    "sha256": "0d7b7f96eeafa71b3a351ca70db8a78743ad3894e53b4c62b38720d0ad6350fb"
+  },
+  "limitations": [
+    "This does not execute particle tracking.",
+    "This does not validate topology collision semantics.",
+    "This does not authorize replacement of the CPU strict_v2 tracker."
+  ]
+}

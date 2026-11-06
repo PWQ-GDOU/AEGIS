@@ -9,8 +9,10 @@ set -e
 # Source OpenFOAM
 source /usr/share/openfoam/etc/bashrc 2>/dev/null
 
-CASE_DIR=~/pelton_jet
-cd $CASE_DIR
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+CASE_DIR="${STEP30_CASE_DIR:-$SCRIPT_DIR}"
+cd "$CASE_DIR"
 
 echo "============================================"
 echo " Pelton Turbine CFD Setup & Run"
@@ -20,9 +22,10 @@ echo "============================================"
 echo ""
 echo "[1/5] Copying DEC geometry..."
 mkdir -p constant/triSurface
-cp /mnt/b/undertaking/学业/非专业相关/比赛/挑战杯/水轮机/workspace/output/dec_model_runner.stl constant/triSurface/ 2>/dev/null || {
-    echo "  WARNING: Could not copy STL. Trying alternative path..."
-    cp /mnt/b/undertaking/temp_xt/model_runner.x_t constant/triSurface/ 2>/dev/null
+cp "$REPO_ROOT/workspace/output/dec_model_runner.stl" constant/triSurface/ 2>/dev/null || {
+    echo "  WARNING: DEC STL is unavailable at the repository-relative output path."
+    echo "  Set STEP30_GEOMETRY_PATH to an explicit geometry file before rerunning."
+    [ -n "${STEP30_GEOMETRY_PATH:-}" ] && cp "$STEP30_GEOMETRY_PATH" constant/triSurface/
 }
 ls -lh constant/triSurface/
 

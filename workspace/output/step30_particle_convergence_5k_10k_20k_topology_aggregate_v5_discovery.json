@@ -1,0 +1,12 @@
+{
+  "version": "step30-particle-convergence-v5",
+  "analysis_role": "discovery",
+  "status": "blocked",
+  "numerical_stability_status": "blocked",
+  "spatial_accuracy_status": "blocked",
+  "reason": "duplicate n_parcels/seed immutable-run identity",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "report_sha256": "d6e0d09dcdab2361235728326ae9252b9a5e1dc8ecba05f78caa8c4bccc603a2"
+}

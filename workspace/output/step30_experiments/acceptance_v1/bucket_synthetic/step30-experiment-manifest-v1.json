@@ -1,0 +1,70 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2802,
+      "file": "step30-bucket_model-summary.json",
+      "sha256": "c330394d63325080fe9cfc65f1eb816be66b36046c7cd8e869701df540bc6e99"
+    },
+    {
+      "bytes": 21546,
+      "file": "step30-bucket_model-bucket_measurements.csv",
+      "sha256": "1a85310f9def216b4942b12a0db68ad29f55c6cb5f816f099ede320719cfffe7"
+    },
+    {
+      "bytes": 8442,
+      "file": "step30-bucket_model-arrays.npz",
+      "sha256": "9db8e4fb777e85eeb9453a14523f3f8842f59f1f8cc8d87197ecb40253f4c885"
+    }
+  ],
+  "experiment": "bucket_model",
+  "measured_policy": "missing or invalid real data blocks; no fabricated measurements",
+  "mode": "synthetic",
+  "notes": [
+    "Original/worn point clouds are registered before depth extraction.",
+    "Topology mapping is retained as point_id to parent_face_id.",
+    "Measured depth is never replaced by the prediction."
+  ],
+  "output_dir": "workspace/output\\step30_experiments\\acceptance_v1\\bucket_synthetic",
+  "provided_inputs": [],
+  "required_inputs": [],
+  "seed": 42,
+  "status": "synthetic",
+  "support_interfaces": {
+    "step30_coordinate_registration": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_coordinate_registration.py"
+    },
+    "step30_error_metrics": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_error_metrics.py"
+    },
+    "step30_measurement_io": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_measurement_io.py"
+    }
+  },
+  "synthetic_policy": "synthetic values only when mode=synthetic",
+  "synthetic_truth": {},
+  "tables": {
+    "bucket_measurements": {
+      "columns": [
+        "point_id",
+        "parent_face_id",
+        "x_original_mm",
+        "y_original_mm",
+        "z_original_mm",
+        "x_worn_mm",
+        "y_worn_mm",
+        "z_worn_mm",
+        "wear_depth_mm",
+        "predicted_depth_mm"
+      ],
+      "file": "step30-bucket_model-bucket_measurements.csv",
+      "rows": 140
+    }
+  },
+  "version": "step30-experiment-manifest-v1"
+}

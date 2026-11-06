@@ -1,0 +1,61 @@
+{
+  "version": "step30-participant-benchmark-inputs-v1",
+  "reference_kind": "literature_reference",
+  "official_reference_gate": false,
+  "measured_truth": false,
+  "participant_built": true,
+  "regions": [
+    {
+      "region_id": "particle_supported_DEC_activity",
+      "literature_support_score": 1.0,
+      "evidence_level": "qualitative_prior",
+      "quantitative_anchor": false
+    },
+    {
+      "region_id": "unresolved_nonimpact_surface",
+      "literature_support_score": 0.05,
+      "evidence_level": "uncertain_background",
+      "quantitative_anchor": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "rai_2017_wear",
+      "doi": "10.1016/j.wear.2017.08.016",
+      "role": "Pelton bucket hydro-abrasive mechanism context",
+      "evidence_level": "bibliographic_only"
+    },
+    {
+      "id": "rai_2019_analytical",
+      "doi": "10.1016/j.wear.2019.203003",
+      "role": "analytical erosion mechanism context",
+      "evidence_level": "bibliographic_only"
+    },
+    {
+      "id": "leguizamon_2019_multiscale",
+      "doi": "10.3390/ijtpp4020009",
+      "role": "multiscale Pelton erosion context",
+      "evidence_level": "bibliographic_only"
+    },
+    {
+      "id": "messa_2019_injector",
+      "doi": "10.1016/j.renene.2018.06.064",
+      "role": "Eulerian-Lagrangian sensitivity context",
+      "evidence_level": "bibliographic_only"
+    },
+    {
+      "id": "ge_2021_bucket",
+      "doi": "10.1016/j.renene.2021.04.072",
+      "role": "Pelton bucket velocity/opening context",
+      "evidence_level": "bibliographic_only"
+    }
+  ],
+  "region_field": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/participant_dec_region_field.npz",
+    "sha256": "04a6d0ab811ec1568282250160ed5c5d5659041713bd8ca1049a6b8fe5d5b093",
+    "construction": "mean stable particle support with nonzero background floor",
+    "official_face_tags": false
+  },
+  "claim_scope": "participant-built regional prior for conditional competition benchmark; not official DEC truth",
+  "report_sha256": "3371d741ae166917e2c7ec7ebc7f670b6a473913a68f147791d6d236784a2994"
+}

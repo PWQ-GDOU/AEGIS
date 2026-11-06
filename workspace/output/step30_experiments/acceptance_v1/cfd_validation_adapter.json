@@ -1,0 +1,57 @@
+{
+  "path": "workspace/output\\native_bucket_si_urans_0.8684190921\\urans_validation_0.8684190921.json",
+  "version": "urans-time-mean-validation-v2",
+  "status": "passed",
+  "accepted": true,
+  "gates": {
+    "max_co_below_0p5": true,
+    "no_turbulence_bounding": true,
+    "no_fatal_or_nonfinite_log": true,
+    "twenty_flow_through_window": true,
+    "mean_field_relative_l2_below_1e3": true,
+    "force_late_mean_change_below_1pct": true,
+    "flux_late_mean_change_below_1pct": true,
+    "flux_imbalance_below_1e4": true,
+    "probe_late_mean_change_below_1pct": true,
+    "mean_speed_below_500_ms": true,
+    "all_mean_fields_finite": true
+  },
+  "metrics": {
+    "max_courant_number": 0.49901701,
+    "bounding_k_count": 0,
+    "bounding_omega_count": 0,
+    "mean_field_relative_l2": {
+      "UMean": 0.00016925379972722868,
+      "pMean": 0.00015993476239902125,
+      "kMean": 0.00018120702702710553,
+      "omegaMean": 9.541983264350302e-05,
+      "wallShearStressMean": 0.00012686259442732886
+    },
+    "force_late_mean_relative_change": {
+      "pressure": 0.0011589974344467066,
+      "viscous": 0.0011641263531796669,
+      "total": 0.001161569932918981
+    },
+    "flux_late_mean_relative_change": {
+      "inletFlux": 0.001255009346379601,
+      "jetFlux": 0.0,
+      "outletFlux": 0.006047106273680715,
+      "sideFlux": 0.0025134166700512767
+    },
+    "flux_recent_mean": {
+      "inletFlux": -6.405330511463414,
+      "jetFlux": -4.5286844099999986,
+      "outletFlux": 10.051971634146343,
+      "sideFlux": 0.8820431467365853
+    },
+    "flux_normalized_imbalance": 6.4285848209914435e-09,
+    "probe_U_late_mean_relative_change": 0.0006969924315755429,
+    "probe_p_late_mean_relative_change": 0.000506040973372024,
+    "mean_speed_ms": {
+      "min": 0.0011268946968697082,
+      "median": 29.412114573738872,
+      "p99": 119.13883695436782,
+      "max": 221.28267804463704
+    }
+  }
+}

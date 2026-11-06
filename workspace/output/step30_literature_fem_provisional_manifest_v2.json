@@ -1,0 +1,60 @@
+{
+  "version": "step30-literature-fem-provisional-manifest-v2",
+  "status": "provisional",
+  "immutable": true,
+  "fem_gate": "blocked",
+  "official_reference_gate": false,
+  "official_accuracy_gate": false,
+  "independent_accuracy_gate": false,
+  "ai5_used_for_calibration": false,
+  "artifacts": [
+    {
+      "role": "literature reference report",
+      "path": "workspace\\output\\step30_literature_reference_distribution_v1.json",
+      "sha256": "fa67f33e810b6dc73dc6296911f4190b39d2b96e6dd9ac6bfa9b5a6ba1ced685"
+    },
+    {
+      "role": "literature prior report",
+      "path": "workspace\\output\\step30_literature_prior_degradation_v2.json",
+      "sha256": "17aa6e69fb90688cf777e1b105499bcc1a86b2bac25bc62eaebd5f875de19c45"
+    },
+    {
+      "role": "literature prior maps",
+      "path": "workspace\\output\\step30_literature_prior_degradation_v2.npz",
+      "sha256": "685e1579993bb4332a7b8f247bb6c7d4e88b05f9a632557f30487c153b8f7e86"
+    },
+    {
+      "role": "geometry audit report",
+      "path": "workspace\\output\\step30_fem_geometry_audit_v1.json",
+      "sha256": "bed9bdfe00de40afcb6b60904b4081965859748a0d9b0c43b5ebd5ff3bf042b0"
+    },
+    {
+      "role": "scan-pair manifest template",
+      "path": "workspace\\templates\\step30-scan-pair-manifest-v1.json",
+      "sha256": "8a22978439e97ceab8f46ede2de26982466b8e743121dc35a162ea4af3fe8ec8"
+    },
+    {
+      "role": "baseline/worn acquisition template",
+      "path": "workspace\\templates\\step30-independent-baseline-worn-acquisition-v1.json",
+      "sha256": "768e46ed2d8c29316c936f3e0f08e5da085dc89be76047495b58f85bb2afee9f"
+    },
+    {
+      "role": "baseline/worn acquisition guide",
+      "path": "workspace\\INDEPENDENT_BASELINE_WORN_ACQUISITION.md",
+      "sha256": "d9f19055bc2e49807988e8a9c0f49fb0d9e2994983f26dbe331140eaf87b5fd4"
+    }
+  ],
+  "interpretation": {
+    "literature_reference": "qualitative region-level prior; not measured DEC erosion truth",
+    "model_region_comparison": "blocked until externally confirmed face-region mapping is supplied",
+    "baseline_worn_scans": "blocked until raw independent measured scan pairs are supplied",
+    "stress_field": "analytical/parametric only; not real FEM",
+    "root_wetted_ai5_selection": "blocked"
+  },
+  "limitations": [
+    "The manifest does not promote literature anchors to DEC dimensions.",
+    "The manifest does not classify synthetic data, CFD fields, or AI5 traces as erosion truth.",
+    "No real FEM solver result or independent measured scan is included."
+  ],
+  "manifest_sha256": "b09463b86f0dbcad292aa2ff683d2d8a13c13eb7868bf1db7b7b4d1dee5d5b80"
+}

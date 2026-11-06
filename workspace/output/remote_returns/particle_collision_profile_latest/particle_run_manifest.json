@@ -1,0 +1,71 @@
+{
+  "version": "step30-particle-run-descriptor-v2",
+  "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+  "collision_backend": "cfd_topology",
+  "implementation_hashes": {
+    "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+    "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+    "particle_tracking": "eda349f25357d7d616eed4798f48246d7e6783cb7895f9d2d4ffb0dd24f763ff"
+  },
+  "input_hashes": {
+    "analytic_reference_transform": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47",
+    "vertices_full_gpr": "c16cf9cec94e7d4215d0ebc88b53e8c7e05d1f50f8ec214bb61411ec735a5862"
+  },
+  "config": {
+    "cfd_variant": "native_si",
+    "collision_backend": "cfd_topology",
+    "collision_policy": "strict_v2",
+    "cfd_field_time": "0.8684190921",
+    "n_parcels": 100,
+    "n_injected": 100,
+    "max_impacts": 3,
+    "seed": 57721,
+    "dt_s": 1e-05,
+    "max_time_s": 0.05,
+    "max_query_distance_mm": 80.0,
+    "face_fallback_distance_mm": 1.5,
+    "hit_epsilon_mm": 0.05,
+    "particle_cfl": 0.25,
+    "cfd_velocity_interpolation": "idw_k8_v1",
+    "particle_integrator": "midpoint_exponential_v2",
+    "strict_max_substep_s": 1e-05,
+    "strict_near_miss_distance_diagnostics": true,
+    "collision_profile": true,
+    "min_substep_s": 1e-08,
+    "max_collision_events_per_step": 8,
+    "min_speed_ms": 0.5,
+    "e_normal": 0.8,
+    "e_tangent": 0.9,
+    "include_gravity": false,
+    "mass_flow_mode": "nominal",
+    "injection_window_s": 1.0,
+    "observation_window_s": 1.0,
+    "concentration_kg_m3": 1.31,
+    "rated_flow_m3_s": 27.0,
+    "nozzle_count": 6,
+    "jet_speed_ms": 104.8,
+    "max_accepted_cfd_speed_ms": 500.0,
+    "jet_diameter_mm": 240.0,
+    "rho_particle_kg_m3": 2650.0,
+    "d_min_m": 1e-06,
+    "d_max_m": 0.00023,
+    "d50_m": 5e-05,
+    "rr_exponent": 1.5,
+    "psd_sampling": "mass_stratified_v1"
+  },
+  "particle_run_id": "1e2b3a5719d70d62d4330d8998fa507522137c4d7bc45e09747e447e81a66bd7",
+  "outputs": {
+    "particle_hits": {
+      "file": "particle_hits.npz",
+      "sha256": "aace3a5b709a88a98f7029eaf1adc4a3beb594cb6a19e1c1d9962fa91dc9e9f7"
+    },
+    "summary": {
+      "file": "summary.json",
+      "sha256": "1de8c878389939b4672d3159995c90dfc2746bedc6f67193262321f923d62346"
+    },
+    "validation": {
+      "file": "validation.png",
+      "sha256": "7354a4624675bfb424cd7e0cd21a66efb1bde59d260614d9c329d42fc9dfcbc7"
+    }
+  }
+}

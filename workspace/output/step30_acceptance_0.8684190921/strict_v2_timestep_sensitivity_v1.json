@@ -1,0 +1,152 @@
+{
+  "version": "step30-particle-timestep-sensitivity-v1",
+  "status": "passed",
+  "gates": {
+    "first_parcel_jaccard_min": 0.99,
+    "first_parent_face_agreement_min": 0.99,
+    "hit_count_relative_max": 0.01,
+    "mass_weighted_speed_relative_max": 0.01,
+    "mass_weighted_angle_relative_max": 0.01,
+    "target_mass_relative_max": 0.05,
+    "erosion_p99_relative_max": 0.05
+  },
+  "shared_identity": {
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "field_time": "0.8684190921",
+    "solver_semantics": {
+      "application": "pimpleFoam",
+      "mode": "urans",
+      "field_statistic": "time_mean",
+      "tracking_velocity_object": "UMean",
+      "averaging_window": {
+        "start_time": "0.7844336016",
+        "end_time": "0.8684190921",
+        "sample_count": 20523
+      }
+    },
+    "parameters_except_dt": {
+      "n_parcels": 500,
+      "n_injected": 500,
+      "collision_backend": "cfd_topology",
+      "collision_policy": "strict_v2",
+      "collision_algorithm_version": "v2",
+      "cfd_variant": "native_si",
+      "max_impacts": 3,
+      "seed": 42,
+      "max_time_s": 0.05,
+      "particle_cfl": 0.25,
+      "cfd_velocity_interpolation": "idw_k8_v1",
+      "particle_integrator": "midpoint_exponential_v2",
+      "min_substep_s": 1e-08,
+      "max_query_distance_mm": 80.0,
+      "face_fallback_distance_mm": 1.5,
+      "hit_epsilon_mm": 0.05,
+      "min_speed_ms": 0.5,
+      "max_collision_events_per_step": 8,
+      "include_gravity": false,
+      "e_normal": 0.8,
+      "e_tangent": 0.9,
+      "diameter_distribution": {
+        "type": "Rosin-Rammler",
+        "min_m": 1e-06,
+        "max_m": 0.00023,
+        "d50_m": 5e-05,
+        "exponent": 1.5
+      },
+      "rho_particle_kg_m3": 2650.0,
+      "max_accepted_cfd_speed_ms": 500.0,
+      "mass_flow_mode": "nominal",
+      "nozzle_flow_m3_s": 4.5,
+      "sediment_flow_kg_s": 5.8950000000000005,
+      "injection_window_s": 1.0,
+      "observation_window_s": 1.0,
+      "rho_wall_kg_m3": 7800.0,
+      "rho_wall_alternative_kg_m3": 7850.0
+    }
+  },
+  "runs": {
+    "coarse": {
+      "dt_s": 1e-05,
+      "strict_max_substep_s": 1e-05,
+      "impacts": 19,
+      "first_hits": 8,
+      "hit_parcels": 8,
+      "target_mass_kg": 9.035779839905445e-07,
+      "erosion_p99_mm_h": 35.8137092590332,
+      "impact_mass_kg": 0.3485715358813972,
+      "Vp_mass_weighted": 36.00208107122521,
+      "angle_mass_weighted": 40.16775475834144,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0
+    },
+    "medium": {
+      "dt_s": 5e-06,
+      "strict_max_substep_s": 5e-06,
+      "impacts": 19,
+      "first_hits": 8,
+      "hit_parcels": 8,
+      "target_mass_kg": 8.97012228051608e-07,
+      "erosion_p99_mm_h": 35.67322540283203,
+      "impact_mass_kg": 0.3485715358813972,
+      "Vp_mass_weighted": 35.920616392065476,
+      "angle_mass_weighted": 40.14723744634272,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0
+    },
+    "fine": {
+      "dt_s": 2.5e-06,
+      "strict_max_substep_s": 2.5e-06,
+      "impacts": 19,
+      "first_hits": 8,
+      "hit_parcels": 8,
+      "target_mass_kg": 9.002427532323054e-07,
+      "erosion_p99_mm_h": 36.19540023803711,
+      "impact_mass_kg": 0.3485715358813972,
+      "Vp_mass_weighted": 35.9835022153621,
+      "angle_mass_weighted": 40.04454411794828,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0
+    }
+  },
+  "pairs": {
+    "coarse__medium": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 1.0,
+      "hit_count_relative": 0.0,
+      "mass_weighted_speed_relative": 0.0022627769488816523,
+      "mass_weighted_angle_relative": 0.0005107906110797943,
+      "target_mass_relative": 0.00726639654270859,
+      "erosion_p99_relative": 0.003922627929575264,
+      "gates": {
+        "first_parcel_jaccard": true,
+        "first_parent_face_agreement": true,
+        "hit_count_relative": true,
+        "mass_weighted_speed_relative": true,
+        "mass_weighted_angle_relative": true,
+        "target_mass_relative": true,
+        "erosion_p99_relative": true
+      },
+      "passed": true
+    },
+    "medium__fine": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 1.0,
+      "hit_count_relative": 0.0,
+      "mass_weighted_speed_relative": 0.0017476293141299047,
+      "mass_weighted_angle_relative": 0.0025579176781888257,
+      "target_mass_relative": 0.0035885045106981406,
+      "erosion_p99_relative": 0.014426552318002378,
+      "gates": {
+        "first_parcel_jaccard": true,
+        "first_parent_face_agreement": true,
+        "hit_count_relative": true,
+        "mass_weighted_speed_relative": true,
+        "mass_weighted_angle_relative": true,
+        "target_mass_relative": true,
+        "erosion_p99_relative": true
+      },
+      "passed": true
+    }
+  }
+}

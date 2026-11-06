@@ -5,9 +5,9 @@ import os, sys, time, subprocess
 from pathlib import Path
 import uiautomation as auto
 
-CAD_EXE = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\workspace\CAD_Assistant\CADAssistant.exe")
-DATA_DIR = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\DecPelton2024\DecPelton2024\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包")
-OUTPUT_DIR = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\workspace\output")
+CAD_EXE = Path(r"workspace/CAD_Assistant\CADAssistant.exe")
+DATA_DIR = Path(r"DecPelton2024/DecPelton2024\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包")
+OUTPUT_DIR = Path(r"workspace/output")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 FILES = [

@@ -1,0 +1,53 @@
+{
+  "version": "step30-particle-confirmation-scale-sweep-v1",
+  "scales": {
+    "4096": {
+      "discovery_status": "failed",
+      "confirmation_status": "blocked",
+      "confirmation_metrics": {
+        "area_weighted_spearman_median": null,
+        "area_weighted_spearman_p10": null,
+        "mass_hotspot_iou_median": null,
+        "spatial_js_divergence_max": null,
+        "passed": null,
+        "gates": null
+      },
+      "discovery_report": "output/step30_particle_scale_sweep_20260830_v5/discovery_4096.json",
+      "confirmation_report": "output/step30_particle_scale_sweep_20260830_v5/confirmation_4096.json"
+    },
+    "8192": {
+      "discovery_status": "failed",
+      "confirmation_status": "blocked",
+      "confirmation_metrics": {
+        "area_weighted_spearman_median": null,
+        "area_weighted_spearman_p10": null,
+        "mass_hotspot_iou_median": null,
+        "spatial_js_divergence_max": null,
+        "passed": null,
+        "gates": null
+      },
+      "discovery_report": "output/step30_particle_scale_sweep_20260830_v5/discovery_8192.json",
+      "confirmation_report": "output/step30_particle_scale_sweep_20260830_v5/confirmation_8192.json"
+    },
+    "16384": {
+      "discovery_status": "exploratory_candidate_requires_confirmation",
+      "confirmation_status": "failed",
+      "confirmation_metrics": {
+        "area_weighted_spearman_median": 0.9450457701988947,
+        "area_weighted_spearman_p10": 0.8854901352266997,
+        "mass_hotspot_iou_median": 1.0,
+        "spatial_js_divergence_max": 0.39394644081068547,
+        "passed": false,
+        "gates": {
+          "minimum_independent_seeds": true,
+          "area_weighted_spearman_median": true,
+          "area_weighted_spearman_p10": true,
+          "mass_hotspot_iou_median": true,
+          "spatial_js_divergence_max": false
+        }
+      },
+      "discovery_report": "output/step30_particle_scale_sweep_20260830_v5/discovery_16384.json",
+      "confirmation_report": "output/step30_particle_scale_sweep_20260830_v5/confirmation_16384.json"
+    }
+  }
+}

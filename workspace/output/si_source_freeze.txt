@@ -1,0 +1,119 @@
+--- OpenFOAM / mesh ---
+|  \\    /   O peration     | Version:  2412                                  |
+    class       volVectorField;
+    location    "500";
+    object      U;
+1d33b53a8f4a7086f58905b1bbf2b69ecbe837b7f2a0a358bad08de504bd81ec  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_0.obj
+dc74ca9e2706d25a1b0039cf83e5240ab217452e7819686b716481fa375921c2  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_1.obj
+f95cf6163aed46f7b9ad774906b6fb93109264437f3a43ccb80d1e352f483338  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_2.obj
+fd0fd3481b72e7a7d683697b83276788377b84e0fec51a1424022777964f48db  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_3.obj
+2717ef53693aa2a6f8e898e20a4a471aa1959e91753a73826f6a4f824ecd5ea6  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_4.obj
+8238b9d6f1595af1aab9d4005bf3ec3b73f5cf5c40e60deeac8794299922e03d  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_5.obj
+88d30653717ff9d735535063f060ebb64092b18b05fa0455818994d7bd8b9ac2  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_6.obj
+ff024db7c51b81086ad42fa436d3941150ca1d7939bf40d64c69b9ca95f8961d  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_7.obj
+b2a6246853412be8274996302cfe4c36487348ab9d61d6602be8b4b35167e2b1  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_8.obj
+0396c48d4d18b2bb35c52b8f453df432f05c030e9644dd221a39be69a1af8989  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local_normal_9.obj
+02a85de7c5e0c93e42b673e34032eb156aea7cf9963dcfafb28803af9c004dcc  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local.stl
+f16ddf6fa0a80d5a0a7fbe2e3224b7075afdae9b1b564f7f83f893440fbe60cc  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_full_runner_local.vtp
+46cef0589c240ea24e97b61a92d4246cca4efd58ccd34624546c4f56756c8bc3  remote_artifacts/wenquan/pelton_bucket_jet/constant/triSurface/dec_single_bucket_local.stl
+cb1df4e1ce9c90c3ace8a254a3555677f313e08b824f1202354af46136131cc7  remote_artifacts/wenquan/pelton_bucket_jet/system/blockMeshDict
+b40e5c08134e5c138d14dc3a59d8401f84da6961f7a4fea20394cd78fb5bb7f4  remote_artifacts/wenquan/pelton_bucket_jet/system/snappyHexMeshDict
+8e3f3ed6003fa572303ec985e5e38606a8d695f7e2e6cfa9562929d0066d6198  remote_artifacts/wenquan/pelton_bucket_jet/system/topoSetDict
+cba545a073de96324b0681aaf2dfbcb6ae5271cd79636bb56df9cacc158dc6ef  remote_artifacts/wenquan/pelton_bucket_jet/system/createPatchDict
+--- topology ---
+    bucket
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          74803;
+        startFace       1295403;
+    }
+    jetInlet
+    {
+--- configs ---
+===blockMeshDict===
+FoamFile { version 2.0; format ascii; class dictionary; object blockMeshDict; }
+scale 1;
+vertices (
+    (0 -180 -420)  (1400 -180 -420)  (1400 180 -420)  (0 180 -420)
+    (0 -180  420)  (1400 -180  420)  (1400 180  420)  (0 180  420)
+);
+blocks ( hex (0 1 2 3 4 5 6 7) (70 18 42) simpleGrading (1 1 1) );
+edges ();
+boundary (
+    inletFace  { type patch; faces ((0 3 7 4)); }
+    outletFace { type patch; faces ((1 2 6 5)); }
+    sides      { type patch; faces ((0 1 5 4)(3 2 6 7)(0 1 2 3)(4 5 6 7)); }
+);
+===snappyHexMeshDict===
+FoamFile { version 2.0; format ascii; class dictionary; object snappyHexMeshDict; }
+castellatedMesh true;
+snap            true;
+addLayers       false;
+geometry { bucket { type triSurfaceMesh; file "dec_full_runner_local.stl"; } }
+castellatedMeshControls {
+    maxLocalCells 4000000;
+    maxGlobalCells 12000000;
+    minRefinementCells 10;
+    maxLoadUnbalance 0.10;
+    nCellsBetweenLevels 3;
+    resolveFeatureAngle 30;
+    features ();
+    refinementSurfaces { bucket { level (2 3); patchInfo { type wall; } } }
+    refinementRegions {}
+    locationInMesh (20 0 0);
+    allowFreeStandingZoneFaces true;
+}
+snapControls { nSmoothPatch 3; tolerance 2.0; nSolveIter 30; nRelaxIter 5; nFeatureSnapIter 10; implicitFeatureSnap false; explicitFeatureSnap true; multiRegionFeatureSnap false; }
+addLayersControls { relativeSizes true; layers {} expansionRatio 1.0; finalLayerThickness 0.3; minThickness 0.1; }
+meshQualityControls {
+    maxNonOrtho 65; maxBoundarySkewness 20; maxInternalSkewness 4; maxConcave 80;
+    minVol 1e-13; minTetQuality 1e-15; minArea -1; minTwist 0.02; minDeterminant 0.001;
+    minFaceWeight 0.05; minVolRatio 0.01; minTriangleTwist -1; nSmoothScale 4; errorReduction 0.75;
+}
+writeFlags ( scalarLevels layerSets layerFields );
+mergeTolerance 1e-6;
+===topoSetDict===
+FoamFile { version 2.0; format ascii; class dictionary; object topoSetDict; }
+actions
+(
+    { name inletCircle; type faceSet; action new; source patchToFace; patch inletFace; }
+    { name inletCircle; type faceSet; action subset; source cylinderToFace; point1 (-10 0 0); point2 (10 0 0); radius 120.0; }
+    { name fluid; type cellZoneSet; action new; source boxToCell; box (0 -200 -450)(1450 200 450); }
+);
+===createPatchDict===
+FoamFile { version 2.0; format ascii; class dictionary; object createPatchDict; }
+pointSync false;
+patches
+(
+    {
+        name jetInlet;
+        patchInfo { type patch; }
+        constructFrom set;
+        set inletCircle;
+    }
+);
+===lineSampleDict===
+FoamFile { version 2.0; format ascii; class dictionary; object lineSampleDict; }
+type sets;
+libs (sampling);
+interpolationScheme cellPoint;
+setFormat raw;
+sets
+{
+    centreline { type uniform; axis x; start (0 0 0); end (450 0 0); nPoints 451; }
+}
+fields (U p k omega);
+===sampleDict===
+FoamFile { version 2.0; format ascii; class dictionary; object sampleDict; }
+type            surfaces;
+libs            (sampling);
+interpolationScheme cellPoint;
+surfaceFormat   raw;
+fields          (p U wallShearStress);
+surfaces
+{
+    bucket { type patch; patches (bucket); interpolate false; }
+}
+
+[stderr]

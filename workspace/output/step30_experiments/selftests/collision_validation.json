@@ -1,0 +1,61 @@
+{
+  "version": "step30-strict-collision-validation-v1",
+  "collision_policy": "strict_v2",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "face_crossing",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "toi": 0.5
+    },
+    {
+      "name": "edge_crossing",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "toi": 0.5
+    },
+    {
+      "name": "vertex_crossing",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "toi": 0.5
+    },
+    {
+      "name": "parallel",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "toi": null
+    },
+    {
+      "name": "coplanar",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "toi": null
+    },
+    {
+      "name": "near_miss",
+      "expected": false,
+      "actual": false,
+      "passed": true,
+      "toi": null
+    }
+  ],
+  "policy_checks": {
+    "strict_intersection_is_physical": true,
+    "strict_near_miss_is_not_physical": true,
+    "legacy_fallback_is_explicit": true,
+    "near_miss_diagnostic_only": true,
+    "deterministic_tie_break": true
+  },
+  "diagnostics": {
+    "endpoint_near_miss": 1
+  },
+  "physical_fallback_hits": 0,
+  "interpretation": "strict_v2 excludes proximity fallback from physical impacts; legacy fallback is tested only under explicit legacy_proximity_v1."
+}

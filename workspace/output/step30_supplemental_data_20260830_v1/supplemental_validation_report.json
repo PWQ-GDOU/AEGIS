@@ -1,0 +1,59 @@
+{
+  "validator_version": "step30-supplemental-data-validator-v1",
+  "status": "valid",
+  "source_count": 7,
+  "sources": [
+    {
+      "source_id": "frontiers_2024_sediment_review",
+      "path": "remote_artifacts/PWQ/step30_supplemental_data_20260830_v1/workspace/input/supplemental_data/sources/frontiers_2024_sediment_erosion_review.pdf",
+      "bytes": 5600126,
+      "sha256": "f7817eb068ec932d1bfe427fd59daf8f44708ed5fc716a4ef5278ae864a27fa2",
+      "evidence_use_count": 3
+    },
+    {
+      "source_id": "han_2021_distribution_parts",
+      "path": "remote_artifacts/PWQ/step30_supplemental_data_20260830_v1/workspace/input/supplemental_data/sources/jafm_2021_13cr4ni_pelton_erosion.pdf",
+      "bytes": 1352562,
+      "sha256": "05ef3d27c40ec6e622f1ec587ba8e624291c24c71de6777b13effaabb524456c",
+      "evidence_use_count": 2
+    },
+    {
+      "source_id": "rai_2017_iit_roorkee_thesis",
+      "path": "remote_artifacts/PWQ/step30_supplemental_data_20260830_v1/workspace/input/supplemental_data/sources/iitr_13cr4ni_pelton_field_abstract.pdf",
+      "bytes": 201270,
+      "sha256": "0f3890f5f1d74c5a28346617fc9ba48819064656cff3788fb43246495b6c227c",
+      "evidence_use_count": 3
+    },
+    {
+      "source_id": "leguizamon_2018_multiscale_slides",
+      "path": "remote_artifacts/PWQ/step30_supplemental_data_20260830_v1/workspace/input/supplemental_data/sources/sccer_2018_13cr4ni_model_parameters_slides.pdf",
+      "bytes": 952112,
+      "sha256": "087b56721df19cb17d1b5174a4eb830bf88b887b2a1a9b51a1e53a6fedf04be8",
+      "evidence_use_count": 2
+    },
+    {
+      "source_id": "ruff_1978_solid_particle_erosion",
+      "path": "remote_artifacts/PWQ/step30_supplemental_data_20260830_v1/workspace/input/supplemental_data/sources/govinfo_solid_particle_erosion_review.pdf",
+      "bytes": 6319249,
+      "sha256": "22f915255ddd08ad60428353d4996eb90f6e9b4b4f90681c4a6fcab9e51621aa",
+      "evidence_use_count": 2
+    },
+    {
+      "source_id": "sawant_2021_erosion_cfd_thesis",
+      "path": "remote_artifacts/PWQ/step30_supplemental_data_20260830_v1/workspace/input/supplemental_data/sources/warwick_2021_solid_particle_erosion_cfd_thesis.pdf",
+      "bytes": 13573658,
+      "sha256": "1e19dfdd3f79a7f7c78302186f41c5632a022368e96c85d8a51d91e3fcbfc818",
+      "evidence_use_count": 2
+    },
+    {
+      "source_id": "cheng_2023_13cr4ni_mechanical_properties",
+      "path": "remote_artifacts/PWQ/step30_supplemental_data_20260830_v1/workspace/input/supplemental_data/sources/metals_2023_13cr4ni_mechanical_properties.pdf",
+      "bytes": 8888577,
+      "sha256": "0780cf06f0e3ed9692f7c6d2d52d09bab7cb82877b8eae30fbdc5a052c510c9f",
+      "evidence_use_count": 3
+    }
+  ],
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked"
+}

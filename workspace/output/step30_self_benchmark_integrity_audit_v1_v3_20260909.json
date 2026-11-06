@@ -1,0 +1,28 @@
+{
+  "version": "step30-self-benchmark-integrity-audit-v1",
+  "status": "eligible_conditional_internal_consistency_only",
+  "source_report": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_competition_self_benchmark_v3_two_sided_lomo_20260909.json",
+    "sha256": "caaf09bc0b057de26700aa0961184da8ef00664af012bc8ff1c53bac95f76334",
+    "version": "step30-competition-self-benchmark-v3-two-sided-lomo"
+  },
+  "conditional_score_value": 96.47058768179876,
+  "competition_score_claim_allowed": false,
+  "conditional_internal_consistency_claim_allowed": true,
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "no_independent_measured_truth",
+      "reason": "self-built reference cannot be reported as physical spatial accuracy"
+    }
+  ],
+  "required_next_evidence": [
+    "independent participant-built or measured baseline/worn depth field",
+    "reference-to-DEC-face registration",
+    "frozen same-material amplitude calibration"
+  ],
+  "report_sha256": "90ae3b4bd82d5b2a3ecbaeb5a188d02b96afbf4b672e68cab238b1a727cc038d"
+}

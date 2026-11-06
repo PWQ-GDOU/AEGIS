@@ -1,0 +1,50 @@
+{
+  "version": "step30-participant-benchmark-inputs-v1",
+  "status": "provisional",
+  "prior_contract": {
+    "ai5_used_for_calibration": false,
+    "official_material_certificate": false,
+    "official_reference": false,
+    "reference_role": "participant_seed_prior",
+    "topology_aggregation": "stable_surface_aggregate_v5",
+    "depth_units": "mm_per_h_prior_rate_scale"
+  },
+  "source": {
+    "source_type": "contest_provided_simulation",
+    "participant_built_reference": true,
+    "run_index": 7,
+    "hit_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/dcbbbc7fc472092d3b54da425e11a06707be614ab34c9f9862a0594fa573c804/particle_hits.npz",
+    "hit_sha256": "ad2aff7b114b8afd5247963809be297c2d6e04c2777f3b7434d3af49180d4d66",
+    "field_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_contract_repair_v3_10x60k_confirmation_fields_20260909/particle_surface_aggregate_v5_dcbbbc7fc472092d3b54da425e11a06707be614ab34c9f9862a0594fa573c804.npz",
+    "field_sha256": "bb356e8513cee9b48a54fd6c1543f719f856188c7c3790114dcf52b78b4bd570"
+  },
+  "domain": {
+    "n_faces": 218988,
+    "centers_sha256": "62aff1a51bb4260d31e93e30d0e9e8cf5e9f7fd47d8f3011bca7b661bbe9e31a",
+    "areas_sha256": "a9f9e379df6a45aded7029ef4d861ddcd9da5b8042964245cb30f633d6116671"
+  },
+  "model_maps": {
+    "oka": {
+      "field": "oka_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    },
+    "finnie": {
+      "field": "finnie_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    },
+    "tabakoff": {
+      "field": "tabakoff_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    },
+    "mansouri": {
+      "field": "mansouri_p50_mm_h",
+      "construction": "hit-level erosion law then topology aggregate area redistribution"
+    }
+  },
+  "independence": {
+    "model_evaluation": "leave_one_model_out_in_consumer",
+    "seed_evaluation": "leave_one_seed_out_in_consumer",
+    "measured_truth": false
+  },
+  "report_sha256": "3a18743ed1247c4c661ae028e00021e62a263094664b7376157e233c14a0cd82"
+}

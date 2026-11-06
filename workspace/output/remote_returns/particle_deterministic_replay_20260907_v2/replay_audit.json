@@ -1,0 +1,116 @@
+{
+  "version": "step30-particle-data-audit-v1",
+  "status": "warning",
+  "run_root": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_deterministic_replay/step30_deterministic_replay_20260907_v2/replica_A/output/step30_runs",
+  "run_count": 1,
+  "seed_values": [
+    57721
+  ],
+  "reports": [
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_deterministic_replay/step30_deterministic_replay_20260907_v2/replica_A/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/abf1534619e04b4eddda64388f1764a406132f2ffdd8669c0823ee9c2b3c5243",
+      "file_sha256": {
+        "particle_hits.npz": "389dfb5e1fd5cf726bbddba4d34671aa31c80377071d90a81a9a89f184142dfa",
+        "summary.json": "a3300b90aa2db27e1a1bde34d42950ae133e2e41e6373b51cf29e12c11971906",
+        "validation.png": "82d4c2532f63fdbfa4c72c5be3f586a99c49b444d19c4918db1ad527d0dfb087",
+        "particle_run_manifest.json": "3257a37281f17dd1f515c736cbed37e94322d423856a85286995f44d3a4c19ae"
+      },
+      "stats": {
+        "n_hits": 6,
+        "impact_mass_kg_from_npz": 0.03537,
+        "target_mass_kg_from_npz": 5.229436702219796e-08,
+        "hit_parcels": 2,
+        "n_parcels": 1000,
+        "fallback_hits": 0,
+        "near_miss_count": 5659,
+        "substep_count": 2035710,
+        "collision_event_limit_count": 0,
+        "seed": 57721,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "9c6689e40586240dd7212711e5b0009d8d06187c39b5402b0d2418cb38c0c7cd"
+    }
+  ],
+  "cross_run": {
+    "hit_total": 6,
+    "parcel_total": 1000,
+    "hit_parcel_total": 2,
+    "hit_parcel_rate": 0.002,
+    "substeps_per_parcel": 2035.71,
+    "near_miss_to_impact_ratio": 943.1666666666666
+  },
+  "configuration_groups": [
+    {
+      "group_key": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "field_time": "0.8684190921",
+        "implementation_hashes_sha256": "a937170f7f75749e555aa25e5e1e2722e30e496293d22b04b845515ea554be70",
+        "n_parcels": 1000,
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "run_count": 1,
+      "seeds": [
+        57721
+      ],
+      "individual_statuses": {
+        "passed": 1
+      },
+      "error_issue_count": 0,
+      "eligible_for_same_configuration_replay": false,
+      "performance": {
+        "hit_total": 6,
+        "parcel_total": 1000,
+        "hit_parcel_total": 2,
+        "hit_parcel_rate": 0.002,
+        "substeps_per_parcel": 2035.71,
+        "near_miss_to_impact_ratio": 943.1666666666666
+      }
+    }
+  ],
+  "interpretation": {
+    "root_mixed_configuration_status": "single_group",
+    "individual_run_integrity": "passed",
+    "group_comparisons_must_use_group_key": true,
+    "performance_warnings_are_diagnostics": true
+  },
+  "issues": [
+    {
+      "code": "sparse_hit_support",
+      "severity": "warning",
+      "message": "physical hit support is below 10 percent of parcels",
+      "context": {
+        "hit_rate": 0.002
+      }
+    },
+    {
+      "code": "near_miss_overhead",
+      "severity": "warning",
+      "message": "endpoint near-miss diagnostics greatly exceed true impacts",
+      "context": {
+        "near_miss_ratio": 943.1666666666666
+      }
+    },
+    {
+      "code": "high_substep_cost",
+      "severity": "warning",
+      "message": "substep cost is high enough to threaten high-particle confirmation runtime",
+      "context": {
+        "substeps_per_parcel": 2035.71
+      }
+    }
+  ],
+  "audit_sha256": "4dbf13d4cc7c7bf2f9d18516904a57a700e255b1e5880037228f5be940dca22a"
+}

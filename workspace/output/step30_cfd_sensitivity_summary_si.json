@@ -1,0 +1,128 @@
+{
+  "version": "step30-native-si-comparison-v2",
+  "final_cfd": {
+    "variant": "native_si",
+    "field_time": "3000",
+    "n_cells": 424146,
+    "source_coordinate_units": "m",
+    "internal_coordinate_units": "mm",
+    "coordinate_scale_to_mm": 1000.0,
+    "speed_stats_ms": {
+      "min": 0.10025633849070341,
+      "max": 183.70238009065096,
+      "median": 37.23167441917351
+    },
+    "convergence": {
+      "final_initial_residuals": {
+        "Ux": 1.52531e-05,
+        "Uy": 2.55613e-05,
+        "Uz": 1.97633e-05,
+        "p_first_corrector": 0.00113991,
+        "omega": 5.86247e-06,
+        "k": 1.06645e-05
+      },
+      "final_continuity": {
+        "local": 3.30166e-05,
+        "global": -2.32903e-06,
+        "cumulative": -0.00191765
+      },
+      "strict_residual_control_met": false,
+      "solver_log": "simpleFoam_3000.log",
+      "end_time": "3000",
+      "residual_control_threshold": 0.0001,
+      "field_change": {
+        "previous_time": "2900",
+        "field_relative_l2": {
+          "U": 0.02082525512800279,
+          "p": 0.00480668755456322,
+          "k": 0.006733080235320488,
+          "omega": 0.013082890485147018
+        },
+        "bulk_speed_relative_change_pct": {
+          "median": 0.007742182405707846,
+          "p95": 0.03366668903677964,
+          "p99": 0.010802980885972382,
+          "max": 0.0009891236918782213
+        },
+        "max_bulk_speed_relative_change_pct": 0.03366668903677964
+      },
+      "status": "bounded_statistical_plateau_strict_residual_control_not_met"
+    }
+  },
+  "topology": {
+    "mesh_signature": "739047925a62c9a521978fdf55fb07d96dbf6ad459b194e88d70875083aa7533",
+    "n_parent_faces": 74802,
+    "n_collision_triangles": 179562,
+    "surface_area_m2": 1.318275465252782,
+    "bounds_mm": [
+      [
+        420.40301513671875,
+        -180.0,
+        -418.3860168457031
+      ],
+      [
+        1400.0,
+        180.01499938964844,
+        390.6109924316406
+      ]
+    ]
+  },
+  "runs": {
+    "si_nominal_i1": {
+      "field_time": "3000",
+      "max_impacts": 1,
+      "n_parcels": 2000,
+      "impacts": 186,
+      "hit_rate_pct": 9.3,
+      "strict_intersections": 0,
+      "fallback_hits": 186,
+      "impact_mass_kg": 1.036958549481625,
+      "total_target_mass_kg": 8.279841895163183e-07,
+      "max_dhdt_mm_h": 61.738548025738154,
+      "spearman_er_vs_analytic": -0.20514,
+      "top10_iou": 0.0
+    },
+    "si_nominal_i3": {
+      "field_time": "3000",
+      "max_impacts": 3,
+      "n_parcels": 2000,
+      "impacts": 558,
+      "hit_rate_pct": 9.3,
+      "strict_intersections": 11,
+      "fallback_hits": 547,
+      "impact_mass_kg": 3.1108756484448747,
+      "total_target_mass_kg": 5.104284880386297e-06,
+      "max_dhdt_mm_h": 139.2740630207,
+      "spearman_er_vs_analytic": -0.19792,
+      "top10_iou": 0.04545
+    }
+  },
+  "legacy_reference": {
+    "case": "native_baseline millimetre-valued OpenFOAM case",
+    "metrics": {
+      "field_time": "500",
+      "max_impacts": 1,
+      "n_parcels": 2000,
+      "impacts": 461,
+      "hit_rate_pct": 23.05,
+      "strict_intersections": 3,
+      "fallback_hits": 458,
+      "impact_mass_kg": 1.7764827145606434,
+      "total_target_mass_kg": 1.0860456922276723e-06,
+      "max_dhdt_mm_h": 11.987673797265717,
+      "spearman_er_vs_analytic": 0.00924,
+      "top10_iou": 0.03659
+    },
+    "comparison_policy": "Retained only as algorithm/topology context. Its absolute pressure, wall shear stress, and erosion rate are not physically comparable with the SI case."
+  },
+  "quality_gates": {
+    "max_cfd_speed_below_500_ms": true,
+    "registration_status": "passed",
+    "registration_p95_mm": 5.11057929924348,
+    "same_mesh_field_and_topology_time": true,
+    "strict_residual_control_met": false,
+    "particle_wall_method": "native OpenFOAM patch topology with post-processed trajectory intersections and proximity fallback; not an OpenFOAM kinematicCloud/DPM wall log",
+    "fallback_warning": "Most reported impacts remain proximity fallback hits. Treat spatial erosion ranking as exploratory until strict intersection coverage or native DPM wall-hit export is improved."
+  },
+  "interpretation": "The SI rebuild removes the historical length-unit and inlet turbulence-length-scale errors and keeps the CFD field, bucket topology, and particle coordinates manifest-aligned. Convergence status is taken from the validated solver logs. The particle result must not be presented as OpenFOAM DPM validation while proximity fallback dominates or analytic spatial ranking remains weak."
+}

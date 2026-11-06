@@ -1,0 +1,70 @@
+{
+  "version": "step30-particle-hits-ensemble-v1",
+  "status": "provisional_particle_ensemble",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "claim_scope": "mass-conservative seed ensemble input for exploratory erosion priors",
+  "merge_contract": {
+    "n_sources": 5,
+    "mass_rule": "divide every source parcel_mass_kg by n_sources before concatenation",
+    "face_domain_rule": "exact equality of face centers and areas is required",
+    "seed_index_field": "seed_index",
+    "domain_fingerprint": "757fa0503d72107abbbc86beac88af9c0d8c2c2198c2007f0da7d1fd4352f478"
+  },
+  "sources": [
+    {
+      "index": 0,
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9404fdc3e8d12c9edf423d44e029b283a2aef3de385842195888c0a07f0d24de/particle_hits.npz",
+      "sha256": "e52d32b38225843ced483769e09e01719a7d95f6c58c2a6929e7ce0964c9f0d5",
+      "n_hits": 1148,
+      "mass_total_kg": 0.33837300000000003,
+      "domain_fingerprint": "757fa0503d72107abbbc86beac88af9c0d8c2c2198c2007f0da7d1fd4352f478"
+    },
+    {
+      "index": 1,
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/825055c9a2cf8c0caa5d237d3c4e4f2c2aee17397b6836c93c00b502a9bda697/particle_hits.npz",
+      "sha256": "0d1de0cc589c22fb9c5f3da9f17e643c200924a11a929fbf3766f9e98802250c",
+      "n_hits": 1203,
+      "mass_total_kg": 0.35458425,
+      "domain_fingerprint": "757fa0503d72107abbbc86beac88af9c0d8c2c2198c2007f0da7d1fd4352f478"
+    },
+    {
+      "index": 2,
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/85c57bafc6fd609a9eb6e08a4043722ff15dee048e23845f207708d72d018d38/particle_hits.npz",
+      "sha256": "12d31c07c428ef62ec68d5cfda25f076a9fb54179e50f2c17700e3e3f336970f",
+      "n_hits": 1083,
+      "mass_total_kg": 0.31921425000000003,
+      "domain_fingerprint": "757fa0503d72107abbbc86beac88af9c0d8c2c2198c2007f0da7d1fd4352f478"
+    },
+    {
+      "index": 3,
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/c004ee52c6451b437ae12bfbbcace4b98462bc5270680b31c6a57e0879c6d41c/particle_hits.npz",
+      "sha256": "c5219ef13df2d55df987570d236655232c91d194c55d691638f25a4d161729ea",
+      "n_hits": 1181,
+      "mass_total_kg": 0.34809975000000004,
+      "domain_fingerprint": "757fa0503d72107abbbc86beac88af9c0d8c2c2198c2007f0da7d1fd4352f478"
+    },
+    {
+      "index": 4,
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_cpu_confirmation_20260828_v2/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/c15c2f2fc32532b6416e51aa969be8b8ff222162acfd4ef4cc1feba1efa0e68c/particle_hits.npz",
+      "sha256": "e56ed4b1278a9180daf575f40e3185e7f0e571b1a5fbc8a6eb247a8515d0e0c1",
+      "n_hits": 1086,
+      "mass_total_kg": 0.3200985,
+      "domain_fingerprint": "757fa0503d72107abbbc86beac88af9c0d8c2c2198c2007f0da7d1fd4352f478"
+    }
+  ],
+  "merged": {
+    "n_hits": 5701,
+    "n_faces": 218988,
+    "mass_total_kg": 0.33607395000000007,
+    "expected_mean_source_mass_kg": 0.33607395,
+    "mass_conservation_passed": true
+  },
+  "limitations": [
+    "This ensemble reduces Monte Carlo seed sensitivity but does not validate the common particle driver.",
+    "The merged artifact represents the mean exposure across sources, not five times the exposure.",
+    "No baseline/worn scan or official spatial erosion truth is included."
+  ],
+  "report_sha256": "0f36d77a792465cb042224cd3a2594f5023c0139d1e846e75b76fd3a5fd2e965"
+}

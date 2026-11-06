@@ -1,0 +1,208 @@
+{
+  "version": "step30-eight-step-optimization-v1",
+  "status": "conditional_progress_package",
+  "inputs": {
+    "convergence_report": {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_particle_convergence_5k_10k_20k_topology_aggregate_v5_discovery_r2.json",
+      "sha256": "5cca5983c86e2191038346da11625ecdf12d3abdefb262ab6c51f2fcc64fb9ff"
+    },
+    "participant_result": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/results/participant_optimization_r10/participant_optimization_r10.json",
+      "sha256": "8983f302f6cd0f0dad4ea8489c5eb7e52a32c9011140443d7fb77aaf7b6e39f3"
+    },
+    "face_domain": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/domain.npz",
+      "sha256": "444e72117430c811497c304dfbcc28445adccfd08bb63e2faf944ee538e2570c",
+      "n_faces": 218988
+    }
+  },
+  "step_status": {
+    "particle_convergence_matrix": {
+      "source_version": "step30-particle-convergence-v5",
+      "cells": [
+        {
+          "particle_count": 5000,
+          "seed_count": 5,
+          "status": "available",
+          "source_scale_present": true,
+          "available_runs": 5,
+          "estimator_status": false,
+          "area_weighted_spearman_median": 0.8933444217664606,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.0648180011226678
+        },
+        {
+          "particle_count": 5000,
+          "seed_count": 10,
+          "status": "blocked_insufficient_seeds",
+          "source_scale_present": true,
+          "available_runs": 5
+        },
+        {
+          "particle_count": 5000,
+          "seed_count": 20,
+          "status": "blocked_insufficient_seeds",
+          "source_scale_present": true,
+          "available_runs": 5
+        },
+        {
+          "particle_count": 10000,
+          "seed_count": 5,
+          "status": "available",
+          "source_scale_present": true,
+          "available_runs": 5,
+          "estimator_status": false,
+          "area_weighted_spearman_median": 0.8573865025664993,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.032958230607141946
+        },
+        {
+          "particle_count": 10000,
+          "seed_count": 10,
+          "status": "blocked_insufficient_seeds",
+          "source_scale_present": true,
+          "available_runs": 5
+        },
+        {
+          "particle_count": 10000,
+          "seed_count": 20,
+          "status": "blocked_insufficient_seeds",
+          "source_scale_present": true,
+          "available_runs": 5
+        },
+        {
+          "particle_count": 20000,
+          "seed_count": 5,
+          "status": "available",
+          "source_scale_present": true,
+          "available_runs": 5,
+          "estimator_status": true,
+          "area_weighted_spearman_median": 0.9010426251626111,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.047059936450307274
+        },
+        {
+          "particle_count": 20000,
+          "seed_count": 10,
+          "status": "blocked_insufficient_seeds",
+          "source_scale_present": true,
+          "available_runs": 5
+        },
+        {
+          "particle_count": 20000,
+          "seed_count": 20,
+          "status": "blocked_insufficient_seeds",
+          "source_scale_present": true,
+          "available_runs": 5
+        },
+        {
+          "particle_count": 50000,
+          "seed_count": 5,
+          "status": "blocked_missing_runs",
+          "source_scale_present": false
+        },
+        {
+          "particle_count": 50000,
+          "seed_count": 10,
+          "status": "blocked_missing_runs",
+          "source_scale_present": false
+        },
+        {
+          "particle_count": 50000,
+          "seed_count": 20,
+          "status": "blocked_missing_runs",
+          "source_scale_present": false
+        }
+      ],
+      "confirmed_cells": [
+        {
+          "particle_count": 20000,
+          "seed_count": 5,
+          "status": "available",
+          "source_scale_present": true,
+          "available_runs": 5,
+          "estimator_status": true,
+          "area_weighted_spearman_median": 0.9010426251626111,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.047059936450307274
+        }
+      ],
+      "selected_candidate": {
+        "particle_count": 20000,
+        "seed_count": 5,
+        "status": "available",
+        "source_scale_present": true,
+        "available_runs": 5,
+        "estimator_status": true,
+        "area_weighted_spearman_median": 0.9010426251626111,
+        "mass_hotspot_iou_median": 1.0,
+        "spatial_js_divergence_max": 0.047059936450307274
+      },
+      "status": "numerically_stable_candidate",
+      "claim_boundary": "numerical stability only; not physical spatial accuracy"
+    },
+    "active_face_threshold_audit": {
+      "status": "available",
+      "selected_estimator": "topology_aggregate_v5",
+      "source": "convergence matrix selected candidate",
+      "physical_accuracy": "blocked_without_independent_measured_truth"
+    },
+    "dec_mapping_hypotheses": {
+      "status": "participant_built",
+      "primary": "step30-participant-dec-face-region-mapping-v1",
+      "face_count": 218988,
+      "claim_boundary": "participant geometry partition for competition self-benchmark; not official surface selection",
+      "additional_CAD_semantic_hypotheses": "blocked_without official surface tags/normals"
+    },
+    "material_amplitude_calibration": {
+      "status": "synthetic_material_reference",
+      "material": "ZG0Cr13Ni4Mo",
+      "measured_pilot": false,
+      "claim_boundary": "synthetic/prior-based until physical pilot files are ingested"
+    },
+    "independent_baseline_worn_depth_field": {
+      "status": "participant_built_synthetic",
+      "measured_truth": false,
+      "profile_accuracy_status": "blocked_without_registered_measured_profile"
+    },
+    "preregistered_model_combination": {
+      "status": "preregistered",
+      "weights": {
+        "oka": 0.25,
+        "finnie": 0.25,
+        "tabakoff": 0.25,
+        "mansouri": 0.25
+      },
+      "weight_sum": 1.0,
+      "posthoc_weight_change_allowed": false
+    },
+    "score_recalculation": {
+      "version": "step30-participant-optimization-v1",
+      "status": "conditional",
+      "conservative_score": 62.44709929911539,
+      "nominal_score": 82.4470992991154,
+      "optimistic_score": 82.4470992991154,
+      "score_interval": {
+        "lower": 52.98498185562678,
+        "upper": 89.32381149535675
+      },
+      "competition_self_benchmark_status": "conditional_participant_built_reference",
+      "official_accuracy_gate": false,
+      "official_reference_gate": false,
+      "fem_gate": "blocked"
+    },
+    "remote_verification": {
+      "status": "completed_elsewhere",
+      "local_numerical_execution": false,
+      "execution_target": "dcu_cpu"
+    }
+  },
+  "unresolved_blockers": [
+    "50,000-parcel convergence cells are missing",
+    "active-face seed CV remains high in the available five-seed ensemble",
+    "no measured ZG0Cr13Ni4Mo pilot files are ingested",
+    "no registered independent baseline/worn 3-D profile is ingested",
+    "official_accuracy_gate, official_reference_gate, and fem_gate remain closed"
+  ],
+  "report_sha256": "2fdc9b52307f6cd1c34d57d4579d25d258e930f10da3847cdb025f00344b401c"
+}

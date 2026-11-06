@@ -1,0 +1,1462 @@
+{
+  "version": "step30-particle-data-audit-v1",
+  "status": "failed",
+  "run_root": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs",
+  "run_count": 35,
+  "seed_values": [
+    316227,
+    387298,
+    500009,
+    223606,
+    500021,
+    271828,
+    331662,
+    346410,
+    500001,
+    510023,
+    244949,
+    314159,
+    500003,
+    282842,
+    161803,
+    424264,
+    510009,
+    264575,
+    500023,
+    104729,
+    57721,
+    510003,
+    161027,
+    42,
+    510001,
+    400001,
+    510021,
+    141421,
+    374166,
+    196613,
+    130363,
+    300001,
+    412311,
+    435889,
+    360555
+  ],
+  "reports": [
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/06781e089e83e6bd1c43dcfa86d40688dbebd9534fc42fc594f688c812787da1",
+      "file_sha256": {
+        "particle_hits.npz": "c0b75ddcb7cc8b3de02c8b5d15634f3b1f53e015cf0fb8ee442d44d80fd4a974",
+        "summary.json": "c8b99a64710a527eee0eaf2d7477ca0407c1f6719b580ba739a17e0cc3ff09ea",
+        "validation.png": "eedb343cf83383c42974d2a367fc15987f949fd646d719bd64bd3509063ab96a",
+        "particle_run_manifest.json": "72152bf67c8513ed3e56a1437b0f69acb419f7738f060a94db9ac1d2ea75d406"
+      },
+      "stats": {
+        "n_hits": 205,
+        "impact_mass_kg_from_npz": 0.06042375,
+        "target_mass_kg_from_npz": 6.140597134942188e-07,
+        "hit_parcels": 71,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 189943,
+        "substep_count": 42063902,
+        "collision_event_limit_count": 0,
+        "seed": 316227,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "91ecf00580d945ec3e7bbb5a47deb10179abf190feee44b5da84c267a4de866d"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/083af187c40a5b3f2e46de0823be0f5ece2f04f02e6ff51e80a7674d5c23e7d8",
+      "file_sha256": {
+        "particle_hits.npz": "59581655d8eb518c6af9990823af8f920d7bdf0407df7f67d06cfc37f2690a9a",
+        "summary.json": "1a180d1f157f5e3d83a9e8e0ed7d09945efaa89ad09f6e7e586a62854a459288",
+        "validation.png": "abf8cd74db570dc4e827ab3c2b76d87976fa2960949e44f4086ae53fad816b44",
+        "particle_run_manifest.json": "a2f80e08760ec37474995c5ea69b4d234f2c06d9f0968020ae94e332e23f602d"
+      },
+      "stats": {
+        "n_hits": 185,
+        "impact_mass_kg_from_npz": 0.05452875,
+        "target_mass_kg_from_npz": 2.2065038559735387e-07,
+        "hit_parcels": 65,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 165961,
+        "substep_count": 41909536,
+        "collision_event_limit_count": 0,
+        "seed": 387298,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "75aa75e3ee7e60e598a0d93992cefef271e156fbfe8af4aa1ab53fa6bc31c577"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/09f3376f1675f0fb2bde2ab907637433cfe42cae417fa35c4e99a77d0198de24",
+      "file_sha256": {
+        "particle_hits.npz": "b5cb70ac561b95bea6414a42e5f04ca5257aa74c790457731fe3ac3d2c4e55e5",
+        "summary.json": "c98ab3c31121342cc479245a642af2427a7053a90d9e0151dddb8114eaaad78d",
+        "validation.png": "09e30b8447125d8f9d02204c955c965edcd212ec755566e76e0013f3237a0d15",
+        "particle_run_manifest.json": "955d14c29dbe13150e1f90e6083392cba3556f8c6516a8da38aa28a63779f9d6"
+      },
+      "stats": {
+        "n_hits": 224,
+        "impact_mass_kg_from_npz": 0.066024,
+        "target_mass_kg_from_npz": 6.639209385236818e-07,
+        "hit_parcels": 77,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 171161,
+        "substep_count": 41677320,
+        "collision_event_limit_count": 0,
+        "seed": 500009,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "33723a3a1a1ada54f0271f2d767034a16c3e9b3b06e08c69fd15cb6de4ab7501"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/11a6ad14d3afd78db4371153ce125eb3aac1c54cbf64d4f953f889b87ef0adee",
+      "file_sha256": {
+        "particle_hits.npz": "5c3b6809f1bc72509dedb8ffe26bf58f38eab0298fa6cc075ca8a9106dd511ad",
+        "summary.json": "cc42099fe091db5944933c0d162871142369444e9c93841057b6ebc60eb1c162",
+        "validation.png": "f8ffbf26d99ff578ec5a20d053703b46043ec286fe51a66e5afccd07f86c68cb",
+        "particle_run_manifest.json": "1ba1c906dd88888162ef71bdd839c7b39637d1037e8a859a79af1d9d5d879adb"
+      },
+      "stats": {
+        "n_hits": 212,
+        "impact_mass_kg_from_npz": 0.062487,
+        "target_mass_kg_from_npz": 3.5775223002926936e-07,
+        "hit_parcels": 76,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 174730,
+        "substep_count": 41779052,
+        "collision_event_limit_count": 0,
+        "seed": 223606,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "168068b37f93afe8af0f04fe8919cb83e7903d6ae51c1564bf18c143594f51fe"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/21e7dc6bbb357b838a044c6bc7eb0edeeb08212472ee64bd941a4c8c737742b0",
+      "file_sha256": {
+        "particle_hits.npz": "e60d661c248dd6dc2a67d7cfb311396f4b24b48991d83d1061f38f3f3d9a5e1b",
+        "summary.json": "fe90e4d813fdd108e0d0cf2a39e1eeda3d67137d49e21c05cd4beaee2d5fe629",
+        "validation.png": "a941fbafa20b7b3e02b1d13ddd46836f9590144fc71477ea216070e4de51fde6",
+        "particle_run_manifest.json": "f0a47805eb2eff290d6e19ef75c3315def4f84cb01a085b3f3aefb2a9ee89c96"
+      },
+      "stats": {
+        "n_hits": 198,
+        "impact_mass_kg_from_npz": 0.058360499999999996,
+        "target_mass_kg_from_npz": 4.892795562321877e-07,
+        "hit_parcels": 70,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 159706,
+        "substep_count": 41794602,
+        "collision_event_limit_count": 0,
+        "seed": 500021,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "2042db156445996202b59e9e4d7c6547292e425ac7db753b46e485683287026b"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a",
+      "file_sha256": {
+        "particle_hits.npz": "213c83dc76ec9313997ddce0f9ef2a0a9bbfadb5948be06ba95c01661b00d8a4",
+        "summary.json": "f40a3882d74815a337eeaaa25ecfcedc58cb8a490559f1c5999f1c8a037e8493",
+        "validation.png": "e819a76e0ddf07c139fb670ab9817566725d14fc77a9cfcafe3b702b8d5a4b47",
+        "particle_run_manifest.json": "c17361b36ed5ac1017b650ab7c9c98b9d204596dc52b09eed6196cd82cae720f"
+      },
+      "stats": {
+        "n_hits": 1114,
+        "impact_mass_kg_from_npz": 0.3283515,
+        "target_mass_kg_from_npz": 2.055919412328807e-06,
+        "hit_parcels": 699,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 973456,
+        "substep_count": 41236237,
+        "collision_event_limit_count": 0,
+        "seed": 271828,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "2868c3532ddbf9071b0b866ef3fc8257db464537f39f7d2455173e09b2236376"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/25006b3eb9d4c12c0d3d294d84a5fe4a67bde6c7bf420224b7150a949f7d52a2",
+      "file_sha256": {
+        "particle_hits.npz": "4ed80b6ebb67040b4c4377079f617df9299429bdf26a7b3aef988210daa28f76",
+        "summary.json": "02bfd08599c21651a89a18df69af047624d855ba0badbab3fcbc59ee99cfa3ab",
+        "validation.png": "3070ea103dabeafe2f68cd6b4b7c0a1ca138987da7e0583c9700ab4f166871cd",
+        "particle_run_manifest.json": "df1618fb72644a2bb000a557612cccf5b22082face28728b0dd7dbef4c10ec8b"
+      },
+      "stats": {
+        "n_hits": 194,
+        "impact_mass_kg_from_npz": 0.057181499999999996,
+        "target_mass_kg_from_npz": 6.161639792124247e-07,
+        "hit_parcels": 70,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 188319,
+        "substep_count": 41759250,
+        "collision_event_limit_count": 0,
+        "seed": 331662,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "d05d18c87404cf3959c892214a41f92e6a4031c536c3a9e68d5da449cf40f5f3"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/2a07055a0ae1575bf48b37996dab0695a6d1c1de2f1200874bceced007d8783f",
+      "file_sha256": {
+        "particle_hits.npz": "4a044783eb2c22287b47a05b888868d7fce792f1a3d46f07a7afae8d54f1500a",
+        "summary.json": "718253f98914268cdaa9fdd65b02b973afcc0a51547bee823faf32da2b22933e",
+        "validation.png": "e2d176c2de575e90f3cf33574afbb09a57f83d3ad2bd2ddb47f289d71dcc2277",
+        "particle_run_manifest.json": "2920f90828daec0af2c61c427703cc9a289e9c939d23d42c12fbd8210c936a03"
+      },
+      "stats": {
+        "n_hits": 166,
+        "impact_mass_kg_from_npz": 0.0489285,
+        "target_mass_kg_from_npz": 2.8696698124343403e-07,
+        "hit_parcels": 60,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 169505,
+        "substep_count": 41556499,
+        "collision_event_limit_count": 0,
+        "seed": 346410,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "44e77c715b3d7cd751ac93b0ff2039e08ae06751b6b118fc4d71ce53df2462b1"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/30c6b7012d2dab89b8ff88135f989b08c663715dba5fd7ad332cc345a0610249",
+      "file_sha256": {
+        "particle_hits.npz": "d7304ae433cc58d66658da2bef8abc831e8cec9992a8aa8de64785dd51732d97",
+        "summary.json": "9e93f8c0cf1ccff00b482d9bcde33411a0faa45af7ebf6482e68d52b069b7573",
+        "validation.png": "4a07c7179179c613948cd4ba1b15cef51ed4d2a7d5debb5910ed43187c9b9fb1",
+        "particle_run_manifest.json": "ed004b36fc39a29bdb1b34b87e76458342a166ad453a378ab764f9cec07fcd3c"
+      },
+      "stats": {
+        "n_hits": 222,
+        "impact_mass_kg_from_npz": 0.06543450000000002,
+        "target_mass_kg_from_npz": 6.398974333432856e-07,
+        "hit_parcels": 77,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 198992,
+        "substep_count": 41836964,
+        "collision_event_limit_count": 0,
+        "seed": 500001,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "a43d729c1476a7f1bc43177620fd17eccb8bcb832271c3576342fa5e5946c394"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/45dd3aedceceb55926c57104ceafcb5edc1e5c8d0186530f149123e5f3dea968",
+      "file_sha256": {
+        "particle_hits.npz": "b03a1112e5f6d2742f13f1ae133fb43550907bccf5200bfa1c38adf2f54e6269",
+        "summary.json": "b0bcf67868eeff1a5590c952a59c7d3341bc0ef98525993a46293ae507e82aa7",
+        "validation.png": "ebecfd6f53cd76fa2a68522ab3ab1f83b33a589a0dd5262e7ee96a755c698f86",
+        "particle_run_manifest.json": "7c31ad665d75da7f7133020410429a0202fa101ebfaf263f5e064ba83b6cbffa"
+      },
+      "stats": {
+        "n_hits": 680,
+        "impact_mass_kg_from_npz": 0.06681000000000001,
+        "target_mass_kg_from_npz": 4.674073251844585e-07,
+        "hit_parcels": 237,
+        "n_parcels": 60000,
+        "fallback_hits": 0,
+        "near_miss_count": 541088,
+        "substep_count": 125413507,
+        "collision_event_limit_count": 0,
+        "seed": 510023,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "0d118d0579a3e0a156edcc0c30d8dd43398e237adfebb0cf5304b276fd250a17"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/4fdf67fc4bd59b8e5fa5f0c38b41bacb865cb28767a3633b7d8ac936555b8186",
+      "file_sha256": {
+        "particle_hits.npz": "740b98b24f26227b2ddb2ce7c66f84ac1ef8c150322d917ebfdf8a524b6240d6",
+        "summary.json": "f41568d62a90d73f28914c7d553164cf32198911af4bf3b6a7b96b79aab00fea",
+        "validation.png": "fb3992e1ea2f52350e93573b319f70b74e9d115a4eae53b4ce8a0f182bbaaef3",
+        "particle_run_manifest.json": "d14774985daf7ece4c17dc55539898e78338dc7ae4ca5269ec8660f8564fb059"
+      },
+      "stats": {
+        "n_hits": 205,
+        "impact_mass_kg_from_npz": 0.06042375,
+        "target_mass_kg_from_npz": 4.2119850953537827e-07,
+        "hit_parcels": 71,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 174574,
+        "substep_count": 41810978,
+        "collision_event_limit_count": 0,
+        "seed": 244949,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "91b59176918ed90d93807fccae9f14272a4e2eb4651650bcc29ceee5cb45da0f"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79",
+      "file_sha256": {
+        "particle_hits.npz": "21e9d755ff93bb2028f4b74407254dc653d1cd9ce2c8e9c0d83015e2f862bcc5",
+        "summary.json": "1ba741bec1521b64b630a2f7e0180b3fe07412b86c6f1ada3e840d9fe47e9f86",
+        "validation.png": "a6c6d8806c4ac3c3e8762e79784c0ce8c6bd6fb43b365e35eb8c9dad785a117d",
+        "particle_run_manifest.json": "482026898f161d5cc8b7e0b45026a64d3b5122b683936846a6112e71b61596c8"
+      },
+      "stats": {
+        "n_hits": 1146,
+        "impact_mass_kg_from_npz": 0.3377835,
+        "target_mass_kg_from_npz": 2.157100451921902e-06,
+        "hit_parcels": 710,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 909899,
+        "substep_count": 41197341,
+        "collision_event_limit_count": 0,
+        "seed": 314159,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "94decf3caab39f69d0b880bf066e9f451411ada52178c7e196f4a3b9d9aa2e1c"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/5b51fdba28c3ae6fa98d410b1635933518d808a0828de6bc14b9f5c3a1818a6f",
+      "file_sha256": {
+        "particle_hits.npz": "03d144b06c80ed145299ef161525a870874e492f1ac3ac59ff822ff05fbac846",
+        "summary.json": "173bd73b12c3cb1d8f9b2ac288679a7fe96a88eed866b274f036c40f35c9ddd6",
+        "validation.png": "4fbd060845793039999cd82e236666784da77e15325ea2e78159624d1eb07240",
+        "particle_run_manifest.json": "f1a5601805cb9d52471e818de9fb20e5d237c68cc1c9ad011664f4e5279bee7d"
+      },
+      "stats": {
+        "n_hits": 215,
+        "impact_mass_kg_from_npz": 0.06337125,
+        "target_mass_kg_from_npz": 2.2318177649498128e-07,
+        "hit_parcels": 77,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 189663,
+        "substep_count": 41935987,
+        "collision_event_limit_count": 0,
+        "seed": 500003,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "7dddb7baf86ed7439c55ee2619b96d257ae750bf31941f860b45d4d7565de33f"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/65cae65a9c02ee72e03078d87246c19bab3aa852a4c9759c0a23772d8b42d1c6",
+      "file_sha256": {
+        "particle_hits.npz": "7f6462bb2707814aa9d7baaaf4449f00d5d8ad45e2e744537c2c90eb6066d620",
+        "summary.json": "7de5213b96ff7dc16a0e6f15ecaf0c83a25a23e023cf40911a410091c2cf90a1",
+        "validation.png": "29cb0426f2d0a42fe0377f6b4b8662e37ed6ba543d8dd0ddf2786bd007547827",
+        "particle_run_manifest.json": "e88215d422fc4ed55bb5231ec6b9e03c3cd167dd4246ad4ed44294ab35155a75"
+      },
+      "stats": {
+        "n_hits": 230,
+        "impact_mass_kg_from_npz": 0.06779250000000002,
+        "target_mass_kg_from_npz": 2.1602011842197567e-07,
+        "hit_parcels": 82,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 182923,
+        "substep_count": 41768583,
+        "collision_event_limit_count": 0,
+        "seed": 282842,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "80f05d20c80d8b586231b83aa265dfa8ea2bf8491680fe95679083bbb21eaf17"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b",
+      "file_sha256": {
+        "particle_hits.npz": "2e10b3f257e459297aa3fe8fce66758acbb908762c218ec9c071114bd0333db6",
+        "summary.json": "3ecf4d9deb2b734cad18acf125c2c917b05918563f0e17f7f041402515c58227",
+        "validation.png": "84ec831e52ed44c46c6f9bd202198daf5a06fdaa84000e86a4915ccbc5881887",
+        "particle_run_manifest.json": "2f2e6ef99af703c526515687adfec5f9107c2bcfbfcf1e446ed16edd460fb2e1"
+      },
+      "stats": {
+        "n_hits": 1044,
+        "impact_mass_kg_from_npz": 0.30771899999999996,
+        "target_mass_kg_from_npz": 1.6758008510841622e-06,
+        "hit_parcels": 649,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 870691,
+        "substep_count": 41172535,
+        "collision_event_limit_count": 0,
+        "seed": 161803,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "476763cac7427723b92591ac02bed60df4fccb990198ba463380e5a60b45a82e"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/77508157811a910e00a4b28a1358573677e34c4d40306d390527842148bd31d4",
+      "file_sha256": {
+        "particle_hits.npz": "62d8a7f225cfb47c67457681b620c016003a0333d7fb53ff14fe84e9d3248f16",
+        "summary.json": "fa67aa2129b211092b70287346368d1aa46ef5f383bc272353c4a41211f44e7c",
+        "validation.png": "b71dc45a691d96e988604a03cb8cab3c9411db320b5a2e0785222200cff45ee6",
+        "particle_run_manifest.json": "a5e22efb96a763abb63055b68f1a96a49e21b6acfe05adb7892bca9d66e01323"
+      },
+      "stats": {
+        "n_hits": 175,
+        "impact_mass_kg_from_npz": 0.051581249999999995,
+        "target_mass_kg_from_npz": 3.9526814663134365e-07,
+        "hit_parcels": 61,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 167330,
+        "substep_count": 41774649,
+        "collision_event_limit_count": 0,
+        "seed": 424264,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "5b556956c56c5dfd4cc59be34b3edcb24306723b6655279873fd407ec28c2836"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/796799f537d90c32b41e3c8d179e16f4cbda778567537c2c273701a7518d025d",
+      "file_sha256": {
+        "particle_hits.npz": "7a1720fd23f157cc4275f85db99e85ac7e90833651f0cffb89aeb754f72b015f",
+        "summary.json": "f18210c885d6679dc8e0e8b13c13bbfb5baf8d175e87c706930b482946edc011",
+        "validation.png": "8ab057dd8a8a7aeeadff3b10a20dfd700f58b91b9199e130d22a9d27f74c91d8",
+        "particle_run_manifest.json": "f6c4d9e0b0717f698ef5e62dd45c706735041fedaf5aa5d0a4d3bcd6e777a64c"
+      },
+      "stats": {
+        "n_hits": 655,
+        "impact_mass_kg_from_npz": 0.06435375,
+        "target_mass_kg_from_npz": 3.5115106013106183e-07,
+        "hit_parcels": 228,
+        "n_parcels": 60000,
+        "fallback_hits": 0,
+        "near_miss_count": 532560,
+        "substep_count": 125325915,
+        "collision_event_limit_count": 0,
+        "seed": 510009,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "2232c43b5b419e61a5614a16da84fe8deb8c8a12c03b2ae63e7faa0753850612"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/7b5cfcc057ca97435e7c3d373c086b0d2580ff7d200d13e79f0db416210577fb",
+      "file_sha256": {
+        "particle_hits.npz": "ebc47846d9ee0d5dfb15fe30d100b3e54c5dab256818c319e931d81efd1a219b",
+        "summary.json": "e7f67cb592441f00af85465c03f099ead3cfbd84d6080de368d85bdade78bc81",
+        "validation.png": "5a0e5108ace976b659604c6ce27888d29f8b507e6238afc399f1f9b1d18936fa",
+        "particle_run_manifest.json": "b9cf9a3e934a0e6cbc88c65a9d08631c449893335d08e1e452e445be57a203ea"
+      },
+      "stats": {
+        "n_hits": 153,
+        "impact_mass_kg_from_npz": 0.045096750000000005,
+        "target_mass_kg_from_npz": 2.3535252370428777e-07,
+        "hit_parcels": 56,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 168705,
+        "substep_count": 41968956,
+        "collision_event_limit_count": 0,
+        "seed": 264575,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "5e4474c4406775024b5301321da7bf7640d06ab7104333c2a06c9be3ec27bf63"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/7bd807e021f377012b18d1f09a4920fc26c4518c01a9014b66c8e348dffedd82",
+      "file_sha256": {
+        "particle_hits.npz": "c01c7f0c56bc3de2a0a1225715ec3e4f25d9006d149104275b63bbd0e0c91b30",
+        "summary.json": "af52847f651553f24a3d1f49e560ba51aa1f7e0e69d7c4d603d8d98308097888",
+        "validation.png": "db31301889c834af01421e627277307490d75aa25ed57a43813c07e19421a9ad",
+        "particle_run_manifest.json": "7542e10878eb50c09a8917d99df016f7d536bc7fcef10d96e61e8aa3b2450e7b"
+      },
+      "stats": {
+        "n_hits": 213,
+        "impact_mass_kg_from_npz": 0.06278175,
+        "target_mass_kg_from_npz": 4.615488513661763e-07,
+        "hit_parcels": 73,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 189341,
+        "substep_count": 41875518,
+        "collision_event_limit_count": 0,
+        "seed": 500023,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "2a875b1eaec64e2bc3f0eb7650b0f251969dbee11bd9b50b5a995aca363b5163"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/825055c9a2cf8c0caa5d237d3c4e4f2c2aee17397b6836c93c00b502a9bda697",
+      "file_sha256": {
+        "particle_hits.npz": "0d1de0cc589c22fb9c5f3da9f17e643c200924a11a929fbf3766f9e98802250c",
+        "summary.json": "f6e5e9f65af01237504d27cfcad385aa22d073d7daf83a2f11549dfe669fd2ca",
+        "validation.png": "e61950efb419c7a30b1d5f5d742a4d3b714e34dbe9d5d9514c4afb271829d2c7",
+        "particle_run_manifest.json": "2f934703a2eb45c124d80c7bf18ecb738055a18dfe782ff8344a8b1e32cab1c4"
+      },
+      "stats": {
+        "n_hits": 1203,
+        "impact_mass_kg_from_npz": 0.35458425,
+        "target_mass_kg_from_npz": 2.1493932422668314e-06,
+        "hit_parcels": 731,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 939598,
+        "substep_count": 41171232,
+        "collision_event_limit_count": 0,
+        "seed": 104729,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "b58d2d3eb2b6d2dbf42f5fc19f6f4778dbc41ae0c77857b326bc15197fd372d5"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "833194eeb638df79b1da25a4d37416a4f64ef133b69d10372a0f3cafd8465cb8"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/85c57bafc6fd609a9eb6e08a4043722ff15dee048e23845f207708d72d018d38",
+      "file_sha256": {
+        "particle_hits.npz": "12d31c07c428ef62ec68d5cfda25f076a9fb54179e50f2c17700e3e3f336970f",
+        "summary.json": "43ece5a4a3d95d57518d71eacce7fd9d1d1184605a46db2f90cc34d96734a53d",
+        "validation.png": "402275f3a1e5f99e9c0657784824c47ccdb1259b5014f35e68ad733e79eb866a",
+        "particle_run_manifest.json": "f72895c6bdae0fc53d357245e6b1d7f6f2ffa5b5bc29c0b0eb5f8d065a96ee56"
+      },
+      "stats": {
+        "n_hits": 1083,
+        "impact_mass_kg_from_npz": 0.31921425000000003,
+        "target_mass_kg_from_npz": 2.0977355727666903e-06,
+        "hit_parcels": 690,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 951687,
+        "substep_count": 41263876,
+        "collision_event_limit_count": 0,
+        "seed": 57721,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "b58d2d3eb2b6d2dbf42f5fc19f6f4778dbc41ae0c77857b326bc15197fd372d5"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "3000d1965e2f215c1eed89d10a2cf49a3b0423bfcc887672a1dd2f9408391264"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/8ccbeef63ffe065586618de23c7dafef7470815e508a0653a5164779c043c0f3",
+      "file_sha256": {
+        "particle_hits.npz": "7528376ca53df5580efffef550f9e8b13ecfe69bcc7d568bd4176db8cd1de44c",
+        "summary.json": "ab1f2bf12b9f0da1f43cbecb5d7cd2bf79ebd5259da83801267d243a8413fbec",
+        "validation.png": "c6dc7249db0e5e23c49be1c546e940ca6932f95315acc509f5e8dedb98bf701e",
+        "particle_run_manifest.json": "a55a7b07b96dfac885a11ab765b22a530dc78b81ee5c76553df2ca1e30fa855d"
+      },
+      "stats": {
+        "n_hits": 542,
+        "impact_mass_kg_from_npz": 0.05325150000000001,
+        "target_mass_kg_from_npz": 3.036499110488679e-07,
+        "hit_parcels": 191,
+        "n_parcels": 60000,
+        "fallback_hits": 0,
+        "near_miss_count": 502657,
+        "substep_count": 125080483,
+        "collision_event_limit_count": 0,
+        "seed": 510003,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "0fd5c21fa10c6ce4df6a8b15719d9f88638b1c8442b3478a0127e95fda25783b"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9404fdc3e8d12c9edf423d44e029b283a2aef3de385842195888c0a07f0d24de",
+      "file_sha256": {
+        "particle_hits.npz": "e52d32b38225843ced483769e09e01719a7d95f6c58c2a6929e7ce0964c9f0d5",
+        "summary.json": "b6e2f2bcfb3f073a2704839a7d0a0487bcbbdb458e7fbc3f33a806ce9abaa2e0",
+        "validation.png": "9f1c66a6dc3b65a0f43232db270c25e39d19e199fae6bbdc9eb2d7d33f933d7e",
+        "particle_run_manifest.json": "f3933fd004f44a0420275494c879eb0c3038d85ca962950c3c52f0c457728cdf"
+      },
+      "stats": {
+        "n_hits": 1148,
+        "impact_mass_kg_from_npz": 0.33837300000000003,
+        "target_mass_kg_from_npz": 2.086685982704418e-06,
+        "hit_parcels": 735,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 901598,
+        "substep_count": 41104056,
+        "collision_event_limit_count": 0,
+        "seed": 161027,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "b58d2d3eb2b6d2dbf42f5fc19f6f4778dbc41ae0c77857b326bc15197fd372d5"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "3a4926415d1ec19cbd9e2755ad987db735f4a36eec3b9e04e82540d5b53c9850"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6",
+      "file_sha256": {
+        "particle_hits.npz": "10ea9394e276eeacdbdfe3c7a32ce692a124b7ba39d3c87da385097c3b064abf",
+        "summary.json": "0f73daae54944410875653790552bb1877838fd692962368b114edae689320bd",
+        "validation.png": "49d778f7dfede9e03fa73c0fa46e9ed2fb29bb60f585d9b3fc038965d794ec34",
+        "particle_run_manifest.json": "4c8dcf44192e75dc4c07459ced60774fcc76473942d763dad60eaf7a0edb3388"
+      },
+      "stats": {
+        "n_hits": 1017,
+        "impact_mass_kg_from_npz": 0.29976075,
+        "target_mass_kg_from_npz": 2.027563565447456e-06,
+        "hit_parcels": 644,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 911024,
+        "substep_count": 41222451,
+        "collision_event_limit_count": 0,
+        "seed": 42,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "52bdb672c71b419e0e6a350451b1c00426041ab62135f32cfbbf8ece8c323440"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9a9dac2007573f7a71150255f3c631631a8e6ede94daacfd4443305abdb5022b",
+      "file_sha256": {
+        "particle_hits.npz": "862877673a25c198f648094c96a3cfebdf67c03c3547499f0622b30e510b05d7",
+        "summary.json": "77c2756fbbdba9184b76cf6b3dc41e88c99fa166e28e023e713bbe907ab95c8c",
+        "validation.png": "42bc91cb2c4956c314f113bea0e0e61dc138ae8c802cdf8282cbe550a4a777a7",
+        "particle_run_manifest.json": "3d66bd180c9789002ccd9f3dd9d413661c3eceb4b3235fc181572383529473de"
+      },
+      "stats": {
+        "n_hits": 599,
+        "impact_mass_kg_from_npz": 0.05885175,
+        "target_mass_kg_from_npz": 4.1250779304528065e-07,
+        "hit_parcels": 215,
+        "n_parcels": 60000,
+        "fallback_hits": 0,
+        "near_miss_count": 547802,
+        "substep_count": 125420841,
+        "collision_event_limit_count": 0,
+        "seed": 510001,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "975655d2da0155cb3526ac753d17f699e6e9af87efa90f7c9417455d519745ea"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9feb8540d4714a07242547ba20685eef49a329ff91a975142df4cb0648581c93",
+      "file_sha256": {
+        "particle_hits.npz": "c8de29219a040dc533058bde74899a123a58a2066e360ba02e7722529cbfcc78",
+        "summary.json": "faa2e970ee3ca6cb9b6cfeefa0d2c4982438141bae285718454ccd8cee45f0e4",
+        "validation.png": "0fc86531e24fa1c491ee61547e9a32a2c48fc519407a4c9672de01bca04a9256",
+        "particle_run_manifest.json": "8d1e69815bd784fdaa7fcc4e2225548fc13b783283a699e317f04a2085f83213"
+      },
+      "stats": {
+        "n_hits": 193,
+        "impact_mass_kg_from_npz": 0.05688675,
+        "target_mass_kg_from_npz": 3.752690368658108e-07,
+        "hit_parcels": 69,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 178083,
+        "substep_count": 41585461,
+        "collision_event_limit_count": 0,
+        "seed": 400001,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "cd5904fa4fff6db9820fb1ab575e0b7a37df3889935f839e7003b00ba3a396ac"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/a09270a54bce55cc874a0dbf040047488e991ba06fd73f9c335a54364d5ee585",
+      "file_sha256": {
+        "particle_hits.npz": "f6d3150ccf27bd4a5326eeef13770d249eae8479ec8fe56f1ed5458e24e3ac8f",
+        "summary.json": "3b1bd799090b6dc90c5f05dc159e04abe981116cb1666e1dcb57213723c630fe",
+        "validation.png": "f9e4a683acc80e5001f5e568dfe4c1860b9eac0b2835a9e743837d13052a24a7",
+        "particle_run_manifest.json": "0b621322f41247b7f9b5445e0c6e6e6e4bf598bca96a2f9150e0d6c14076f096"
+      },
+      "stats": {
+        "n_hits": 589,
+        "impact_mass_kg_from_npz": 0.05786925000000001,
+        "target_mass_kg_from_npz": 3.364354927328698e-07,
+        "hit_parcels": 206,
+        "n_parcels": 60000,
+        "fallback_hits": 0,
+        "near_miss_count": 503320,
+        "substep_count": 125388520,
+        "collision_event_limit_count": 0,
+        "seed": 510021,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "72a944850248375579d11e590903c7734498a4f11b80be7b4b0f0181da7fd106"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc",
+      "file_sha256": {
+        "particle_hits.npz": "4bcfcd4d7376f639c908b88dbfe15e2f7108b6bafc7b08b5ffb83dbb1341fd49",
+        "summary.json": "7d11bca88c8db8721425cf277c1efc0190ac07bf070420ebe09b9ca47dd9422b",
+        "validation.png": "19bc6d7bb5b73d1a5edbb4ac2f668272081cfcc28fbb816b18d1cd082766c3f6",
+        "particle_run_manifest.json": "8713fcb425d8260b78a01e0336d81fbf1aaee520dbfe6d252d42e2a251048d57"
+      },
+      "stats": {
+        "n_hits": 1034,
+        "impact_mass_kg_from_npz": 0.3047715,
+        "target_mass_kg_from_npz": 1.6877509419477877e-06,
+        "hit_parcels": 661,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 908175,
+        "substep_count": 41248477,
+        "collision_event_limit_count": 0,
+        "seed": 141421,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "d96c57a57a75de3f54e4739978d000ed0c9ddbe45acfa76a685fd80d2e8702c8"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/bd57335756de5bb11b1bea52475d2cce851c03b21a578e29adddad1a03a7c167",
+      "file_sha256": {
+        "particle_hits.npz": "e2e6b227310ac2665a520dc28cbcc5ecf85437373eb008faf74aec45fcd0c62c",
+        "summary.json": "321bb51d63d0cda85a18db5a686f81117908f2ab137f440c82100e699bb1bbfd",
+        "validation.png": "6a0ff58396975a352d653b8fb8730c38e4147dcf3b8adaa91e5bc16c8bce4db4",
+        "particle_run_manifest.json": "e8a80ec4a746fb3bd0cf03ed30ea23fd03642fc0e333ad299d19fa152b4bbf94"
+      },
+      "stats": {
+        "n_hits": 207,
+        "impact_mass_kg_from_npz": 0.061013250000000005,
+        "target_mass_kg_from_npz": 2.9663010000020363e-07,
+        "hit_parcels": 72,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 185232,
+        "substep_count": 41543835,
+        "collision_event_limit_count": 0,
+        "seed": 374166,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "2179d1d5790f8441ad95762f5ec0d862a41d1deb639be51a8fe151a15fc7ad28"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/c004ee52c6451b437ae12bfbbcace4b98462bc5270680b31c6a57e0879c6d41c",
+      "file_sha256": {
+        "particle_hits.npz": "c5219ef13df2d55df987570d236655232c91d194c55d691638f25a4d161729ea",
+        "summary.json": "81a2eeb80e244f513091b4b06d281deb988596a9fe4a8dbe8c2b7188375d31cc",
+        "validation.png": "cb656109de8f36a38e08af6e0d40055d1aecd6e67804cfccb4109b9f368c94e0",
+        "particle_run_manifest.json": "5408207491afbd53d86c8cf5ca39f7f58f81db665392f2cb782312f4a46f3183"
+      },
+      "stats": {
+        "n_hits": 1181,
+        "impact_mass_kg_from_npz": 0.34809975000000004,
+        "target_mass_kg_from_npz": 2.3438646101040147e-06,
+        "hit_parcels": 749,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 948907,
+        "substep_count": 41228680,
+        "collision_event_limit_count": 0,
+        "seed": 196613,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "b58d2d3eb2b6d2dbf42f5fc19f6f4778dbc41ae0c77857b326bc15197fd372d5"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "1a635a9dc02986ec9580409554ce0915011413831e43414c4cb136d6ec74f3ed"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/c15c2f2fc32532b6416e51aa969be8b8ff222162acfd4ef4cc1feba1efa0e68c",
+      "file_sha256": {
+        "particle_hits.npz": "e56ed4b1278a9180daf575f40e3185e7f0e571b1a5fbc8a6eb247a8515d0e0c1",
+        "summary.json": "758568ff0b8f3151fb0879076663bf97643336ad78be6479bab2d2a92787c790",
+        "validation.png": "0694cfe05261a72c348e17432f85e7611ecd79b76263818cfd0e7eab1e39bb59",
+        "particle_run_manifest.json": "ccfdfa7a7621dd5701702e11349e2c10629bd7b910af65e4a589d9901844d5d0"
+      },
+      "stats": {
+        "n_hits": 1086,
+        "impact_mass_kg_from_npz": 0.3200985,
+        "target_mass_kg_from_npz": 1.8723165391453187e-06,
+        "hit_parcels": 691,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 884676,
+        "substep_count": 40938684,
+        "collision_event_limit_count": 0,
+        "seed": 130363,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+          "particle_tracking": "b58d2d3eb2b6d2dbf42f5fc19f6f4778dbc41ae0c77857b326bc15197fd372d5"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "282968bf7b5f5919c61c4fb6238e5465989423e096ace5f596586b7834990421"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/c6021329f1872069ede05bbfd2cdd5c2c199700d72188a3f6a6e7a41e6d38190",
+      "file_sha256": {
+        "particle_hits.npz": "9feae89a58ea00725e94a7bf99cbbefc5329070ba40bcd07da6c40a1bdbe7ad1",
+        "summary.json": "2812b50be24561a70eb412fa01323041644f322871a35403f5571e753721d706",
+        "validation.png": "01c6334054782b0cb1f24c14990203f9059cb5add8de10da8cc2905ab9640209",
+        "particle_run_manifest.json": "53b8f781d99fdbe109d1e9e31759bf5f729fc615937e74d083971f510c25c285"
+      },
+      "stats": {
+        "n_hits": 185,
+        "impact_mass_kg_from_npz": 0.05452875,
+        "target_mass_kg_from_npz": 2.483860726989345e-07,
+        "hit_parcels": 65,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 190438,
+        "substep_count": 41768549,
+        "collision_event_limit_count": 0,
+        "seed": 300001,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "357c5369102b99beeb1ed8050919091cd790c3fe2b4323ece709ddad109e3c1e"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/c9e897c8ec1697d3dc950e100f4a1d6539cddf6c467b068ceaf7ddbbb4b1caac",
+      "file_sha256": {
+        "particle_hits.npz": "6eb6bc16ee4f9e86f3fccec747c2f1a951d070ad0f678b5ab83885eb56a0029e",
+        "summary.json": "ac76d5b29d13dfac236efb16307a72b51970b61bda87c7cd35e282693935c7f6",
+        "validation.png": "90f79e1fac002326efe820901376cc0861b399ecd7c242483c71dcfe4bd28032",
+        "particle_run_manifest.json": "48972bc209b64e8d6693d945450af36b25b78428985ad0e6578cda4d3a910aae"
+      },
+      "stats": {
+        "n_hits": 213,
+        "impact_mass_kg_from_npz": 0.06278175,
+        "target_mass_kg_from_npz": 5.094718484888368e-07,
+        "hit_parcels": 73,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 171555,
+        "substep_count": 41701269,
+        "collision_event_limit_count": 0,
+        "seed": 412311,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "3f7c80752c7134b76628ba6f08d3e98b891348cb8cc279110199c2cad0a70119"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/db6268d13129123d7b8b3cd76e490d9d728b0c7e89c5373fc8647c76946602b9",
+      "file_sha256": {
+        "particle_hits.npz": "be9b2fb24a45ef6c98c5918a3ecc5cd1b793846a7e9e2e0b4f53853115a758d8",
+        "summary.json": "980b01bf344b192c458668d56f07d11ab2dbc9fe21b48ba37e32e41fb511e2e9",
+        "validation.png": "6069fc40843c086cd7d74c1e4339e30ca27f4850223dc63d26a92ad905f483fb",
+        "particle_run_manifest.json": "19f0de4a3fe287671efdc12d19a2d49922c2c9cc3452c3611824948c84be2b86"
+      },
+      "stats": {
+        "n_hits": 206,
+        "impact_mass_kg_from_npz": 0.06071850000000001,
+        "target_mass_kg_from_npz": 1.9409082042673445e-07,
+        "hit_parcels": 72,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 176055,
+        "substep_count": 41705067,
+        "collision_event_limit_count": 0,
+        "seed": 435889,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "9db9e9044169d8a53c723995544401edd73fecc5288d069d6def299ad9d5ad93"
+    },
+    {
+      "version": "step30-particle-data-audit-v1",
+      "status": "passed",
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/e9e0c5b47362d96e236077352362ee0d1baf77b2a67a9984a18a0ef262a130f2",
+      "file_sha256": {
+        "particle_hits.npz": "99339672274499f5cbad35a2632ad8fc6e33e913afa9c8f724cf44a4078b3330",
+        "summary.json": "9166546b07e68db0df423b36ab448c2bf51b7776713987d65ee6e76a677a7bcd",
+        "validation.png": "2f67de3d4c5f37693000b4a7d3580bafca46475a84f574c8d2bc3c35eefac89d",
+        "particle_run_manifest.json": "0f78556635dc3a34dff38e926c19f8fb53596ddb9329818204daefa5764aa4f0"
+      },
+      "stats": {
+        "n_hits": 230,
+        "impact_mass_kg_from_npz": 0.06779250000000002,
+        "target_mass_kg_from_npz": 4.300547025523098e-07,
+        "hit_parcels": 78,
+        "n_parcels": 20000,
+        "fallback_hits": 0,
+        "near_miss_count": 213447,
+        "substep_count": 41596061,
+        "collision_event_limit_count": 0,
+        "seed": 360555,
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "collision_policy": "strict_v2",
+        "collision_backend": "cfd_topology",
+        "field_time": "0.8684190921",
+        "implementation_hashes": {
+          "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+          "cfd_topology": "9477febbc60a16484965cec80eec7350ea512a257dc206ca22bf3a3e55891cf1",
+          "particle_tracking": "8ccf474cca5035c91d68b41c84bfd7a8defd3920040e4759a0cba076583af8f3"
+        },
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "issues": [],
+      "audit_sha256": "039b58db69bb7f64f186c799149b3c201db349a6aa6c7d73b33c3d6c64033078"
+    }
+  ],
+  "cross_run": {
+    "hit_total": 18152,
+    "parcel_total": 900000,
+    "hit_parcel_total": 9451,
+    "hit_parcel_rate": 0.01050111111111111,
+    "substeps_per_parcel": 2082.0276366666667,
+    "near_miss_to_impact_ratio": 850.1983803437638
+  },
+  "configuration_groups": [
+    {
+      "group_key": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "field_time": "0.8684190921",
+        "implementation_hashes_sha256": "a33ce79cb19d986a3330fd319e1eb724ae68f881d3aac117b7a3bc8a9bd32622",
+        "n_parcels": 20000,
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "run_count": 5,
+      "seeds": [
+        57721,
+        104729,
+        130363,
+        161027,
+        196613
+      ],
+      "individual_statuses": {
+        "passed": 5
+      },
+      "error_issue_count": 0,
+      "eligible_for_same_configuration_replay": true,
+      "performance": {
+        "hit_total": 5701,
+        "parcel_total": 100000,
+        "hit_parcel_total": 3596,
+        "hit_parcel_rate": 0.03596,
+        "substeps_per_parcel": 2057.06528,
+        "near_miss_to_impact_ratio": 811.5183301175232
+      }
+    },
+    {
+      "group_key": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "field_time": "0.8684190921",
+        "implementation_hashes_sha256": "a937170f7f75749e555aa25e5e1e2722e30e496293d22b04b845515ea554be70",
+        "n_parcels": 20000,
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "run_count": 20,
+      "seeds": [
+        223606,
+        244949,
+        264575,
+        282842,
+        300001,
+        316227,
+        331662,
+        346410,
+        360555,
+        374166,
+        387298,
+        400001,
+        412311,
+        424264,
+        435889,
+        500001,
+        500003,
+        500009,
+        500021,
+        500023
+      ],
+      "individual_statuses": {
+        "passed": 20
+      },
+      "error_issue_count": 0,
+      "eligible_for_same_configuration_replay": true,
+      "performance": {
+        "hit_total": 4031,
+        "parcel_total": 400000,
+        "hit_parcel_total": 1415,
+        "hit_parcel_rate": 0.0035375,
+        "substeps_per_parcel": 2088.530095,
+        "near_miss_to_impact_ratio": 894.4835028528901
+      }
+    },
+    {
+      "group_key": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "field_time": "0.8684190921",
+        "implementation_hashes_sha256": "a937170f7f75749e555aa25e5e1e2722e30e496293d22b04b845515ea554be70",
+        "n_parcels": 60000,
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "run_count": 5,
+      "seeds": [
+        510001,
+        510003,
+        510009,
+        510021,
+        510023
+      ],
+      "individual_statuses": {
+        "passed": 5
+      },
+      "error_issue_count": 0,
+      "eligible_for_same_configuration_replay": true,
+      "performance": {
+        "hit_total": 3065,
+        "parcel_total": 300000,
+        "hit_parcel_total": 1077,
+        "hit_parcel_rate": 0.00359,
+        "substeps_per_parcel": 2088.76422,
+        "near_miss_to_impact_ratio": 857.2355628058727
+      }
+    },
+    {
+      "group_key": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "field_time": "0.8684190921",
+        "implementation_hashes_sha256": "cc716c6bb4760de6121be31dbadfef7e47a61fee3786fdb0bf2ca2606d16a169",
+        "n_parcels": 20000,
+        "physical_config_sha256": "3155f9b0c099b32d3d4e3dcab9e6110d4a48a6861075a74786ae51b7e83c145c"
+      },
+      "run_count": 5,
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "individual_statuses": {
+        "passed": 5
+      },
+      "error_issue_count": 0,
+      "eligible_for_same_configuration_replay": true,
+      "performance": {
+        "hit_total": 5355,
+        "parcel_total": 100000,
+        "hit_parcel_total": 3363,
+        "hit_parcel_rate": 0.03363,
+        "substeps_per_parcel": 2060.77041,
+        "near_miss_to_impact_ratio": 854.0140056022409
+      }
+    }
+  ],
+  "interpretation": {
+    "root_mixed_configuration_status": "mixed_historical_and_implementation_groups",
+    "individual_run_integrity": "passed",
+    "group_comparisons_must_use_group_key": true,
+    "performance_warnings_are_diagnostics": true
+  },
+  "issues": [
+    {
+      "code": "physical_config_mismatch",
+      "severity": "error",
+      "message": "runs do not share one physical tracking configuration"
+    },
+    {
+      "code": "implementation_version_mismatch",
+      "severity": "error",
+      "message": "runs mix tracker or collision implementation hashes"
+    },
+    {
+      "code": "sparse_hit_support",
+      "severity": "warning",
+      "message": "physical hit support is below 10 percent of parcels",
+      "context": {
+        "hit_rate": 0.01050111111111111
+      }
+    },
+    {
+      "code": "near_miss_overhead",
+      "severity": "warning",
+      "message": "endpoint near-miss diagnostics greatly exceed true impacts",
+      "context": {
+        "near_miss_ratio": 850.1983803437638
+      }
+    },
+    {
+      "code": "high_substep_cost",
+      "severity": "warning",
+      "message": "substep cost is high enough to threaten high-particle confirmation runtime",
+      "context": {
+        "substeps_per_parcel": 2082.0276366666667
+      }
+    }
+  ],
+  "audit_sha256": "4109ee83fc8241faae3a7bd5796b8cee7911901f8a1d9c424093191bb41a429e"
+}

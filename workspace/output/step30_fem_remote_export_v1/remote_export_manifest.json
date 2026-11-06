@@ -1,0 +1,79 @@
+{
+  "version": "step30-fem-remote-export-v1",
+  "remote_host": "100.92.47.51",
+  "remote_root": "remote_artifacts/user/aegis_comsol_bucket_v1",
+  "artifacts": [
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/input/full_runner_authoritative.x_t",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\input\\full_runner_authoritative.x_t",
+      "bytes": 45249094,
+      "sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/output/single_bucket_authoritative.step",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\output\\single_bucket_authoritative.step",
+      "bytes": 631157,
+      "sha256": "d57fd761c8c9243251fe1fc65e73c07a229f72f3701387782cb5730df9cb031c"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/output/single_bucket_authoritative.stl",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\output\\single_bucket_authoritative.stl",
+      "bytes": 479684,
+      "sha256": "23dec9f94c297d056f1dbbd444d9456d7b815a955f493baffa1856120d35aff5"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/output/single_bucket_authoritative.x_t",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\output\\single_bucket_authoritative.x_t",
+      "bytes": 787232,
+      "sha256": "0d9ffbdc282eb6c67018ac1c820d0f8ce4c1d19378d0a2e95bc49164428c2a33"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/output/single_bucket_target_authoritative.step",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\output\\single_bucket_target_authoritative.step",
+      "bytes": 631244,
+      "sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/output/single_bucket_target_authoritative.stl",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\output\\single_bucket_target_authoritative.stl",
+      "bytes": 479684,
+      "sha256": "dd1b87aa34064641679e58cff1859efb927782cb713a42a419eb13aeb65e8834"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/output/single_bucket_target_authoritative.x_t",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\output\\single_bucket_target_authoritative.x_t",
+      "bytes": 771136,
+      "sha256": "7e7a8ad6168112ba91c4e4f75c51fc71ef29ce3a0cc2fd8b8877fc37857b9b2c"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/work/ComsolBucketExport.java",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\work\\ComsolBucketExport.java",
+      "bytes": 3503,
+      "sha256": "b6dcb108a380fe7c8e9d9f89e9d55e8caea2357e6267caa9ed9c1a741778dcaa"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/work/ComsolCadProbe.java",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\work\\ComsolCadProbe.java",
+      "bytes": 2104,
+      "sha256": "e7d2ec4310e723fa051ad53928564c3111fa45a90ac8508083e46a0b31295ef8"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/work/probe2.log",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\work\\probe2.log",
+      "bytes": 1038,
+      "sha256": "7c8c23681b39ed92f5c893338b238f587c817d4d901f618c0fbbe51c78e88c82"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/work/bucket_export2.log",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\work\\bucket_export2.log",
+      "bytes": 5982,
+      "sha256": "4d11ba166d4e5711498e7f9066eab749021c909d8f4c579a22817ab04bb5a15f"
+    },
+    {
+      "remote_path": "remote_artifacts/user/aegis_comsol_bucket_v1/work/target_export.log",
+      "local_path": "\\b\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\step30_fem_remote_export_v1\\work\\target_export.log",
+      "bytes": 5974,
+      "sha256": "7b912a9df53b0bca56798c76e7d97c80ccf4a04471a706ea8428d4c08f2e30db"
+    }
+  ]
+}

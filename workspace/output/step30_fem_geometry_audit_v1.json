@@ -1,0 +1,184 @@
+{
+  "version": "step30-fem-geometry-audit-v1",
+  "status": "blocked",
+  "fem_gate": "blocked",
+  "real_fem_evidence": false,
+  "source_artifacts": [
+    {
+      "role": "authoritative_step",
+      "status": "present",
+      "path": "workspace\\output\\step30_fem_remote_export_v1\\output\\single_bucket_target_authoritative.step",
+      "sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d",
+      "bytes": 631244
+    },
+    {
+      "role": "comsol_export_java",
+      "status": "present",
+      "path": "workspace\\output\\step30_fem_remote_export_v1\\work\\ComsolBucketExport.java",
+      "sha256": "b6dcb108a380fe7c8e9d9f89e9d55e8caea2357e6267caa9ed9c1a741778dcaa",
+      "bytes": 3503
+    },
+    {
+      "role": "comsol_export_log",
+      "status": "present",
+      "path": "workspace\\output\\step30_fem_remote_export_v1\\work\\target_export.log",
+      "sha256": "7b912a9df53b0bca56798c76e7d97c80ccf4a04471a706ea8428d4c08f2e30db",
+      "bytes": 5974
+    },
+    {
+      "role": "surface_catalog",
+      "status": "present",
+      "path": "workspace\\output\\step30_fem_remote_export_v1\\step_surface_catalog.json",
+      "sha256": "221d4e30093c9b96d83c09079cbeaf1c1a219008b5ab5bf0fdf391993cbb9553",
+      "bytes": 12042,
+      "parse_status": "readable",
+      "catalog_version": "step30-fem-surface-catalog-v1",
+      "catalog_source_sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d",
+      "catalog_surface_count": 30,
+      "catalog_note": "Surface tags are catalog identifiers only; production ROOT/WETTED/AI5 selections still require independent confirmation."
+    }
+  ],
+  "geometry": {
+    "step_sha256_matches_expected": true,
+    "step_sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d",
+    "embedded_length_unit": {
+      "status": "declared",
+      "value": "m",
+      "raw_si_unit_names": [
+        "METRE"
+      ],
+      "reason": "embedded STEP length-unit declaration was parsed"
+    },
+    "step_coordinate_points": {
+      "cartesian_point_count": 6274,
+      "vertex_count": 44,
+      "control_point_bbox_native": [
+        0.0,
+        -0.0188375048171542,
+        -0.415604161825143,
+        1.64593487492225,
+        0.368407238129266,
+        0.5
+      ],
+      "vertex_point_bbox_native": [
+        1.27808357037206,
+        -0.0171935184778359,
+        -0.404525819356133,
+        1.63268558197253,
+        0.357343497189078,
+        0.404525819356133
+      ]
+    },
+    "gmsh_metrics": {
+      "status": "passed",
+      "volume_count": 1,
+      "surface_count": 30,
+      "edge_count": 78,
+      "vertex_count": 44,
+      "volume_tag": 1,
+      "bbox_native": [
+        1273.8677290568405,
+        -19.058021916903645,
+        -415.636626924254,
+        1646.1553920219994,
+        368.62775522901546,
+        415.8246789248924
+      ],
+      "volume_mass_native": 13636502.96902611,
+      "boundary_area_sum_native": 936507.4863775173,
+      "surface_tags": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    "scale_consistency": {
+      "status": "blocked",
+      "gmsh_bbox_to_step_control_span_ratios": [
+        226.18614420132806,
+        1001.1389030000595,
+        908.1012740175097
+      ],
+      "median_scale_ratio": 908.1012740175097,
+      "max_to_min_scale_ratio": 4.426172551528827,
+      "uniform_scale_within_5_percent": false,
+      "reason": "Gmsh native extents do not admit one uniform scale within 5%; downstream unit semantics remain unresolved"
+    },
+    "comsol_export_script_claim": {
+      "status": "declared",
+      "parasolid_length_unit": "m",
+      "step_length_unit": "m",
+      "basis": "ComsolBucketExport.java calls setLengthUnit('m') and setLengthUnitSTEP('m')"
+    }
+  },
+  "physical_selection_audit": {
+    "ROOT_INTERFACE": {
+      "status": "blocked",
+      "entity_dimension": 2,
+      "entity_tags": [],
+      "confirmation_method": null,
+      "reason": "Geometry topology and raw Gmsh surface tags do not establish runner-interface semantics"
+    },
+    "WETTED_SURFACE": {
+      "status": "blocked",
+      "entity_dimension": 2,
+      "entity_tags": [],
+      "confirmation_method": null,
+      "reason": "Geometry topology and raw Gmsh surface tags do not establish wetted-face semantics or root exclusion"
+    },
+    "AI5_04": {
+      "status": "blocked",
+      "entity_dimension": 2,
+      "entity_tags": [],
+      "patch_center": null,
+      "gauge_directions": [],
+      "reason": "STEP export contains no machine-readable AI5 patch or gauge direction"
+    }
+  },
+  "selection_inference_policy": {
+    "raw_surface_tags_are_physical_names": false,
+    "bbox_heuristics_are_admissible": false,
+    "visual_guess_is_admissible": false,
+    "required_next_evidence": "independent CAD named-selection/face-list report bound to this STEP SHA-256"
+  },
+  "blockers": [
+    "ROOT_INTERFACE has no independently confirmed CAD named selection",
+    "WETTED_SURFACE has no independently confirmed CAD named selection",
+    "AI5_04 numeric patch and gauge direction are not contained in the STEP export",
+    "Gmsh native geometry scale is not uniformly consistent with the parsed STEP coordinates"
+  ],
+  "limitations": [
+    "The embedded STEP unit is recorded as declared evidence, not as a formal unit pass.",
+    "Gmsh mass values are reported in native reader units and are not relabelled as m3 or m2.",
+    "This audit does not generate a mesh, CalculiX case, or FEM result.",
+    "No AI5 data are used to calibrate geometry, material, boundary conditions, or gauge directions."
+  ],
+  "audit_sha256": "f8980048c17fe08058ae9570228e9a336bcc514daee2313fd1abbc8703c49392"
+}

@@ -1,0 +1,310 @@
+{
+  "version": "step30-official-stress-evidence-v1",
+  "status": "provisional_transcription",
+  "formal_evidence_status": "blocked_pending_double_transcription_review",
+  "official_pdf": {
+    "path": "DecPelton2024\\DecPelton2024\\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包\\3-现场动应力试验实测数据\\3.2-转轮动应力试验报告.pdf",
+    "sha256": "ea63c63c39f01ca3e484b1b145a54fbf6a2707cc1b94c688a214d6d7c973c22c",
+    "pages_used": [
+      4,
+      5
+    ],
+    "tables_used": [
+      "3-1",
+      "3-3"
+    ]
+  },
+  "measurement_definition": {
+    "static_stress": "mean_mpa",
+    "dynamic_stress": "peak_to_peak_mpa",
+    "source_page": 5,
+    "source_table": "3-3"
+  },
+  "transcription_reviews": [
+    {
+      "reviewer_id": "analyst_a",
+      "status": "completed_match",
+      "reviewed_at": null,
+      "scope": "table_3_1_and_3_3",
+      "notes": null
+    }
+  ],
+  "double_review_completed": false,
+  "table_3_3_rows": [
+    {
+      "condition": "rated_noload",
+      "power_mw": 0,
+      "nozzle_count": 1,
+      "mean_needle_opening_pct": null,
+      "static_mean_mpa": 22.31,
+      "dynamic_peak_to_peak_mpa": 2.21,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "rated_noload",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": null
+      }
+    },
+    {
+      "condition": "30MW",
+      "power_mw": 30,
+      "nozzle_count": 2,
+      "mean_needle_opening_pct": 39.7,
+      "static_mean_mpa": 24.19,
+      "dynamic_peak_to_peak_mpa": 16.81,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "30MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "30MW"
+        }
+      }
+    },
+    {
+      "condition": "40MW",
+      "power_mw": 40,
+      "nozzle_count": 2,
+      "mean_needle_opening_pct": 57.505,
+      "static_mean_mpa": 24.69,
+      "dynamic_peak_to_peak_mpa": 25.62,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "40MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "40MW"
+        }
+      }
+    },
+    {
+      "condition": "50MW",
+      "power_mw": 50,
+      "nozzle_count": 4,
+      "mean_needle_opening_pct": 30.5325,
+      "static_mean_mpa": 25.24,
+      "dynamic_peak_to_peak_mpa": 14.06,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "50MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "50MW"
+        }
+      }
+    },
+    {
+      "condition": "60MW",
+      "power_mw": 60,
+      "nozzle_count": 4,
+      "mean_needle_opening_pct": 37.8625,
+      "static_mean_mpa": 25.79,
+      "dynamic_peak_to_peak_mpa": 16.89,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "60MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "60MW"
+        }
+      }
+    },
+    {
+      "condition": "70MW",
+      "power_mw": 70,
+      "nozzle_count": 4,
+      "mean_needle_opening_pct": 45.975,
+      "static_mean_mpa": 26.33,
+      "dynamic_peak_to_peak_mpa": 20.6,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "70MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "70MW"
+        }
+      }
+    },
+    {
+      "condition": "80MW",
+      "power_mw": 80,
+      "nozzle_count": 4,
+      "mean_needle_opening_pct": 54.8325,
+      "static_mean_mpa": 26.88,
+      "dynamic_peak_to_peak_mpa": 24.16,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "80MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "80MW"
+        }
+      }
+    },
+    {
+      "condition": "90MW",
+      "power_mw": 90,
+      "nozzle_count": 4,
+      "mean_needle_opening_pct": 65.9675,
+      "static_mean_mpa": 27.48,
+      "dynamic_peak_to_peak_mpa": 28.78,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "90MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "90MW"
+        }
+      }
+    },
+    {
+      "condition": "100MW",
+      "power_mw": 100,
+      "nozzle_count": 6,
+      "mean_needle_opening_pct": 42.1767,
+      "static_mean_mpa": 28.04,
+      "dynamic_peak_to_peak_mpa": 17.62,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "100MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "100MW"
+        }
+      }
+    },
+    {
+      "condition": "110MW",
+      "power_mw": 110,
+      "nozzle_count": 6,
+      "mean_needle_opening_pct": 48.25,
+      "static_mean_mpa": 28.56,
+      "dynamic_peak_to_peak_mpa": 20.12,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "110MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "110MW"
+        }
+      }
+    },
+    {
+      "condition": "120MW",
+      "power_mw": 120,
+      "nozzle_count": 6,
+      "mean_needle_opening_pct": 54.495,
+      "static_mean_mpa": 29.1,
+      "dynamic_peak_to_peak_mpa": 23.63,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "120MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "120MW"
+        }
+      }
+    },
+    {
+      "condition": "130MW",
+      "power_mw": 130,
+      "nozzle_count": 6,
+      "mean_needle_opening_pct": 62.0675,
+      "static_mean_mpa": 29.57,
+      "dynamic_peak_to_peak_mpa": 25.31,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "130MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "130MW"
+        }
+      }
+    },
+    {
+      "condition": "140MW",
+      "power_mw": 140,
+      "nozzle_count": 6,
+      "mean_needle_opening_pct": 70.38,
+      "static_mean_mpa": 29.92,
+      "dynamic_peak_to_peak_mpa": 29.89,
+      "source_binding": {
+        "static_and_dynamic": {
+          "page": 5,
+          "table": "3-3",
+          "row": "140MW",
+          "definition": "static stress is mean; dynamic stress amplitude is peak-to-peak"
+        },
+        "needle_opening": {
+          "page": 4,
+          "table": "3-1",
+          "row": "140MW"
+        }
+      }
+    }
+  ],
+  "table_3_3_sha256": "fad13e305f88eb922193012f4b56dba1f0cdd919b4110e10a0dfdff21fbd64f4",
+  "ai5_raw_timeseries_role": "recomputable diagnostic only; raw peak-to-peak values do not replace official table statistics",
+  "strict_scoring_eligible": false,
+  "official_accuracy_gate": false,
+  "fem_gate": "blocked",
+  "evidence_sha256": "915851c0d589e8f6aa6304eac67321aefa32c88ab9a38f44be09445b935aaf39"
+}

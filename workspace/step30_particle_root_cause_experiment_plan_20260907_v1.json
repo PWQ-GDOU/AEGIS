@@ -1,0 +1,131 @@
+{
+  "version": "step30-particle-root-cause-experiment-plan-v1",
+  "created_date": "2026-09-07",
+  "status": "planned_remote_execution_pending_authentication",
+  "execution_policy": {
+    "local_numerical_execution": false,
+    "approved_cpu_target": "dcu_cpu",
+    "approved_gpu_target": "user_gpu",
+    "gpu_tracker_replacement": false,
+    "work_drive": "H:"
+  },
+  "current_evidence_boundary": {
+    "historical_20260902_confirmation": "failed",
+    "current_v5_rebuild": "not_executed",
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "particle_convergence_gate": "failed"
+  },
+  "root_cause_hypotheses": [
+    {
+      "id": "H1_sparse_hit_support",
+      "priority": 1,
+      "claim": "Only a small fraction of injected parcels produce strict physical impacts, so parent-face spatial mass estimates have high Monte Carlo variance.",
+      "test": "same physical inputs, increase hit-support diagnostics and compare hit-parcel rate, impact count, active-face count, ESS, target-mass CV and active-face JS",
+      "falsifier": "stable active-face JS at low hit support or a strong improvement after changing only estimator resolution"
+    },
+    {
+      "id": "H2_cfd_reference_mapping",
+      "priority": 1,
+      "claim": "CFD wall samples and the analytic Mansouri reference are not in a consistent coordinate, unit, topology or normal-angle convention.",
+      "test": "independent transform, unit, nearest-face and normal-angle audit before any new physical scoring",
+      "falsifier": "same-face mapping, acceptable distances and nonnegative spatial agreement under a frozen convention"
+    },
+    {
+      "id": "H3_tracker_numerical_resolution",
+      "priority": 2,
+      "claim": "Adaptive substeps, interpolation and integrator settings alter trajectories or create excessive near-miss work.",
+      "test": "fixed seed and injection replay across dt, strict_max_substep, interpolation and integrator levels",
+      "falsifier": "byte-identical hit arrays and stable termination/impact summaries across all tested resolutions"
+    },
+    {
+      "id": "H4_collision_face_mapping",
+      "priority": 2,
+      "claim": "Triangle collision IDs and parent-face IDs are deterministic but may map impacts to an unintended face or suppress valid re-impacts.",
+      "test": "replay accepted trajectories through intersection, parent-face and collision-triangle mapping with face-ID and normal diagnostics",
+      "falsifier": "one-to-one intended mapping and no material change when mapping implementation is independently replayed"
+    },
+    {
+      "id": "H5_estimator_resolution",
+      "priority": 3,
+      "claim": "The v4 kernel and v5 18-aggregate map hide or redistribute parent-face variance rather than solve it.",
+      "test": "report raw parent-face, active-face, kernel and aggregate metrics at fixed input and multiple declared resolutions",
+      "falsifier": "parent-face or declared physical-resolution JS <= 0.05 without relying on coarse aggregation"
+    }
+  ],
+  "experiment_layers": [
+    {
+      "layer": "data_integrity",
+      "objective": "Prove that immutable artifacts, summaries and NPZ arrays describe the same run.",
+      "entrypoint": "step30_particle_data_audit_v1.py",
+      "checks": ["required file hashes", "manifest bindings", "summary/NPZ lengths", "impact mass", "target mass", "strict fallback exclusion", "duplicate seeds", "implementation hash consistency"]
+    },
+    {
+      "layer": "deterministic_replay",
+      "objective": "Separate nondeterminism from sampling variance.",
+      "design": "same seed, same topology, same native SI field, same transform, same code hashes, two fresh remote workspaces",
+      "metrics": ["particle_hits SHA-256", "summary canonical hash", "parent-face field hash", "impact count", "termination counts", "runtime"]
+    },
+    {
+      "layer": "sampling",
+      "objective": "Measure whether injection and PSD sampling create the instability.",
+      "design": "fixed tracking settings; compare number_random_v1 and mass_stratified_v1, then fixed radial strata versus random radial injection using registered random streams",
+      "metrics": ["hit-parcel rate", "impact count", "target-mass CV", "active-face ESS", "active-face JS"]
+    },
+    {
+      "layer": "tracking",
+      "objective": "Measure trajectory sensitivity and runtime overhead.",
+      "design": "fixed parcel samples; one factor at a time over dt, strict_max_substep, cfd interpolation and particle integrator",
+      "metrics": ["trajectory displacement at fixed checkpoints", "impact face agreement", "Vp/alpha agreement", "substeps per parcel", "near-miss to impact ratio", "wall-clock time"]
+    },
+    {
+      "layer": "collision_mapping",
+      "objective": "Verify that accepted impacts land on the intended parent faces.",
+      "design": "replay recorded segments; compare collision triangle, parent face, normal orientation, hit time and suppression state",
+      "metrics": ["triangle-to-parent consistency", "normal sign consistency", "duplicate impact rate", "suppressed-face escape distance"]
+    },
+    {
+      "layer": "estimator",
+      "objective": "Find the finest declared resolution that is numerically stable without false confidence from coarse bins.",
+      "design": "fixed hit arrays; raw parent-face, v4 kernel and v5 aggregate at 4096/8192/16384/32768 face budgets",
+      "metrics": ["area-weighted Spearman", "hotspot IoU", "JS divergence", "local support mass", "ESS", "confidence mask"]
+    },
+    {
+      "layer": "physical_mapping",
+      "objective": "Resolve the negative CFD-versus-Mansouri spatial agreement before physical accuracy claims.",
+      "design": "independently verify m/mm conversion, local/global row-vector convention, wall sample registration, UMean time semantics, collision-pre velocity and normal-angle formula",
+      "metrics": ["registration distance distribution", "matched face count", "normal-angle distribution", "CFD/reference Spearman and top-10 IoU"]
+    }
+  ],
+  "stop_rules": {
+    "do_not_launch_high_n_confirmation_until": [
+      "data audit has no error-level findings",
+      "same-seed replay is deterministic or nondeterminism is explicitly localized",
+      "physical configuration and implementation hashes are homogeneous",
+      "CFD-to-reference registration discrepancy is explained",
+      "runtime estimate is below the remote timeout budget"
+    ],
+    "convergence_gate": {
+      "required_independent_runs": 5,
+      "active_face_js_max": 0.05,
+      "declared_resolution_js_max": 0.05,
+      "minimum_hit_support": "pre-registered and reported; parcel count alone is insufficient",
+      "official_accuracy_gate": false,
+      "official_reference_gate": false,
+      "fem_gate": "blocked"
+    }
+  },
+  "known_performance_risk": {
+    "historical_20k_seed_elapsed_s_range": [16426.752844810486, 16735.19199872017],
+    "current_v2_default_seed_timeout_s": 7200,
+    "impact": "a 20k seed can be terminated before completion under the default guard",
+    "repair": "preflight runtime from smoke benchmark and set a registered remote timeout per experiment; never disable timeout or disk guard"
+  },
+  "artifacts": {
+    "audit_module": "workspace/step30_particle_data_audit_v1.py",
+    "audit_remote_entrypoint": "workspace/remote/run_particle_root_cause_audit_v1.sh",
+    "audit_output_pattern": "workspace/output/step30_particle_data_audit_<job_id>.json",
+    "plan_hash": "pending_after_immutable_write"
+  }
+}

@@ -16,7 +16,7 @@
     }
   },
   "validations": {
-    "D1276P21_妯″瀷": {
+    "D1276P21_模型": {
       "dec_stats": {
         "n_points": 21000,
         "bbox_x": [
@@ -103,7 +103,7 @@
         "D1_median_error_pct": 2.1455067900807623
       }
     },
-    "D1247R2_鐪熸満": {
+    "D1247R2_真机": {
       "dec_stats": {
         "n_points": 21000,
         "bbox_x": [

@@ -1,0 +1,337 @@
+{
+  "version": "step30-literature-reference-distribution-v1",
+  "status": "provisional",
+  "reference_kind": "literature_reference",
+  "official_reference_gate": false,
+  "official_accuracy_gate": false,
+  "ai5_used_for_calibration": false,
+  "distribution_semantics": {
+    "type": "qualitative_region_prior",
+    "probability_claim": false,
+    "literature_support_fraction_is": "normalized source-support score for prioritization only",
+    "facewise_DEC_truth": false
+  },
+  "literature_sources": [
+    {
+      "source_id": "rai_2017_wear",
+      "citation": "Rai, Kumar and Staubli, Hydro-abrasive erosion in Pelton buckets: Classification and field study",
+      "journal": "Wear",
+      "year": 2017,
+      "doi": "10.1016/j.wear.2017.08.016",
+      "source_role": "field geometry-change anchor",
+      "regional_evidence": {
+        "splitter_like": "high",
+        "cutout_like": "high"
+      },
+      "reported_anchors": [
+        {
+          "region_id": "splitter_like",
+          "metric": "average_splitter_height_reduction_fraction_of_bucket_width",
+          "value": 0.03,
+          "units": "fraction_of_bucket_width",
+          "scope": "reported field-study average for uncoated buckets"
+        },
+        {
+          "region_id": "cutout_like",
+          "metric": "cutout_abrasion_fraction_of_bucket_width",
+          "value": 0.05,
+          "units": "fraction_of_bucket_width",
+          "scope": "reported field-study average for uncoated buckets"
+        }
+      ]
+    },
+    {
+      "source_id": "rai_2019_analytical",
+      "citation": "Rai, Kumar and Staubli, Analytical modelling and mechanism of hydro-abrasive erosion in Pelton buckets",
+      "journal": "Wear",
+      "year": 2019,
+      "doi": "10.1016/j.wear.2019.06.012",
+      "source_role": "mechanism and analytical-model context",
+      "regional_evidence": {
+        "splitter_like": "medium",
+        "cutout_like": "medium",
+        "impact_zone_like": "medium"
+      },
+      "reported_anchors": []
+    },
+    {
+      "source_id": "leguizamon_2019_multiscale",
+      "citation": "Leguizamon et al., Multiscale Simulation of the Hydroabrasive Erosion of a Pelton Bucket",
+      "journal": "International Journal of Turbomachinery, Propulsion and Power",
+      "year": 2019,
+      "doi": "10.3390/ijtpp4020009",
+      "source_role": "full-scale multiscale impact and erosion distribution",
+      "regional_evidence": {
+        "splitter_like": "high",
+        "impact_zone_like": "medium"
+      },
+      "reported_anchors": [
+        {
+          "region_id": "splitter_like",
+          "metric": "hotspot_order",
+          "value": 2,
+          "units": "ordinal_hotspot_rank",
+          "scope": "splitter reported as the second sediment-impact hotspot"
+        }
+      ]
+    },
+    {
+      "source_id": "ge_2021_bucket",
+      "citation": "Ge et al., Experimental and numerical studies on opening and velocity influence on sediment erosion of Pelton turbine buckets",
+      "journal": "Renewable Energy",
+      "year": 2021,
+      "doi": "10.1016/j.renene.2021.04.072",
+      "source_role": "bucket erosion experiment and numerical sensitivity",
+      "regional_evidence": {
+        "impact_zone_like": "medium",
+        "splitter_like": "medium",
+        "cutout_like": "medium"
+      },
+      "reported_anchors": []
+    },
+    {
+      "source_id": "fahrni_2025_defects",
+      "citation": "Fahrni, Staubli and Casartelli, Efficiency Testing of Pelton Turbines with Artificial Defects",
+      "journal": "Energies",
+      "year": 2025,
+      "doi": "10.3390/en18112716",
+      "source_role": "load-dependent defect-location sensitivity",
+      "regional_evidence": {
+        "splitter_like": "high",
+        "cutout_like": "high",
+        "bucket_base_or_side_like": "high"
+      },
+      "reported_anchors": [
+        {
+          "region_id": "splitter_like",
+          "metric": "partial_load_defect_sensitivity",
+          "value": 1,
+          "units": "qualitative",
+          "scope": "splitter defects dominate the reported partial-load losses"
+        },
+        {
+          "region_id": "cutout_like",
+          "metric": "full_load_defect_sensitivity",
+          "value": 1,
+          "units": "qualitative",
+          "scope": "cutout defects dominate the reported full-load losses"
+        }
+      ]
+    },
+    {
+      "source_id": "pelton_erosion_review_2023",
+      "citation": "Sediment Erosion on Pelton Turbines: A Review",
+      "journal": "Chinese Journal of Mechanical Engineering",
+      "year": 2023,
+      "doi": "10.1186/s10033-023-00880-y",
+      "source_role": "review-level component and mechanism context",
+      "regional_evidence": {
+        "splitter_like": "medium",
+        "cutout_like": "medium",
+        "brim_like": "medium",
+        "impact_zone_like": "medium"
+      },
+      "reported_anchors": []
+    }
+  ],
+  "regions": [
+    {
+      "region_id": "splitter_like",
+      "literature_support_score": 15,
+      "supporting_sources": [
+        {
+          "source_id": "rai_2017_wear",
+          "evidence_level": "high",
+          "evidence_score": 3
+        },
+        {
+          "source_id": "rai_2019_analytical",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        },
+        {
+          "source_id": "leguizamon_2019_multiscale",
+          "evidence_level": "high",
+          "evidence_score": 3
+        },
+        {
+          "source_id": "ge_2021_bucket",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        },
+        {
+          "source_id": "fahrni_2025_defects",
+          "evidence_level": "high",
+          "evidence_score": 3
+        },
+        {
+          "source_id": "pelton_erosion_review_2023",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        }
+      ],
+      "reported_geometry_anchors": [
+        {
+          "region_id": "splitter_like",
+          "metric": "average_splitter_height_reduction_fraction_of_bucket_width",
+          "value": 0.03,
+          "units": "fraction_of_bucket_width",
+          "scope": "reported field-study average for uncoated buckets"
+        },
+        {
+          "region_id": "splitter_like",
+          "metric": "hotspot_order",
+          "value": 2,
+          "units": "ordinal_hotspot_rank",
+          "scope": "splitter reported as the second sediment-impact hotspot"
+        },
+        {
+          "region_id": "splitter_like",
+          "metric": "partial_load_defect_sensitivity",
+          "value": 1,
+          "units": "qualitative",
+          "scope": "splitter defects dominate the reported partial-load losses"
+        }
+      ],
+      "literature_support_fraction": 0.375,
+      "interpretation": "ordinal literature support share; not a physical damage probability"
+    },
+    {
+      "region_id": "cutout_like",
+      "literature_support_score": 12,
+      "supporting_sources": [
+        {
+          "source_id": "rai_2017_wear",
+          "evidence_level": "high",
+          "evidence_score": 3
+        },
+        {
+          "source_id": "rai_2019_analytical",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        },
+        {
+          "source_id": "ge_2021_bucket",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        },
+        {
+          "source_id": "fahrni_2025_defects",
+          "evidence_level": "high",
+          "evidence_score": 3
+        },
+        {
+          "source_id": "pelton_erosion_review_2023",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        }
+      ],
+      "reported_geometry_anchors": [
+        {
+          "region_id": "cutout_like",
+          "metric": "cutout_abrasion_fraction_of_bucket_width",
+          "value": 0.05,
+          "units": "fraction_of_bucket_width",
+          "scope": "reported field-study average for uncoated buckets"
+        },
+        {
+          "region_id": "cutout_like",
+          "metric": "full_load_defect_sensitivity",
+          "value": 1,
+          "units": "qualitative",
+          "scope": "cutout defects dominate the reported full-load losses"
+        }
+      ],
+      "literature_support_fraction": 0.3,
+      "interpretation": "ordinal literature support share; not a physical damage probability"
+    },
+    {
+      "region_id": "brim_like",
+      "literature_support_score": 2,
+      "supporting_sources": [
+        {
+          "source_id": "pelton_erosion_review_2023",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        }
+      ],
+      "reported_geometry_anchors": [],
+      "literature_support_fraction": 0.05,
+      "interpretation": "ordinal literature support share; not a physical damage probability"
+    },
+    {
+      "region_id": "bucket_base_or_side_like",
+      "literature_support_score": 3,
+      "supporting_sources": [
+        {
+          "source_id": "fahrni_2025_defects",
+          "evidence_level": "high",
+          "evidence_score": 3
+        }
+      ],
+      "reported_geometry_anchors": [],
+      "literature_support_fraction": 0.075,
+      "interpretation": "ordinal literature support share; not a physical damage probability"
+    },
+    {
+      "region_id": "impact_zone_like",
+      "literature_support_score": 8,
+      "supporting_sources": [
+        {
+          "source_id": "rai_2019_analytical",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        },
+        {
+          "source_id": "leguizamon_2019_multiscale",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        },
+        {
+          "source_id": "ge_2021_bucket",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        },
+        {
+          "source_id": "pelton_erosion_review_2023",
+          "evidence_level": "medium",
+          "evidence_score": 2
+        }
+      ],
+      "reported_geometry_anchors": [],
+      "literature_support_fraction": 0.2,
+      "interpretation": "ordinal literature support share; not a physical damage probability"
+    },
+    {
+      "region_id": "residual_other",
+      "literature_support_score": 0,
+      "supporting_sources": [],
+      "reported_geometry_anchors": [],
+      "literature_support_fraction": 0.0,
+      "interpretation": "ordinal literature support share; not a physical damage probability"
+    }
+  ],
+  "model_comparison": {
+    "status": "blocked",
+    "reason": "No externally confirmed face-region mapping is available; raw surface tags, bounding boxes, and visual guesses are inadmissible.",
+    "official_accuracy_gate": false,
+    "models": {}
+  },
+  "input_bindings": {
+    "prior_report_path": "workspace\\output\\step30_literature_prior_degradation_v2.json",
+    "prior_map_artifact_path": "workspace\\output\\step30_literature_prior_degradation_v2.npz",
+    "prior_map_artifact_sha256": "685e1579993bb4332a7b8f247bb6c7d4e88b05f9a632557f30487c153b8f7e86",
+    "face_region_mapping_path": null,
+    "face_region_mapping_sha256": null
+  },
+  "blockers": [
+    "No externally confirmed face-region mapping was supplied for model comparison."
+  ],
+  "limitations": [
+    "The regional package is a literature_reference, not measured DEC truth.",
+    "Reported 3% and 5% values are source-specific geometry-change anchors and are not transferred to DEC dimensions.",
+    "No AI5 trace, CAD surface tag, bounding-box heuristic, or visual guess is used to label regions.",
+    "Independent baseline/worn scans remain required for spatial accuracy and remain blocked when absent."
+  ],
+  "report_sha256": "912e56587e857a08c33c00b70a953a2f50247e09eed4be9bc46daca9b2c7d32f"
+}

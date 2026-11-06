@@ -1,0 +1,359 @@
+{
+  "version": "step30-particle-convergence-v5",
+  "analysis_role": "discovery",
+  "status": "failed",
+  "numerical_stability_status": "failed",
+  "spatial_accuracy_status": "blocked",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "action": "do_not_claim_convergence_increase_independent_particle_support",
+  "aggregation_contract": {
+    "version": "topology-connected-bfs-face-budget-v1",
+    "adjacency_rule": "parent faces share at least one collision-triangle edge",
+    "partition_rule": "canonical ascending-parent-face seed; breadth-first expansion over unassigned topology neighbours; fixed maximum parent-face budget",
+    "candidate_max_parent_faces_per_aggregate": [
+      4096,
+      8192,
+      16384
+    ],
+    "default_max_parent_faces_per_aggregate": 16384,
+    "selected_scale_interpretation": "coarse topology-connected numerical screening scale for sparse particle impacts; not a physical erosion-resolution claim",
+    "normalization": "sum target mass within each connected aggregate, then redistribute to member faces in proportion to face area; exact total-mass conservation",
+    "confidence": {
+      "minimum_support_mass_fraction_of_total": 1e-05,
+      "minimum_aggregate_contribution_ess": 3.0
+    }
+  },
+  "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+  "evaluation_provenance": {
+    "evaluator_file": "step30_particle_convergence_v5.py",
+    "evaluator_sha256": "3b1d83bc9b55bb23267d99bf639b9407be809a490a3ed295058d248d8aa295f8",
+    "estimator_file": "step30_particle_spatial_estimator_v5.py",
+    "estimator_sha256": "a52826cf4239622ee3e35fe37076fc8944b03848a5f95495f3665263ebfd43de"
+  },
+  "gates": {
+    "weighted_spearman_median_min": 0.9,
+    "weighted_spearman_p10_min": 0.8,
+    "mass_hotspot_iou_median_min": 0.8,
+    "spatial_js_divergence_max": 0.05
+  },
+  "identity": {
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+    "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+    "partition_sha256": "ca1cc8afbf15bad4790a0ccb227429c6a308fac9599d0cc4da2f4499ea0b170f",
+    "strict_immutable_run_identity": {
+      "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+      "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+      "field_time": "0.8684190921",
+      "solver_semantics": {
+        "application": "pimpleFoam",
+        "mode": "urans",
+        "field_statistic": "time_mean",
+        "tracking_velocity_object": "UMean",
+        "averaging_window": {
+          "start_time": "0.7844336016",
+          "end_time": "0.8684190921",
+          "sample_count": 20523
+        }
+      },
+      "implementation_hashes": {
+        "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+        "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+        "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+      },
+      "input_hashes": {
+        "analytic_reference_transform": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47",
+        "vertices_full_gpr": "c16cf9cec94e7d4215d0ebc88b53e8c7e05d1f50f8ec214bb61411ec735a5862"
+      },
+      "parameters": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "collision_algorithm_version": "v2",
+        "cfd_variant": "native_si",
+        "max_impacts": 3,
+        "dt_s": 1e-05,
+        "max_time_s": 0.05,
+        "particle_cfl": 0.25,
+        "cfd_velocity_interpolation": "idw_k8_v1",
+        "particle_integrator": "midpoint_exponential_v2",
+        "strict_max_substep_s": 1e-05,
+        "min_substep_s": 1e-08,
+        "max_query_distance_mm": 80.0,
+        "face_fallback_distance_mm": 1.5,
+        "hit_epsilon_mm": 0.05,
+        "min_speed_ms": 0.5,
+        "max_collision_events_per_step": 8,
+        "include_gravity": false,
+        "e_normal": 0.8,
+        "e_tangent": 0.9,
+        "diameter_distribution": {
+          "type": "Rosin-Rammler",
+          "min_m": 1e-06,
+          "max_m": 0.00023,
+          "d50_m": 5e-05,
+          "exponent": 1.5,
+          "sampling_contract": "mass_stratified_v1"
+        },
+        "psd_sampling": "mass_stratified_v1",
+        "rho_particle_kg_m3": 2650.0,
+        "max_accepted_cfd_speed_ms": 500.0,
+        "mass_flow_mode": "nominal",
+        "nozzle_flow_m3_s": 4.5,
+        "sediment_flow_kg_s": 5.8950000000000005,
+        "injection_window_s": 1.0,
+        "observation_window_s": 1.0,
+        "rho_wall_kg_m3": 7800.0,
+        "rho_wall_alternative_kg_m3": 7850.0
+      }
+    }
+  },
+  "discovery_identity_compatibility": null,
+  "decision_scale": 20000,
+  "scales": {
+    "20000": {
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "n_runs": 5,
+      "estimators": {
+        "raw_parent_face": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": -0.28637666481512686,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.633938086905629
+            },
+            {
+              "area_weighted_spearman": -0.3147545848670779,
+              "mass_hotspot_iou": 0.1111111111111111,
+              "js_divergence": 0.6291427091728359
+            },
+            {
+              "area_weighted_spearman": -0.29158630598759366,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.6268161738692419
+            },
+            {
+              "area_weighted_spearman": -0.27615461085713383,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.5807821915574363
+            },
+            {
+              "area_weighted_spearman": -0.27325696468269256,
+              "mass_hotspot_iou": 0.1111111111111111,
+              "js_divergence": 0.5966950496207086
+            },
+            {
+              "area_weighted_spearman": -0.2879571282777153,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.601106432434984
+            },
+            {
+              "area_weighted_spearman": -0.2502246074305288,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.5856719569306865
+            },
+            {
+              "area_weighted_spearman": -0.2733315257477286,
+              "mass_hotspot_iou": 0.1111111111111111,
+              "js_divergence": 0.6128986132398455
+            },
+            {
+              "area_weighted_spearman": -0.26841707202405013,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.6074937061413014
+            },
+            {
+              "area_weighted_spearman": -0.22102042966223842,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.6049115543777943
+            }
+          ],
+          "area_weighted_spearman_median": -0.2747430683024312,
+          "area_weighted_spearman_p10": -0.29390313387554207,
+          "mass_hotspot_iou_median": 0.0,
+          "spatial_js_divergence_max": 0.633938086905629,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": false,
+            "area_weighted_spearman_p10": false,
+            "mass_hotspot_iou_median": false,
+            "spatial_js_divergence_max": false
+          },
+          "passed": false
+        },
+        "topology_aggregate": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": 0.9151128399272688,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.042935454745159696
+            },
+            {
+              "area_weighted_spearman": 0.9402458806419514,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.033822400482727534
+            },
+            {
+              "area_weighted_spearman": 0.9378614022724542,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.03671691202402269
+            },
+            {
+              "area_weighted_spearman": 0.5618325334856884,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.05866040182017829
+            },
+            {
+              "area_weighted_spearman": 0.9714004826283613,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.002321419735279855
+            },
+            {
+              "area_weighted_spearman": 0.9181746144505117,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.004386113011314151
+            },
+            {
+              "area_weighted_spearman": 0.6543672668597101,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.012019706627842918
+            },
+            {
+              "area_weighted_spearman": 0.9065160653091844,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.007076813771549472
+            },
+            {
+              "area_weighted_spearman": 0.6318366472391397,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.01470888621477907
+            },
+            {
+              "area_weighted_spearman": 0.5670815589893083,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.015530712257387856
+            }
+          ],
+          "area_weighted_spearman_median": 0.9108144526182266,
+          "area_weighted_spearman_p10": 0.5665566564389464,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.05866040182017829,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": true,
+            "area_weighted_spearman_p10": false,
+            "mass_hotspot_iou_median": true,
+            "spatial_js_divergence_max": false
+          },
+          "passed": false
+        }
+      },
+      "mass_estimate": {
+        "n_runs": 5,
+        "mean_target_mass_kg": 1.920827042159532e-06,
+        "sample_sd_target_mass_kg": 2.235117770308695e-07,
+        "relative_sample_sd": 0.11636226069557074,
+        "relative_standard_error": 0.05203878498616962
+      },
+      "aggregate_support_diagnostics": {
+        "median_confident_area_fraction": 0.13873264129500748,
+        "minimum_confident_area_fraction": 0.10443029673460653,
+        "per_run_confident_area_fraction": [
+          0.13873264129500748,
+          0.13873264129500748,
+          0.13873264129500748,
+          0.13873264129500748,
+          0.10443029673460653
+        ]
+      }
+    }
+  },
+  "scale_diagnostics": [],
+  "confirmation_contract": {
+    "required_n_parcels": 20000,
+    "minimum_nonoverlapping_runs": 5,
+    "run_overlap_rule": "particle_hits SHA-256 must not appear in the hash-valid discovery report",
+    "acceptance_interpretation": "numerically stable coarse risk map only; never a physical erosion-accuracy or official competition-evidence claim"
+  },
+  "discovery_report_path": null,
+  "discovery_report_sha256": null,
+  "historical_records": {
+    "v3": {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_particle_convergence_5k_10k_20k_mass_stratified_v3.json",
+      "status": "failed",
+      "preserved_as": "historical_spatial_instability_record"
+    },
+    "v4": {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_particle_convergence_5k_10k_20k_surface_kernel_v4r2.json",
+      "status": "failed",
+      "preserved_as": "historical_short-range_kernel_record"
+    }
+  },
+  "artifact_inputs": [
+    {
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6",
+      "n_parcels": 20000,
+      "seed": 42,
+      "particle_run_id": "9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6",
+      "particle_hits_sha256": "10ea9394e276eeacdbdfe3c7a32ce692a124b7ba39d3c87da385097c3b064abf",
+      "field_contract_sha256": "bbe89eddf067fb75fe51ea39ef97d76f5a49112f92a2e05d73d74c9d05bea3ec",
+      "field_path": null,
+      "field_sha256": null
+    },
+    {
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc",
+      "n_parcels": 20000,
+      "seed": 141421,
+      "particle_run_id": "b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc",
+      "particle_hits_sha256": "4bcfcd4d7376f639c908b88dbfe15e2f7108b6bafc7b08b5ffb83dbb1341fd49",
+      "field_contract_sha256": "fd34de0d2e45ed9a5f8f2119760da576e044c6bff34f4a0b86a723c91b7088b7",
+      "field_path": null,
+      "field_sha256": null
+    },
+    {
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b",
+      "n_parcels": 20000,
+      "seed": 161803,
+      "particle_run_id": "6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b",
+      "particle_hits_sha256": "2e10b3f257e459297aa3fe8fce66758acbb908762c218ec9c071114bd0333db6",
+      "field_contract_sha256": "2ab4d7b38062002396f8e5a60aa80214445740b25ef0c67e8d361fe6d3d24453",
+      "field_path": null,
+      "field_sha256": null
+    },
+    {
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a",
+      "n_parcels": 20000,
+      "seed": 271828,
+      "particle_run_id": "22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a",
+      "particle_hits_sha256": "213c83dc76ec9313997ddce0f9ef2a0a9bbfadb5948be06ba95c01661b00d8a4",
+      "field_contract_sha256": "b3d30a57f5e75b9323f8023a820b4cf35f22856b13dc79eb80e1a06bcc406990",
+      "field_path": null,
+      "field_sha256": null
+    },
+    {
+      "run_directory": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79",
+      "n_parcels": 20000,
+      "seed": 314159,
+      "particle_run_id": "51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79",
+      "particle_hits_sha256": "21e9d755ff93bb2028f4b74407254dc653d1cd9ce2c8e9c0d83015e2f862bcc5",
+      "field_contract_sha256": "ec259c82ea129a84353c35c9575f5e5913e1f3afddedcfacc77cd4fc330cd104",
+      "field_path": null,
+      "field_sha256": null
+    }
+  ],
+  "limitations": [
+    "The discovery data identify a method candidate but cannot confirm it.",
+    "Aggregate stability does not validate the parent-face field.",
+    "No worn scan, baseline map, or independent spatial erosion truth is present.",
+    "No v5 result may open official accuracy, reference, or FEM gates."
+  ],
+  "report_sha256": "17ffda4f3c0e808f55878072b9005203c867bde18691089977b580ba8e218039"
+}

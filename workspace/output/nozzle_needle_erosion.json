@@ -31,31 +31,31 @@
   "erosion_type_zones": {
     "needle_tip": {
       "type": "cutting (Finnie)",
-      "alpha_range": "5â€“15Â°",
+      "alpha_range": "5¨C15¡ã",
       "dominant_model": "Finnie",
       "risk": "HIGH"
     },
     "needle_body": {
       "type": "mixed",
-      "alpha_range": "15â€“25Â°",
+      "alpha_range": "15¨C25¡ã",
       "dominant_model": "Oka+Finnie",
       "risk": "MEDIUM"
     },
     "nozzle_lip": {
       "type": "cutting+deformation",
-      "alpha_range": "15â€“30Â°",
+      "alpha_range": "15¨C30¡ã",
       "dominant_model": "Oka",
       "risk": "HIGH"
     },
     "nozzle_body": {
       "type": "deformation (Oka)",
-      "alpha_range": "30â€“45Â°",
+      "alpha_range": "30¨C45¡ã",
       "dominant_model": "Oka",
       "risk": "MEDIUM"
     },
     "bucket_entry": {
       "type": "cutting+deformation",
-      "alpha_range": "20â€“60Â°",
+      "alpha_range": "20¨C60¡ã",
       "dominant_model": "Oka",
       "risk": "VERY HIGH"
     }

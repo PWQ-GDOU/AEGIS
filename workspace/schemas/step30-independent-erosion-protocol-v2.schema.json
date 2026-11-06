@@ -1,0 +1,485 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://step30.local/schemas/step30-independent-erosion-protocol-v2.schema.json",
+  "title": "Step30 independent measured erosion protocol v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "schema_version",
+    "status",
+    "immutable",
+    "formal",
+    "study_phase",
+    "minimum_independent_groups",
+    "recommended_formal_groups",
+    "formal_eligibility_reason",
+    "created_at_utc",
+    "scan_manifest",
+    "scan_manifest_sha256",
+    "evaluation_mask",
+    "evaluation_mask_sha256",
+    "evaluation_mask_file_sha256",
+    "truth_build_contract",
+    "core_protocol",
+    "protocol_sha256"
+  ],
+  "properties": {
+    "version": {
+      "const": "step30-independent-erosion-protocol-v2"
+    },
+    "schema_version": {
+      "const": "step30-independent-erosion-protocol-v2"
+    },
+    "status": {
+      "const": "measured"
+    },
+    "immutable": {
+      "const": true
+    },
+    "formal": {
+      "type": "boolean"
+    },
+    "study_phase": {
+      "enum": [
+        "pilot",
+        "formal_candidate"
+      ]
+    },
+    "minimum_independent_groups": {
+      "const": 3
+    },
+    "recommended_formal_groups": {
+      "const": 5
+    },
+    "formal_eligibility_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "created_at_utc": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "scan_manifest": {
+      "$ref": "#/$defs/scanManifest"
+    },
+    "scan_manifest_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "evaluation_mask": {
+      "$ref": "#/$defs/evaluationMask"
+    },
+    "evaluation_mask_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "evaluation_mask_file_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "truth_build_contract": {
+      "$ref": "#/$defs/truthBuildContract"
+    },
+    "core_protocol": {
+      "$ref": "#/$defs/coreProtocolV1"
+    },
+    "protocol_sha256": {
+      "$ref": "#/$defs/sha256"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "formal": {
+            "const": true
+          }
+        },
+        "required": [
+          "formal"
+        ]
+      },
+      "then": {
+        "properties": {
+          "study_phase": {
+            "const": "formal_candidate"
+          },
+          "formal_eligibility_reason": {
+            "const": null
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "study_phase": {
+            "const": "pilot"
+          },
+          "formal_eligibility_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "utcTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "scan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scan_id",
+        "acquired_at",
+        "instrument_serial",
+        "calibration_certificate",
+        "coordinate_frame",
+        "fiducial_id",
+        "fixture_id",
+        "coordinate_units",
+        "source"
+      ],
+      "properties": {
+        "scan_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acquired_at": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "instrument_serial": {
+          "type": "string",
+          "minLength": 1
+        },
+        "calibration_certificate": {
+          "$ref": "#/$defs/source"
+        },
+        "coordinate_frame": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fiducial_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fixture_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinate_units": {
+          "enum": [
+            "m",
+            "cm",
+            "mm",
+            "um"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        }
+      }
+    },
+    "scanPair": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_id",
+        "asset_id",
+        "component_id",
+        "campaign_id",
+        "service_episode",
+        "baseline_scan",
+        "worn_scan"
+      ],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "asset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "component_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "campaign_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "service_episode": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "service_episode_id",
+            "started_at",
+            "ended_at"
+          ],
+          "properties": {
+            "service_episode_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "started_at": {
+              "$ref": "#/$defs/utcTimestamp"
+            },
+            "ended_at": {
+              "$ref": "#/$defs/utcTimestamp"
+            }
+          }
+        },
+        "baseline_scan": {
+          "$ref": "#/$defs/scan"
+        },
+        "worn_scan": {
+          "$ref": "#/$defs/scan"
+        }
+      }
+    },
+    "scanManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "schema_version",
+        "status",
+        "formal_requested",
+        "created_at_utc",
+        "minimum_independent_groups",
+        "recommended_formal_groups",
+        "blocked_reason",
+        "scan_pairs"
+      ],
+      "properties": {
+        "version": {
+          "const": "step30-scan-pair-manifest-v1"
+        },
+        "schema_version": {
+          "const": "step30-scan-pair-manifest-v1"
+        },
+        "status": {
+          "const": "measured"
+        },
+        "formal_requested": {
+          "type": "boolean"
+        },
+        "created_at_utc": {
+          "$ref": "#/$defs/utcTimestamp"
+        },
+        "minimum_independent_groups": {
+          "const": 3
+        },
+        "recommended_formal_groups": {
+          "const": 5
+        },
+        "blocked_reason": {
+          "const": null
+        },
+        "scan_pairs": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "$ref": "#/$defs/scanPair"
+          }
+        }
+      }
+    },
+    "evaluationMaskEpisode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_id",
+        "service_episode_id",
+        "parent_face_ids",
+        "minimum_area_coverage_fraction",
+        "minimum_valid_count"
+      ],
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "service_episode_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parent_face_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "minimum_area_coverage_fraction": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "minimum_valid_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "evaluationMask": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "status",
+        "immutable",
+        "topology_v3_sha256",
+        "episodes",
+        "mask_sha256"
+      ],
+      "properties": {
+        "version": {
+          "const": "step30-independent-erosion-evaluation-mask-v1"
+        },
+        "status": {
+          "const": "measured"
+        },
+        "immutable": {
+          "const": true
+        },
+        "topology_v3_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "episodes": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "$ref": "#/$defs/evaluationMaskEpisode"
+          }
+        },
+        "mask_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "truthBuildContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "topology_path",
+        "topology_v3_sha256",
+        "mesh_signature",
+        "artifact_set_id",
+        "registration_options",
+        "maximum_projection_distance_mm",
+        "truth_build_contract_sha256"
+      ],
+      "properties": {
+        "version": {
+          "const": "step30-independent-erosion-truth-build-v1"
+        },
+        "topology_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "topology_v3_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "mesh_signature": {
+          "$ref": "#/$defs/sha256"
+        },
+        "artifact_set_id": {
+          "$ref": "#/$defs/sha256"
+        },
+        "registration_options": {
+          "type": "object"
+        },
+        "maximum_projection_distance_mm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "truth_build_contract_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "coreProtocolV1": {
+      "type": "object",
+      "required": [
+        "version",
+        "schema_version",
+        "status",
+        "immutable",
+        "n_records",
+        "n_independent_groups",
+        "assets",
+        "groups",
+        "splits",
+        "protocol_sha256"
+      ],
+      "properties": {
+        "version": {
+          "const": "step30-independent-erosion-protocol-v1"
+        },
+        "schema_version": {
+          "const": "step30-independent-erosion-protocol-v1"
+        },
+        "status": {
+          "const": "measured"
+        },
+        "immutable": {
+          "const": true
+        },
+        "n_records": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "n_independent_groups": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "assets": {
+          "type": "array",
+          "minItems": 3
+        },
+        "groups": {
+          "type": "array",
+          "minItems": 3
+        },
+        "splits": {
+          "type": "object"
+        },
+        "protocol_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    }
+  }
+}

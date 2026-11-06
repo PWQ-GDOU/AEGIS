@@ -1,0 +1,321 @@
+HYDRO-ABRASIVE EROSION OF PELTON TURBINES
+
+
+
+
+                 Ph.D. THESIS
+
+
+
+
+                      by
+
+
+
+
+               ANANT KUMAR RAI
+
+
+
+
+       ALTERNATE HYDRO ENERGY CENTRE
+   INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+             ROORKEE - 247 667 (INDIA)
+                SEPTEMBER, 2017
+HYDRO-ABRASIVE EROSION OF PELTON TURBINES
+
+
+
+                        A THESIS
+
+
+            Submitted in partial fulfilment of the
+          requirements for the award of the degree
+
+
+                            of
+
+              DOCTOR OF PHILOSOPHY
+
+                            in
+
+        ALTERNATE HYDRO ENERGY CENTRE
+
+                            by
+
+
+                  ANANT KUMAR RAI
+
+
+
+
+       ALTERNATE HYDRO ENERGY CENTRE
+   INDIAN INSTITUTE OF TECHNOLOGY ROORKEE
+             ROORKEE – 247 667 (INDIA)
+                SEPTEMBER, 2017
+                                                                        ABSTRACT
+
+
+
+       In geologically young mountains like the Andes and the Himalayas, the most
+of the streams contain high sediment concentration during the snow melt and rainy
+seasons. The suspended sediment causes hydro-abrasive erosion in hydraulic turbines
+and other components of hydropower plant coming in direct contact with moving
+sediment laden water due to presence of hard minerals such as quartz and feldspar.
+Due to hydro-abrasive erosion, frequent and high level of maintenance, repair and
+replacements of eroded parts are required. Further on account of reduced efficiency
+and downtimes, there are losses in electricity generation. The problem of erosion in
+hydraulic machines is expected to become more severe in the future due to higher
+suspended sediment availability from retreating glaciers and intense rainfalls caused
+by climate change. Due to continuous development of untapped hydropower potential
+of the Asian and South American continents, the number of hydro turbines facing
+hydro-abrasive erosion shall increase.
+
+       For high head run-of-river (RoR) schemes, even small sediment particles can
+cause high hydro-abrasive erosion especially in Pelton turbines due to high impact on
+account of high velocity. For optimization of a hydropower plant with respect to
+suspended sediment and hydro-abrasive erosion, information is required on the costs
+of various mitigation measures and losses in electricity generation. Currently, only
+limited information is available due to lack of practically proven measurement
+techniques as well as reliable measurement data on suspended sediment properties
+and turbine erosion with efficiency losses. Further, quantitative relations between
+suspended sediment, turbine erosion and efficiency losses are rare in literature.
+
+       Based on literature survey, it was found that the abrasion tests give widely
+varying results depending on the features of different test rigs employed by various
+researchers, erosion velocity, impact angle, composition, concentration and size of
+particles. Commonly used slurry pot testers do not simulate erosion conditions of
+Pelton turbine due to high concentration of erodent and continuous contact of
+sediment with specimen. The static specimen in jet type erosion tester lacks the effect
+of forces like centrifugal force and Coriolis force, which are present in rotating frame
+
+
+
+                                                                                       i
+only. Hence, studies based on test set-up simulating the erosion conditions similar to
+Pelton turbines in actual hydropower plant conditions on materials used in turbine
+components are required. Further, the forces and accelerations inside Pelton bucket
+need to be analyzed to understand the main causes behind the hydro-abrasive erosion
+in Pelton turbines. The models developed for efficiency loss due to erosion were for
+specific laboratory or field conditions; hence, the application of the models require
+calibration specific to the hydropower plant for which erosion based losses are to be
+assessed. In addition to the specific calibrations, the efficiency of the hydropower
+plant needs to be monitored to obtain the losses for the gradual efficiency reduction
+caused by the erosion.
+
+        On the basis of literature survey, following objectives of the study were
+formulated.
+
+i)   To investigate suspended sediment parameters (concentration, size, shape and
+     mineral contents), turbine erosion and efficiency reduction of a prototype Pelton
+     turbine based on field measurements in a hydropower plant.
+ii) To investigate the relation of Pelton bucket erosion with suspended sediment
+     concentration (SSC), sediment size, velocity of erosion, roughness of buckets and
+     operating time based on tests of commonly used grades of steel and coatings in
+     the laboratory test rig, which allows controlled flow conditions similar to Pelton
+     turbines.
+iii) To investigate the forces on sediment particles in Pelton bucket and their effects
+     on the erosion of the bucket. To develop an erosion model considering various
+     forces inside Pelton bucket.
+iv) To investigate and adapt erosion models from the literature based on the
+     laboratory as well as field data. Further to find out the values of unknown terms
+     of erosion model IEC 62364 (2013) for analysis of erosion in Pelton and Kaplan
+     turbines.
+v) To assess the financial implications of the erosion on the hydropower plant based
+     on the field investigations in the prototype plant and information from turbine
+     manufacturers.
+
+        In order to achieve the objectives, the research work was carried out with
+following methods:
+
+
+
+ii
+i)   Identification of a hydropower plant having high sediment laden river water and
+     erosion conditions with Pelton turbines
+ii) Measurement of erosion, suspended sediment and reduction in efficiency at the
+     study plant
+iii) Identification and classification of the major erosion zones in the Pelton bucket
+iv) Assessment of applicability of methods such as laser diffraction and turbidity for
+     continuous SSC measurement at the study plant
+v) Selection of variables for laboratory tests as per field observations and available
+     literature and carrying out the tests in the laboratory on specially designed test rig
+     for the study
+vi) Derivation of correlation between various parameters in laboratory investigations
+     and finding the mechanism of erosion in different parts of the Pelton bucket
+vii) Analysis of forces on sediment particles inside Pelton buckets with the
+     assumptions to simplify the complex flows inside buckets and developing an
+     analytical erosion model
+viii) Finding the unknown terms such as flow co-efficient (Kf), material factor (Km)
+     and exponent (p) of hydro-abrasive erosion model of IEC 62364 (2013) for
+     Pelton turbine from the field and laboratory data
+ix) Analysing erosion in a Kaplan turbine with respect to IEC 62364 (2013)
+x) Calibration of erosion models from literature and financial analysis due to hydro-
+     abrasive erosion assessed using the calibrated erosion models
+xi) Uncertainty analysis for parameters involved in the laboratory and field
+     investigations
+
+        From various hydropower plants affected by hydro-abrasive erosion in the
+Indian Himalayas, Toss HPP (2×5 MW) having two numbers 4-jet Pelton turbines
+with coated buckets in one unit and uncoated buckets in second unit was selected for
+hydro-abrasive erosion study. Based on analysis of images of uncoated eroded
+buckets from the literature as well as Pelton turbine at study plant, hydro-abrasive
+erosion has been classified into 5 classes. The hydro-abrasive erosion was measured
+with an optical 3D-scanner and suspended sediment parameters were obtained with
+gravimetric, turbidity, laser diffraction and dynamic imaging techniques. The major
+findings from the field investigations of Pelton turbine erosion and monitoring of
+suspended sediment are as follows.
+
+
+
+                                                                                         iii
+ i)    The hydro-abrasive erosion in uncoated Pelton buckets has been classified in 5
+       different type - wavy erosion in splitter (E1), scaly erosion in curved surface
+       inside bucket (E2), bulging/protruded erosion lines between splitter and curved
+       surface inside bucket (E3), combination of cavitation and erosion near splitter in
+       entry as well as the bucket root (E4) and polished smooth surface with metallic
+       luster outside bucket (E5). Detailed measurements of each type of erosion has
+       been explained and discussed.
+ii)    Method of 3D-scanning has been found having distinct advantage over other
+       methods of hydro-abrasive erosion measurement (using template) as it allows the
+       measurement of the depth, profile as well as material loss. The decrease of
+       splitter height, erosion depth in curved zones and abrasion in the cut-out portion
+       of uncoated bucket on average were 3%, 1.5% and 5% of the bucket width.
+       Erosion depth in curved zone of coated buckets was around 0.4% of the bucket
+       width in few patches having coating intact in other parts.
+iii)   The erosion at outlet surface inside the bucket had directed the flow towards
+       lateral surface outside bucket. The outside of Pelton bucket was eroded on
+       average up to 0.1% of the bucket width, which is considerably lesser than the
+       inside surface.
+iv)    The sediment properties like concentration and size have been found to vary
+       significantly with coefficient of variation 75% and 32% respectively during the
+       high flow season. Total suspended sediment load of 12540 tons passed through
+       each turbine unit during study period (5 May to 15 October 2015).
+ v)    Sediment shape has been quantified with respect to roundness as well as
+       elongation ratio (b/l) and has been found to vary within a narrow range (1.5%).
+       The sediment mineral composition was identified and quantified with X-ray
+       diffraction (XRD), X-ray spectroscopy (EDS) and petrographic analysis. 88% of
+       the minerals in incoming suspended sediment were harder than the material of the
+       uncoated turbine, which was 13Cr-4Ni martensitic steel in the study plant.
+vi)    The efficiency of the unit with uncoated Pelton turbine decreased by 6% due to
+       severe erosion of nozzle rings and needles requiring shutdown for replacements
+       mid-time of the study period.
+
+          For laboratory investigations, the testing conditions were selected to simulate
+ flow conditions similar to a Pelton turbine as shown in the following Table. The
+
+
+
+ iv
+  Pelton turbine of the test rig with 24 buckets was designed with model buckets as 1:8
+  geometric scaled of the tested Pelton buckets in the field. The buckets were designed
+  with detachable feature for ease of dismantling to measure erosion and fixing disks
+  were used for reassembly in well reproducible manner. The model Pelton turbine had
+  6 different materials (4 number of each type) namely 13Cr-4Ni, 16Cr-5Ni, 16Cr-4Ni
+  martensitic steel, bronze, 13Cr-4Ni with plasma sprayed Cr2O3 coating and 13Cr-4Ni
+  with WC-Co-Cr HVOF coating.
+
+                                   Range of parameters
+            Parameters                                 Range
+          Erosion velocity        4 values - (32.11, 28.97, 25.62 and 22.05) m/s
+          Operating head               4 values - (200, 180, 160 and 140) m
+                SSC                    3 values - (750, 1500 and 3000) ppm
+                                 4 values - (0-90), (90-180), (180-250) and (250-
+            PSD ranges
+                                                      355) μm
+                Time                       4 values - (3, 6, 9 and 12) hrs
+
+         The erosion after each test was measured with weight loss of buckets and 3D-
+  scans. The roughness of the buckets was also measured in different zones. Based on
+  laboratory tests, the major findings are as follows.
+
+ i)    The WC-Co-Cr HVOF coating was found to have the best erosion resistance
+       among the materials tested in the laboratory. Among different parameters, the
+       erosion velocity was found contributing maximum to the erosion of the buckets.
+ii)    Among sediment parameters, SSC was found to have the linear relation with
+       erosion. Correlations between normalized erosion and test parameters were
+       developed for all the materials tested.
+iii)   The roughness of the uncoated surface has been found to have no significant
+       relation with erosion. However, the surface roughness decreases in case of coated
+       surfaces until the coating is completely removed from the surface and the surface
+       starts behaving like an uncoated surface.
+iv)    The mechanism of erosion in different parts of Pelton buckets was found to be
+       strongly related to the flow pattern in that part. The mechanism of erosion in the
+       splitter region was mainly due to the impact of sediment particles on the surface
+       forming craters whereas scratching was the main mode of material removal in the
+       curved region.
+
+
+
+
+                                                                                        v
+          Due to rotation of Pelton runner and flow in curved path inside buckets,
+ different types of centrifugal forces and Coriolis force act on sediment particles in
+ Pelton buckets. These forces were determined with a series of assumptions and
+ simplifications. The main reason for the susceptibility of Pelton buckets to erosion
+ was found high accelerations caused by the curvature of the bucket separating the
+ sediment particles from the streamlines, and leads to the grinding of the particles on
+ the surface of bucket. Further, an erosion model has been developed with
+ considerations of impact and frictional forces inside the bucket. The erosion model
+ developed for Pelton buckets with respect to the forces was found in agreement with
+ the available literature. The findings from the analytical study are summarised as
+ follows:
+
+ i)    The angle between the particle path and the fluid streamline resulting from the
+       forces on particles was considered as major similarity parameter for the erosion
+       potential in the Pelton buckets.
+ii)    The hydro-abrasive erosion can be decreased by increasing pitch circle diameter
+       (PCD) and bucket width at the design stage itself.
+iii)   The largest resulting separation angles and the largest separation velocity occur in
+       the outer zone of the buckets and lead to the highest resultant forces on the
+       particles.
+
+iv)    The exponent of erosion velocity for hydro-abrasive erosion has been found
+       between 3 and 4, similar to the value obtained from laboratory investigations.
+       Exponents of other parameters in the derived erosion model have been found to
+       be similar to the values reported in literature and obtained from laboratory
+       investigations.
+
+          In the theoretical erosion model proposed by IEC 62364 (2013), the value of
+ terms like the flow coefficient (Kf) and exponent (p) of reference size (RS) are not
+ prescribed for Pelton and Kaplan turbines due to lack of field studies. From the field
+ and laboratory data, the values of Kf and p of RS were obtained as 5.43×10-6 and 0.3
+ respectively for curved zone of the bucket. For splitter height reduction, these values
+ were found as 1.76×10-5 and 0.15 respectively. The erosion in Kaplan turbine of a
+ hydropower plant from Himalayan region is also analysed as per IEC 62364.
+
+
+
+
+ vi
+       The models available in the literature for calculating gradual loss of efficiency
+of turbine were explored and applied for calculating the same for the study
+hydropower plant. The details on the loss of revenue due to erosion of material from
+turbine surface and restoring back the surface to initial uneroded profile were obtained
+from the turbine manufacturers and analysed for the study plant. The financial
+analysis for study plant has been carried out for 3 months duration starting from the
+date of installation of new runner and sediment laden inflows during monsoon/rainy
+season. It has been found that the losses in operating the uncoated turbine for the
+duration accounted for 15.7% of the initial cost of uncoated turbine, major portion
+contributed by gradual efficiency loss. Hence, the operation of eroded turbine for
+longer duration adds significantly to revenue losses. Further, the cost of preventive
+measures has been obtained for the study plant and a criterion for decision making is
+developed. The cost of coating was 11% of the uncoated turbine cost; however, it
+minimized the downtime and other losses as observed from other unit of the plant
+with coated bucket. From this limited financial analysis, it may be concluded that the
+option of coated turbine would be more economical for the study plant.
+
+       The present study provides data and information to hydropower plant
+managers and researchers for measuring the erosion and to develop strategies for
+handling erosion issues effectively. However, more systematic erosion studies with
+advanced instruments and methodologies are required, especially in Pelton and
+Kaplan turbines, with simultaneous measurement of erosion in turbines, suspended
+sediment and efficiency reduction. To assess the complete loss due to erosion and
+optimum measures to minimize the losses, data needs to be obtained for longer
+duration of few years say 3 to 5 years at a hydropower plant.
+
+
+
+
+                                                                                     vii
+

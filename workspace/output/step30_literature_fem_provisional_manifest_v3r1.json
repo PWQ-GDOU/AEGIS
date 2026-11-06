@@ -1,0 +1,71 @@
+{
+  "version": "step30-literature-fem-provisional-manifest-v3",
+  "status": "provisional",
+  "evidence_status": "literature_prior_reproducibility_only",
+  "artifacts": [
+    {
+      "role": "literature evidence report",
+      "path": "workspace\\output\\step30_literature_evidence_v1r1.json",
+      "sha256": "bb24a95f89e60945bc9a26479154c0e38ce62d45483f8d480e5dbfbd27e294c2"
+    },
+    {
+      "role": "literature prior degradation report",
+      "path": "workspace\\output\\step30_literature_prior_degradation_v2r1.json",
+      "sha256": "82ac50077f5fbc1962e624edffbc4e6c68b0a5d527daacdd012bfec5547c8f14"
+    },
+    {
+      "role": "literature prior degradation maps",
+      "path": "workspace\\output\\step30_literature_prior_degradation_v2r1.npz",
+      "sha256": "685e1579993bb4332a7b8f247bb6c7d4e88b05f9a632557f30487c153b8f7e86"
+    },
+    {
+      "role": "legacy qualitative reference distribution",
+      "path": "workspace\\output\\step30_literature_reference_distribution_v1r1.json",
+      "sha256": "4966292e1b4003330f195c47bee380566fcb8013f32eece3156df45243125e45"
+    }
+  ],
+  "evidence_summary": {
+    "evidence_sha256": "0832724c76f89715cf9624b62092d2257d30f9ee78c62bebeb991a7808e2ecb2",
+    "quantitative_claim_count": 0,
+    "qualitative_claim_count": 0,
+    "bibliographic_only_source_count": 7,
+    "model_prior_bindings": {
+      "oka": {
+        "implementation": "step30_material_model_calibration.oka_volume_mm3_per_kg",
+        "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+      },
+      "finnie": {
+        "implementation": "step30_material_model_calibration.finnie_volume_mm3_per_kg",
+        "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+      },
+      "tabakoff": {
+        "implementation": "step30_material_model_calibration.tabakoff_volume_mm3_per_kg",
+        "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+      },
+      "mansouri": {
+        "implementation": "step30_material_model_calibration.mansouri_mass_ratio_kg_per_kg",
+        "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+      }
+    }
+  },
+  "parameter_prior_status": {
+    "oka": "blocked_pending_claim_level_original_source_evidence",
+    "finnie": "blocked_pending_claim_level_original_source_evidence",
+    "tabakoff": "blocked_pending_claim_level_original_source_evidence",
+    "mansouri": "blocked_pending_claim_level_original_source_evidence"
+  },
+  "regional_reference_status": "legacy qualitative distribution retained for history; not promoted without claim-level original evidence",
+  "quantitative_literature_calibration": false,
+  "DEC_dimension_transfer": false,
+  "DEC_facewise_truth": false,
+  "official_reference_gate": false,
+  "official_accuracy_gate": false,
+  "independent_accuracy_gate": false,
+  "fem_gate": "blocked",
+  "limitations": [
+    "Model comparisons can be reproduced, but their coefficient priors are not quantitatively anchored by this manifest.",
+    "The 3% and 5% source-specific geometry values are not DEC dimensions or spatial truth.",
+    "No literature package can replace independent baseline/worn scans for spatial accuracy."
+  ],
+  "manifest_sha256": "7d11bb8403a980a84cb6e607d3fc27667ab902c33284f9a223b3bf0587c8ffe8"
+}

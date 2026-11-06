@@ -1,0 +1,41 @@
+{
+  "schema": "step30-remote-result-manifest-v1",
+  "job_id": "REQUIRED",
+  "execution_target": "REQUIRED: dcu_cpu or user_gpu",
+  "server": {
+    "host": "REQUIRED",
+    "scheduler": "REQUIRED",
+    "partition_or_queue": "REQUIRED",
+    "runtime": "REQUIRED",
+    "code_sha256": "REQUIRED",
+    "container_or_module_digest": "REQUIRED or null"
+  },
+  "inputs": [
+    {
+      "relative_path": "REQUIRED",
+      "sha256": "REQUIRED",
+      "bytes": "REQUIRED"
+    }
+  ],
+  "execution": {
+    "command": "REQUIRED",
+    "started_utc": "REQUIRED",
+    "finished_utc": "REQUIRED",
+    "exit_code": "REQUIRED",
+    "stdout_sha256": "REQUIRED",
+    "stderr_sha256": "REQUIRED"
+  },
+  "outputs": [
+    {
+      "relative_path": "REQUIRED",
+      "sha256": "REQUIRED",
+      "bytes": "REQUIRED"
+    }
+  ],
+  "evidence_status": {
+    "artifact_type": "server_generated",
+    "spatial_accuracy_status": "blocked",
+    "official_accuracy_gate": false,
+    "fem_gate": "blocked"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": "step30-fem-tool-provenance-v1",
+  "status": "verified",
+  "solver": "CalculiX CrunchiX",
+  "solver_version": "2.19",
+  "executable_path": "B:/tools/calculixforwin_03.5/CL35-win64/bin/ccx/218-64/ccx219.exe",
+  "executable_sha256": "62221aa53f99a76bb6668bb1f678ef0f7235744ebd98e9853021cafef5d74473",
+  "package_source": "https://sourceforge.net/projects/calculixforwin/files/03.5/CL35-win64-test.zip/download",
+  "package_name": "CL35-win64-test.zip",
+  "package_sha256": "a9afe6f0c03d14a4f3227bc9672fb6a6e2dc3d9642f5ea554ea593d52f33352f",
+  "package_sha1": "1c0b2ad13b0df7ee0b7e75c10a5b04e977b0b59d",
+  "package_md5": "342f92beb85b130ebce0d075bd9e0c32",
+  "verification": {
+    "case": "CL35-win64/hlp/verifsamples/freq_test.inp",
+    "command": "ccx219.exe -i freq_test",
+    "return_code": 0,
+    "termination": "Job finished",
+    "outputs": ["freq_test.dat", "freq_test.frd", "freq_test.sta", "freq_test.cvg"]
+  },
+  "provenance_note": "Windows CalculiXforWin package; executable and package hashes are recorded for FEM case binding. This verification case is a solver smoke test, not project FEM evidence."
+}

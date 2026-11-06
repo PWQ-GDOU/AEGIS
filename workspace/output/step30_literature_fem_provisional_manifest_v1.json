@@ -1,0 +1,64 @@
+{
+  "version": "step30-literature-fem-provisional-manifest-v1",
+  "status": "provisional",
+  "immutable": true,
+  "fem_gate": "blocked",
+  "official_gate": "blocked",
+  "ai5_used_for_calibration": false,
+  "artifacts": [
+    {
+      "role": "literature_prior_report",
+      "path": "output/step30_literature_prior_degradation_v2.json",
+      "sha256": "17aa6e69fb90688cf777e1b105499bcc1a86b2bac25bc62eaebd5f875de19c45"
+    },
+    {
+      "role": "literature_prior_maps",
+      "path": "output/step30_literature_prior_degradation_v2.npz",
+      "sha256": "685e1579993bb4332a7b8f247bb6c7d4e88b05f9a632557f30487c153b8f7e86"
+    },
+    {
+      "role": "geometry_audit_report",
+      "path": "output/step30_fem_geometry_audit_v1.json",
+      "sha256": "bed9bdfe00de40afcb6b60904b4081965859748a0d9b0c43b5ebd5ff3bf042b0"
+    },
+    {
+      "role": "particle_hits_input",
+      "path": "output/particle_hits_cfd.npz",
+      "sha256": "a5c63c7eeaf5109a06a55a4d52757ba6ca04b44e132b43c99ed784b701241b75"
+    },
+    {
+      "role": "parametric_stress_input",
+      "path": "output/fem_stress_field.npz",
+      "sha256": "11c806b543f53e8436ec3f4240f509232f038096013f839ed70d5c1b989babcd"
+    },
+    {
+      "role": "authoritative_step",
+      "path": "output/step30_fem_remote_export_v1/output/single_bucket_target_authoritative.step",
+      "sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d"
+    },
+    {
+      "role": "comsol_export_script",
+      "path": "output/step30_fem_remote_export_v1/work/ComsolBucketExport.java",
+      "sha256": "b6dcb108a380fe7c8e9d9f89e9d55e8caea2357e6267caa9ed9c1a741778dcaa"
+    },
+    {
+      "role": "comsol_export_log",
+      "path": "output/step30_fem_remote_export_v1/work/target_export.log",
+      "sha256": "7b912a9df53b0bca56798c76e7d97c80ccf4a04471a706ea8428d4c08f2e30db"
+    },
+    {
+      "role": "surface_catalog",
+      "path": "output/step30_fem_remote_export_v1/step_surface_catalog.json",
+      "sha256": "221d4e30093c9b96d83c09079cbeaf1c1a219008b5ab5bf0fdf391993cbb9553"
+    }
+  ],
+  "interpretation": {
+    "literature_models": "provisional exploratory prior comparison",
+    "stress_field": "analytical/parametric only; not real FEM",
+    "step_length_unit": "embedded m declaration only; formal scale gate blocked",
+    "root_interface": "blocked",
+    "wetted_surface": "blocked",
+    "ai5_patch_and_gauge_direction": "blocked"
+  },
+  "manifest_sha256": "7cc9ad2fc9c3e685cbeca4e7e25984e4e5198478a5d5230b2e25ea9c8ae007f7"
+}

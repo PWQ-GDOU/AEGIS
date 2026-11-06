@@ -1,17 +1,17 @@
 {
   "version": "native-bucket-provenance-v1",
   "openfoam_version": "2412",
-  "source_case": "/public/home/wenquan/pelton_bucket_jet",
+  "source_case": "remote_artifacts/wenquan/pelton_bucket_jet",
   "source_time": "1000",
   "patch": {
     "patch_name": "bucket",
     "n_faces": 74803,
     "start_face": 1295403,
-    "boundary_file": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\native_bucket\\polyMesh_boundary.txt"
+    "boundary_file": "workspace/output\\native_bucket\\polyMesh_boundary.txt"
   },
   "topology": {
-    "artifact": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\bucket_topology.npz",
-    "summary": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\bucket_topology_summary.json",
+    "artifact": "workspace/output\\bucket_topology.npz",
+    "summary": "workspace/output\\bucket_topology_summary.json",
     "mesh_signature": "4bdb5e5a2203663a9d9c13dd384a7de471225aa1c145582b60e1a436621c877f",
     "n_points": 90816,
     "n_parent_faces": 74803,
@@ -32,7 +32,7 @@
   },
   "same_mesh_velocity_fields": {
     "variant": "native",
-    "directory": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\native_bucket",
+    "directory": "workspace/output\\native_bucket",
     "n_cells": 424161,
     "fields": [
       "native_1000_Cx.foam",
@@ -48,7 +48,7 @@
     "max_distance_mm": 6.495202113533899
   },
   "raw_coordinate_match": {
-    "file": "B:\\undertaking\\学业\\非专业相关\\比赛\\挑战杯\\水轮机\\workspace\\output\\mrf2_p_bucket.raw",
+    "file": "workspace/output\\mrf2_p_bucket.raw",
     "rows": 74803,
     "same_row_count": true,
     "median_distance_mm": 0.0019222745130360467,

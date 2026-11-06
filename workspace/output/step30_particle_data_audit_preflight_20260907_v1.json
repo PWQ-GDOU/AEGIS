@@ -1,0 +1,123 @@
+{
+  "version": "step30-particle-data-audit-preflight-v1",
+  "created_date": "2026-09-07",
+  "status": "static_preflight_complete_remote_execution_pending",
+  "execution_policy": {
+    "local_numerical_execution": false,
+    "local_scope": "read-only source-report inspection and control-file generation",
+    "remote_audit_entrypoint": "workspace/remote/run_particle_root_cause_audit_v1.sh",
+    "work_drive": "H:"
+  },
+  "remote_execution_blocker": {
+    "dcu": {
+      "host": "100.121.154.58",
+      "network": "tcp_22_reachable",
+      "attempted_user_from_h_drive_ssh_config": "mgr",
+      "result": "Permission denied (publickey,password)",
+      "impact": "server-side audit and replay not executed"
+    },
+    "user_gpu": {
+      "host": "100.92.47.51",
+      "result": "SSH connection timed out",
+      "impact": "GPU backend remains probe-only and was not used"
+    },
+    "security_boundary": "No password was written to files, commands, logs, reports, or GitHub."
+  },
+  "confirmed_from_existing_reports": [
+    {
+      "id": "C1_sparse_hit_support",
+      "severity": "blocking",
+      "evidence": {
+        "source": "output/step30_particle_convergence_root_cause_20260907_v1.json",
+        "confirmation_n_parcels": 20000,
+        "hit_parcels_range": [644, 749],
+        "hit_rate_percent_range": [3.22, 3.75],
+        "impact_count_range": [1017, 1203],
+        "target_mass_relative_sample_sd": 0.382840977502846,
+        "required_js_max": 0.05,
+        "v4_surface_kernel_js_max": 0.689021999209736,
+        "v5_topology_aggregate_js_max": 0.393946440810685
+      },
+      "interpretation": "The support cloud is too sparse for parent-face spatial mass to be stable across independent seeds. Parcel count alone is not an adequate stopping rule."
+    },
+    {
+      "id": "C2_physical_registration_failed",
+      "severity": "blocking",
+      "evidence": {
+        "source": "historical strict-v2 summary inspected under workspace/output/step30_runs",
+        "registration_status": "failed",
+        "registration_distance_median_mm": 248.44939413747784,
+        "registration_distance_p95_mm": 386.7249494656798,
+        "registration_threshold_median_mm": 10.0,
+        "registration_threshold_p95_mm": 15.0,
+        "n_faces_compared": 0
+      },
+      "interpretation": "A failed registration with zero comparison faces cannot support a physical CFD-versus-Mansouri spatial accuracy claim."
+    },
+    {
+      "id": "C3_runtime_budget_mismatch",
+      "severity": "high",
+      "evidence": {
+        "source": "output/remote_returns/dcu_confirmation_status_20260902/run_status.json",
+        "historical_20k_seed_elapsed_seconds_range": [16426.752844810486, 16735.19199872017],
+        "current_v2_default_seed_timeout_seconds": 7200
+      },
+      "interpretation": "A new 20k run can be terminated before completion by the current default timeout. Runtime must be estimated from a remote smoke benchmark and registered per job."
+    },
+    {
+      "id": "C4_near_miss_overhead",
+      "severity": "high",
+      "evidence": {
+        "source": "historical strict-v2 summary inspected under workspace/output/step30_runs",
+        "sample_n_parcels": 500,
+        "near_miss_diagnostics": 6579,
+        "true_intersection_hits": 19,
+        "fallback_hits": 0,
+        "substep_count": 1016401
+      },
+      "interpretation": "The strict collision policy correctly rejects fallbacks, but the candidate-distance diagnostic path is doing substantial work relative to accepted impacts. This is a performance hypothesis, not yet a code-change authorization."
+    },
+    {
+      "id": "C5_provenance_mismatch",
+      "severity": "blocking_for_reanalysis",
+      "evidence": {
+        "current_evaluator_sha256": "E6E8FDBF3381FDB30284285D8EE625BAF82640BA8289AC90451DBC2B2DB1A74A",
+        "current_estimator_sha256": "D6B6EA20BEF0F67E677BA97A292E93ED1792958BB4469CFCE96D777286C8F174",
+        "historical_confirmation_evaluator_sha256": "9ADCC951CAB7B48CFD334B6C91BED848396C36330FE5277A954D1ED7D9032DEC",
+        "historical_discovery_evaluator_sha256": "D523A0A35726BCD10731AA11A7B191915F3232F627CD1097D52C1C7D95473562"
+      },
+      "interpretation": "Historical reports remain valid history but cannot be mixed with a current v5 rebuild."
+    },
+    {
+      "id": "C6_gpu_not_validated",
+      "severity": "blocking_for_gpu_replacement",
+      "evidence": {
+        "source": "output/remote_returns/user_gpu_probe_20260831/step30_gpu_particle_kernel_candidate_v1.json",
+        "physics_backend_validated": false,
+        "limitations": [
+          "CFD interpolation is not ported",
+          "topology collision detection is not ported",
+          "impact response is not ported"
+        ]
+      },
+      "interpretation": "The GPU candidate cannot replace strict_v2 or change a convergence or competition score."
+    }
+  ],
+  "audit_gaps_requiring_remote_execution": [
+    "recompute every artifact SHA-256 on the remote source tree",
+    "validate summary-to-NPZ mass and field consistency for every seed",
+    "check duplicate seeds and homogeneous implementation hashes across the complete run root",
+    "same-seed replay in two fresh remote workspaces",
+    "fixed-sample tracking sensitivity over dt, strict_max_substep, interpolation and integrator",
+    "collision triangle to parent-face and normal-orientation replay",
+    "active-face ESS and active-face JS at declared resolutions",
+    "independent CFD wall registration and unit/transform audit"
+  ],
+  "gates_unchanged": {
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "particle_convergence_gate": "failed"
+  },
+  "next_action": "Restore DCU SSH authentication or provide a working H-drive SSH config/key, then run the remote audit entrypoint before launching any new high-particle-count confirmation."
+}

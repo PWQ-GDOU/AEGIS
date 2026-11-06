@@ -1,0 +1,71 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2733,
+      "file": "step30-material_erosion-summary.json",
+      "sha256": "1bd7d3a7fb16b2774ba819412f1e3c4850f04091809c6dc25c7134069df5ec58"
+    },
+    {
+      "bytes": 1329,
+      "file": "step30-material_erosion-material_comparison.csv",
+      "sha256": "a249380b801ff524609bac3258c2e1e0d97243911f323b2fd207852f6dbd52ca"
+    },
+    {
+      "bytes": 2058,
+      "file": "step30-material_erosion-arrays.npz",
+      "sha256": "488f2456d4d62f881f065c5ee0c9a338cd605b07156987dd78fdca671bf3d867"
+    }
+  ],
+  "experiment": "material_erosion",
+  "measured_policy": "missing or invalid real data blocks; no fabricated measurements",
+  "mode": "synthetic",
+  "notes": [
+    "Measured mode requires speed, angle, particle size, and mass loss or depth.",
+    "No missing observation is imputed."
+  ],
+  "output_dir": "workspace/output\\step30_experiments\\acceptance_v1\\material_synthetic",
+  "provided_inputs": [],
+  "required_inputs": [],
+  "seed": 42,
+  "status": "synthetic",
+  "support_interfaces": {
+    "step30_coordinate_registration": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_coordinate_registration.py"
+    },
+    "step30_error_metrics": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_error_metrics.py"
+    },
+    "step30_measurement_io": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_measurement_io.py"
+    }
+  },
+  "synthetic_policy": "synthetic values only when mode=synthetic",
+  "synthetic_truth": {},
+  "tables": {
+    "material_comparison": {
+      "columns": [
+        "case_id",
+        "speed_ms",
+        "impact_angle_deg",
+        "particle_size_um",
+        "sediment_mass_kg",
+        "target_area_mm2",
+        "observed_mass_loss_mg",
+        "observed_wear_depth_mm",
+        "predicted_erosion_mm3kg",
+        "predicted_mass_loss_mg",
+        "predicted_wear_depth_mm",
+        "observation_kind"
+      ],
+      "file": "step30-material_erosion-material_comparison.csv",
+      "rows": 8
+    }
+  },
+  "version": "step30-experiment-manifest-v1"
+}

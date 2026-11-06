@@ -1,0 +1,102 @@
+{
+  "max_rated_mm_h": 10.448243141174316,
+  "max_weighted_mm_h": 8.423896032571792,
+  "weighted_to_rated_ratio": 0.8062499999999999,
+  "hotspot_iou_rated_vs_weighted": 1.0,
+  "per_load": [
+    {
+      "power_mw": 30.0,
+      "fraction": 0.0625,
+      "nozzle_count": 2,
+      "scale_factor": 0.6000000000000001,
+      "max_dhdt_mm_h": 6.268945884704591
+    },
+    {
+      "power_mw": 40.0,
+      "fraction": 0.0625,
+      "nozzle_count": 2,
+      "scale_factor": 0.8,
+      "max_dhdt_mm_h": 8.358594512939453
+    },
+    {
+      "power_mw": 50.0,
+      "fraction": 0.0625,
+      "nozzle_count": 4,
+      "scale_factor": 0.5,
+      "max_dhdt_mm_h": 5.224121570587158
+    },
+    {
+      "power_mw": 60.0,
+      "fraction": 0.0625,
+      "nozzle_count": 4,
+      "scale_factor": 0.6000000000000001,
+      "max_dhdt_mm_h": 6.268945884704591
+    },
+    {
+      "power_mw": 70.0,
+      "fraction": 0.0625,
+      "nozzle_count": 4,
+      "scale_factor": 0.7,
+      "max_dhdt_mm_h": 7.313770198822021
+    },
+    {
+      "power_mw": 80.0,
+      "fraction": 0.0625,
+      "nozzle_count": 4,
+      "scale_factor": 0.8,
+      "max_dhdt_mm_h": 8.358594512939453
+    },
+    {
+      "power_mw": 90.0,
+      "fraction": 0.0625,
+      "nozzle_count": 4,
+      "scale_factor": 0.8999999999999999,
+      "max_dhdt_mm_h": 9.403418827056884
+    },
+    {
+      "power_mw": 100.0,
+      "fraction": 0.0625,
+      "nozzle_count": 6,
+      "scale_factor": 0.6666666666666666,
+      "max_dhdt_mm_h": 6.965495427449544
+    },
+    {
+      "power_mw": 110.0,
+      "fraction": 0.0625,
+      "nozzle_count": 6,
+      "scale_factor": 0.7333333333333333,
+      "max_dhdt_mm_h": 7.662044970194498
+    },
+    {
+      "power_mw": 120.0,
+      "fraction": 0.0625,
+      "nozzle_count": 6,
+      "scale_factor": 0.8,
+      "max_dhdt_mm_h": 8.358594512939453
+    },
+    {
+      "power_mw": 130.0,
+      "fraction": 0.0625,
+      "nozzle_count": 6,
+      "scale_factor": 0.8666666666666667,
+      "max_dhdt_mm_h": 9.055144055684408
+    },
+    {
+      "power_mw": 140.0,
+      "fraction": 0.0625,
+      "nozzle_count": 6,
+      "scale_factor": 0.9333333333333333,
+      "max_dhdt_mm_h": 9.751693598429362
+    },
+    {
+      "power_mw": 150.0,
+      "fraction": 0.25,
+      "nozzle_count": 6,
+      "scale_factor": 1.0,
+      "max_dhdt_mm_h": 10.448243141174316
+    }
+  ],
+  "duty_cycle_mode": "uniform_with_rated",
+  "source": "rbf",
+  "hits_path": "output/erosion_map_rbf.npz"
+}

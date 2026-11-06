@@ -1,0 +1,63 @@
+FoamFile { version 2.0; format ascii; class dictionary; object controlDict; }
+application pimpleFoam;
+startFrom startTime;
+startTime 0.1209875984;
+stopAt endTime;
+endTime 0.4094423824;
+deltaT 3.7e-6;
+adjustTimeStep yes;
+maxCo 0.499;
+maxDeltaT 1e-5;
+writeControl timeStep;
+writeInterval 100;
+purgeWrite 0;
+writeFormat ascii;
+writePrecision 8;
+timePrecision 10;
+runTimeModifiable true;
+functions
+{
+    wallShearStress1
+    {
+        type wallShearStress;
+        libs (fieldFunctionObjects);
+        patches (bucket);
+        executeControl timeStep;
+        executeInterval 1;
+        writeControl writeTime;
+    }
+    fieldAverage1
+    {
+        type fieldAverage;
+        libs (fieldFunctionObjects);
+        executeControl timeStep;
+        executeInterval 1;
+        writeControl writeTime;
+        restartOnRestart true;
+        restartOnOutput false;
+        periodicRestart false;
+        fields
+        (
+            U { mean on; prime2Mean off; base time; }
+            p { mean on; prime2Mean off; base time; }
+            k { mean on; prime2Mean off; base time; }
+            omega { mean on; prime2Mean off; base time; }
+            wallShearStress { mean on; prime2Mean off; base time; }
+        );
+    }
+    residuals1 { type residuals; libs (utilityFunctionObjects); fields (U p k omega); writeControl timeStep; writeInterval 10; }
+    bucketForces { type forces; libs (forces); patches (bucket); rhoInf 1000; rho rhoInf; CofR (0 0 0); writeControl timeStep; writeInterval 10; }
+    inletFlux { type surfaceFieldValue; libs (fieldFunctionObjects); regionType patch; name inletFace; operation sum; fields (phi); writeFields false; writeControl timeStep; writeInterval 10; }
+    jetFlux { type surfaceFieldValue; libs (fieldFunctionObjects); regionType patch; name jetInlet; operation sum; fields (phi); writeFields false; writeControl timeStep; writeInterval 10; }
+    outletFlux { type surfaceFieldValue; libs (fieldFunctionObjects); regionType patch; name outletFace; operation sum; fields (phi); writeFields false; writeControl timeStep; writeInterval 10; }
+    sideFlux { type surfaceFieldValue; libs (fieldFunctionObjects); regionType patch; name sides; operation sum; fields (phi); writeFields false; writeControl timeStep; writeInterval 10; }
+    flowProbes
+    {
+        type probes;
+        libs (sampling);
+        writeControl timeStep;
+        writeInterval 10;
+        fields (U p);
+        probeLocations ((0.02 0 0) (0.03 0.08 0) (0.5 0.25 0));
+    }
+}

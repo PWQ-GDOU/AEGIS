@@ -46,7 +46,7 @@ def run() -> dict:
     result = {
         "version": "native-bucket-provenance-v1",
         "openfoam_version": "2412",
-        "source_case": "/public/home/wenquan/pelton_bucket_jet",
+        "source_case": "remote_artifacts/wenquan/pelton_bucket_jet",
         "source_time": topo["time_name"],
         "patch": boundary,
         "topology": {

@@ -1,0 +1,58 @@
+{
+  "report": "report_build/大容量冲击式水轮机精准抗磨防护技术研究技术报告.docx",
+  "competition_rule": "CS-202606-东方电气集团东方电机有限公司-大容量冲击式水轮机关键过流部件精准抗磨防护技术研究比赛方案.pdf",
+  "chapters": [
+    {
+      "chapter": "赛事要求与方案定位",
+      "evidence": [
+        "比赛方案.pdf",
+        "step30_competition_self_benchmark_v3_two_sided_lomo_20260909.json"
+      ]
+    },
+    {
+      "chapter": "粒子追踪与空间收敛",
+      "evidence": [
+        "step30_particle_spatial_estimator_v5.py",
+        "step30_particle_convergence_v5.py",
+        "step30_particle_convergence_5k_10k_20k_surface_kernel_v4r2.json"
+      ]
+    },
+    {
+      "chapter": "自建 baseline/worn 基准",
+      "evidence": [
+        "step30_participant_benchmark_inputs_v1.py",
+        "step30_independent_profile_reference_v1_20260909/profile_manifest.json"
+      ]
+    },
+    {
+      "chapter": "材料幅值与试验",
+      "evidence": [
+        "step30_zg0cr13ni4mo_water_sand_pilot_preregistration_v1r1.json",
+        "step30_zg0cr13ni4mo_amplitude_evidence_layer_v1.json"
+      ]
+    },
+    {
+      "chapter": "130 MW 动应力",
+      "evidence": [
+        "step30_stress_130mw_leave_one_v1r1.json"
+      ]
+    },
+    {
+      "chapter": "工程防护",
+      "evidence": [
+        "step30_protection_design.py",
+        "step30_risk_map.py"
+      ]
+    }
+  ],
+  "score": {
+    "conservative": 96.47058768179876,
+    "nominal": 99.99999952952895,
+    "interval": {
+      "lower": 96.448222114241,
+      "upper": 99.99999952952896
+    },
+    "status": "conditional participant-built benchmark"
+  },
+  "claim_boundary": "The score is conditional internal consistency under a participant-built reference; it is not official accuracy."
+}

@@ -1,0 +1,166 @@
+{
+  "version": "step30-particle-v5-confirmation-preregistration-v1",
+  "status": "preregistered",
+  "purpose": "independent confirmation of the v5 topology-connected coarse numerical screening map",
+  "discovery_report": {
+    "path": "workspace\\output\\step30_particle_convergence_5k_10k_20k_topology_aggregate_v5_discovery_r2.json",
+    "sha256": "5cca5983c86e2191038346da11625ecdf12d3abdefb262ab6c51f2fcc64fb9ff",
+    "report_sha256": "7966133d82ac9ac9111715867fa7da7daf526ae4d2eb0817d28cfa418a15c370"
+  },
+  "frozen_v5_identity": {
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+    "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+    "partition_sha256": "3cce7b2b8c7307fbe0ff1efd55de35105e878fc0bad9b818f579afade10d04c9",
+    "strict_immutable_run_identity": {
+      "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+      "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+      "field_time": "0.8684190921",
+      "solver_semantics": {
+        "application": "pimpleFoam",
+        "mode": "urans",
+        "field_statistic": "time_mean",
+        "tracking_velocity_object": "UMean",
+        "averaging_window": {
+          "start_time": "0.7844336016",
+          "end_time": "0.8684190921",
+          "sample_count": 20523
+        }
+      },
+      "implementation_hashes": {
+        "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+        "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+        "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+      },
+      "input_hashes": {
+        "analytic_reference_transform": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47",
+        "vertices_full_gpr": "c16cf9cec94e7d4215d0ebc88b53e8c7e05d1f50f8ec214bb61411ec735a5862"
+      },
+      "parameters": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "collision_algorithm_version": "v2",
+        "cfd_variant": "native_si",
+        "max_impacts": 3,
+        "dt_s": 1e-05,
+        "max_time_s": 0.05,
+        "particle_cfl": 0.25,
+        "cfd_velocity_interpolation": "idw_k8_v1",
+        "particle_integrator": "midpoint_exponential_v2",
+        "strict_max_substep_s": 1e-05,
+        "min_substep_s": 1e-08,
+        "max_query_distance_mm": 80.0,
+        "face_fallback_distance_mm": 1.5,
+        "hit_epsilon_mm": 0.05,
+        "min_speed_ms": 0.5,
+        "max_collision_events_per_step": 8,
+        "include_gravity": false,
+        "e_normal": 0.8,
+        "e_tangent": 0.9,
+        "diameter_distribution": {
+          "type": "Rosin-Rammler",
+          "min_m": 1e-06,
+          "max_m": 0.00023,
+          "d50_m": 5e-05,
+          "exponent": 1.5,
+          "sampling_contract": "mass_stratified_v1"
+        },
+        "psd_sampling": "mass_stratified_v1",
+        "rho_particle_kg_m3": 2650.0,
+        "max_accepted_cfd_speed_ms": 500.0,
+        "mass_flow_mode": "nominal",
+        "nozzle_flow_m3_s": 4.5,
+        "sediment_flow_kg_s": 5.8950000000000005,
+        "injection_window_s": 1.0,
+        "observation_window_s": 1.0,
+        "rho_wall_kg_m3": 7800.0,
+        "rho_wall_alternative_kg_m3": 7850.0
+      }
+    }
+  },
+  "acceptance_contract": {
+    "required_n_parcels": 20000,
+    "minimum_nonoverlapping_runs": 5,
+    "run_overlap_rule": "particle_hits SHA-256 must not appear in the hash-valid discovery report",
+    "acceptance_interpretation": "numerically stable coarse risk map only; never a physical erosion-accuracy or official competition-evidence claim"
+  },
+  "tracking_command_contract": {
+    "cfd_variant": "native_si",
+    "native_si_directory": "output/native_bucket_si_urans_0.8684190921",
+    "field_time": "0.8684190921",
+    "collision_backend": "cfd_topology",
+    "collision_policy": "strict_v2",
+    "topology_path": "output/step30_acceptance_0.8684190921/bucket_topology_v3_0.8684190921.npz",
+    "n_parcels": 20000,
+    "max_impacts": 3,
+    "mass_flow_mode": "nominal",
+    "psd_sampling": "mass_stratified_v1",
+    "max_time_s": 0.05,
+    "dt_s": 1e-05,
+    "particle_cfl": 0.25,
+    "strict_max_substep_s": 1e-05,
+    "cfd_velocity_interpolation": "idw_k8_v1",
+    "particle_integrator": "midpoint_exponential_v2",
+    "analytic_reference_transform_path": "authoritative_bucket_reference_transform_v1.json",
+    "include_gravity": false
+  },
+  "preflight": {
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "artifact_set_descriptor_sha256": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "native_si_manifest_sha256": "f44162883a41e3f89846164364e8c898621bc46a4a72e4e23cd65d81b70626b7",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+    "implementation_hashes": {
+      "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f",
+      "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+      "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb"
+    },
+    "input_hashes": {
+      "analytic_reference_transform": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47",
+      "vertices_full_gpr": "c16cf9cec94e7d4215d0ebc88b53e8c7e05d1f50f8ec214bb61411ec735a5862"
+    },
+    "reference_transform_sha256": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47"
+  },
+  "confirmation_seeds": [
+    57721,
+    104729,
+    130363,
+    161027,
+    196613
+  ],
+  "expected_runs": [
+    {
+      "seed": 57721,
+      "particle_run_id": "292a4b8ce26ec1e7d1ceb9486accb205255db4b2f3f940d65352008ac7f4e248",
+      "planned_run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\292a4b8ce26ec1e7d1ceb9486accb205255db4b2f3f940d65352008ac7f4e248"
+    },
+    {
+      "seed": 104729,
+      "particle_run_id": "c2bb816fc6af4883d314549fa402ab9bb071e8c6e9cc0018f32047f0a31d28c2",
+      "planned_run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c2bb816fc6af4883d314549fa402ab9bb071e8c6e9cc0018f32047f0a31d28c2"
+    },
+    {
+      "seed": 130363,
+      "particle_run_id": "4baa3a753acff91df25ff4feb6fe64b96904bc5f2ef82866b7f317e343c59643",
+      "planned_run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\4baa3a753acff91df25ff4feb6fe64b96904bc5f2ef82866b7f317e343c59643"
+    },
+    {
+      "seed": 161027,
+      "particle_run_id": "c610ec53f6f3313db446bb633a0919ff60dae5996000026e589c646a46d5d225",
+      "planned_run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c610ec53f6f3313db446bb633a0919ff60dae5996000026e589c646a46d5d225"
+    },
+    {
+      "seed": 196613,
+      "particle_run_id": "98c5c98b052f0ff0163c02a11a75b725ce5328a69b28b75d8f9be0c7a0cee4c8",
+      "planned_run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\98c5c98b052f0ff0163c02a11a75b725ce5328a69b28b75d8f9be0c7a0cee4c8"
+    }
+  ],
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "limitations": [
+    "Confirmation can establish only v5 coarse numerical stability.",
+    "No confirmation result establishes parent-face spatial accuracy or physical erosion truth."
+  ],
+  "preregistration_sha256": "c4ce79e8ffa0793870b586bcd2e699111e1005e7410191cc015aafd59d6c4620"
+}

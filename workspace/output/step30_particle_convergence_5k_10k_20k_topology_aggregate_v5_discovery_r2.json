@@ -1,0 +1,855 @@
+{
+  "version": "step30-particle-convergence-v5",
+  "analysis_role": "discovery",
+  "status": "exploratory_candidate_requires_confirmation",
+  "numerical_stability_status": "exploratory_candidate_requires_confirmation",
+  "spatial_accuracy_status": "blocked",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "action": "freeze_v5_contract_then_run_nonoverlapping_confirmation_seeds",
+  "aggregation_contract": {
+    "version": "topology-connected-bfs-face-budget-v1",
+    "adjacency_rule": "parent faces share at least one collision-triangle edge",
+    "partition_rule": "canonical ascending-parent-face seed; breadth-first expansion over unassigned topology neighbours; fixed maximum parent-face budget",
+    "candidate_max_parent_faces_per_aggregate": [
+      4096,
+      8192,
+      16384
+    ],
+    "default_max_parent_faces_per_aggregate": 16384,
+    "selected_scale_interpretation": "coarse topology-connected numerical screening scale for sparse particle impacts; not a physical erosion-resolution claim",
+    "normalization": "sum target mass within each connected aggregate, then redistribute to member faces in proportion to face area; exact total-mass conservation",
+    "confidence": {
+      "minimum_support_mass_fraction_of_total": 1e-05,
+      "minimum_aggregate_contribution_ess": 3.0
+    }
+  },
+  "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+  "evaluation_provenance": {
+    "evaluator_file": "step30_particle_convergence_v5.py",
+    "evaluator_sha256": "d523a0a35726bcd10731aa11a7b191915f3232f627cd1097d52c1c7d95473562",
+    "estimator_file": "step30_particle_spatial_estimator_v5.py",
+    "estimator_sha256": "a52826cf4239622ee3e35fe37076fc8944b03848a5f95495f3665263ebfd43de"
+  },
+  "gates": {
+    "weighted_spearman_median_min": 0.9,
+    "weighted_spearman_p10_min": 0.8,
+    "mass_hotspot_iou_median_min": 0.8,
+    "spatial_js_divergence_max": 0.05
+  },
+  "identity": {
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+    "aggregation_contract_sha256": "612a346653ff76f93f0698ca9a59b987ac61a16b4a7875bc5f3a77e4a5427ade",
+    "partition_sha256": "3cce7b2b8c7307fbe0ff1efd55de35105e878fc0bad9b818f579afade10d04c9",
+    "strict_immutable_run_identity": {
+      "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+      "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+      "field_time": "0.8684190921",
+      "solver_semantics": {
+        "application": "pimpleFoam",
+        "mode": "urans",
+        "field_statistic": "time_mean",
+        "tracking_velocity_object": "UMean",
+        "averaging_window": {
+          "start_time": "0.7844336016",
+          "end_time": "0.8684190921",
+          "sample_count": 20523
+        }
+      },
+      "implementation_hashes": {
+        "artifact_identity": "10a48b0961cbad0f521a9cefa6c2261dd9cc8a8ce32fd8cfb5e9c88834526acb",
+        "cfd_topology": "a7f2cf03d3d0eaffde2155d28d9067b120ccc9100bc4d04e769efb59451da533",
+        "particle_tracking": "4e78745d7f112b8f4ed1658cd97277d883a7cf1579b30ba88e37eef20e56be8f"
+      },
+      "input_hashes": {
+        "analytic_reference_transform": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47",
+        "vertices_full_gpr": "c16cf9cec94e7d4215d0ebc88b53e8c7e05d1f50f8ec214bb61411ec735a5862"
+      },
+      "parameters": {
+        "collision_backend": "cfd_topology",
+        "collision_policy": "strict_v2",
+        "collision_algorithm_version": "v2",
+        "cfd_variant": "native_si",
+        "max_impacts": 3,
+        "dt_s": 1e-05,
+        "max_time_s": 0.05,
+        "particle_cfl": 0.25,
+        "cfd_velocity_interpolation": "idw_k8_v1",
+        "particle_integrator": "midpoint_exponential_v2",
+        "strict_max_substep_s": 1e-05,
+        "min_substep_s": 1e-08,
+        "max_query_distance_mm": 80.0,
+        "face_fallback_distance_mm": 1.5,
+        "hit_epsilon_mm": 0.05,
+        "min_speed_ms": 0.5,
+        "max_collision_events_per_step": 8,
+        "include_gravity": false,
+        "e_normal": 0.8,
+        "e_tangent": 0.9,
+        "diameter_distribution": {
+          "type": "Rosin-Rammler",
+          "min_m": 1e-06,
+          "max_m": 0.00023,
+          "d50_m": 5e-05,
+          "exponent": 1.5,
+          "sampling_contract": "mass_stratified_v1"
+        },
+        "psd_sampling": "mass_stratified_v1",
+        "rho_particle_kg_m3": 2650.0,
+        "max_accepted_cfd_speed_ms": 500.0,
+        "mass_flow_mode": "nominal",
+        "nozzle_flow_m3_s": 4.5,
+        "sediment_flow_kg_s": 5.8950000000000005,
+        "injection_window_s": 1.0,
+        "observation_window_s": 1.0,
+        "rho_wall_kg_m3": 7800.0,
+        "rho_wall_alternative_kg_m3": 7850.0
+      }
+    }
+  },
+  "decision_scale": 20000,
+  "scales": {
+    "5000": {
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "n_runs": 5,
+      "estimators": {
+        "raw_parent_face": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": -0.5420827239520393,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8179074213343993
+            },
+            {
+              "area_weighted_spearman": -0.72375850594788,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8945938467747558
+            },
+            {
+              "area_weighted_spearman": -0.6509438520559276,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8980126302932695
+            },
+            {
+              "area_weighted_spearman": -0.6694624639282948,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8880809042489868
+            },
+            {
+              "area_weighted_spearman": -0.658034961902012,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.830287933501425
+            },
+            {
+              "area_weighted_spearman": -0.5926232657983357,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.821749581775464
+            },
+            {
+              "area_weighted_spearman": -0.5938503358166587,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8165236221919231
+            },
+            {
+              "area_weighted_spearman": -0.6208564218284313,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8197787227556524
+            },
+            {
+              "area_weighted_spearman": -0.5834086846631166,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8398314643737606
+            },
+            {
+              "area_weighted_spearman": -0.6800591914887759,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.8879549471291605
+            }
+          ],
+          "area_weighted_spearman_median": -0.6359001369421795,
+          "area_weighted_spearman_p10": -0.6844291229346863,
+          "mass_hotspot_iou_median": 0.0,
+          "spatial_js_divergence_max": 0.8980126302932695,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": false,
+            "area_weighted_spearman_p10": false,
+            "mass_hotspot_iou_median": false,
+            "spatial_js_divergence_max": false
+          },
+          "passed": false
+        },
+        "topology_aggregate": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": 0.9254383312628474,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.01252194943723054
+            },
+            {
+              "area_weighted_spearman": 0.8983337859153833,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.00839164941078661
+            },
+            {
+              "area_weighted_spearman": 0.8885959098818025,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.0648180011226678
+            },
+            {
+              "area_weighted_spearman": 0.9633031577702762,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.004002870126331973
+            },
+            {
+              "area_weighted_spearman": 0.88930111124346,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.004380085949674934
+            },
+            {
+              "area_weighted_spearman": 0.8858970959670411,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.03928870631270047
+            },
+            {
+              "area_weighted_spearman": 0.8506860750036093,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.015944823697990117
+            },
+            {
+              "area_weighted_spearman": 0.9281603442614957,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.04572714301687048
+            },
+            {
+              "area_weighted_spearman": 0.8973877322894612,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.011522595900187308
+            },
+            {
+              "area_weighted_spearman": 0.8537015257830528,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.05062860073760157
+            }
+          ],
+          "area_weighted_spearman_median": 0.8933444217664606,
+          "area_weighted_spearman_p10": 0.8533999807051085,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.0648180011226678,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": false,
+            "area_weighted_spearman_p10": true,
+            "mass_hotspot_iou_median": true,
+            "spatial_js_divergence_max": false
+          },
+          "passed": false
+        }
+      },
+      "mass_estimate": {
+        "n_runs": 5,
+        "mean_target_mass_kg": 2.189593158460378e-06,
+        "sample_sd_target_mass_kg": 4.254504542752482e-07,
+        "relative_sample_sd": 0.19430571046102715,
+        "relative_standard_error": 0.08689615540144974
+      },
+      "aggregate_support_diagnostics": {
+        "median_confident_area_fraction": 0.2857658274298084,
+        "minimum_confident_area_fraction": 0.2857658274298084,
+        "per_run_confident_area_fraction": [
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084
+        ]
+      }
+    },
+    "10000": {
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "n_runs": 5,
+      "estimators": {
+        "raw_parent_face": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": -0.4403754963691223,
+              "mass_hotspot_iou": 0.16666666666666666,
+              "js_divergence": 0.6953500344060624
+            },
+            {
+              "area_weighted_spearman": -0.4770416408040875,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.7495044976094878
+            },
+            {
+              "area_weighted_spearman": -0.48178592037471685,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.7186475755454772
+            },
+            {
+              "area_weighted_spearman": -0.5028609220555524,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.7410994869279057
+            },
+            {
+              "area_weighted_spearman": -0.427434321325516,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.673366701497222
+            },
+            {
+              "area_weighted_spearman": -0.4471507712397692,
+              "mass_hotspot_iou": 0.16666666666666666,
+              "js_divergence": 0.7201282497789769
+            },
+            {
+              "area_weighted_spearman": -0.5209007599747377,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.7604628442816038
+            },
+            {
+              "area_weighted_spearman": -0.4301002932235855,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.6917925507177027
+            },
+            {
+              "area_weighted_spearman": -0.4614899966735461,
+              "mass_hotspot_iou": 0.25,
+              "js_divergence": 0.7123435180375303
+            },
+            {
+              "area_weighted_spearman": -0.44000896528162314,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.7077410897493491
+            }
+          ],
+          "area_weighted_spearman_median": -0.45432038395665764,
+          "area_weighted_spearman_p10": -0.5046649058474709,
+          "mass_hotspot_iou_median": 0.0,
+          "spatial_js_divergence_max": 0.7604628442816038,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": false,
+            "area_weighted_spearman_p10": false,
+            "mass_hotspot_iou_median": false,
+            "spatial_js_divergence_max": false
+          },
+          "passed": false
+        },
+        "topology_aggregate": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": 0.8828263651994802,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.012417306992048353
+            },
+            {
+              "area_weighted_spearman": 0.748487504734182,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.016807852718285485
+            },
+            {
+              "area_weighted_spearman": 0.9421189261551093,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.006095206121975569
+            },
+            {
+              "area_weighted_spearman": 0.8593340612431241,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.025098172839620493
+            },
+            {
+              "area_weighted_spearman": 0.7406135635333753,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.0254100879245312
+            },
+            {
+              "area_weighted_spearman": 0.9417983379988071,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.012008140293013688
+            },
+            {
+              "area_weighted_spearman": 0.8554389438898744,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.032958230607141946
+            },
+            {
+              "area_weighted_spearman": 0.7816652809108579,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.02178313234799861
+            },
+            {
+              "area_weighted_spearman": 0.7965214651188074,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.002614411317499795
+            },
+            {
+              "area_weighted_spearman": 0.9286806272483291,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.026551043755759077
+            }
+          ],
+          "area_weighted_spearman_median": 0.8573865025664993,
+          "area_weighted_spearman_p10": 0.7477001106141014,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.032958230607141946,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": false,
+            "area_weighted_spearman_p10": false,
+            "mass_hotspot_iou_median": true,
+            "spatial_js_divergence_max": true
+          },
+          "passed": false
+        }
+      },
+      "mass_estimate": {
+        "n_runs": 5,
+        "mean_target_mass_kg": 2.14962100035886e-06,
+        "sample_sd_target_mass_kg": 2.6816700762006676e-07,
+        "relative_sample_sd": 0.12475083169326066,
+        "relative_standard_error": 0.05579026798315321
+      },
+      "aggregate_support_diagnostics": {
+        "median_confident_area_fraction": 0.2857658274298084,
+        "minimum_confident_area_fraction": 0.2857658274298084,
+        "per_run_confident_area_fraction": [
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084
+        ]
+      }
+    },
+    "20000": {
+      "seeds": [
+        42,
+        141421,
+        161803,
+        271828,
+        314159
+      ],
+      "n_runs": 5,
+      "estimators": {
+        "raw_parent_face": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": -0.28637666481512686,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.633938086905629
+            },
+            {
+              "area_weighted_spearman": -0.3147545848670779,
+              "mass_hotspot_iou": 0.1111111111111111,
+              "js_divergence": 0.6291427091728359
+            },
+            {
+              "area_weighted_spearman": -0.29158630598759366,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.6268161738692419
+            },
+            {
+              "area_weighted_spearman": -0.27615461085713383,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.5807821915574363
+            },
+            {
+              "area_weighted_spearman": -0.27325696468269256,
+              "mass_hotspot_iou": 0.1111111111111111,
+              "js_divergence": 0.5966950496207086
+            },
+            {
+              "area_weighted_spearman": -0.2879571282777153,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.601106432434984
+            },
+            {
+              "area_weighted_spearman": -0.2502246074305288,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.5856719569306865
+            },
+            {
+              "area_weighted_spearman": -0.2733315257477286,
+              "mass_hotspot_iou": 0.1111111111111111,
+              "js_divergence": 0.6128986132398455
+            },
+            {
+              "area_weighted_spearman": -0.26841707202405013,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.6074937061413014
+            },
+            {
+              "area_weighted_spearman": -0.22102042966223842,
+              "mass_hotspot_iou": 0.0,
+              "js_divergence": 0.6049115543777943
+            }
+          ],
+          "area_weighted_spearman_median": -0.2747430683024312,
+          "area_weighted_spearman_p10": -0.29390313387554207,
+          "mass_hotspot_iou_median": 0.0,
+          "spatial_js_divergence_max": 0.633938086905629,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": false,
+            "area_weighted_spearman_p10": false,
+            "mass_hotspot_iou_median": false,
+            "spatial_js_divergence_max": false
+          },
+          "passed": false
+        },
+        "topology_aggregate": {
+          "pairwise": [
+            {
+              "area_weighted_spearman": 0.8776554071210635,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.04557051321905781
+            },
+            {
+              "area_weighted_spearman": 0.9244298432041587,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.035440242765522253
+            },
+            {
+              "area_weighted_spearman": 0.9554376168143223,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.033225798413345296
+            },
+            {
+              "area_weighted_spearman": 0.7473308137379482,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.047059936450307274
+            },
+            {
+              "area_weighted_spearman": 0.9629266047074493,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.0042536144031235755
+            },
+            {
+              "area_weighted_spearman": 0.9629266047074493,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.004843732330424419
+            },
+            {
+              "area_weighted_spearman": 0.8440311911252946,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.015321290983248317
+            },
+            {
+              "area_weighted_spearman": 1.0000000000000002,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.00038150763726364605
+            },
+            {
+              "area_weighted_spearman": 0.8167149571125139,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.015492051470024488
+            },
+            {
+              "area_weighted_spearman": 0.8454246225333863,
+              "mass_hotspot_iou": 1.0,
+              "js_divergence": 0.017015193813642825
+            }
+          ],
+          "area_weighted_spearman_median": 0.9010426251626111,
+          "area_weighted_spearman_p10": 0.8097765427750573,
+          "mass_hotspot_iou_median": 1.0,
+          "spatial_js_divergence_max": 0.047059936450307274,
+          "gates": {
+            "minimum_independent_seeds": true,
+            "area_weighted_spearman_median": true,
+            "area_weighted_spearman_p10": true,
+            "mass_hotspot_iou_median": true,
+            "spatial_js_divergence_max": true
+          },
+          "passed": true
+        }
+      },
+      "mass_estimate": {
+        "n_runs": 5,
+        "mean_target_mass_kg": 1.920827042159532e-06,
+        "sample_sd_target_mass_kg": 2.235117770308695e-07,
+        "relative_sample_sd": 0.11636226069557074,
+        "relative_standard_error": 0.05203878498616962
+      },
+      "aggregate_support_diagnostics": {
+        "median_confident_area_fraction": 0.2857658274298084,
+        "minimum_confident_area_fraction": 0.2857658274298084,
+        "per_run_confident_area_fraction": [
+          0.35527397475381184,
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084,
+          0.2857658274298084
+        ]
+      }
+    }
+  },
+  "scale_diagnostics": [
+    {
+      "scales": [
+        5000,
+        10000
+      ],
+      "shared_seed_count": 5,
+      "aggregate_pairwise": [
+        {
+          "area_weighted_spearman": 1.0,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.004898763442677798
+        },
+        {
+          "area_weighted_spearman": 1.0,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.01515382361550708
+        },
+        {
+          "area_weighted_spearman": 0.8592201162463146,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.01168691556950752
+        },
+        {
+          "area_weighted_spearman": 0.9439401981869049,
+          "mass_hotspot_iou": 0.0,
+          "js_divergence": 0.03572809985054594
+        },
+        {
+          "area_weighted_spearman": 0.8518364258692854,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.047522772630213136
+        }
+      ],
+      "max_paired_relative_mass_change": 0.23204069379220332,
+      "interpretation": "diagnostic only: mass-stratified runs at different parcel counts are not nested common-random-number samples, so this is not an acceptance test for bias"
+    },
+    {
+      "scales": [
+        10000,
+        20000
+      ],
+      "shared_seed_count": 5,
+      "aggregate_pairwise": [
+        {
+          "area_weighted_spearman": 0.8829354838756889,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.03330373393334764
+        },
+        {
+          "area_weighted_spearman": 0.9629266047074493,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.019678884584285822
+        },
+        {
+          "area_weighted_spearman": 0.7454305339486186,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.012203605680690892
+        },
+        {
+          "area_weighted_spearman": 0.9417983379988071,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.008871963492389901
+        },
+        {
+          "area_weighted_spearman": 0.7987007149497369,
+          "mass_hotspot_iou": 1.0,
+          "js_divergence": 0.03235371603047499
+        }
+      ],
+      "max_paired_relative_mass_change": 0.3274182547192234,
+      "interpretation": "diagnostic only: mass-stratified runs at different parcel counts are not nested common-random-number samples, so this is not an acceptance test for bias"
+    }
+  ],
+  "confirmation_contract": {
+    "required_n_parcels": 20000,
+    "minimum_nonoverlapping_runs": 5,
+    "run_overlap_rule": "particle_hits SHA-256 must not appear in the hash-valid discovery report",
+    "acceptance_interpretation": "numerically stable coarse risk map only; never a physical erosion-accuracy or official competition-evidence claim"
+  },
+  "discovery_report_path": null,
+  "discovery_report_sha256": null,
+  "historical_records": {
+    "v3": {
+      "path": "workspace\\output\\step30_particle_convergence_5k_10k_20k_mass_stratified_v3.json",
+      "status": "failed",
+      "preserved_as": "historical_spatial_instability_record"
+    },
+    "v4": {
+      "path": "workspace\\output\\step30_particle_convergence_5k_10k_20k_surface_kernel_v4r2.json",
+      "status": "failed",
+      "preserved_as": "historical_short-range_kernel_record"
+    }
+  },
+  "artifact_inputs": [
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\ab23c9351d214592884eb1ebc5f214af3da37507ee9bf408a125c5ddae6e53fc",
+      "n_parcels": 5000,
+      "seed": 42,
+      "particle_run_id": "ab23c9351d214592884eb1ebc5f214af3da37507ee9bf408a125c5ddae6e53fc",
+      "particle_hits_sha256": "eefe240697668a972966f82c23a6a9ff104d5a3fe15a43b0acd3a39defa25520",
+      "field_contract_sha256": "3a25fcee7f117403d81af4ed44d83aaf5420bda2b58bff5927a4dc37d9601133",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_ab23c9351d214592884eb1ebc5f214af3da37507ee9bf408a125c5ddae6e53fc.npz",
+      "field_sha256": "5a1126ec38fd53413cad0e593eacf3172051c613b4b2a246923ca0154edfd80b"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\78363e7589403ac502e651b57cb5a8eddb37b400fe12e838e65833edd29a3d1b",
+      "n_parcels": 5000,
+      "seed": 141421,
+      "particle_run_id": "78363e7589403ac502e651b57cb5a8eddb37b400fe12e838e65833edd29a3d1b",
+      "particle_hits_sha256": "23e8519db524ad56284513ed7801dd9584975081deb4fc0cdf74ec48f0996c2c",
+      "field_contract_sha256": "1586f05186d46c464246a7eff8d5d6a1ad9524addd3e69be1892f3535fc2dcaa",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_78363e7589403ac502e651b57cb5a8eddb37b400fe12e838e65833edd29a3d1b.npz",
+      "field_sha256": "da86e198b0e86be27098000a6e81109be8eb1cf294896d016b8db8f595b5fa44"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\456cdde22b3216fe2b14edd36b6a94f28e50bdbe10e6c7c44fedc33f02422ef7",
+      "n_parcels": 5000,
+      "seed": 161803,
+      "particle_run_id": "456cdde22b3216fe2b14edd36b6a94f28e50bdbe10e6c7c44fedc33f02422ef7",
+      "particle_hits_sha256": "e1262a482890dd205600db2073036fdc24e1f29f6c12711274632057f7e04d26",
+      "field_contract_sha256": "19fc2f56f5e020dbd57b440e91ff4afb8e4ab43be16176228884bd5cd09250a7",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_456cdde22b3216fe2b14edd36b6a94f28e50bdbe10e6c7c44fedc33f02422ef7.npz",
+      "field_sha256": "61bfe35751005cdd40a476a361c770c86797d985ae945c5a52b2e0db54637345"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\48c52056225ccb4e9ba8f16e8f180e27ea9ef529c7306645588bef30517dcf41",
+      "n_parcels": 5000,
+      "seed": 271828,
+      "particle_run_id": "48c52056225ccb4e9ba8f16e8f180e27ea9ef529c7306645588bef30517dcf41",
+      "particle_hits_sha256": "e59f0fe3d71c8120c393a6059a6a3349769de9d803721755ba031d627ed655ff",
+      "field_contract_sha256": "79a41a4f954037d0303021aa3284ee3f8b4e6201dec294c519d3305fb5b5b39e",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_48c52056225ccb4e9ba8f16e8f180e27ea9ef529c7306645588bef30517dcf41.npz",
+      "field_sha256": "4862e17bfedaf1a2b320649f153ef6dba471fdab041e8c5426bf32a244f70d48"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\da9bddf96dba5a6347dfabebf3803f0c5b589b1f3a6790737bf71a361171b6a0",
+      "n_parcels": 5000,
+      "seed": 314159,
+      "particle_run_id": "da9bddf96dba5a6347dfabebf3803f0c5b589b1f3a6790737bf71a361171b6a0",
+      "particle_hits_sha256": "75cf80bf97855a458d7be6d1cf715bbbffc96d6bcd064b5074ea9c7723bb4759",
+      "field_contract_sha256": "2103dd5b337c523d898e072bc2ad26d841230f2b8e40ce9385f37d3c5b1f1333",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_da9bddf96dba5a6347dfabebf3803f0c5b589b1f3a6790737bf71a361171b6a0.npz",
+      "field_sha256": "117cb384dec48f83bf6de9ed95b3e5e692f58806cbbe7f4fb66876d5fb272b30"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\92cef092535ff3890fe042ee0ede0d7a9b0e0ec52195a5a69180f012753e85c7",
+      "n_parcels": 10000,
+      "seed": 42,
+      "particle_run_id": "92cef092535ff3890fe042ee0ede0d7a9b0e0ec52195a5a69180f012753e85c7",
+      "particle_hits_sha256": "07d662b937ab5d53854de5388a63cf0f4585e84fe36cde71dd6d00a58941940e",
+      "field_contract_sha256": "995d71d3b7bd8beecc76b21601f7a6b42444aeead59061a405b27cb18a2023ea",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_92cef092535ff3890fe042ee0ede0d7a9b0e0ec52195a5a69180f012753e85c7.npz",
+      "field_sha256": "04917c8a29ae62d256c1d3c3b305138e767380b814d453312a439414839023b0"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\2884d28ba0f66d6dd6fab840b533ca2b63f385dbaea238557d0895760f94407e",
+      "n_parcels": 10000,
+      "seed": 141421,
+      "particle_run_id": "2884d28ba0f66d6dd6fab840b533ca2b63f385dbaea238557d0895760f94407e",
+      "particle_hits_sha256": "d7874164832bc5cdc510123fdfb4ec2a5ad2a5581d39c5211ec7c40bdbfc2a77",
+      "field_contract_sha256": "2b7fe6889f1e55b9ec0344044251f437f219afdc24b0bbb5aa3db83edf8d4850",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_2884d28ba0f66d6dd6fab840b533ca2b63f385dbaea238557d0895760f94407e.npz",
+      "field_sha256": "9fd60e5a40dab181a4aa94d608a8a8d48c255fd5ab7efcd817b78bd3164b0188"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\8c84b400f9b2ecb14d4e3fed98eb15b58cb1f2df438d38717523ebcb51b29b9d",
+      "n_parcels": 10000,
+      "seed": 161803,
+      "particle_run_id": "8c84b400f9b2ecb14d4e3fed98eb15b58cb1f2df438d38717523ebcb51b29b9d",
+      "particle_hits_sha256": "cd6bb83ece12d1921f0657ec8f8a2a8370c5324f96f7d9a18d44056c530c345c",
+      "field_contract_sha256": "f180e5a7747f2121ece55a9797f0f1534526b51a4f4203649e1a575c74745960",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_8c84b400f9b2ecb14d4e3fed98eb15b58cb1f2df438d38717523ebcb51b29b9d.npz",
+      "field_sha256": "7d0d350feec58d93df2bcd2b9eccaa35bd4918be8a48d0f56af63e6b413a2d54"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\adb12f220f10843940acc9df403c7c78323c17e691c7f11728c54c98f47d2abd",
+      "n_parcels": 10000,
+      "seed": 271828,
+      "particle_run_id": "adb12f220f10843940acc9df403c7c78323c17e691c7f11728c54c98f47d2abd",
+      "particle_hits_sha256": "ec0e1c6e38e17ec2f51971b6e2d81e151a676e7a944f7798dc5104c40c9dcac3",
+      "field_contract_sha256": "35cd6a317949e4f0cb21cd7aef1d0d71ea12d2946a3b90515d7feb09e9330b4d",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_adb12f220f10843940acc9df403c7c78323c17e691c7f11728c54c98f47d2abd.npz",
+      "field_sha256": "4212edc0a32a1f1e67493dbd723002727eb0c98d05c81149044926e05a1d0337"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e",
+      "n_parcels": 10000,
+      "seed": 314159,
+      "particle_run_id": "5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e",
+      "particle_hits_sha256": "2fd47c72ac85e69806887fb22434a7e514efc17a39b1f170ca7209fe3da01447",
+      "field_contract_sha256": "3d1561f1c9d298b0da4e88b2501bc22827ec06c212a0c7b8826ca2d2fe2e3209",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_5e7384399b72eb0b0d26390c0d27c9cf74f0ad1e72e1780f967de28b7e40e89e.npz",
+      "field_sha256": "b4569d5e0e2323b72c5f1b695de05f82ac1fd15e6e4ec172567194ecb242b543"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6",
+      "n_parcels": 20000,
+      "seed": 42,
+      "particle_run_id": "9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6",
+      "particle_hits_sha256": "10ea9394e276eeacdbdfe3c7a32ce692a124b7ba39d3c87da385097c3b064abf",
+      "field_contract_sha256": "efb3a5eea5ec50acdc9097abb1763a3e7f0ce95e91ef8b6e1944c9bcf8c52e1b",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_9a5436e405c4f45d725ea1a7188e2190cf133bb3e2113a6fa4f80509876044d6.npz",
+      "field_sha256": "188592d620095ace8340cfe0b202cddb111bdc2e74fa39d65d22c85d54967a15"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc",
+      "n_parcels": 20000,
+      "seed": 141421,
+      "particle_run_id": "b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc",
+      "particle_hits_sha256": "4bcfcd4d7376f639c908b88dbfe15e2f7108b6bafc7b08b5ffb83dbb1341fd49",
+      "field_contract_sha256": "b2f1d1bcb3fa51c177822b21a44ee87b63320bd427ffafc255a7e2fe025b8064",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_b7f72a2ce2d30b2b616d4bb3922a07a7b4f489dbed75b419fb437e4412d6d0dc.npz",
+      "field_sha256": "19741b06448cb3e440be943937d36ad137cdad2a6bc119fd63c433b3d5d40b73"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b",
+      "n_parcels": 20000,
+      "seed": 161803,
+      "particle_run_id": "6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b",
+      "particle_hits_sha256": "2e10b3f257e459297aa3fe8fce66758acbb908762c218ec9c071114bd0333db6",
+      "field_contract_sha256": "21f57e8c42b6e487069530d245e4052ae474c1645d3774c1f90b8758b486f56a",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_6f68edf907831bbf38fbf3b14756b2890521da2e3c32ec2893cd5baa24c1dd6b.npz",
+      "field_sha256": "0e359064a7ab598d1abab1834ff8de41fac6651cd16e0edb80210b8967373fee"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a",
+      "n_parcels": 20000,
+      "seed": 271828,
+      "particle_run_id": "22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a",
+      "particle_hits_sha256": "213c83dc76ec9313997ddce0f9ef2a0a9bbfadb5948be06ba95c01661b00d8a4",
+      "field_contract_sha256": "c2eabaf781fa0f1f402a26a3c4d9afe00b2bebc5248ce205088841c75e63107e",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a.npz",
+      "field_sha256": "920fc7696a1fd8212cfc7f72a7351494caf97c04695763735c9a93871ccb9cf2"
+    },
+    {
+      "run_directory": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79",
+      "n_parcels": 20000,
+      "seed": 314159,
+      "particle_run_id": "51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79",
+      "particle_hits_sha256": "21e9d755ff93bb2028f4b74407254dc653d1cd9ce2c8e9c0d83015e2f862bcc5",
+      "field_contract_sha256": "9fd77f4fc0c011bd580e5311c40d4824195901c42019d3d744ece7d4b5f655e5",
+      "field_path": "workspace\\output\\step30_particle_surface_aggregate_v5_discovery_fields_r2\\particle_surface_aggregate_v5_51288bb4ee1bb1f1bbd466ca4aa9b59647b41b474bf421c7419f69f11a042c79.npz",
+      "field_sha256": "179f16c17167ef9525199c7d9d3a0284e6e30a1f2bf062b122b728c9fa7b2324"
+    }
+  ],
+  "limitations": [
+    "The discovery data identify a method candidate but cannot confirm it.",
+    "Aggregate stability does not validate the parent-face field.",
+    "No worn scan, baseline map, or independent spatial erosion truth is present.",
+    "No v5 result may open official accuracy, reference, or FEM gates."
+  ],
+  "report_sha256": "7966133d82ac9ac9111715867fa7da7daf526ae4d2eb0817d28cfa418a15c370"
+}

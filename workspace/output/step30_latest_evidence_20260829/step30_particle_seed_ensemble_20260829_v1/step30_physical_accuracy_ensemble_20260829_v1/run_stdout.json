@@ -1,0 +1,146 @@
+{
+  "version": "step30-physical-accuracy-ensemble-v1",
+  "status": "provisional_physical_accuracy_ensemble",
+  "physical_spatial_accuracy_status": "blocked_without_independent_measured_truth",
+  "spatial_accuracy_status": "blocked",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "claim_scope": "seed uncertainty and erosion-model disagreement for exploratory spatial screening",
+  "merged_prior": {
+    "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_physical_accuracy_prior_ensemble_20260829_v1/prior.json",
+    "sha256": "1bbc41567b1bbb4d962fa94fe94b405087894e3d8fa66ae564142bed25e41c58",
+    "npz_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_physical_accuracy_prior_ensemble_20260829_v1/prior.npz",
+    "npz_sha256": "002a89c87c77e9f7c931a46f5c56997fa39408466cf5dd0304719faf390c02f8",
+    "n_faces": 218988
+  },
+  "seed_priors": [
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_9404/prior.json",
+      "sha256": "41c7daac2e89bafb8bd12b120cb3cc9e582530be6478d1d9be8a93390daf6e60",
+      "npz_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_9404/prior.npz",
+      "npz_sha256": "f208f97636f082a43c5278662212d91d5a2f67ac4925b23852f3f633838d35e4"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_825055/prior.json",
+      "sha256": "8b7be0ccb369e66efebd92e80f97671ebcf9fc0d893125a1cc7a513c12e0606b",
+      "npz_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_825055/prior.npz",
+      "npz_sha256": "353e7b498b346b70f75eda17fb528fd517f62b0a37bd8a2439764f6f9034ca26"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_85c57/prior.json",
+      "sha256": "6e4aa033e90796e33c29949d3ad5383bcb9ce0e1e50ff5c113f2007fa6acdf1b",
+      "npz_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_85c57/prior.npz",
+      "npz_sha256": "231b5e06dff816729d0a10cdf8e9106ab871d295a3d3b8ebeac398a469ef3e0c"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_c004/prior.json",
+      "sha256": "6e305933351393193c4918dd500d68375df6c615636b3f175119c4ec60b820fd",
+      "npz_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_c004/prior.npz",
+      "npz_sha256": "61b41f29d7684058f377bc905b30663c57a711a035de2ca504ef09df7bcd241d"
+    },
+    {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_c15c/prior.json",
+      "sha256": "a43a1a6773b4bc6a7cba8206b69bc928927bd0a61f5259c560ba788bdcc8ccb7",
+      "npz_path": "remote_artifacts/PWQ/step30_cpu_v1/results/step30_seed_prior_20260829_v1/seed_c15c/prior.npz",
+      "npz_sha256": "6bb72f66857e5788b0a99f561c84cfbb6ada823adc00d4e2d780546bec45ae0f"
+    }
+  ],
+  "seed_uncertainty": {
+    "n_seeds": 5,
+    "models": {
+      "oka": {
+        "seed_mean_of_face_mean": 1.5070074458471614e-06,
+        "seed_std_p50": 0.0,
+        "seed_std_p95": 0.0,
+        "seed_cv_p50": 0.0,
+        "seed_cv_p95": 0.0,
+        "high_cv_face_fraction": 0.01256689864284801
+      },
+      "finnie": {
+        "seed_mean_of_face_mean": 2.4274792915274902e-09,
+        "seed_std_p50": 0.0,
+        "seed_std_p95": 0.0,
+        "seed_cv_p50": 0.0,
+        "seed_cv_p95": 0.0,
+        "high_cv_face_fraction": 0.012539499881272034
+      },
+      "tabakoff": {
+        "seed_mean_of_face_mean": 6.06504059585226e-10,
+        "seed_std_p50": 0.0,
+        "seed_std_p95": 0.0,
+        "seed_cv_p50": 0.0,
+        "seed_cv_p95": 0.0,
+        "high_cv_face_fraction": 0.012562332182585347
+      },
+      "mansouri": {
+        "seed_mean_of_face_mean": 3.329907080754765e-07,
+        "seed_std_p50": 0.0,
+        "seed_std_p95": 0.0,
+        "seed_cv_p50": 0.0,
+        "seed_cv_p95": 0.0,
+        "high_cv_face_fraction": 0.01091840648802674
+      }
+    },
+    "interpretation": "variation across independent particle seeds on the same frozen CFD/topology contract"
+  },
+  "model_uncertainty": {
+    "models": [
+      "oka",
+      "finnie",
+      "tabakoff",
+      "mansouri"
+    ],
+    "pairwise": [
+      {
+        "left": "oka",
+        "right": "finnie",
+        "spearman": 0.9999998148730863,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "oka",
+        "right": "tabakoff",
+        "spearman": 0.9999998506023019,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "oka",
+        "right": "mansouri",
+        "spearman": 0.9999995982888833,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "finnie",
+        "right": "tabakoff",
+        "spearman": 0.9999999470424121,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "finnie",
+        "right": "mansouri",
+        "spearman": 0.9999993839536657,
+        "hotspot_iou": 1.0
+      },
+      {
+        "left": "tabakoff",
+        "right": "mansouri",
+        "spearman": 0.999999534813391,
+        "hotspot_iou": 1.0
+      }
+    ],
+    "spearman_median": 0.9999997065809848,
+    "spearman_min": 0.9999993839536657,
+    "hotspot_iou_median": 1.0,
+    "hotspot_iou_min": 1.0,
+    "normalized_disagreement_cv_p50": 0.0,
+    "normalized_disagreement_cv_p95": 0.0,
+    "interpretation": "model disagreement is conditional on one common particle-hit driver and is not physical validation"
+  },
+  "limitations": [
+    "Seed uncertainty is not a measurement uncertainty and does not cover CFD model-form error.",
+    "The four laws share the same hit locations; near-identical spatial rankings are expected under sparse common support.",
+    "No baseline/worn scan or independent ZG0Cr13Ni4Mo spatial measurement is supplied."
+  ],
+  "report_sha256": "58f3d58671f2f5d75cc70ae21aebbf0a60b6a4ebae54b8987f22da3fca489edf"
+}

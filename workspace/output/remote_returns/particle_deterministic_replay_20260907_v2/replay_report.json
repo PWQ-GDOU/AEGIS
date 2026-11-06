@@ -1,0 +1,36 @@
+{
+  "version": "step30-particle-deterministic-replay-v1",
+  "status": "passed",
+  "execution_target": "dcu_cpu",
+  "run_a": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_deterministic_replay/step30_deterministic_replay_20260907_v2/replica_A/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/abf1534619e04b4eddda64388f1764a406132f2ffdd8669c0823ee9c2b3c5243",
+  "run_b": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_deterministic_replay/step30_deterministic_replay_20260907_v2/replica_B/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/abf1534619e04b4eddda64388f1764a406132f2ffdd8669c0823ee9c2b3c5243",
+  "process_status": {
+    "A": 0,
+    "B": 0
+  },
+  "byte_equal": {
+    "particle_hits_npz": true,
+    "summary_json": true,
+    "particle_run_manifest_json": true
+  },
+  "sha256": {
+    "particle_hits.npz": {
+      "A": "389dfb5e1fd5cf726bbddba4d34671aa31c80377071d90a81a9a89f184142dfa",
+      "B": "389dfb5e1fd5cf726bbddba4d34671aa31c80377071d90a81a9a89f184142dfa"
+    },
+    "summary.json": {
+      "A": "a3300b90aa2db27e1a1bde34d42950ae133e2e41e6373b51cf29e12c11971906",
+      "B": "a3300b90aa2db27e1a1bde34d42950ae133e2e41e6373b51cf29e12c11971906"
+    },
+    "particle_run_manifest.json": {
+      "A": "3257a37281f17dd1f515c736cbed37e94322d423856a85286995f44d3a4c19ae",
+      "B": "3257a37281f17dd1f515c736cbed37e94322d423856a85286995f44d3a4c19ae"
+    }
+  },
+  "summary_differences": {
+    "tracking": false,
+    "face_erosion": false,
+    "validation": false
+  },
+  "interpretation": "Byte-identical replay supports deterministic implementation at this smoke scale; it does not prove spatial convergence or physical accuracy."
+}

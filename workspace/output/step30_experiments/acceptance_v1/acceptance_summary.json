@@ -1,0 +1,1115 @@
+{
+  "version": "step30-acceptance-gates-v1",
+  "status": "blocked",
+  "numerical_status": "passed",
+  "production": true,
+  "checks": {
+    "artifact_set": {
+      "status": "passed",
+      "required": true,
+      "source": {
+        "version": "step30-artifact-set-validation-v1",
+        "status": "passed",
+        "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+        "artifact": {
+          "path": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\artifact_set_manifest.json",
+          "status": "passed",
+          "errors": [],
+          "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+          "descriptor": {
+            "version": "step30-artifact-set-descriptor-v2",
+            "cfd": {
+              "variant": "native_si",
+              "field_time": "0.8684190921",
+              "manifest_version": "step30-native-si-manifest-v2",
+              "manifest_sha256": "f44162883a41e3f89846164364e8c898621bc46a4a72e4e23cd65d81b70626b7",
+              "polyMesh_signature": "5b401242fdea449fdcbb9ba2f01ea9d98b05a50718f161a27e842a2e4dd93f27",
+              "field_sha256": {
+                "Cx": "2a17a388eeefa11d37c5e367467c1d5ab571bf4ae64d1f25ade90be43edff7ad",
+                "Cy": "c01cb67915e7cab8c4d116b5b5eb3c0e30516a9872e2a0c9560a4c87d184b5f0",
+                "Cz": "45e7947daadb186563efad4738c75db4ed3d9313dcc03ce5cd5622164fad5faf",
+                "UMean": "cf9c33bc28491c96ad71e1541280475b6d601aeeffbcc07f18880cb4de7a7041",
+                "kMean": "0db7dc85fd8b1eb8568fa74e9fdb57e47b4cfd8b628ed6187215cfbdf85254d7",
+                "omegaMean": "b5d6c07a3028751b3307d0684509abcd3b675808406a90ca91b266ac96d5a036",
+                "pMean": "9031e68bf4e36cd386a83d513d51c54e6bb69d8e0693bd48777978c60a4db71e",
+                "wallShearStressMean": "82647c3d46152bd88e60b1ffc07586085b1764b60d041eb78bdabeaf5a5484e0"
+              },
+              "solver_semantics": {
+                "application": "pimpleFoam",
+                "mode": "urans",
+                "field_statistic": "time_mean",
+                "tracking_velocity_object": "UMean",
+                "averaging_window": {
+                  "start_time": "0.7844336016",
+                  "end_time": "0.8684190921",
+                  "sample_count": 20523
+                }
+              }
+            },
+            "topology": {
+              "file_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+              "artifact_version": "step30-native-openfoam-topology-v3",
+              "mesh_signature_algorithm": "sha256-vtk-triangulation-source-units-points-triangles-parent-ids-v3",
+              "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+              "source_vtp_sha256": "c27b5d14644231f5232e136623a69aff57c547f8cfdca05cbde73776b40e8d10",
+              "patch_name": "bucket",
+              "time": "0.8684190921",
+              "n_parent_faces": 218988
+            },
+            "units": {
+              "source_coordinate_units": "m",
+              "internal_coordinate_units": "mm",
+              "coordinate_scale_to_mm": 1000.0
+            },
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44"
+          }
+        },
+        "runs": [
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\477d1e15b9f4bb0cbddd7989191e2d23187af3201c0ac28e83b903bb963b3e39",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "477d1e15b9f4bb0cbddd7989191e2d23187af3201c0ac28e83b903bb963b3e39",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 500,
+              "n_injected": 500,
+              "max_impacts": 3,
+              "seed": 42,
+              "dt_s": 5e-06,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 5e-06,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          },
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\6ea9fbb8a05c2705779ee7744b703b80cb3638c9d267b4fb4b0c01a4fca63304",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "6ea9fbb8a05c2705779ee7744b703b80cb3638c9d267b4fb4b0c01a4fca63304",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 500,
+              "n_injected": 500,
+              "max_impacts": 3,
+              "seed": 42,
+              "dt_s": 5e-06,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 5e-06,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          },
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\72952d34b96f23a917b7eff2371e44f97aa89172ecba3124b47052b4bdf158a0",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "72952d34b96f23a917b7eff2371e44f97aa89172ecba3124b47052b4bdf158a0",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 500,
+              "n_injected": 500,
+              "max_impacts": 3,
+              "seed": 42,
+              "dt_s": 2.5e-06,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 2.5e-06,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          },
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\7d81dd50a05c60ac0e172205d7c6634dd413629ad31658abbf1e26c1911f0865",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "7d81dd50a05c60ac0e172205d7c6634dd413629ad31658abbf1e26c1911f0865",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 500,
+              "n_injected": 500,
+              "max_impacts": 3,
+              "seed": 42,
+              "dt_s": 1e-05,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 1e-05,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          },
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c27975a35b0779a46404df6240b540723ffdc582dcac9e84eab07fa95e0030c5",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "c27975a35b0779a46404df6240b540723ffdc582dcac9e84eab07fa95e0030c5",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 2000,
+              "n_injected": 2000,
+              "max_impacts": 3,
+              "seed": 42,
+              "dt_s": 1e-05,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 2.5e-06,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          },
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c3d50c39a0df680d9c79b3b7aaa73712f54b7588b5d53b94489c45e7b4d81aab",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "c3d50c39a0df680d9c79b3b7aaa73712f54b7588b5d53b94489c45e7b4d81aab",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 2000,
+              "n_injected": 2000,
+              "max_impacts": 1,
+              "seed": 42,
+              "dt_s": 1e-05,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 2.5e-06,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          },
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\e49c380926f68de2e5988f9b43f59c156c886f9bc52f6b2d4113c49e585aaa6d",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "e49c380926f68de2e5988f9b43f59c156c886f9bc52f6b2d4113c49e585aaa6d",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 500,
+              "n_injected": 500,
+              "max_impacts": 3,
+              "seed": 42,
+              "dt_s": 1e-05,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 1e-05,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          },
+          {
+            "run_dir": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\e8a756c88c44118fb2b1448f15c7f29bd9ce64a44f61f53efcdc521a7f4eac1d",
+            "status": "passed",
+            "errors": [],
+            "particle_run_id": "e8a756c88c44118fb2b1448f15c7f29bd9ce64a44f61f53efcdc521a7f4eac1d",
+            "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+            "config": {
+              "cfd_variant": "native_si",
+              "collision_backend": "cfd_topology",
+              "collision_policy": "strict_v2",
+              "cfd_field_time": "0.8684190921",
+              "n_parcels": 500,
+              "n_injected": 500,
+              "max_impacts": 3,
+              "seed": 42,
+              "dt_s": 2.5e-06,
+              "max_time_s": 0.05,
+              "max_query_distance_mm": 80.0,
+              "face_fallback_distance_mm": 1.5,
+              "hit_epsilon_mm": 0.05,
+              "particle_cfl": 0.25,
+              "cfd_velocity_interpolation": "idw_k8_v1",
+              "particle_integrator": "midpoint_exponential_v2",
+              "strict_max_substep_s": 2.5e-06,
+              "min_substep_s": 1e-08,
+              "max_collision_events_per_step": 8,
+              "min_speed_ms": 0.5,
+              "e_normal": 0.8,
+              "e_tangent": 0.9,
+              "include_gravity": false,
+              "mass_flow_mode": "nominal",
+              "injection_window_s": 1.0,
+              "observation_window_s": 1.0,
+              "concentration_kg_m3": 1.31,
+              "rated_flow_m3_s": 27.0,
+              "nozzle_count": 6,
+              "jet_speed_ms": 104.8,
+              "max_accepted_cfd_speed_ms": 500.0,
+              "jet_diameter_mm": 240.0,
+              "rho_particle_kg_m3": 2650.0,
+              "d_min_m": 1e-06,
+              "d_max_m": 0.00023,
+              "d50_m": 5e-05,
+              "rr_exponent": 1.5
+            }
+          }
+        ],
+        "errors": []
+      }
+    },
+    "strict_collision": {
+      "status": "passed",
+      "required": true,
+      "source": {
+        "version": "step30-strict-collision-validation-v1",
+        "collision_policy": "strict_v2",
+        "status": "passed",
+        "cases": [
+          {
+            "name": "face_crossing",
+            "expected": true,
+            "actual": true,
+            "passed": true,
+            "toi": 0.5
+          },
+          {
+            "name": "edge_crossing",
+            "expected": true,
+            "actual": true,
+            "passed": true,
+            "toi": 0.5
+          },
+          {
+            "name": "vertex_crossing",
+            "expected": true,
+            "actual": true,
+            "passed": true,
+            "toi": 0.5
+          },
+          {
+            "name": "parallel",
+            "expected": false,
+            "actual": false,
+            "passed": true,
+            "toi": null
+          },
+          {
+            "name": "coplanar",
+            "expected": false,
+            "actual": false,
+            "passed": true,
+            "toi": null
+          },
+          {
+            "name": "near_miss",
+            "expected": false,
+            "actual": false,
+            "passed": true,
+            "toi": null
+          }
+        ],
+        "policy_checks": {
+          "strict_intersection_is_physical": true,
+          "strict_near_miss_is_not_physical": true,
+          "legacy_fallback_is_explicit": true,
+          "near_miss_diagnostic_only": true,
+          "deterministic_tie_break": true
+        },
+        "diagnostics": {
+          "endpoint_near_miss": 1
+        },
+        "physical_fallback_hits": 0,
+        "interpretation": "strict_v2 excludes proximity fallback from physical impacts; legacy fallback is tested only under explicit legacy_proximity_v1."
+      }
+    },
+    "cfd_mean_field": {
+      "status": "passed",
+      "required": true,
+      "source": {
+        "path": "workspace/output\\native_bucket_si_urans_0.8684190921\\urans_validation_0.8684190921.json",
+        "version": "urans-time-mean-validation-v2",
+        "status": "passed",
+        "accepted": true,
+        "gates": {
+          "max_co_below_0p5": true,
+          "no_turbulence_bounding": true,
+          "no_fatal_or_nonfinite_log": true,
+          "twenty_flow_through_window": true,
+          "mean_field_relative_l2_below_1e3": true,
+          "force_late_mean_change_below_1pct": true,
+          "flux_late_mean_change_below_1pct": true,
+          "flux_imbalance_below_1e4": true,
+          "probe_late_mean_change_below_1pct": true,
+          "mean_speed_below_500_ms": true,
+          "all_mean_fields_finite": true
+        },
+        "metrics": {
+          "max_courant_number": 0.49901701,
+          "bounding_k_count": 0,
+          "bounding_omega_count": 0,
+          "mean_field_relative_l2": {
+            "UMean": 0.00016925379972722868,
+            "pMean": 0.00015993476239902125,
+            "kMean": 0.00018120702702710553,
+            "omegaMean": 9.541983264350302e-05,
+            "wallShearStressMean": 0.00012686259442732886
+          },
+          "force_late_mean_relative_change": {
+            "pressure": 0.0011589974344467066,
+            "viscous": 0.0011641263531796669,
+            "total": 0.001161569932918981
+          },
+          "flux_late_mean_relative_change": {
+            "inletFlux": 0.001255009346379601,
+            "jetFlux": 0.0,
+            "outletFlux": 0.006047106273680715,
+            "sideFlux": 0.0025134166700512767
+          },
+          "flux_recent_mean": {
+            "inletFlux": -6.405330511463414,
+            "jetFlux": -4.5286844099999986,
+            "outletFlux": 10.051971634146343,
+            "sideFlux": 0.8820431467365853
+          },
+          "flux_normalized_imbalance": 6.4285848209914435e-09,
+          "probe_U_late_mean_relative_change": 0.0006969924315755429,
+          "probe_p_late_mean_relative_change": 0.000506040973372024,
+          "mean_speed_ms": {
+            "min": 0.0011268946968697082,
+            "median": 29.412114573738872,
+            "p99": 119.13883695436782,
+            "max": 221.28267804463704
+          }
+        }
+      }
+    },
+    "timestep_sensitivity": {
+      "status": "passed",
+      "required": true,
+      "source": {
+        "version": "step30-particle-timestep-sensitivity-v1",
+        "status": "passed",
+        "gates": {
+          "first_parcel_jaccard_min": 0.99,
+          "first_parent_face_agreement_min": 0.99,
+          "hit_count_relative_max": 0.01,
+          "mass_weighted_speed_relative_max": 0.01,
+          "mass_weighted_angle_relative_max": 0.01,
+          "target_mass_relative_max": 0.05,
+          "erosion_p99_relative_max": 0.05
+        },
+        "shared_identity": {
+          "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+          "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+          "field_time": "0.8684190921",
+          "solver_semantics": {
+            "application": "pimpleFoam",
+            "mode": "urans",
+            "field_statistic": "time_mean",
+            "tracking_velocity_object": "UMean",
+            "averaging_window": {
+              "start_time": "0.7844336016",
+              "end_time": "0.8684190921",
+              "sample_count": 20523
+            }
+          },
+          "parameters_except_dt": {
+            "n_parcels": 500,
+            "n_injected": 500,
+            "collision_backend": "cfd_topology",
+            "collision_policy": "strict_v2",
+            "collision_algorithm_version": "v2",
+            "cfd_variant": "native_si",
+            "max_impacts": 3,
+            "seed": 42,
+            "max_time_s": 0.05,
+            "particle_cfl": 0.25,
+            "cfd_velocity_interpolation": "idw_k8_v1",
+            "particle_integrator": "midpoint_exponential_v2",
+            "min_substep_s": 1e-08,
+            "max_query_distance_mm": 80.0,
+            "face_fallback_distance_mm": 1.5,
+            "hit_epsilon_mm": 0.05,
+            "min_speed_ms": 0.5,
+            "max_collision_events_per_step": 8,
+            "include_gravity": false,
+            "e_normal": 0.8,
+            "e_tangent": 0.9,
+            "diameter_distribution": {
+              "type": "Rosin-Rammler",
+              "min_m": 1e-06,
+              "max_m": 0.00023,
+              "d50_m": 5e-05,
+              "exponent": 1.5
+            },
+            "rho_particle_kg_m3": 2650.0,
+            "max_accepted_cfd_speed_ms": 500.0,
+            "mass_flow_mode": "nominal",
+            "nozzle_flow_m3_s": 4.5,
+            "sediment_flow_kg_s": 5.8950000000000005,
+            "injection_window_s": 1.0,
+            "observation_window_s": 1.0,
+            "rho_wall_kg_m3": 7800.0,
+            "rho_wall_alternative_kg_m3": 7850.0
+          }
+        },
+        "runs": {
+          "dt_1e-5": {
+            "dt_s": 1e-05,
+            "strict_max_substep_s": 1e-05,
+            "impacts": 19,
+            "first_hits": 8,
+            "hit_parcels": 8,
+            "target_mass_kg": 9.035779839905445e-07,
+            "erosion_p99_mm_h": 35.8137092590332,
+            "impact_mass_kg": 0.3485715358813972,
+            "Vp_mass_weighted": 36.00208107122521,
+            "angle_mass_weighted": 40.16775475834144,
+            "fallback_hits": 0,
+            "physical_strict_hit_ratio": 1.0
+          },
+          "dt_5e-6": {
+            "dt_s": 5e-06,
+            "strict_max_substep_s": 5e-06,
+            "impacts": 19,
+            "first_hits": 8,
+            "hit_parcels": 8,
+            "target_mass_kg": 8.97012228051608e-07,
+            "erosion_p99_mm_h": 35.67322540283203,
+            "impact_mass_kg": 0.3485715358813972,
+            "Vp_mass_weighted": 35.920616392065476,
+            "angle_mass_weighted": 40.14723744634272,
+            "fallback_hits": 0,
+            "physical_strict_hit_ratio": 1.0
+          },
+          "dt_2p5e-6": {
+            "dt_s": 2.5e-06,
+            "strict_max_substep_s": 2.5e-06,
+            "impacts": 19,
+            "first_hits": 8,
+            "hit_parcels": 8,
+            "target_mass_kg": 9.002427532323054e-07,
+            "erosion_p99_mm_h": 36.19540023803711,
+            "impact_mass_kg": 0.3485715358813972,
+            "Vp_mass_weighted": 35.9835022153621,
+            "angle_mass_weighted": 40.04454411794828,
+            "fallback_hits": 0,
+            "physical_strict_hit_ratio": 1.0
+          }
+        },
+        "pairs": {
+          "dt_1e-5__dt_5e-6": {
+            "first_parcel_jaccard": 1.0,
+            "first_parent_face_agreement": 1.0,
+            "hit_count_relative": 0.0,
+            "mass_weighted_speed_relative": 0.0022627769488816523,
+            "mass_weighted_angle_relative": 0.0005107906110797943,
+            "target_mass_relative": 0.00726639654270859,
+            "erosion_p99_relative": 0.003922627929575264,
+            "gates": {
+              "first_parcel_jaccard": true,
+              "first_parent_face_agreement": true,
+              "hit_count_relative": true,
+              "mass_weighted_speed_relative": true,
+              "mass_weighted_angle_relative": true,
+              "target_mass_relative": true,
+              "erosion_p99_relative": true
+            },
+            "passed": true
+          },
+          "dt_5e-6__dt_2p5e-6": {
+            "first_parcel_jaccard": 1.0,
+            "first_parent_face_agreement": 1.0,
+            "hit_count_relative": 0.0,
+            "mass_weighted_speed_relative": 0.0017476293141299047,
+            "mass_weighted_angle_relative": 0.0025579176781888257,
+            "target_mass_relative": 0.0035885045106981406,
+            "erosion_p99_relative": 0.014426552318002378,
+            "gates": {
+              "first_parcel_jaccard": true,
+              "first_parent_face_agreement": true,
+              "hit_count_relative": true,
+              "mass_weighted_speed_relative": true,
+              "mass_weighted_angle_relative": true,
+              "target_mass_relative": true,
+              "erosion_p99_relative": true
+            },
+            "passed": true
+          }
+        }
+      }
+    },
+    "i1_i3_comparison": {
+      "status": "passed",
+      "required": true,
+      "source": {
+        "version": "step30-native-si-comparison-v3",
+        "accepted": true,
+        "artifact_identity": {
+          "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+          "artifact_set_manifest": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\artifact_set_manifest.json",
+          "artifact_set_manifest_verified": true,
+          "i1_particle_run_id": "c3d50c39a0df680d9c79b3b7aaa73712f54b7588b5d53b94489c45e7b4d81aab",
+          "i3_particle_run_id": "c27975a35b0779a46404df6240b540723ffdc582dcac9e84eab07fa95e0030c5"
+        },
+        "final_cfd": {
+          "variant": "native_si",
+          "field_time": "0.8684190921",
+          "solver_semantics": {
+            "application": "pimpleFoam",
+            "mode": "urans",
+            "field_statistic": "time_mean",
+            "tracking_velocity_object": "UMean",
+            "averaging_window": {
+              "start_time": "0.7844336016",
+              "end_time": "0.8684190921",
+              "sample_count": 20523
+            }
+          },
+          "n_cells": 837972,
+          "source_coordinate_units": "m",
+          "internal_coordinate_units": "mm",
+          "coordinate_scale_to_mm": 1000.0,
+          "speed_stats_ms": {
+            "min": 0.0011268946968697082,
+            "max": 221.28267804463704,
+            "median": 29.412114573738872
+          },
+          "solver_assessment": {
+            "assessment_type": "urans_time_mean_sampling",
+            "solver_log": "pimpleFoam_0.8684190921.log",
+            "end_time": "0.8684190921",
+            "averaging_window": {
+              "start_time": "0.7844336016",
+              "end_time": "0.8684190921",
+              "sample_count": 20523
+            },
+            "previous_mean_field_change": {
+              "previous_time": "0.8680083057",
+              "field_relative_l2": {
+                "UMean": 0.00016925379972722874,
+                "pMean": 0.00015993476239902125,
+                "kMean": 0.00018120702702710559,
+                "omegaMean": 9.541983264350299e-05
+              },
+              "bulk_speed_relative_change_pct": {
+                "median": 0.0011102734475734407,
+                "p95": 2.3230293595176724e-05,
+                "p99": 9.935828457665568e-05,
+                "max": 0.006827961364013424
+              },
+              "max_bulk_speed_relative_change_pct": 0.006827961364013424
+            },
+            "simple_convergence_marker_applied": false,
+            "validation_report": {
+              "file": "urans_validation_0.8684190921.json",
+              "sha256": "be935daddff386d03856c00e89adae82791febf7d2b9e6e44256bc8b6e2dc829",
+              "gates": {
+                "max_co_below_0p5": true,
+                "no_turbulence_bounding": true,
+                "no_fatal_or_nonfinite_log": true,
+                "twenty_flow_through_window": true,
+                "mean_field_relative_l2_below_1e3": true,
+                "force_late_mean_change_below_1pct": true,
+                "flux_late_mean_change_below_1pct": true,
+                "flux_imbalance_below_1e4": true,
+                "probe_late_mean_change_below_1pct": true,
+                "mean_speed_below_500_ms": true,
+                "all_mean_fields_finite": true
+              }
+            },
+            "steady_rejection_evidence": {
+              "file": "steady_fixed_point_assessment.json",
+              "sha256": "5778a38bbc6634ad9422fe262d3b205934c5f1033070382c8ce76ab6aab308f4",
+              "accepted_as_steady_fixed_point": false
+            },
+            "extended_burnin_rejection_evidence": {
+              "file": "extended_burnin_rejected_gate.json",
+              "sha256": "771449d21767aa0d972b3c0ff8ee3f02cd8c4057bd6600d3887a4d8350efbef5",
+              "accepted_as_clean_window": false
+            },
+            "status": "sampling_window_validated"
+          }
+        },
+        "topology": {
+          "artifact_version": "step30-native-openfoam-topology-v3",
+          "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+          "n_parent_faces": 218988,
+          "n_collision_triangles": 437976,
+          "surface_area_m2": 0.932961002108641,
+          "bounds_mm": [
+            [
+              43.46799850463867,
+              -187.9819929599762,
+              -406.25301003456116
+            ],
+            [
+              421.34401202201843,
+              172.0850020647049,
+              402.14699506759644
+            ]
+          ]
+        },
+        "runs": {
+          "strict_native_si_i1": {
+            "field_time": "0.8684190921",
+            "max_impacts": 1,
+            "n_parcels": 2000,
+            "impacts": 32,
+            "hit_rate_pct": 1.6,
+            "strict_intersections": 32,
+            "fallback_hits": 0,
+            "physical_strict_hit_ratio": 1.0,
+            "impact_mass_kg": 0.07804027059939386,
+            "total_target_mass_kg": 2.079142156852854e-07,
+            "max_dhdt_mm_h": 7.199468734334929,
+            "spearman_er_vs_analytic": -0.51709,
+            "top10_iou": 0.0
+          },
+          "strict_native_si_i3": {
+            "field_time": "0.8684190921",
+            "max_impacts": 3,
+            "n_parcels": 2000,
+            "impacts": 81,
+            "hit_rate_pct": 1.6,
+            "strict_intersections": 81,
+            "fallback_hits": 0,
+            "physical_strict_hit_ratio": 1.0,
+            "impact_mass_kg": 0.16949303504792168,
+            "total_target_mass_kg": 9.043723214907451e-07,
+            "max_dhdt_mm_h": 70.50579775063179,
+            "spearman_er_vs_analytic": -0.12695,
+            "top10_iou": 0.07692
+          }
+        },
+        "first_impact_match": {
+          "matching_first_impact_parcels": 32,
+          "parent_face_agreement": 1.0,
+          "collision_triangle_agreement": 1.0,
+          "max_position_delta_mm": 0.0
+        },
+        "quality_gates": {
+          "zero_fallback_hits": true,
+          "physical_strict_hit_ratio_is_one": true,
+          "zero_collision_event_limit_terminations": true,
+          "strict_v2_policy": true,
+          "native_si": true,
+          "same_immutable_artifact_set": true,
+          "output_hashes_verified": true,
+          "i1_i3_first_impacts_identical": true,
+          "max_cfd_speed_below_500_ms": true,
+          "registration_passed_i1": true,
+          "registration_passed_i3": true,
+          "solver_evidence": {
+            "field_statistic": "time_mean",
+            "assessment_type": "urans_time_mean_sampling",
+            "averaging_window": {
+              "start_time": "0.7844336016",
+              "end_time": "0.8684190921",
+              "sample_count": 20523
+            },
+            "sample_count_positive": true,
+            "validation_report_gates": {
+              "max_co_below_0p5": true,
+              "no_turbulence_bounding": true,
+              "no_fatal_or_nonfinite_log": true,
+              "twenty_flow_through_window": true,
+              "mean_field_relative_l2_below_1e3": true,
+              "force_late_mean_change_below_1pct": true,
+              "flux_late_mean_change_below_1pct": true,
+              "flux_imbalance_below_1e4": true,
+              "probe_late_mean_change_below_1pct": true,
+              "mean_speed_below_500_ms": true,
+              "all_mean_fields_finite": true
+            },
+            "previous_mean_field_change_available": true,
+            "simple_convergence_marker_applied": false
+          }
+        },
+        "legacy_reference": {
+          "status": "not_requested"
+        },
+        "interpretation": "The compared runs use the same immutable native-SI CFD/topology artifact and strict swept intersections. Solver evidence is interpreted according to steady-snapshot or URANS time-mean semantics."
+      }
+    },
+    "measurement_validation": {
+      "status": "passed",
+      "required": false,
+      "source": {
+        "version": "step30-experimental-validation-report-v1",
+        "status": "passed",
+        "reports": [
+          {
+            "path": "workspace/output\\step30_experiments\\acceptance_v1\\material_synthetic\\step30-material_erosion-summary.json",
+            "status": "synthetic",
+            "experiment": "step30-material-erosion-experiment-v1",
+            "mode": "synthetic",
+            "comparison": {
+              "observed_mass_loss_mg": {
+                "hotspot": {
+                  "intersection": 1,
+                  "iou": 1.0,
+                  "observed_count": 1,
+                  "observed_threshold": 12.652406514417507,
+                  "percentile": 90.0,
+                  "predicted_count": 1,
+                  "predicted_threshold": 12.65897852065507,
+                  "union": 1
+                },
+                "independent_validation_set": false,
+                "maximum_depth_error": {
+                  "absolute": 0.061698396915183196,
+                  "relative": 0.0038093673184748877,
+                  "signed": 0.061698396915183196
+                },
+                "metrics_sha256": "f294a6a75f335930e03612d33bde225d2f16f4a53c0eedd92672965a07d9ac48",
+                "n": 8,
+                "observed": {
+                  "maximum_depth": 16.196494524420046,
+                  "total": 42.24844372805307
+                },
+                "official_accuracy_gate": false,
+                "predicted": {
+                  "maximum_depth": 16.25819292133523,
+                  "total": 42.477448505230555
+                },
+                "provenance_note": "synthetic result; not official accuracy",
+                "quality": {
+                  "gates": null,
+                  "passed": true
+                },
+                "residual_distribution": {
+                  "mae": 0.041317808390756564,
+                  "max": 0.1138138536078559,
+                  "p50": 0.021014816032444594,
+                  "p95": 0.10916617301213916,
+                  "rmse": 0.059021077250713386
+                },
+                "signed_bias": 0.028625597147185308,
+                "status": "synthetic",
+                "total_error": {
+                  "absolute": 0.22900477717748657,
+                  "relative": 0.005420431073190676,
+                  "signed": 0.22900477717748657
+                },
+                "total_quantity_error": {
+                  "absolute": 0.22900477717748657,
+                  "relative": 0.005420431073190676,
+                  "signed": 0.22900477717748657
+                },
+                "value_units": "mm",
+                "version": "step30-error-metrics-v1"
+              }
+            }
+          },
+          {
+            "path": "workspace/output\\step30_experiments\\acceptance_v1\\bucket_synthetic\\step30-bucket_model-summary.json",
+            "status": "synthetic",
+            "experiment": "step30-bucket-model-experiment-v1",
+            "mode": "synthetic",
+            "comparison": {
+              "hotspot": {
+                "intersection": 14,
+                "iou": 1.0,
+                "observed_count": 14,
+                "observed_threshold": 0.6240860181169348,
+                "percentile": 90.0,
+                "predicted_count": 14,
+                "predicted_threshold": 0.6228079613053554,
+                "union": 14
+              },
+              "independent_validation_set": false,
+              "maximum_depth_error": {
+                "absolute": 3.9641126772349544e-05,
+                "relative": 4.024747493873642e-05,
+                "signed": 3.9641126772349544e-05
+              },
+              "metrics_sha256": "56035a08a8796b7c9d99c4705f89b1f754bfa46ce89090ca1d7823b5ff9e1b51",
+              "n": 140,
+              "observed": {
+                "maximum_depth": 0.9849345041568486,
+                "total": 34.71556754283459
+              },
+              "official_accuracy_gate": false,
+              "predicted": {
+                "maximum_depth": 0.9849741452836209,
+                "total": 34.75390110946648
+              },
+              "provenance_note": "synthetic result; not official accuracy",
+              "quality": {
+                "gates": null,
+                "passed": true
+              },
+              "residual_distribution": {
+                "mae": 0.0059775944116799195,
+                "max": 0.02090430465460147,
+                "p50": 0.004788565486220538,
+                "p95": 0.015818772062002197,
+                "rmse": 0.0076800748989296185
+              },
+              "signed_bias": 0.000273811190227809,
+              "status": "synthetic",
+              "total_error": {
+                "absolute": 0.03833356663189136,
+                "relative": 0.0011042183477079158,
+                "signed": 0.03833356663189136
+              },
+              "total_quantity_error": {
+                "absolute": 0.03833356663189136,
+                "relative": 0.0011042183477079158,
+                "signed": 0.03833356663189136
+              },
+              "value_units": "mm",
+              "version": "step30-error-metrics-v1"
+            }
+          },
+          {
+            "path": "workspace/output\\step30_experiments\\acceptance_v1\\field_synthetic\\step30-field_validation-summary.json",
+            "status": "synthetic",
+            "experiment": "step30-field-validation-v1",
+            "mode": "synthetic",
+            "comparison": {
+              "hotspot": {
+                "intersection": 14,
+                "iou": 1.0,
+                "observed_count": 14,
+                "observed_threshold": 0.6240860181169348,
+                "percentile": 90.0,
+                "predicted_count": 14,
+                "predicted_threshold": 0.6228079613053554,
+                "union": 14
+              },
+              "independent_validation_set": false,
+              "maximum_depth_error": {
+                "absolute": 3.9641126772349544e-05,
+                "relative": 4.024747493873642e-05,
+                "signed": 3.9641126772349544e-05
+              },
+              "metrics_sha256": "56035a08a8796b7c9d99c4705f89b1f754bfa46ce89090ca1d7823b5ff9e1b51",
+              "n": 140,
+              "observed": {
+                "maximum_depth": 0.9849345041568486,
+                "total": 34.71556754283459
+              },
+              "official_accuracy_gate": false,
+              "predicted": {
+                "maximum_depth": 0.9849741452836209,
+                "total": 34.75390110946648
+              },
+              "provenance_note": "synthetic result; not official accuracy",
+              "quality": {
+                "gates": null,
+                "passed": true
+              },
+              "residual_distribution": {
+                "mae": 0.0059775944116799195,
+                "max": 0.02090430465460147,
+                "p50": 0.004788565486220538,
+                "p95": 0.015818772062002197,
+                "rmse": 0.0076800748989296185
+              },
+              "signed_bias": 0.000273811190227809,
+              "status": "synthetic",
+              "total_error": {
+                "absolute": 0.03833356663189136,
+                "relative": 0.0011042183477079158,
+                "signed": 0.03833356663189136
+              },
+              "total_quantity_error": {
+                "absolute": 0.03833356663189136,
+                "relative": 0.0011042183477079158,
+                "signed": 0.03833356663189136
+              },
+              "value_units": "mm",
+              "version": "step30-error-metrics-v1"
+            }
+          }
+        ],
+        "official_accuracy_gate": false,
+        "note": "Synthetic outputs validate the software path only; measured accuracy requires independent measured data and all <5% gates."
+      }
+    }
+  },
+  "official_accuracy_gate": false,
+  "official_accuracy_note": "Only measured, independent validation with registration quality gates can satisfy the official <5% claim; synthetic/blocked inputs never pass this gate."
+}

@@ -1,0 +1,66 @@
+{
+  "version": "step30-fem-selection-material-intake-v1",
+  "status": "blocked",
+  "geometry": {
+    "coordinate_units": "m",
+    "artifact": {
+      "path": "ABSOLUTE_PATH_TO_SINGLE_BUCKET_TARGET_AUTHORITATIVE.step",
+      "sha256": "521fbaf7688ad1f0e063dedb08c360135026ce60e5e371b4a196294b18cfe21d",
+      "bytes": 0
+    }
+  },
+  "selections": {
+    "ROOT_INTERFACE": {
+      "status": "blocked",
+      "confirmation_method": "cad_named_selection",
+      "independent_confirmation": false,
+      "entity_dimension": 2,
+      "entity_tags": [],
+      "evidence_files": []
+    },
+    "WETTED_SURFACE": {
+      "status": "blocked",
+      "confirmation_method": "cad_named_selection",
+      "independent_confirmation": false,
+      "entity_dimension": 2,
+      "entity_tags": [],
+      "excludes_root_interface": false,
+      "evidence_files": []
+    },
+    "AI5_04": {
+      "status": "blocked",
+      "confirmation_method": "cad_named_selection",
+      "independent_confirmation": false,
+      "entity_dimension": 2,
+      "entity_tags": [],
+      "patch_center": {
+        "coordinates": [],
+        "units": "m"
+      },
+      "direction_frame": "step_global",
+      "gauge_directions": [],
+      "outside_fixed_root": false,
+      "evidence_files": []
+    },
+    "MATERIAL_DOMAIN": {
+      "status": "blocked",
+      "confirmation_method": "cad_named_selection",
+      "independent_confirmation": false,
+      "entity_dimension": 3,
+      "entity_tags": [],
+      "evidence_files": []
+    }
+  },
+  "material": {
+    "grade": "",
+    "heat_or_batch": "",
+    "source_kind": "material_certificate",
+    "density_kg_m3": null,
+    "source_artifact": {
+      "path": "ABSOLUTE_PATH_TO_MATERIAL_CERTIFICATE.pdf",
+      "sha256": "",
+      "bytes": 0
+    }
+  },
+  "package_sha256": "e7e4481452347f9051359f32855183dcd9572fe489e8794c59a04b0a0fce57c5"
+}

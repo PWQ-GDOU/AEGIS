@@ -1,0 +1,26 @@
+{
+  "version": "step30-zg0cr13ni4mo-water-sand-pilot-preregistration-v1",
+  "status": "template",
+  "material_grade": "ZG0Cr13Ni4Mo",
+  "test_rig": "controlled_water_sand_jet",
+  "factorial_design": {
+    "speed_m_s": [50, 90],
+    "impact_angle_deg": [20, 45, 90],
+    "repeats_per_condition": 2,
+    "n_coupons": 12
+  },
+  "execution_prerequisites": [
+    "mill_heat_certificate",
+    "chemistry_and_heat_treatment_record",
+    "measured_HV_hardness",
+    "measured_or_certified_density",
+    "calibrated_balance_hardness_tester_profilometer_PSD_analyzer",
+    "measured_quartz_D10_D50_D90",
+    "specimen_photos_and_raw_data_hashes"
+  ],
+  "forbidden_claims": [
+    "single heat equals independent material validation",
+    "pilot opens official accuracy gate",
+    "04Cr13Ni5Mo automatically equals ZG0Cr13Ni4Mo"
+  ]
+}

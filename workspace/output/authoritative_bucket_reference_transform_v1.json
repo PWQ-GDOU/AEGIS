@@ -1,0 +1,40 @@
+{
+  "version": "step30-analytic-reference-transform-v1",
+  "convention": "row-vector: global_mm = local_mm @ R + translation_mm",
+  "source_geometry_sha256": "181eb659091f187e1286ca27b689d654a83b5522b28d6f39aceaa4ebc3fc38ca",
+  "source_cad_sha256": "a597476082e104cfa1b70c48a06adb46629e60a0cfd0175399471ecd2fcb6313",
+  "derivation": {
+    "method": "paired-vertex Kabsch rigid fit",
+    "local_full_runner_export": {
+      "file": "dec_full_runner_local_m.stl",
+      "sha256": "e756a7f06bc3d8577ec0cf2c77cb0326f0a3cbcbf06160edd21979b724c10425",
+      "coordinate_units": "m"
+    },
+    "global_full_runner_export": {
+      "file": "dec_full_runner_original.stl",
+      "sha256": "a27e5684cf9c63ef36185f56e8a913581ce515e04b5873d73513713a57cf5abc",
+      "coordinate_units": "mm"
+    },
+    "paired_vertex_count": 5517852,
+    "fit_residual_mm": {
+      "median": 0.0000489,
+      "p95": 0.000161,
+      "max_sampled": 0.000253
+    }
+  },
+  "R": [
+    [-0.992901715462954, -0.118937729214589, -1.2313e-11],
+    [0.118937729214589, -0.992901715462954, 1.061e-12],
+    [-1.2352e-11, -4.11e-13, 1.0]
+  ],
+  "translation_mm": [1702.8260001644514, 203.977999522502, 1.910002958706901],
+  "validation": {
+    "determinant": 1.0,
+    "max_orthogonality_error": 2.22e-16,
+    "authoritative_topology_registration_mm": {
+      "median": 3.4349572731,
+      "p95": 5.1806670025,
+      "max": 7.0888735068
+    }
+  }
+}

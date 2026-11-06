@@ -1,7 +1,7 @@
 {
   "global_stats": {
     "dec": {
-      "label": "DEC æ¨¡å‹è½¬è½®",
+      "label": "DEC Ä£ĞÍ×ªÂÖ",
       "n_vertices": 145694,
       "n_faces": 291388,
       "bbox": {
@@ -30,7 +30,7 @@
       "volume": 3007860.4377547675
     },
     "our": {
-      "label": "æˆ‘ä»¬çš„é‡å»º",
+      "label": "ÎÒÃÇµÄÖØ½¨",
       "n_vertices": 4740,
       "n_faces": 9086,
       "bbox": {

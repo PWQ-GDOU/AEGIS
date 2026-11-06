@@ -1,0 +1,80 @@
+{
+  "version": "step30-particle-convergence-root-cause-v1",
+  "date": "2026-09-07",
+  "status": "diagnosed_not_resolved",
+  "execution_policy": {
+    "numerical_computation_local": false,
+    "source_reports_only": true,
+    "work_drive": "H:"
+  },
+  "primary_root_cause": {
+    "category": "sparse_hit_cloud_spatial_variance",
+    "evidence": {
+      "confirmation_n_parcels": 20000,
+      "confirmation_hit_parcels_range": [644, 749],
+      "confirmation_hit_rate_percent_range": [3.22, 3.75],
+      "confirmation_impact_count_range": [1017, 1203],
+      "confirmation_target_mass_relative_sample_sd": 0.382840977502846,
+      "discovery_target_mass_relative_sample_sd": 0.116362260695571,
+      "required_js_max": 0.05,
+      "observed_v5_topology_aggregate_js_max": 0.393946440810685,
+      "observed_v4_surface_kernel_js_max": 0.689021999209736,
+      "observed_v4_surface_kernel_spearman_median": -0.145372559430862
+    },
+    "interpretation": "Only about 3 percent of parcels produce physical impacts. The resulting impact support is too sparse for parent-face or short-range kernel fields to have stable spatial mass distributions across independent seeds. Increasing the parcel count modestly is not sufficient evidence of convergence.",
+    "severity": "blocking"
+  },
+  "secondary_root_causes": [
+    {
+      "category": "over_coarse_topology_aggregation",
+      "evidence": {
+        "parent_face_count": 218988,
+        "aggregate_count": 18,
+        "aggregate_face_budget": 16384,
+        "median_confident_area_fraction": 0.146595370805057,
+        "minimum_confident_area_fraction": 0.0776782963886138,
+        "aggregate_spearman_median": 0.945045770198895,
+        "aggregate_hotspot_iou_median": 1.0,
+        "aggregate_js_max": 0.393946440810685
+      },
+      "interpretation": "The aggregate map preserves broad hotspot order but reduces 218988 parent faces to 18 bins. Good Spearman and IoU therefore do not prove parent-face spatial convergence; JS remains high because mass moves between aggregate bins.",
+      "severity": "blocking_for_parent_face_accuracy"
+    },
+    {
+      "category": "physical_reference_mismatch",
+      "evidence": {
+        "comparison_faces": 634,
+        "cfd_vs_analytic_mansouri_spearman": -0.0638,
+        "cfd_vs_analytic_mansouri_top10_iou": 0.01587,
+        "cfd_dhdt_vs_analytic_mansouri_spearman": -0.08421,
+        "cfd_dhdt_vs_analytic_mansouri_top10_iou": 0.00775
+      },
+      "interpretation": "The CFD-derived impact/erosion field is not spatially aligned with the analytic Mansouri reference on the diagnostic mask. This is a model or mapping discrepancy, not a random-seed convergence symptom.",
+      "severity": "blocking_for_physical_accuracy"
+    },
+    {
+      "category": "cross_version_evaluation_provenance",
+      "evidence": {
+        "current_evaluator_sha256": "E6E8FDBF3381FDB30284285D8EE625BAF82640BA8289AC90451DBC2B2DB1A74A",
+        "current_estimator_sha256": "D6B6EA20BEF0F67E677BA97A292E93ED1792958BB4469CFCE96D777286C8F174",
+        "historical_confirmation_evaluator_sha256": "9ADCC951CAB7B48CFD334B6C91BED848396C36330FE5277A954D1ED7D9032DEC",
+        "historical_discovery_evaluator_sha256": "D523A0A35726BCD10731AA11A7B191915F3232F627CD1097D52C1C7D95473562"
+      },
+      "interpretation": "Historical discovery and confirmation reports were produced by evaluator revisions that do not match the current code. Their numerical summaries must not be mixed with a new evaluation. The v5 evaluator now rejects this mismatch before confirmation scoring.",
+      "severity": "evidence_chain_blocking"
+    }
+  ],
+  "not_root_causes": [
+    "fallback collision hits: all accepted strict-v2 runs report fallback_hits=0",
+    "missing topology identity: artifact, mesh, topology, and partition identities are bound",
+    "simple particle-count-only failure: confirmation variance remains high after moving from 5k/10k/20k discovery to independent 20k runs"
+  ],
+  "required_repair_sequence": [
+    "rebuild discovery and confirmation reports with one identical evaluator and estimator hash",
+    "rerun an independent remote experiment with a pre-registered hit-support target rather than parcel count alone",
+    "report parent-face, active-face, and aggregate metrics separately",
+    "investigate CFD-to-analytic spatial mismatch before claiming physical convergence",
+    "keep official_accuracy_gate=false, official_reference_gate=false, and fem_gate=blocked"
+  ],
+  "current_conclusion": "The non-convergence cause has been identified but not repaired. The particle convergence gate remains failed; no score increase is justified from the current reports."
+}

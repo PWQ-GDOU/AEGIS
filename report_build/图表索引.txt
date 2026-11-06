@@ -1,0 +1,4 @@
+图1 关键部件冲蚀风险空间分布示意图：workspace/output/erosion_spatial_map_rbf.png
+图2 面级冲蚀风险场与运行暴露加权结果：workspace/output/duty_cycle_erosion_map.png
+图3 参赛者自建 baseline/worn 深度分布与风险分区示意：workspace/output/erosion_distribution_profile.png
+图4 冲蚀风险与结构响应的综合支撑示意：workspace/output/stress_erosion_combined.png

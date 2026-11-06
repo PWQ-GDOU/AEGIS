@@ -1,0 +1,564 @@
+Journal of Applied Fluid Mechanics, Vol. 14, No. 6, pp. 1809-1816, 2021.
+Available online at www.jafmonline.net, ISSN 1735-3572, EISSN 1735-3645.
+https://doi.org/10.47176/jafm.14.06.32868
+
+
+
+
+        Investigation of the Erosion Characteristics in the
+               Distribution Parts of Pelton Turbine
+                            L. Han 1†, Y. Wang1, G. F. Zhang1, X. Z. Wei 2
+     1. School of Energy Science and Engineering, Harbin Institute of Technology, Harbin 150001, China
+2. State Key Laboratory of Hydro-Power Equipment, Harbin Institute of Large Electrical Machinery, Harbin
+
+                                                  150040, China
+
+                              †Corresponding Author Email: hithanlei@hit.edu.cn
+
+                                (Received April 8, 2021; accepted June 22, 2021)
+
+                                                   ABSTRACT
+
+Pelton turbine, as its working principle, can perform in the high head condition especially in the southwest
+mountainous region in China. When the flow contains silt, it will induce the erosion in the bucket and needle
+structure which affects the efficiency and furthermore the service life. This paper performs unsteady air-liquid-
+solid three-phases simulation focusing on the distribution tube and needle parts. Volume of Fluid (VOF) method
+is used for capturing the free surface flow, at the same time, silt particle is simplified as the sphere particle and
+simulated through the Discrete Particle Model (DPM). Furthermore, flow detail and erosion information are
+obtained by conjugating both the former methodologies. Finally, particle size is analyzed in order to investigate
+the effect of erosion characteristic to the flow passage of Pelton turbine which aims to improve the turbine
+efficiency.
+
+Keywords: Three-phase flow; VOF method; Euler-Lagrange methodology; DPM model.
+
+                                               NOMENCLATURE
+
+ 𝐸       dimensionless erosion mass                               𝑣       relative particle velocity
+ 𝑑       particle diameter                                        𝑣       particle impact velocity
+ 𝐹       additional force to balance the particle balance         𝛼       liquid volume of fluid
+ 𝑓(𝛾)    dimensionless function of the impact angle 𝛾             𝜇       fluid dynamic viscosity
+ 𝑘       model constant                                           𝑔       gravity
+ 𝑅𝑒      relative Reynolds number                                 𝜌       density of the fluid
+ 𝑢       velocity of the fluid                                    𝜌       density of the particle
+ 𝑢       velocity of the particle
+
+
+
+
+     1. INTRODUCTION                                         velocity in the distribution and bucket regions
+                                                             reaches high. The erosion is then induced by the
+China is a country which contains huge quantity of           continuous friction between silt and the turbine
+hydraulic resources. In the same time, according to          surface. As time goes on, the needle, bucket and
+the energy distribution, most of the hydraulic power         distribution tube will be damaged by all these
+plant are located in the low plain regions. However,         erosion. In the same time, the working life will be
+in the south-western mountainous region, there is            shortened and the efficiency will decrease.
+still huge quantity of hydraulic resource to be              In recent years, as the rapid development of
+developed urgently in order to balance the electronic        Computed Fluid Dynamics (CFD), more and more
+demand. Pelton turbine, as its advantage in the high         flow phenomenon in hydraulic turbines is
+water level region, is widely investigated and used as       investigated step by step through numerical
+the first choice for power plant. As the plant is built      simulation. However, the flow pattern in the Pelton
+in mountainous area, silt will be induced in the             turbine appears too complex considering the three-
+hydraulic turbine. Although its contribution is lower        phase flow and the bucket construction which also
+than the ones such as Francis turbine, the flow              increases the difficulty to realize the numerical
+L. Han et al. / JAFM, Vol. 14, No. 6, pp. 1809-1816, 2021.
+
+simulation. Secondly, the high velocity passing                  the wear depth and the amount of wear of the spear
+bucket and needle part induces also the difficulty for           and nozzle, the degree and type of wear were
+experiments. In the same time, limited to the                    analyzed. Thapa et al. (2012) supposed an
+experimental condition, there is rare comparison                 empirical modeling of sediment erosion in Francis
+between numerical simulation and experiments.                    turbines considering the particle concentration,
+Thirdly, in the high altitude region, the flow is                size, hardness, shape and material characteristics
+relatively pure and clean, there is not so much                  which approves that the erosion is complex enough
+research of the erosion (Luo et al. 2010).                       and should be investigated systematically.
+Xu et al. (2002) performed the solid-fluid flow in the           Zeng et al. (2014) simulated the air-fluid-solid
+rotating disk with Euler-Lagrange methodology.                   three-phase flow with unsteady condition in the
+With Finnie erosion model, the research calculated               needle part of Pelton turbine. The simulation
+the erosion rate of the particle to the material and in          results of the particle flow pattern and erosion
+the same time, obtained both the fluid and particle              prediction in the needle are compared with
+information to analyze further two phase flow in                 experimental observation. It approved that the
+Pelton turbine. He et al. (2013) also performed CFD              feasibility of the three-phase method in Pelton
+investigation in some working point and compared                 turbine. However, comparing with the real needle
+with the theoretical result and shows correspondence             in the power plant, the erosion depth is less
+between both. This approved that CFD technology is               predicted. The reason may induced by the
+adaptive to the flow in Pelton turbine. Cao et al.               simulation without considering the initial cavity
+(2014(a)) performed numerical simulation focusing                phenomenon which can improve the erosion effect.
+on the flow pattern in needle part of the turbine and            Zhang and Casey (2007) further investigated the
+obtained the erosion characteristics in the region.              flow in distribution tube through experiments by
+The flow appears not symmetric and furthermore,                  Laser Doppler Anemometry (LDA). A secondary
+erosion is much more evident in the lower part. It               flow generated by the bifurcations in the
+seems that the effect of gravity cannot be ignored in            distributor are still present in the jet in the needle
+the numerical simulation. Guo et al. (2020) using a              part. They will affect the shape, orientation, and
+combination of The Volume of Fluid (VOF) and                     also the topology of the jets and leads a jet center
+Lagrangian particle tracking approach to simulate                shifting which induces the efficiency decrease.
+the air-water-sediment flow, followed by the                     Messa et al. (2019) adopt the Euler-Lagrangian
+application of Mansouri’s model to estimate the                  method to simulate the air-solid-liquid flow of a
+erosion. Fundamental analysis of the flow patterns               single Pelton turbine nozzle. The stroke of the
+including the vortex structures and the secondary                spray needle is changed, and the abrasion
+flow on the particle behaviors was carried out to                conditions of the nozzle and the spray needle under
+elucidate the asymmetrical erosion distribution on               different spray needle strokes are obtained and the
+the needle surface. Ge et al. (2020) used the Euler-             numerical simulation results are highly consistent
+Lagrangian method to simulate the air-water-particle             with this article. Anant et al. (2020) used six
+three-phase flow with unsteady constant values, and              different materials to measure the erosion variation
+explored the influence of the change of particle                 in various materials under the same erosive
+diameter and concentration on the abrasion position              conditions by 3D-scanner and weighing balance
+and wear rate of the impulse turbine, and obtained               method. They found the erosion behavior of all
+the particle diameter and the correlation between                three martensitic steels (16Cr-5Ni, 16Cr-4Ni and
+concentration and wear.                                          13Cr-4Ni) are similar whereas bronze shows the
+                                                                 most erosion for every operating condition.
+Cao et al. (2014b) investigated the erosion                      Among the two tested coating materials (13Cr-4Ni
+characteristics in the bucket region using the                   with plasma sprayed Cr 2O3 coating and 13Cr-4Ni
+erosion model supposed by Grant and Tabkoff.                     with WC-Co-Cr HVOF coating), HVOF coated
+With the erosion distribution in the inner boundary              tungsten carbide shows higher erosion resistance
+of the bucket, it is mainly influenced by the                    compared to ceramic carbide coating and
+diameter, relative velocity and concentration of the             performed best against hydro-abrasive erosion.
+particle. Padhy and Saini (2009) performed
+experiments to investigate mechanism of the                      This paper investigates the erosion effect in the
+erosion in the inner surface of the bucket.                      distribution parts of Pelton turbine including the
+Experiments approved material removal from the                   distributor, bifurcation tube and also the nozzle part.
+surface is due to plastic deformation and ploughing              Three-phase numerical simulation is performed with
+of surface. Another series of experiments approved               Euler-Lagrange methodology. According to the
+that the size and concentration of the particle are              simulation results, the flow pattern is analyzed and
+both the key parameters to the erosion. Sugiyama                 furthermore, erosion characteristics with different
+et al. (2004) carried out slurry wear tests, it was              particle status are investigated. Up to now, the
+found that the volume loss rate of materials at                  research focusing on the three-phase flow in Pelton
+40m/s is almost constant irrespective of                         turbine is relatively rare especially the calculation
+impingement angle between 90° and 60°, and                       methodology. This paper performs the first try in this
+decreases with a decreased angle. Zehab et al.                   three-phase simulation with the help of limited
+(2020) used a new non-contact three-dimensional                  reference. The erosion phenomenon is analyzed in
+optical scanning technology to study the influence               different particle sizes systematically based on the jet
+of particles under different working conditions on               flow pattern which is confirmed by experience in
+the abrasion of the Pelton turbine. By measuring                 literature.
+
+
+
+                                                          1810
+L. Han et al. / JAFM, Vol. 14, No. 6, pp. 1809-1816, 2021.
+
+   2. MATHEMATICAL MODEL AND                                       The other part of the force is induced by the velocity
+          NUMERICAL SIMULATION STRATEGY                            gradient in the flow field：
+
+                                                                        
+  2.1. Mathematical model                                          F      u u
+                                                                         p                                      (4)
+                                                                       p
+Simulation in this research is performed based on the
+platform ANSYS Fluent 18. Three-phase flow in                      Erosion is calculated by the Finnie model scripted in
+distributor tube and nozzle is solved by Euler-                    Fluent, the erosion rate is defined as:
+Lagrange methodology in which water and air are
+defined as continuous phase and particle is defined                E  KV p f ( )
+                                                                            n
+                                                                                                                     (5)
+as the discrete phase. Volume of Fluid （VOF）
+model is used to define the status of the continuous               where E is the dimensionless erosion mass, k is a
+phase. As the two phases flow is steady, the DPM is                model constant, 𝑉 is the particle impact velocity,
+added in the three-phase calculation. Then, COUPLE                 and f(γ) is a dimensionless function of the impact
+algorithm is carried out to couple particle with the               angle γ. For metals, the value of the exponent n is
+other two phases during the final calculation.                     generally in the range 2.3 to 2.5 radians. Finnie’s
+VOF is one of the most used method to capture the                  model of erosive wear relates the rate of wear to the
+interface between two phases in the fixed Euler mesh               rate of kinetic energy of impact of particles on the
+system. During the iteration process, different                    surface using the following functions:
+components are calculated within the same
+                                                                              1
+continuous equation, so the components of the                                     cos2           for   18.5
+                                                                   f   =  3
+continuous phase are recorded then through the                               sin(2 )  3sin 2 
+                                                                                                   for   18.5
+fraction, the interface of the water and air is defined
+so called the free surface. w is defined as the
+                                                                   Cao et al. (2020) successfully simulated the air-solid
+volume of fluid. If one mesh contains only air, w                 flow in governing valve based on Euler-Lagrange
+equals to 0; contritely, if it contains only water, w             method and Finnie erosion model. The DPM was
+                                                                   used to simulate the particle flow, and the Eulerian
+equals to 1. When it contains two phases in one
+                                                                   conservation equation was used to solve the
+mesh, this is the interface of the water and air. In this
+                                                                   continuous phase. Compared with the reference data,
+research, we define w =0.8 as the interface.                      the variation trend of relative flow coefficient is
+                                                                   consistent, and the error is less than 5%. Therefore,
+For simulating the flow characteristics of the solid
+                                                                   the simulation results have a good accuracy in this
+particle, the silt is defined as the spherical structure
+                                                                   paper.
+with different diameters. DPM model is chosen
+which can relate the continuous phase and discrete                 2.2. Simulation strategy and boundary
+phase and furthermore the trajectory of the particle.                   condition
+The control equations are listed as below according
+to the Fluent User Guide:                                          The simulation domain of this research is distribution
+                                                                   tube and nozzle flow passage in a Pelton turbine. The
+du p                        g p                               complete calculating domain is figured in Fig. 1. In
+        FD  u  u p                   F        (1)            the same time, a column with diameter of 6d and 5.3d
+ dt                             p
+                                                                   length outside the nozzle is added as the air domain
+                                                                   as shown in Fig. 1. d value in this figure represents
+where, D        p
+          F   u u
+                    is the unit particle drag force, 𝜇             the outlet let diameter of the nozzle structure.
+(Pa.s) is the fluid dynamic viscosity, 𝑢 (m/s) is the
+velocity of the particle, 𝑢 (m/s)is the velocity of the
+fluid, 𝜌 (kg/m3) is the density of the particle, 𝜌
+(kg/m3) is the density of fluid, 𝐹 is defined as
+below:
+        18  C D Re
+FD                                                (2)
+         p d p2 24
+
+where, CD presents the drag coefficient, Re is the
+relative Reynolds number which defined as
+       vd p . v(m/s) presents the relative velocity
+Re 
+            
+between particle and fluid, dp(m)is the particle
+diameter.
+In the Eq. (1), F is defined as the additional force to
+balance the particle force. One part of the force is
+virtual mass for which can be defined as                                 Fig. 1. Global computational domain.
+
+       1  d
+F
+       2  p dt
+                u  up                            (3)
+
+
+
+                                                            1811
+L. Han et al. / JAFM, Vol. 14, No. 6, pp. 1809-1816, 2021.
+
+
+
+
+                                                                                   No.1          No.2
+                                                                            No.6
+
+                                                                                                           No.3
+  Fig. 2. Computational domain of nozzle (The                               No.5
+   flow direction is towards left, nozzle outlet
+             diameter d=49.42 mm).                                                               No.4
+
+The calculation domain is meshed by the structured
+mesh as hexahedron blocks. The near wall region and
+the air region are designed with denser mesh. The
+entire mesh is shown in Fig. 3a) which has 8.2
+million elements in other word 7.9 million nodes in
+the flow domain. Figure 3b) shows the detail of the
+structured mesh of the zooming zone in Fig. 3a).
+The turbine is designed in the 80 meter hydraulic
+head with inlet mass discharge of 197 kg/s and the
+fluid is defined as water. Pressure outlet is set as 0 Pa
+which is relative to the atmospheric pressure. The
+initial flow field is fully filled with air. The wall
+condition is defined as the standard no-slip
+condition. For the two phases, air is defined as the
+major phase to make convergence easier. For the                    a) up: The entire calculating mesh
+closure of the N-S equation, RNG k-ε model is                      b) down: Structure mesh detail of perturbation tube
+chosen. The inlet is set to velocity inlet and pressure            #3
+outlet is set at the end of the nozzle part. The flow               Fig. 3. Calculating mesh design in fluid domain.
+direction is marked as the black arrow in Fig. 3(a).
+Solid particle equaling to 1% volume flow rate is
+added from the inlet through surface rejection
+method. The density is 2650 kg/m3, three different
+diameters are chosen as 1 mm, 0.5 mm and 0.1 mm.
+The inlet and outlet of the particle are set as escape.
+It means that when existing particles in the domain
+reach an inlet or an opening, they escape from the
+domain. Wall condition is set as reflection.
+Considering the influence of the turbulence to the
+particle, particle random model is switched on.
+                                                                         Fig. 4. Shape of jet outside the nozzle.
+  3. FLOW CHARACTERISTICS VERIFI-
+       CATION WITH EXPERIMENTS
+
+For confirming the calculation availability of the
+three-phase calculation, two-phase flow of water and
+air is preliminarily performed. As the structures of
+the 6 nozzles are same, 6# nozzle is chosen to be
+analyzed in the following. First, the jet structure is
+shown in the Fig. 4. where the  =0.8 is defined as
+the surface of the jet.
+                                                                        Fig. 5. Selected analyzing section of the jet.
+Along the water jet, 6 sections with the same distance
+between each two are chosen to be analyzed. They
+are shown in Fig.5. In the same time, vortex of each               from the distributor and will induce the secondary
+section are shown and compared in Fig. 6.                          flow in the pipe (Han et al. 2019). The jet, without
+In Fig.6, the process of the jet developing along the              the bound of the nozzle boundary, bifurcates by
+flow direction is shown clearly. There are several                 influence of the center vortex. Hence, in Fig.6, the
+pairs of the vortex near the jet center. These pairs of            lower boundary deforms outside of the jet round
+the vortex are called Dean vortex which are induced                section. This is also observed in the experiment by
+                                                                   Zhang and Casay (2007) which is shown in Fig. 7.
+
+
+                                                            1812
+L. Han et al. / JAFM, Vol. 14, No. 6, pp. 1809-1816, 2021.
+
+The shape deformation occurs as the jet develops                  Figure 8 indicates that the flow rate variation of the
+which obtained by the simulation as shown in the red              different particle diameter. This flow rate is
+block region in Fig.4.                                            monitored in the 6 sections of the nozzle outlets from
+                                                                  1# to 6# nozzle.
+
+
+
+
+       a) Section S1               b) Section S2
+
+
+
+
+                                                                    Fig. 8. Particle flow statistics in nozzle outlet.
+       c) Section S3               d) Section S4
+
+                                                                  When the particle is becoming bigger, the
+                                                                  distribution of the particle in the bifurcation tube and
+                                                                  nozzle parts is less uniform. Furthermore, this is
+                                                                  especially evident in the 2# and 6# bifurcation tube.
+                                                                  When the particle diameter is set to 1 mm, the
+                                                                  quantity in 2# bifurcation tube is far less than the 6#
+      e）Section S5                 f) Section S6                  tube. At the same time, as the diameter becomes
+                                                                  smaller, the total amount of particles in 2# tube
+                                                                  increases and decreases relatively in 6# bifurcation
+                                                                  tube. The particle distributions in the other
+                                                                  bifurcation tube also become more uniform.
+                                                                  Globally, the total amount of particles in 1#
+  Fig. 6. Velocity vorticity distribution of each                 bifurcation is slightly higher than the other 5 tubes.
+               section along the jet.                             This uniform phenomenon is induced by the different
+                                                                  structure of the tube. The curve rate of the upper
+                                                                  section of 1# bifurcation tube is smaller than the
+                                                                  other one, so the flow passing 1# tube are more fluent
+                                                                  than the other. Meanwhile, the other’s structure are
+                                                                  not strictly same, this also induces uniform flow
+                                                                  discharge and furthermore the total amount of
+                                                                  particles.
+                                                                  For analyzing the particle detail in different nozzle,
+                                                                  the flow streamline and particle path line are
+                                                                  compared in Fig. 9. For the case of particle with
+                                                                  diameter of 0.1 mm as Fig. 9(b), the particle
+                                                                  trajectory is similar to the streamline in the nozzle.
+                                                                  When the flow passes the rib part, the particle
+                                                                  direction varies but because of the inertia force of the
+                                                                  particle, the particle recovers back to the flow and
+                                                                  shows the similar tendency with the flow streamline.
+       Fig. 7. Jet deformation observed in the                    This can be seen from Fig. 9(a) and (b). When the
+  experimental from Zhang and Casey (2007).                       diameter becomes larger, the difference between the
+                                                                  streamline and particle trajectory occurs. For
+                                                                  example, Fig. 9(d) shows the trajectory of the
+                                                                  particle diameter of 1 mm. The trajectory is
+     4. NUMERICAL SIMULATION RESULTS
+                                                                  somehow chaotic because the rib structure disturbs
+          AND ANALYSIS
+                                                                  the flow pattern and the particle cannot follow the
+                                                                  flow as soon as possible. The radial velocity
+4.1 Particle trajectory and characteristics                       component is larger than the one of small particle.
+In this research, the erosion particle is defined as              Hence, this induces also the particle trajectory
+spherical structure for simplification. 3 different               contraction out of the nozzle outlet. Furthermore, as
+sizes of particle are compared together to investigate            the jet develops, the particle trajectory recovers
+the particle’s influence to the erosion characteristics.          along the streamline.
+
+
+                                                           1813
+L. Han et al. / JAFM, Vol. 14, No. 6, pp. 1809-1816, 2021.
+
+
+
+
+            a) Flow streamline in the nozzle
+
+
+
+
+          b) Particle trajectories of 6# nozzle
+              (Particle diameter=0.1 mm)
+
+
+                                                                                a) article diameter equals to 1 mm
+
+
+          c) Particle trajectories of 6# nozzle
+              (Particle diameter=0.5 mm)
+
+
+
+
+          d) Particle trajectories of 6# nozzle
+               (Particle diameter=1 mm)
+   Fig. 9. Comparison of streamline and particle
+             trajectories of 6# nozzle.
+
+
+As a conclusion, the larger the particle is, the harder
+                                                                             b) Particle diameter equals to 0.5 mm
+for the particle to follow the water flow through the
+nozzle part of the turbine, and so the bigger
+difference between the streamline and particle
+trajectory. This can also explain that why different
+bifurcation tube has different quantity of particle.
+Meanwhile, the bigger the particle is, less uniform of
+the particle distribution in each of the bifurcation
+tube.
+  4.2 Silt erosion characteristics in the flow
+  passage
+
+In this section, the erosion characteristics are
+analyzed in the nozzle within different particle size
+conditions. Most important is to investigate the
+erosion location and concentration. In Fig.10, all the
+erosion regions concentrate near the outlet of the
+nozzle exterior shell.
+When the particle diameter equals to 1 mm, the                            c) Particle diameter equals to 0.1 mm
+erosion region appears like flake distribution, this
+reveals that lots of particles attack this region from                 Fig. 10. Erosion of 6# nozzle outlet under
+different directions. Meanwhile, in Fig10 (a), the left                 the condition of various particle sizes.
+and right sides of the nozzle have more serious
+erosion. Those are the region without influence of the
+rib. Hence, the rib decreases the erosion of the large            former one. The erosion region does not appear as
+size particle in some degree.                                     the flake region, which is scattered around the nozzle
+                                                                  outlet. In the same time, the erosion rate is lower than
+Figure 10 (b) shows the erosion of 0.5 mm size                    the one in 1 mm. This can be concluded that different
+particle. This type of the erosion is different from the          size of the particle has different following
+                                                                  performance. Erosion by particles of 0.1 mm
+
+
+
+                                                           1814
+L. Han et al. / JAFM, Vol. 14, No. 6, pp. 1809-1816, 2021.
+
+diameter is shown in Fig. 10 (c) which is similar to            is even smaller. It concludes that, the smaller the
+the one of 0.5 mm diameter.                                     particle is, the better they follow with the fluid along
+                                                                the needle, and the particle distribution is more
+In the Pelton turbine, the nozzle part includes two             uniform.
+parts: on is the outer part which is analyzed in last
+subsection, the other one is the needle inside to               Analyzing the experimental data of Zehab et al.
+control the nozzle opening which can adjust the flow            (2020)，It can be seen that the closer the nozzle is to
+velocity according to different working conditions.             the top, the more serious the corrosion, as shown in
+                                                                Fig. 12. In the numerical simulation analysis of this
+Evidently, erosion by 1 mm particle appears different
+                                                                paper, the wear rate from the top to the low end
+from these by the other two types of particles. Figure
+                                                                gradually decreases (shown in Fig. 10 and Fig. 11).
+11 (a) shows the erosion distribution by the particle
+                                                                Therefore, through comparative analysis between
+of 1 mm diameter. The most serious erosion region
+                                                                Fig.10, Fig. 11 and Fig. 12, the numerical simulation
+locates in the head section of the needle and the
+                                                                results are highly consistent with the experimental
+erosion appears strip structure. It reveals that when
+                                                                data which verifies the correctness of the numerical
+the particle collides the needle, the attacking angle
+                                                                simulation results of this paper.
+between particle and needle is relatively small.
+Hence, the erosion is induced by the cut and scrape
+action. In the end section of the needle (left side in
+the Fig. 11 (a)), punctiform erosion happens. This is
+caused by the orthographic attack by the particles.
+Then, there is a region of slight erosion along the
+body of the needle which called blind erosion area.
+In this region, the particles escape from the needle
+with influence of the end of needle.
+
+
+
+
+             a) Particle diameter equals to 1 mm
+
+
+                                                                 Fig. 12. Wear law of spare and nozzle (Zehab et
+                                                                                    al. 2020).
+
+     b) Particle diameter equals to 0.5 mm
+                                                                     5. CONCLUSION
+
+
+                                                                This paper performs three-phase flow using
+                                                                numerical simulation focuses on the 6 nozzles Pelton
+      c) Particle diameter equals to 1 mm                       turbine. The working condition is set as below: head
+                                                                is 80 m, normalized nozzle opening is set to 0.55.
+                                                                Through the numerical simulation, this research
+                                                                achieves three acknowledgement listed below:
+                                                                (1) In the distribution tube of Pelton turbine, there
+                                                                exists the secondary flow caused by the Dean vortex
+Fig. 11. Erosion of 6# needle under the condition               induced by the tube curving pattern. The vortex
+             of various particle sizes.                         develop till the end of the nozzle. Without the bound
+                                                                effect of the wall, the vortex induces the deformation
+When the particle size decreases below 0.5 mm as                of the jet.
+seen in Fig. 11(b) and (c), the most serious erosion
+region locates in the neck section of the needle.               (2) Based on the numerical calculations of coupled
+Meanwhile, there is nearly no erosion in the head               VOF and DPM methods, silt defined as spherical
+section. The no-erosion area on the body is much                particle is then added in the simulation. Results
+smaller than the previous condition. Furthermore, for           reveal that the bigger the particle is, the harder for
+the condition of 0.5 mm particle, the no-erosion area           the particle to follow up the flow in the passage, more
+
+
+                                                         1815
+L. Han et al. / JAFM, Vol. 14, No. 6, pp. 1809-1816, 2021.
+
+difference between the particle trajectory and the                     19th Symposium on Hydraulic machinery of
+flow streamline. Meanwhile, when the particle                          China 8, 129-136.
+becomes larger, the distribution of the particle is less
+uniform in the bifurcation tube and nozzle parts.                 Ge, F., J. Sun, Y. Li, D. Wu, Z. Li and H. C. Hua,
+                                                                      (2020). Numerical simulation of sand abrasion
+(3) The erosion area on the nozzle exterior shell                     characteristics of jet mechanism of impulse
+locates mainly near the outlet. Meanwhile, bigger (1                  turbine. Journal of Hydraulic Engineering
+mm) particle induces the flake erosion and the                        51(12), 1486-1494
+smaller ones (0.5 mm and 0.1 mm) bring scattered
+erosion style. For the erosion on the needle surface,             Luo, J., J. Han, C. H. Wang and J. Zhan (2010).
+it’s mainly located in the head and neck parts.                       Manufacture situation and tendency of Pelton
+Furthermore, there is also a no-erosion area in the                   turbine generator runner. Journal of Chongqing
+middle section of the needle body.                                    University of Science and Technology (Natural
+                                                                      Sciences Edition) 12(03), 103-106.
+     ACKNOWLEDGEMENTS                                             Messa, G. V., S. Mandelli and S. Malavasi (2019).
+                                                                      Hydro-abrasive erosion in Pelton turbine
+This work was supported by the National Natural                       injectors: A numerical study. Renewable
+Science Foundation of China (Grant No. 51806043).                     Energy 130, 474-488.
+                                                                  Padhy, M. K. and R. P. Saini (2009). Effect of size
+     REFERENCES                                                       and concentration of silt particles on erosion of
+                                                                      Pelton turbine buckets. Energy 34(10), 1477-
+Anant, K. R., K. Arun and S. Thomas (2020). Effect                    1483.
+    of concentration and size of sediments on
+                                                                  Sugiyama, K., S. Nakahama and S. Hattori (2004).
+    hydro-abrasive erosion of Pelton turbine.
+                                                                      Slurry wear and cavitation erosion of thermal-
+    Renewable Energy 145, 893-902.
+                                                                      sprayed cermets. Wear 258(5), 768-775.
+Cao, L. H., S. Liu, P. F. Hu and H. Y. Si (2020). The
+                                                                  Thapa, B. S., B. Thapa and O. G. Dahlhaug (2012).
+     influence of governing valve opening on the
+                                                                      Empirical modelling of sediment erosion in
+     erosion characteristics of solid particle in steam
+                                                                      Francis turbines. Energy 41(1), 386-391.
+     turbine, Engineering Failure Analysis 118,
+     104929.                                                      Xu, Y., Z. Zhang and X. W. Cheng and Y. G. Zheng
+                                                                      (2002). Numerical simulation of abrasive
+Cao, Y., W. W. Song and Q. Huang (2014(a)).
+                                                                      erosion in the solid-liquid two-phase rotary
+    Investigation of the two-phase flow in the
+                                                                      flow. Journal of Beijing University of Chemical
+    nozzle of the Pelton turbine. Science and
+                                                                      Technology 29(3), 12-16.
+    Technology innovation Herald 11(28), 65-66.
+                                                                  Zehab, U. D. M. and G. A. Huang (2020).
+Cao, Y., W. W. Song, J. Fu and W. Su (2014(b)).
+                                                                      Assessment of erosive wear of Pelton turbine
+    Erosion of buckets of Pelton turbine with
+                                                                      injector: Nozzle and spear combination – A
+    sediment. Water Power 40(7), 75-78.
+                                                                      study of Chenani hydro-power plant.
+Guo, B., Y. X. Xiao, A. K. Rai, J. Zhang and Q. W.                    Engineering Failure Analysis 116, 104695.
+    Liang (2020). Sediment-laden flow and erosion
+                                                                  Zeng, C. J., Y. X. Xiao and Z. W. Wang (2014).
+    modeling in a Pelton turbine injector.
+                                                                      Pelton turbine needle erosion prediction based
+    Renewable Energy 162, 30-42.
+                                                                      on 3D Three-phase flow simulation. IOP
+Han, L., X. L. Duan, R. Z. Gong, G. F. Zhang, H. J.                   Conference Series: Earth and Environmental
+    Wang and X. Z. Wei (2019). Physic of                              Science 22(5), 22-26.
+    secondary flow phenomenon in distributor and
+                                                                  Zhang, Z. and M. Casey (2007). Experimental
+    bifurcation pipe of Pelton turbine. Renewable
+                                                                     Studies of the Jet of a Pelton turbine.
+    Energy 131, 159-167.
+                                                                     Proceedings of the Institution of Mechanical
+He, L. P., Q. Y. Wang and W. J. Liu (2013).                          Engineers, Part A: Journal of Power and Energy
+    Numerical simulation in the Pelton turbine. The                  221(8), 1181-119.
+
+
+
+
+                                                           1816
+

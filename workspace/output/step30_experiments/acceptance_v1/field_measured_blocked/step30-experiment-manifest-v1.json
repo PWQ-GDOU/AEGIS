@@ -1,0 +1,64 @@
+{
+  "artifacts": [
+    {
+      "bytes": 334,
+      "file": "step30-field_validation-summary.json",
+      "sha256": "e32d3def61fdcc808640affc5f3b747e3c592c129497288adabb76e389193916"
+    },
+    {
+      "bytes": 137,
+      "file": "step30-field_validation-measurements.csv",
+      "sha256": "e592aef585cc52f37f7c596c6e784d9408131ec1a19c2e6a2da516c3577b42b8"
+    },
+    {
+      "bytes": 217,
+      "file": "step30-field_validation-arrays.npz",
+      "sha256": "2c7f23411b3e200bbe9f396e7b0565ba82c758c8bdac6c51e148bc5116a3ef7d"
+    }
+  ],
+  "experiment": "field_validation",
+  "measured_policy": "missing or invalid real data blocks; no fabricated measurements",
+  "mode": "measured",
+  "notes": [
+    "Blocked output contains no fabricated measurement values."
+  ],
+  "output_dir": "workspace/output\\step30_experiments\\acceptance_v1\\field_measured_blocked",
+  "provided_inputs": [],
+  "required_inputs": [
+    "--depth-field or --original-points + --worn-points"
+  ],
+  "seed": 42,
+  "status": "blocked",
+  "support_interfaces": {
+    "step30_coordinate_registration": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_coordinate_registration.py"
+    },
+    "step30_error_metrics": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_error_metrics.py"
+    },
+    "step30_measurement_io": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_measurement_io.py"
+    }
+  },
+  "synthetic_policy": "synthetic values only when mode=synthetic",
+  "synthetic_truth": {
+    "status": "not_applicable"
+  },
+  "tables": {
+    "measurements": {
+      "columns": [
+        "status",
+        "blocked_reason"
+      ],
+      "file": "step30-field_validation-measurements.csv",
+      "rows": 1
+    }
+  },
+  "version": "step30-experiment-manifest-v1"
+}

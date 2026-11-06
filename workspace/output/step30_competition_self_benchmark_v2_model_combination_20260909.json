@@ -1,0 +1,1697 @@
+{
+  "version": "step30-competition-self-benchmark-v2-model-combination",
+  "status": "conditional",
+  "benchmark_kind": "competition_self_benchmark",
+  "reference_independence": "leave_one_model_out_and_leave_one_seed_out",
+  "participant_built": true,
+  "measured_truth": false,
+  "competition_self_benchmark_gate": true,
+  "competition_self_benchmark_status": "conditional_preregistered_model_combination",
+  "model_combination": {
+    "weights": {
+      "oka": 0.25,
+      "finnie": 0.25,
+      "tabakoff": 0.25,
+      "mansouri": 0.25
+    },
+    "weight_sum": 1.0,
+    "normalization": "per-model p95 normalized then equal-weight mean with median p95 amplitude anchor",
+    "posthoc_weight_change_allowed": false
+  },
+  "model_combination_score": {
+    "model_leave_one_out": {
+      "nominal": 65.50840892407706,
+      "conservative": 57.229626022010606,
+      "optimistic": 67.10020401454945
+    },
+    "seed_leave_one_out": {
+      "nominal": 57.44042226541471,
+      "conservative": 57.226926888156385,
+      "optimistic": 76.38191129273815
+    }
+  },
+  "competition_self_benchmark_score": 57.229626022010606,
+  "competition_self_benchmark_score_interval": {
+    "lower": 57.226926888156385,
+    "upper": 76.38191129273815
+  },
+  "nominal_score": 65.50840892407706,
+  "conservative_score": 57.229626022010606,
+  "optimistic_score": 67.10020401454945,
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "source_layers": {
+    "official_geometry": "baseline_face_domain_only",
+    "particle": "10 independent 60000-parcel runs with stable topology aggregate",
+    "material": "synthetic_material_reference",
+    "literature": "participant-built literature region prior"
+  },
+  "inputs": {
+    "base_single_model_audit": {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_competition_self_benchmark_v2_model_combination_20260909_single_model_audit.json",
+      "sha256": "d6c7329a23d87a8a07313555a17213452e73d826463e4c284f5175e15e9d68ac"
+    },
+    "merged_prior": {
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/merged.json",
+      "sha256": "d0144c87fa6bfcca7d3a11bdd8dc3833ccf9c6e891482e4a628ee4bf3d29c0cb"
+    },
+    "seed_count": 10,
+    "n_faces": 218988,
+    "region_field": {
+      "status": "supplied",
+      "path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_participant_benchmark_inputs_v1_20260909/participant_dec_region_field.npz",
+      "sha256": "04a6d0ab811ec1568282250160ed5c5d5659041713bd8ca1049a6b8fe5d5b093"
+    }
+  },
+  "single_model_audit": {
+    "nominal": 57.64216782613509,
+    "conservative": 57.61376915345029,
+    "optimistic": 57.73142842881523,
+    "score_interval": {
+      "lower": 41.74262323612679,
+      "upper": 78.83922973792895
+    }
+  },
+  "model_leave_one_out": {
+    "oka": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 57.25345363011858,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8114124722605912,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18858752773940876,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.00031461607368294493,
+        "relative_volume_error": 101.04296503749468
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 57.25345363011858,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8114124722605912,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18858752773940876,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.00017599676942349344,
+        "relative_volume_error": 181.41446767588823
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 1.15,
+        "material_factor": 0.6581196581196581,
+        "score": 57.25345363011881,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8114124722606029,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1885875277393971,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.00020705502285119431,
+        "relative_volume_error": 154.05229752448585
+      },
+      "score_interval": {
+        "lower": 57.25345363011858,
+        "upper": 57.25345363011881
+      },
+      "scenario_count": 81
+    },
+    "finnie": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 73.76336421803555,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8067646656292655,
+          "absolute_amplitude": 0.8301433360271742
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.19323533437073442,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.03867326955933269,
+        "relative_volume_error": 0.16985666397282584
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 5.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.3948717948717949,
+        "score": 57.16049749749206,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8067646656292655,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.19323533437073442,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.012980335859786281,
+        "relative_volume_error": 1.4733071126860038
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 0.85,
+        "material_factor": 0.9871794871794872,
+        "score": 76.94695439898008,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8067646656292656,
+          "absolute_amplitude": 0.9893228450744014
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1932353343707344,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.032450839649465706,
+        "relative_volume_error": 0.01067715492559866
+      },
+      "score_interval": {
+        "lower": 57.16049749749206,
+        "upper": 76.94695439898008
+      },
+      "scenario_count": 81
+    },
+    "tabakoff": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 74.02610910927426,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.810066128652275,
+          "absolute_amplitude": 0.8399791175661004
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18993387134772494,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.03822042278870845,
+        "relative_volume_error": 0.16002088243389953
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.4935897435897436,
+        "score": 57.22652675795226,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.810066128652275,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18993387134772494,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.01603542738154467,
+        "relative_volume_error": 1.0020892641758847
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 0.85,
+        "material_factor": 0.9871794871794872,
+        "score": 77.20563411619341,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.810066128652275,
+          "absolute_amplitude": 0.9989553679120576
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18993387134772494,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.03207085476308934,
+        "relative_volume_error": 0.0010446320879423838
+      },
+      "score_interval": {
+        "lower": 57.22652675795226,
+        "upper": 77.20563411619341
+      },
+      "scenario_count": 81
+    },
+    "mansouri": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 57.23272528606896,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8103760550581108,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18962394494188917,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.00031369657780237184,
+        "relative_volume_error": 101.34206962655576
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 1.0,
+        "material_factor": 0.6581196581196581,
+        "score": 57.23272528606896,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8103760550581108,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18962394494188917,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.00020644988453660365,
+        "relative_volume_error": 154.50678112087047
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 1.15,
+        "material_factor": 0.6581196581196581,
+        "score": 57.23272528606931,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8103760550581279,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1896239449418721,
+        "prediction_volume_mm3_h": 0.0321043570070626,
+        "reference_volume_mm3_h": 0.00020644988453663742,
+        "relative_volume_error": 154.50678112084503
+      },
+      "score_interval": {
+        "lower": 57.23272528606896,
+        "upper": 57.23272528606931
+      },
+      "scenario_count": 81
+    }
+  },
+  "seed_leave_one_out": {
+    "0": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 49.883097681801644,
+        "components": {
+          "hotspot_iou": 0.28373031758304323,
+          "ranking": 0.9615972543131361,
+          "js_distribution": 0.7956302604283366,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.5120879238310455,
+          "medium": 0.0,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7877723159829952,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.2043697395716634,
+        "prediction_volume_mm3_h": 0.03346625461868049,
+        "reference_volume_mm3_h": 0.014781156352710437,
+        "relative_volume_error": 1.264116136796276
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 49.883097681801644,
+        "components": {
+          "hotspot_iou": 0.28373031758304323,
+          "ranking": 0.9615972543131361,
+          "js_distribution": 0.7956302604283366,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.5120879238310455,
+          "medium": 0.0,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7877723159829952,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.20436973957166335,
+        "prediction_volume_mm3_h": 0.03346625461868049,
+        "reference_volume_mm3_h": 0.008268604130640156,
+        "relative_volume_error": 3.0473886631805085
+      },
+      "optimistic": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 0.85,
+        "material_factor": 2.6666666666666665,
+        "score": 69.86059300647467,
+        "components": {
+          "hotspot_iou": 0.28373031758304323,
+          "ranking": 0.9615972543131361,
+          "js_distribution": 0.7956302604283366,
+          "absolute_amplitude": 0.9988747662336512
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.5120879238310455,
+          "medium": 0.0,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7877723159829952,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.20436973957166335,
+        "prediction_volume_mm3_h": 0.03346625461868049,
+        "reference_volume_mm3_h": 0.03350395439947699,
+        "relative_volume_error": 0.0011252337663487137
+      },
+      "score_interval": {
+        "lower": 49.883097681801644,
+        "upper": 69.86059300647467
+      },
+      "scenario_count": 81
+    },
+    "1": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 61.70756598133337,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9591773532448316,
+          "js_distribution": 0.819239730474569,
+          "absolute_amplitude": 0.20437427912631967
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7732529095731671,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.180760269525431,
+        "prediction_volume_mm3_h": 0.02660972358640748,
+        "reference_volume_mm3_h": 0.014819192706518061,
+        "relative_volume_error": 0.7956257208736803
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 57.62008039880697,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9591773532448316,
+          "js_distribution": 0.819239730474569,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7732529095731671,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.180760269525431,
+        "prediction_volume_mm3_h": 0.02660972358640748,
+        "reference_volume_mm3_h": 0.008289881731979547,
+        "relative_volume_error": 2.2099038860537914
+      },
+      "optimistic": {
+        "density_kg_m3": 7900.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 0.85,
+        "material_factor": 2.0256410256410255,
+        "score": 76.76247708858402,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9591773532448316,
+          "js_distribution": 0.819239730474569,
+          "absolute_amplitude": 0.9571198344888525
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7732529095731671,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.180760269525431,
+        "prediction_volume_mm3_h": 0.02660972358640748,
+        "reference_volume_mm3_h": 0.025515610006222756,
+        "relative_volume_error": 0.04288016551114753
+      },
+      "score_interval": {
+        "lower": 57.62008039880697,
+        "upper": 76.76247708858402
+      },
+      "scenario_count": 81
+    },
+    "2": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 57.361690542234356,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.953805554085841,
+          "js_distribution": 0.8130349865946762,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 1.0
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18696501340532382,
+        "prediction_volume_mm3_h": 0.0317560172510931,
+        "reference_volume_mm3_h": 0.01482070153848214,
+        "relative_volume_error": 1.1426797624011387
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 57.361690542234356,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.953805554085841,
+          "js_distribution": 0.8130349865946762,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 1.0
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18696501340532382,
+        "prediction_volume_mm3_h": 0.0317560172510931,
+        "reference_volume_mm3_h": 0.008290725775159453,
+        "relative_volume_error": 2.830306068769034
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 0.85,
+        "material_factor": 2.6324786324786325,
+        "score": 76.51322088607952,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.953805554085841,
+          "js_distribution": 0.8130349865946762,
+          "absolute_amplitude": 0.9575765171922583
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 1.0
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18696501340532382,
+        "prediction_volume_mm3_h": 0.0317560172510931,
+        "reference_volume_mm3_h": 0.03316290310063781,
+        "relative_volume_error": 0.04242348280774161
+      },
+      "score_interval": {
+        "lower": 57.361690542234356,
+        "upper": 76.51322088607952
+      },
+      "scenario_count": 81
+    },
+    "3": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 59.48055743038617,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8033479524585834,
+          "absolute_amplitude": 0.11941970981538774
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.19665204754141669,
+        "prediction_volume_mm3_h": 0.0280282779331593,
+        "reference_volume_mm3_h": 0.014904058114108932,
+        "relative_volume_error": 0.8805802901846123
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 57.09216323407842,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8033479524585833,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1966520475414167,
+        "prediction_volume_mm3_h": 0.0280282779331593,
+        "reference_volume_mm3_h": 0.008337355586054952,
+        "relative_volume_error": 2.361770725005343
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.9743589743589745,
+        "score": 76.14219734244202,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8033479524585833,
+          "absolute_amplitude": 0.9525017054181801
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1966520475414167,
+        "prediction_volume_mm3_h": 0.0280282779331593,
+        "reference_volume_mm3_h": 0.029425960891958664,
+        "relative_volume_error": 0.047498294581819867
+      },
+      "score_interval": {
+        "lower": 57.09216323407842,
+        "upper": 76.14219734244202
+      },
+      "scenario_count": 81
+    },
+    "4": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 57.99422942764192,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8484512621367587,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.15154873786324127,
+        "prediction_volume_mm3_h": 0.042268582892957096,
+        "reference_volume_mm3_h": 0.014828214742476982,
+        "relative_volume_error": 1.850551035781421
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 1.0,
+        "material_factor": 0.6581196581196581,
+        "score": 57.99422942764192,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8484512621367587,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.15154873786324127,
+        "prediction_volume_mm3_h": 0.042268582892957096,
+        "reference_volume_mm3_h": 0.009758739616843825,
+        "relative_volume_error": 3.3313567686548864
+      },
+      "optimistic": {
+        "density_kg_m3": 7900.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 1.15,
+        "material_factor": 2.7008547008547006,
+        "score": 76.88571859306035,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8484512621367587,
+          "absolute_amplitude": 0.9445744582709216
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.15154873786324127,
+        "prediction_volume_mm3_h": 0.042268582892957096,
+        "reference_volume_mm3_h": 0.040048853492506434,
+        "relative_volume_error": 0.0554255417290784
+      },
+      "score_interval": {
+        "lower": 57.99422942764192,
+        "upper": 76.88571859306035
+      },
+      "scenario_count": 81
+    },
+    "5": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 56.66463881401391,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7819717314553578,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.21802826854464213,
+        "prediction_volume_mm3_h": 0.03098168979247363,
+        "reference_volume_mm3_h": 0.014947166488265473,
+        "relative_volume_error": 1.0727466852527758
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 56.66463881401391,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7819717314553578,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.21802826854464216,
+        "prediction_volume_mm3_h": 0.03098168979247363,
+        "reference_volume_mm3_h": 0.008361470484247652,
+        "relative_volume_error": 2.7052920118346027
+      },
+      "optimistic": {
+        "density_kg_m3": 7900.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 1.15,
+        "material_factor": 2.0256410256410255,
+        "score": 76.19954495962162,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7819717314553578,
+          "absolute_amplitude": 0.9767453072803851
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.21802826854464213,
+        "prediction_volume_mm3_h": 0.03098168979247363,
+        "reference_volume_mm3_h": 0.03027759365572049,
+        "relative_volume_error": 0.023254692719614892
+      },
+      "score_interval": {
+        "lower": 56.66463881401391,
+        "upper": 76.19954495962162
+      },
+      "scenario_count": 81
+    },
+    "6": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 57.3880349721996,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8181415393646423,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18185846063535777,
+        "prediction_volume_mm3_h": 0.037919263339630485,
+        "reference_volume_mm3_h": 0.014803569048042557,
+        "relative_volume_error": 1.5614946785177095
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 57.3880349721996,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8181415393646423,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18185846063535777,
+        "prediction_volume_mm3_h": 0.037919263339630485,
+        "reference_volume_mm3_h": 0.008281141830721246,
+        "relative_volume_error": 3.5789897232478514
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 1.0,
+        "material_factor": 2.6324786324786325,
+        "score": 76.84874129600297,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8181415393646422,
+          "absolute_amplitude": 0.9730353161901685
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.18185846063535785,
+        "prediction_volume_mm3_h": 0.037919263339630485,
+        "reference_volume_mm3_h": 0.0389700792033941,
+        "relative_volume_error": 0.026964683809831518
+      },
+      "score_interval": {
+        "lower": 57.3880349721996,
+        "upper": 76.84874129600297
+      },
+      "scenario_count": 81
+    },
+    "7": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 66.19156160001926,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7909405696232481,
+          "absolute_amplitude": 0.4673773011323772
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.20905943037675193,
+        "prediction_volume_mm3_h": 0.02492535500390371,
+        "reference_volume_mm3_h": 0.0162632036066801,
+        "relative_volume_error": 0.5326226988676228
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 56.84401557737171,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7909405696232481,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.2090594303767519,
+        "prediction_volume_mm3_h": 0.02492535500390371,
+        "reference_volume_mm3_h": 0.009097663897924895,
+        "relative_volume_error": 1.73975333487413
+      },
+      "optimistic": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 5.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.5794871794871796,
+        "score": 76.2506016993968,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7909405696232481,
+          "absolute_amplitude": 0.9703293061012543
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.20905943037675193,
+        "prediction_volume_mm3_h": 0.02492535500390371,
+        "reference_volume_mm3_h": 0.025687521594140884,
+        "relative_volume_error": 0.02967069389874566
+      },
+      "score_interval": {
+        "lower": 56.84401557737171,
+        "upper": 76.2506016993968
+      },
+      "scenario_count": 81
+    },
+    "8": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 56.91301678616726,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7943906300630253,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.20560936993697462,
+        "prediction_volume_mm3_h": 0.031290703340251406,
+        "reference_volume_mm3_h": 0.014789912008221322,
+        "relative_volume_error": 1.1156788034207188
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 56.91301678616726,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7943906300630253,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.20560936993697462,
+        "prediction_volume_mm3_h": 0.031290703340251406,
+        "reference_volume_mm3_h": 0.008273502059299878,
+        "relative_volume_error": 2.78203850267722
+      },
+      "optimistic": {
+        "density_kg_m3": 7900.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 1.15,
+        "material_factor": 2.0256410256410255,
+        "score": 76.02403619543338,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.7943906300630255,
+          "absolute_amplitude": 0.9555509704633061
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.2056093699369746,
+        "prediction_volume_mm3_h": 0.031290703340251406,
+        "reference_volume_mm3_h": 0.029959052529477306,
+        "relative_volume_error": 0.0444490295366939
+      },
+      "score_interval": {
+        "lower": 56.91301678616726,
+        "upper": 76.02403619543338
+      },
+      "scenario_count": 81
+    },
+    "9": {
+      "nominal": {
+        "density_kg_m3": 7800.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 1.0,
+        "region_expansion": 1.0,
+        "material_factor": 1.0,
+        "score": 57.49280955862983,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8233802686861538,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1766197313138462,
+        "prediction_volume_mm3_h": 0.030030477773673125,
+        "reference_volume_mm3_h": 0.014818979598323418,
+        "relative_volume_error": 1.0264875576905914
+      },
+      "conservative": {
+        "density_kg_m3": 7700.0,
+        "hardness_gpa": 3.0,
+        "concentration_scale": 0.5,
+        "region_expansion": 0.85,
+        "material_factor": 0.6581196581196581,
+        "score": 57.49280955862983,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8233802686861538,
+          "absolute_amplitude": 0.0
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1766197313138462,
+        "prediction_volume_mm3_h": 0.030030477773673125,
+        "reference_volume_mm3_h": 0.008289762518891176,
+        "relative_volume_error": 2.6225980786829526
+      },
+      "optimistic": {
+        "density_kg_m3": 7900.0,
+        "hardness_gpa": 4.0,
+        "concentration_scale": 2.0,
+        "region_expansion": 1.15,
+        "material_factor": 2.0256410256410255,
+        "score": 77.48445139409199,
+        "components": {
+          "hotspot_iou": 0.4930243416627087,
+          "ranking": 0.9507740890684779,
+          "js_distribution": 0.8233802686861538,
+          "absolute_amplitude": 0.9995820917731079
+        },
+        "weights": {
+          "hotspot_iou": 0.35,
+          "ranking": 0.25,
+          "js_distribution": 0.2,
+          "absolute_amplitude": 0.2
+        },
+        "band_iou": {
+          "low": 0.679599095304624,
+          "medium": 0.46037090076541803,
+          "high": 0.33910302891808414
+        },
+        "ranking_raw": {
+          "full": 0.7228333245150463,
+          "top_10_percent": 1.0000000000000002,
+          "top_20_percent": 0.9818112098958217
+        },
+        "active_face_fraction": 0.4489013096608033,
+        "active_face_count": 98304,
+        "active_js_divergence": 0.1766197313138462,
+        "prediction_volume_mm3_h": 0.030030477773673125,
+        "reference_volume_mm3_h": 0.030017933032504544,
+        "relative_volume_error": 0.00041790822689214487
+      },
+      "score_interval": {
+        "lower": 57.49280955862983,
+        "upper": 77.48445139409199
+      },
+      "scenario_count": 81
+    }
+  },
+  "claim_scope": "conditional competition score against a participant-built independent benchmark; not official accuracy and not measured wear truth",
+  "limitations": [
+    "The reference field is participant-built and synthetic/prior-based.",
+    "The combination score is independent by leave-one-model-out and leave-one-seed-out construction, but it is not measured physical accuracy.",
+    "Official accuracy, official reference, and formal FEM gates remain closed."
+  ],
+  "report_sha256": "01500c98952515306b74ab7a175efeb3e6260498524515d134d143dcc31349db"
+}

@@ -4,9 +4,9 @@ Step 6: 使用 CAD Assistant 将 .x_t 转换为 STL (GUI 自动化)
 import os, sys, time
 from pathlib import Path
 
-CAD_EXE = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\workspace\CAD_Assistant\CADAssistant.exe")
-DATA_DIR = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\DecPelton2024\DecPelton2024\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包")
-OUTPUT_DIR = Path(r"B:\undertaking\学业\非专业相关\比赛\挑战杯\水轮机\workspace\output")
+CAD_EXE = Path(r"workspace/CAD_Assistant\CADAssistant.exe")
+DATA_DIR = Path(r"DecPelton2024/DecPelton2024\DEC PELTON 2024-150MW级冲击式国产化转轮研发共享数据包")
+OUTPUT_DIR = Path(r"workspace/output")
 
 # 要转换的文件
 FILES = [

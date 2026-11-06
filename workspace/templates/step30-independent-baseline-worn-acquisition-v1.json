@@ -1,0 +1,33 @@
+{
+  "version": "step30-independent-baseline-worn-acquisition-v1",
+  "status": "blocked",
+  "evidence_kind": "independent_measured_scan_intake",
+  "official_reference_gate": false,
+  "official_accuracy_gate": false,
+  "minimum_independent_groups": 3,
+  "recommended_formal_groups": 5,
+  "required_before_formal_accuracy": [
+    "baseline_scan_source",
+    "worn_scan_source",
+    "scanner_serial_number",
+    "scanner_calibration_certificate",
+    "baseline_and_worn_acquisition_timestamps",
+    "service_episode_start_and_end",
+    "shared_coordinate_frame",
+    "fiducial_and_fixture_identity",
+    "coordinate_units",
+    "source_sha256_and_byte_count",
+    "registration_transform_and_quality",
+    "topology_v3_parent_face_mapping",
+    "measurement_uncertainty",
+    "independent_test_split_commitment"
+  ],
+  "records": [],
+  "blocked_reason": "No real baseline/worn scan pairs have been supplied. Synthetic fixtures, DEC AI5 traces, CFD fields, literature figures, and guessed CAD regions are not measured erosion truth.",
+  "delivery_binding": {
+    "scan_pair_manifest": "templates/step30-scan-pair-manifest-v1.json",
+    "protocol_cli": "step30_independent_erosion_cli.py",
+    "truth_builder": "step30_independent_erosion_truth.py",
+    "acceptance_replay": "step30_measurement_acceptance.py"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "artifacts": [
+    {
+      "bytes": 260,
+      "file": "step30-material_erosion-summary.json",
+      "sha256": "530fdb48df3a25d0ad8fa732d0741b45709be59be66a267944074c5f7976f00d"
+    },
+    {
+      "bytes": 63,
+      "file": "step30-material_erosion-measurements.csv",
+      "sha256": "c02749eae21d80e073f3fefef528f5105d492aaca6bbc5e3138e0ec97d2312eb"
+    },
+    {
+      "bytes": 217,
+      "file": "step30-material_erosion-arrays.npz",
+      "sha256": "2c7f23411b3e200bbe9f396e7b0565ba82c758c8bdac6c51e148bc5116a3ef7d"
+    }
+  ],
+  "experiment": "material_erosion",
+  "measured_policy": "missing or invalid real data blocks; no fabricated measurements",
+  "mode": "measured",
+  "notes": [
+    "Blocked output contains no fabricated measurement values."
+  ],
+  "output_dir": "workspace/output\\step30_experiments\\acceptance_v1\\material_measured_blocked",
+  "provided_inputs": [],
+  "required_inputs": [
+    "--input"
+  ],
+  "seed": 42,
+  "status": "blocked",
+  "support_interfaces": {
+    "step30_coordinate_registration": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_coordinate_registration.py"
+    },
+    "step30_error_metrics": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_error_metrics.py"
+    },
+    "step30_measurement_io": {
+      "available": true,
+      "implementation": "external_module",
+      "module": "workspace/step30_measurement_io.py"
+    }
+  },
+  "synthetic_policy": "synthetic values only when mode=synthetic",
+  "synthetic_truth": {
+    "status": "not_applicable"
+  },
+  "tables": {
+    "measurements": {
+      "columns": [
+        "status",
+        "blocked_reason"
+      ],
+      "file": "step30-material_erosion-measurements.csv",
+      "rows": 1
+    }
+  },
+  "version": "step30-experiment-manifest-v1"
+}

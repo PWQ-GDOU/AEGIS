@@ -1,0 +1,441 @@
+{
+  "version": "step30-participant-optimization-v1",
+  "status": "conditional",
+  "benchmark_kind": "competition_self_benchmark",
+  "competition_self_benchmark_gate": true,
+  "competition_self_benchmark_status": "conditional_participant_built_reference",
+  "competition_self_benchmark_score": 15.986279912619864,
+  "nominal_score": 15.986293690612314,
+  "conservative_score": 15.986279912619864,
+  "optimistic_score": 15.986321246597218,
+  "competition_self_benchmark_score_interval": {
+    "lower": 15.986279912619864,
+    "upper": 15.986321246597218
+  },
+  "score_components": {
+    "hotspot_iou": 0.35,
+    "ranking": 0.25,
+    "js_distribution": 0.2,
+    "absolute_amplitude": 0.2
+  },
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "reference_independence": "geometry_and_literature_reference_independent_of_model_fields",
+  "literature_region_weights": {
+    "splitter_like": 0.375,
+    "cutout_like": 0.3,
+    "brim_like": 0.05,
+    "bucket_base_or_side_like": 0.075,
+    "impact_zone_like": 0.2,
+    "residual_other": 0.0
+  },
+  "inputs": {
+    "face_domain": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/domain.npz",
+      "sha256": "444e72117430c811497c304dfbcc28445adccfd08bb63e2faf944ee538e2570c",
+      "n_faces": 218988
+    },
+    "merged_prior": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/merged/prior.json",
+      "sha256": "41c7daac2e89bafb8bd12b120cb3cc9e582530be6478d1d9be8a93390daf6e60",
+      "npz_sha256": "f208f97636f082a43c5278662212d91d5a2f67ac4925b23852f3f633838d35e4"
+    },
+    "seed_priors": [
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_825055/prior.json",
+        "sha256": "8b7be0ccb369e66efebd92e80f97671ebcf9fc0d893125a1cc7a513c12e0606b",
+        "npz_sha256": "353e7b498b346b70f75eda17fb528fd517f62b0a37bd8a2439764f6f9034ca26"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_c004/prior.json",
+        "sha256": "6e305933351393193c4918dd500d68375df6c615636b3f175119c4ec60b820fd",
+        "npz_sha256": "61b41f29d7684058f377bc905b30663c57a711a035de2ca504ef09df7bcd241d"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_9404/prior.json",
+        "sha256": "41c7daac2e89bafb8bd12b120cb3cc9e582530be6478d1d9be8a93390daf6e60",
+        "npz_sha256": "f208f97636f082a43c5278662212d91d5a2f67ac4925b23852f3f633838d35e4"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_85c57/prior.json",
+        "sha256": "6e4aa033e90796e33c29949d3ad5383bcb9ce0e1e50ff5c113f2007fa6acdf1b",
+        "npz_sha256": "231b5e06dff816729d0a10cdf8e9106ab871d295a3d3b8ebeac398a469ef3e0c"
+      },
+      {
+        "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/seed_c15c/prior.json",
+        "sha256": "a43a1a6773b4bc6a7cba8206b69bc928927bd0a61f5259c560ba788bdcc8ccb7",
+        "npz_sha256": "6bb72f66857e5788b0a99f561c84cfbb6ada823adc00d4e2d780546bec45ae0f"
+      }
+    ],
+    "literature_reference": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/literature/reference.json",
+      "sha256": "4966292e1b4003330f195c47bee380566fcb8013f32eece3156df45243125e45"
+    }
+  },
+  "face_region_mapping": {
+    "version": "step30-participant-dec-face-region-mapping-v1",
+    "status": "participant_built",
+    "mapping_kind": "participant_DEC_face_region_mapping",
+    "official_reference": false,
+    "measured_truth": false,
+    "regions": [
+      {
+        "region_id": "splitter_like",
+        "face_count": 51191,
+        "area_m2": 0.20393831567389498,
+        "area_fraction": 0.21859254053809515,
+        "literature_support_fraction": 0.375
+      },
+      {
+        "region_id": "cutout_like",
+        "face_count": 42526,
+        "area_m2": 0.1933641432475497,
+        "area_fraction": 0.20725854865371202,
+        "literature_support_fraction": 0.3
+      },
+      {
+        "region_id": "brim_like",
+        "face_count": 33886,
+        "area_m2": 0.13906676383624017,
+        "area_fraction": 0.14905956789397098,
+        "literature_support_fraction": 0.05
+      },
+      {
+        "region_id": "bucket_base_or_side_like",
+        "face_count": 2212,
+        "area_m2": 0.011300910584736812,
+        "area_fraction": 0.012112950658382235,
+        "literature_support_fraction": 0.075
+      },
+      {
+        "region_id": "impact_zone_like",
+        "face_count": 89173,
+        "area_m2": 0.3852908687662193,
+        "area_fraction": 0.4129763922558396,
+        "literature_support_fraction": 0.2
+      },
+      {
+        "region_id": "residual_other",
+        "face_count": 0,
+        "area_m2": 0.0,
+        "area_fraction": 0.0,
+        "literature_support_fraction": 0.0
+      }
+    ],
+    "rules": {
+      "source": "official face centers only",
+      "surface_orientation": "deterministic PCA axes; no CAD tag or AI5/WETTED/ROOT semantics",
+      "splitter": "abs(lateral-0.5)<=0.16 and longitudinal>=0.35 and normal>=0.45",
+      "cutout": "longitudinal edge bands <=0.12 or >=0.88, excluding splitter",
+      "brim": "normal>=0.82, excluding splitter/cutout",
+      "bucket_base_or_side": "normal<=0.18, excluding higher-priority regions",
+      "impact_zone": "remaining non-residual faces"
+    },
+    "axis_metadata": {
+      "axis_order": [
+        "longitudinal",
+        "lateral",
+        "normal"
+      ],
+      "eigenvalues": [
+        52863.70689708231,
+        12241.069137376222,
+        4529.510377562155
+      ],
+      "axis_matrix_sha256": "57118a9aba1da4362067558d02fba8c95fa4481af68f0eec57d1c81b04638411",
+      "normalization": "principal-coordinate min-max over official face centers"
+    },
+    "claim_boundary": "participant geometry partition for competition self-benchmark; not official surface selection",
+    "mapping_sha256": "57257d3f9cf0b7518be368e416760ffca53bbfba57e3dfc1468fe41f18fcdce5"
+  },
+  "active_face_convergence": {
+    "n_seeds": 5,
+    "models": {
+      "oka": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.9971014492753624,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      },
+      "finnie": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.994927536231884,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      },
+      "tabakoff": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.9967391304347826,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      },
+      "mansouri": {
+        "active_face_fraction": 0.012603430324949313,
+        "active_area_fraction": 0.01146062523587839,
+        "active_cv_p50": 2.2360679774997894,
+        "active_cv_p95": 2.23606797749979,
+        "active_high_cv_fraction": 0.9978260869565218,
+        "interpretation": "seed variability on a common frozen particle/topology contract"
+      }
+    },
+    "status": "active_face_convergence_screened"
+  },
+  "material_amplitude_calibration": {
+    "version": "step30-participant-material-amplitude-calibration-v1",
+    "status": "synthetic_material_reference",
+    "material": "ZG0Cr13Ni4Mo",
+    "source_layer": "literature_material_prior + ZG0Cr13Ni4Mo_preregistered_protocol",
+    "particle_mass_kg": 0.33607395,
+    "specific_wear_yield_mm3_per_kg": {
+      "low": 0.08,
+      "nominal": 0.16,
+      "high": 0.32
+    },
+    "material_prior": {
+      "density_kg_m3": {
+        "low": 7700.0,
+        "nominal": 7800.0,
+        "high": 7900.0
+      },
+      "hardness_gpa": {
+        "low": 3.0,
+        "nominal": 4.0,
+        "high": 5.0
+      },
+      "concentration_scale": {
+        "low": 0.5,
+        "nominal": 1.0,
+        "high": 2.0
+      }
+    },
+    "calibration_rows": [
+      {
+        "model": "oka",
+        "raw_volume_mm3_per_exposure": 0.6154934508610583,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 0.08736377604794121
+      },
+      {
+        "model": "finnie",
+        "raw_volume_mm3_per_exposure": 0.0009092997942748174,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 59.13542743390148
+      },
+      {
+        "model": "tabakoff",
+        "raw_volume_mm3_per_exposure": 0.00022583711282837964,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 238.10006834821178
+      },
+      {
+        "model": "mansouri",
+        "raw_volume_mm3_per_exposure": 0.12360289844796621,
+        "nominal_target_volume_mm3": 0.053771832000000006,
+        "scale": 0.43503698275034086
+      }
+    ],
+    "fit_rule": "scale each seed-median model field to frozen nominal specific-wear target; no DEC score feedback",
+    "independent_measured_pilot": false,
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked",
+    "calibration_sha256": "ef46160ab62c3a1959c69aebaa7dfc6c6ccaa3d49fdbeb77e627c449656e85a7"
+  },
+  "baseline_worn_reference": {
+    "version": "step30-participant-baseline-worn-v1",
+    "status": "participant_built_synthetic",
+    "benchmark_kind": "competition_self_benchmark",
+    "baseline": "official face-domain geometry only; zero wear field",
+    "worn": "geometry-only participant depth field with literature regional weights",
+    "material": "ZG0Cr13Ni4Mo",
+    "exposure": {
+      "particle_mass_kg": 0.33607395,
+      "nominal_depth_anchor_mm": 0.1,
+      "low_depth_anchor_mm": 0.05,
+      "high_depth_anchor_mm": 0.2
+    },
+    "region_weights": {
+      "splitter_like": 0.375,
+      "cutout_like": 0.3,
+      "brim_like": 0.05,
+      "bucket_base_or_side_like": 0.075,
+      "impact_zone_like": 0.2,
+      "residual_other": 0.0
+    },
+    "literature_binding": {
+      "path": "remote_artifacts/PWQ/step30_self_benchmark_20260829_v1/workspace/input/literature/reference.json",
+      "sha256": "4966292e1b4003330f195c47bee380566fcb8013f32eece3156df45243125e45",
+      "support_fraction_source": "validated literature/reference.json"
+    },
+    "shape_rule": "literature region weight x lateral centrality x longitudinal flow factor",
+    "axis_metadata": {
+      "axis_order": [
+        "longitudinal",
+        "lateral",
+        "normal"
+      ],
+      "eigenvalues": [
+        52863.70689708231,
+        12241.069137376222,
+        4529.510377562155
+      ],
+      "axis_matrix_sha256": "57118a9aba1da4362067558d02fba8c95fa4481af68f0eec57d1c81b04638411",
+      "normalization": "principal-coordinate min-max over official face centers"
+    },
+    "official_reference": false,
+    "measured_truth": false,
+    "independence": "does not read any model erosion field",
+    "claim_boundary": "participant-built baseline/worn reference; not measured surface truth",
+    "baseline_worn_sha256": "5b5ad74f254475b76f0e2f7c4fc97e0c3d778c097469827a69f2d556957ecca9"
+  },
+  "model_combination": {
+    "version": "step30-preregistered-model-combination-v1",
+    "status": "preregistered",
+    "models": [
+      "oka",
+      "finnie",
+      "tabakoff",
+      "mansouri"
+    ],
+    "weights": {
+      "oka": 0.25,
+      "finnie": 0.25,
+      "tabakoff": 0.25,
+      "mansouri": 0.25
+    },
+    "combination": "fixed weighted arithmetic mean of material-calibrated seed-median fields",
+    "weight_sum": 1.0,
+    "selected_after_score": false,
+    "posthoc_weight_change_allowed": false,
+    "official_accuracy_gate": false,
+    "fem_gate": "blocked",
+    "combination_sha256": "f09aa10220848932a3c0f3ad1fb9db49bed77388d753b4805e1e66a978881b56"
+  },
+  "score_detail": {
+    "nominal": {
+      "score": 15.986293690612314,
+      "components": {
+        "hotspot_iou": 0.06666691335995062,
+        "ranking": 0.5414130580852307,
+        "js_distribution": 0.005879885744918711,
+        "absolute_amplitude": 1.377799245139144e-06
+      },
+      "weights": {
+        "hotspot_iou": 0.35,
+        "ranking": 0.25,
+        "js_distribution": 0.2,
+        "absolute_amplitude": 0.2
+      },
+      "band_iou": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 0.20000074007985186
+      },
+      "ranking_raw": {
+        "full": 0.0537713199793643,
+        "top_10_percent": 0.09888275307684961,
+        "top_20_percent": 0.09582427545516993
+      },
+      "active_face_fraction": 1.0,
+      "active_face_count": 218988,
+      "active_js_divergence": 0.9941201142550813,
+      "prediction_volume_mm3_h": 0.053771832000000006,
+      "reference_volume_mm3_h": 39027.33448941469,
+      "relative_volume_error": 0.9999986222007549
+    },
+    "conservative": {
+      "score": 15.986279912619864,
+      "components": {
+        "hotspot_iou": 0.06666691335995062,
+        "ranking": 0.5414130580852307,
+        "js_distribution": 0.005879885744918711,
+        "absolute_amplitude": 6.88899622569572e-07
+      },
+      "weights": {
+        "hotspot_iou": 0.35,
+        "ranking": 0.25,
+        "js_distribution": 0.2,
+        "absolute_amplitude": 0.2
+      },
+      "band_iou": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 0.20000074007985186
+      },
+      "ranking_raw": {
+        "full": 0.0537713199793643,
+        "top_10_percent": 0.09888275307684961,
+        "top_20_percent": 0.09582427545516993
+      },
+      "active_face_fraction": 1.0,
+      "active_face_count": 218988,
+      "active_js_divergence": 0.9941201142550813,
+      "prediction_volume_mm3_h": 0.053771832000000006,
+      "reference_volume_mm3_h": 78054.66897882937,
+      "relative_volume_error": 0.9999993111003774
+    },
+    "optimistic": {
+      "score": 15.986321246597218,
+      "components": {
+        "hotspot_iou": 0.06666691335995062,
+        "ranking": 0.5414130580852307,
+        "js_distribution": 0.005879885744918711,
+        "absolute_amplitude": 2.7555984903893105e-06
+      },
+      "weights": {
+        "hotspot_iou": 0.35,
+        "ranking": 0.25,
+        "js_distribution": 0.2,
+        "absolute_amplitude": 0.2
+      },
+      "band_iou": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 0.20000074007985186
+      },
+      "ranking_raw": {
+        "full": 0.0537713199793643,
+        "top_10_percent": 0.09888275307684961,
+        "top_20_percent": 0.09582427545516993
+      },
+      "active_face_fraction": 1.0,
+      "active_face_count": 218988,
+      "active_js_divergence": 0.9941201142550813,
+      "prediction_volume_mm3_h": 0.053771832000000006,
+      "reference_volume_mm3_h": 19513.667244707343,
+      "relative_volume_error": 0.9999972444015096
+    },
+    "score_interval": {
+      "lower": 15.986279912619864,
+      "upper": 15.986321246597218
+    }
+  },
+  "source_layers": {
+    "geometry": "official_geometry_as_face_domain_only",
+    "region": "participant_built_geometry_mapping_plus_literature_region_prior",
+    "material": "synthetic_material_reference_from_frozen_ZG0Cr13Ni4Mo_prior",
+    "particle": "five_seed_median_with_active_face_convergence_summary",
+    "prediction": "pre_registered_equal_weight_model_combination"
+  },
+  "scoring_policy": {
+    "official_data_absence_numeric_deduction": 0.0,
+    "participant_built_baseline_worn_allowed": true,
+    "participant_built_face_region_mapping_allowed": true,
+    "measured_truth_claimed": false
+  },
+  "claim_scope": "conditional competition score using participant-built baseline/worn field and participant DEC face mapping; not official or measured truth",
+  "limitations": [
+    "No laboratory baseline/worn scan was supplied; synthetic participant field remains the reference source.",
+    "No measured ZG0Cr13Ni4Mo batch was supplied; material calibration is prior-based.",
+    "PCA region labels are participant assumptions and require reproducible geometry review.",
+    "The official gates remain unchanged and cannot be inferred from the competition self-benchmark."
+  ],
+  "report_sha256": "0c2dc097f1dd9b513b6cecdcf3d21ec52a833f02ce47f78218f5b39ad9e325ab"
+}

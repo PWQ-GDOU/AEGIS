@@ -1,0 +1,52 @@
+{
+  "version": "step30-particle-seed-ensemble-registration-v1",
+  "status": "exploratory_remote_evidence",
+  "execution_target": "dcu_cpu",
+  "remote_host": "100.121.154.58",
+  "remote_workspace": "remote_artifacts/PWQ/step30_cpu_v1",
+  "source_run": "step30_cpu_confirmation_20260828_v2",
+  "topology_consistency": {
+    "n_sources": 5,
+    "domain_fingerprint": "757fa0503d72107abbbc86beac88af9c0d8c2c2198c2007f0da7d1fd4352f478",
+    "exact_face_center_and_area_match": true,
+    "source_hit_counts": [1148, 1203, 1083, 1181, 1086],
+    "merged_hit_count": 5701,
+    "n_faces": 218988
+  },
+  "mass_conservation": {
+    "rule": "divide every source parcel mass by five before concatenation",
+    "merged_mass_kg": 0.33607395000000007,
+    "source_mean_mass_kg": 0.33607395,
+    "passed": true
+  },
+  "artifacts": {
+    "merged_hits_json_sha256": "6a8632c811562d7bd897b4d77856baee78ca94420d7ced417d7f79e627e7271f",
+    "merged_hits_npz_sha256": "444e72117430c811497c304dfbcc28445adccfd08bb63e2faf944ee538e2570c",
+    "ensemble_report_json_sha256": "c9a4ab127648b74d3cc9bd4e3facb6baf0491397eebb36bef16cd2a655642310",
+    "ensemble_report_npz_sha256": "e6e06a183089e3e1e908d866206cf29ce8e8aba0d1612dba306c3c782ea23dcc",
+    "profile_compare_json_sha256": "80031d7b5e03dafaa22db6733a33c0781a773f3e42a8741a30bf295444da0511"
+  },
+  "uncertainty_summary": {
+    "prior_draws_per_seed": 256,
+    "oka_active_face_fraction": 0.012603430324949313,
+    "oka_active_seed_cv_p95": 2.23606797749979,
+    "oka_active_high_cv_face_fraction": 0.9971014492753624,
+    "model_active_face_fraction": 0.012603430324949313,
+    "model_active_normalized_cv_p95": 1.0569967389228374,
+    "model_spearman_median": 0.9999997065809848,
+    "model_hotspot_iou_median": 1.0
+  },
+  "profile_comparison": {
+    "status": "blocked",
+    "reason": "measured 3-D wear profile and prediction-to-profile registration were not supplied",
+    "official_accuracy_gate": false
+  },
+  "gate_status": {
+    "physical_spatial_accuracy_status": "blocked_without_independent_measured_truth",
+    "spatial_accuracy_status": "blocked",
+    "official_accuracy_gate": false,
+    "official_reference_gate": false,
+    "fem_gate": "blocked"
+  },
+  "interpretation": "Five seed variability is now quantified separately from erosion-law disagreement. High activity-conditioned seed CV shows that sparse spatial support remains a dominant uncertainty; common-model agreement is not physical validation."
+}

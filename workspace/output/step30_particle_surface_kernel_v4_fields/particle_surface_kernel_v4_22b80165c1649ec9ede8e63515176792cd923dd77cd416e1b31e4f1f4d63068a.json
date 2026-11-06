@@ -1,0 +1,60 @@
+{
+  "version": "step30-particle-spatial-estimator-v4",
+  "evidence_status": "numerical_risk_map_only",
+  "spatial_accuracy_status": "blocked",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "kernel_contract": {
+    "version": "topology-local-area-normalized-gaussian-v1",
+    "adjacency_rule": "parent faces share at least one collision-triangle edge",
+    "kernel": "gaussian_hop_distance",
+    "bandwidth_hop_candidates": [
+      1,
+      2,
+      3
+    ],
+    "default_bandwidth_hops": 2,
+    "truncation_hops": 3,
+    "receiver_weight": "face_area_m2 * exp(-0.5 * (hop_distance / bandwidth_hops)^2)",
+    "normalization": "per-source finite neighbourhood; exact target-mass conservation",
+    "confidence": {
+      "minimum_support_mass_fraction_of_total": 1e-05,
+      "minimum_local_ess": 1.5
+    }
+  },
+  "kernel_contract_sha256": "24306fb754f97e6d3783c5526817cc05ca576841d36d3e3018a04e30f62dca29",
+  "bandwidth_hops": 2,
+  "topology_adjacency_sha256": "4d15ce84e22a447226e5dfdb45e61e48c3da3d57070164bde01fa5c0d6c599ee",
+  "input_bindings": {
+    "particle_hits_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a\\particle_hits.npz",
+    "particle_hits_sha256": "213c83dc76ec9313997ddce0f9ef2a0a9bbfadb5948be06ba95c01661b00d8a4",
+    "summary_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a\\summary.json",
+    "summary_sha256": "f40a3882d74815a337eeaaa25ecfcedc58cb8a490559f1c5999f1c8a037e8493",
+    "run_manifest_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a\\particle_run_manifest.json",
+    "run_manifest_sha256": "c17361b36ed5ac1017b650ab7c9c98b9d204596dc52b09eed6196cd82cae720f",
+    "artifact_manifest_path": "workspace\\output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\artifact_set_manifest.json",
+    "artifact_manifest_sha256": "8f5debae923fb927447b4ce531fbe23d5785aba20aa8bfddbdb4cf2a0b3b5304",
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "particle_run_id": "22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "topology_path": "workspace\\output\\step30_acceptance_0.8684190921\\bucket_topology_v3_0.8684190921.npz",
+    "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f"
+  },
+  "field_hashes": {
+    "raw_face_target_mass_kg": "2d0da70ba7d26b41802d5c212b9730361ff9561dd00f6e02149cfe66d736149c",
+    "raw_mass_per_area_kg_m2": "58d9a9d24aac8b45467556a7b4c099c046243b2e85835e7d86d3455788ff8b51",
+    "surface_kernel_face_target_mass_kg": "b5e7091fdf01d53772e81150a10a4f77d9e2a11bc209d4b5d015bced5c9d8d03",
+    "surface_kernel_mass_per_area_kg_m2": "ec51b87fcd61f5ffb2dddb85216443e64dcbde21bc1f7fa363e6e753943c0122",
+    "local_support_mass_kg": "6d72e7dac3056005138229d6f19e617285223717bc0e3946dfaa45225c970d05",
+    "local_ess": "b02e1fc8855f2c68493c18e31a9f1d924955fa019efbc9bca5832833bce42d1f",
+    "confidence_mask": "6528a9ffbcf657c337367f70ed53d58f74141b634f35306ec39bd876e72d2afc"
+  },
+  "limitations": [
+    "A topology-local kernel improves numerical regularity only.",
+    "No baseline/worn scan or independent spatial erosion truth is present.",
+    "No ROOT, WETTED, AI5 patch, gauge direction, or CAD semantic inference is used."
+  ],
+  "report_sha256": "0fc6355f0319fea2268a7d430e5ecad47e9432e4d2c908a90ad96d8b8f73731e",
+  "field_path": "workspace\\output\\step30_particle_surface_kernel_v4_fields\\particle_surface_kernel_v4_22b80165c1649ec9ede8e63515176792cd923dd77cd416e1b31e4f1f4d63068a.npz",
+  "field_sha256": "60618ea8b2f86e6bef785aef35ebd14d79b056ef357d1f44247073f20f174a9d"
+}

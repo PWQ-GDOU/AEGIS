@@ -1,0 +1,52 @@
+{
+  "version": "step30-gpu-particle-kernel-candidate-v1",
+  "status": "passed",
+  "candidate_only": true,
+  "physics_backend_validated": false,
+  "competition_evidence_eligible": false,
+  "execution_target": "user_gpu",
+  "host": {
+    "hostname": "user",
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+    "cupy": "14.2.0",
+    "cuda_runtime_version": 12090,
+    "device": "NVIDIA GeForce RTX 2080 Ti"
+  },
+  "contract": {
+    "integrator_formula": "strict_v2 drag_state + Schiller-Naumann tau correction",
+    "n": 200000,
+    "dt_s": 1e-05,
+    "gravity_ms2": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "random_seed": 20260831
+  },
+  "errors": {
+    "tau": {
+      "max_abs": 1.0842021724855044e-19,
+      "max_rel": 6.547917768557259e-16
+    },
+    "position": {
+      "max_abs": 1.4210854715202004e-14,
+      "max_rel": 5.045006782770052e-12
+    },
+    "velocity": {
+      "max_abs": 1.1368683772161603e-13,
+      "max_rel": 1.502469988941415e-11
+    }
+  },
+  "gpu_result_sha256": "ec2673edf55792afe7e1b4c4decd93e52ca914b4dd52f053eb978b1fb2770b5e",
+  "gpu_elapsed_s": 1.87260103225708,
+  "source": {
+    "file": "step30_gpu_particle_kernel_candidate_v1.py",
+    "sha256": "84fe0d52904fff019773fb8b98b4f4a9188f690e7dc5e1d28260efaed03c9f02"
+  },
+  "limitations": [
+    "CFD interpolation is not ported.",
+    "Topology collision detection and impact response are not ported.",
+    "This candidate cannot replace strict_v2 or change a competition score."
+  ]
+}

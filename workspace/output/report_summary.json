@@ -1,5 +1,5 @@
 {
-  "project": "AEGIS â€” Pelton Bucket Erosion Grey-box Degradation Model",
+  "project": "AEGIS ¡ª Pelton Bucket Erosion Grey-box Degradation Model",
   "model_architecture": "Oka(physics) + GPR(residual correction) + linear degradation",
   "geometry": {
     "model_runner_verts": 145694,
@@ -36,7 +36,7 @@
     "global_min_rul_h": 4.0,
     "global_min_rul_lower_h": 2.0,
     "critical_vertex_id": 142984,
-    "note": "h0/h_min ä¸ºå·¥ç¨‹ç¼ºçœå€¼ï¼Œå¾… DEC å›¾çº¸ç¡®è®¤ï¼›é€Ÿç‡æ’å®šå‡è®¾æœªè€ƒè™‘ç£¨æŸåå‡ ä½•/å†²å‡»è§’å˜åŒ–"
+    "note": "h0/h_min Îª¹¤³ÌÈ±Ê¡Öµ£¬´ı DEC Í¼Ö½È·ÈÏ£»ËÙÂÊºã¶¨¼ÙÉèÎ´¿¼ÂÇÄ¥Ëğºó¼¸ºÎ/³å»÷½Ç±ä»¯"
   },
   "top10_critical_points": [
     {

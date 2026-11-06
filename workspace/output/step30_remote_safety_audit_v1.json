@@ -1,0 +1,56 @@
+{
+  "schema": "step30-remote-safety-audit-v1",
+  "created_local_date": "2026-09-02",
+  "local_project_root": "",
+  "policy": {
+    "local_numerical_execution": false,
+    "current_v1_job_modified": false,
+    "official_accuracy_gate": false,
+    "fem_gate": "blocked"
+  },
+  "new_files": [
+    {
+      "path": "workspace/step30_remote_safety_v1.py",
+      "sha256": "6c963f0e396c58d57b589f42b09136a62d6bbd0065f3b3bd1707657cc742540f"
+    },
+    {
+      "path": "workspace/step30_particle_confirmation_parallel_v2.py",
+      "sha256": "ec9c1b21b5d29e734957e4cf6ebf41af7a053986603f6ad0eedb29fdbe853159"
+    },
+    {
+      "path": "workspace/remote/dcu_cpu_particle_confirmation_v2.sbatch",
+      "sha256": "b4d05662b77946270ffdc57ce9d10880ee46d931a329fef441704f62b76296e2"
+    },
+    {
+      "path": "workspace/remote/run_direct_remote_v2.sh",
+      "sha256": "aa6e259dac7437783a64538cc3fd7d033156005215c4aa3770e1454b284c1cda"
+    },
+    {
+      "path": "workspace/REMOTE_SAFETY_RUNBOOK_v2.md"
+    }
+  ],
+  "remote_verification": {
+    "host": "100.121.154.58",
+    "workspace": "remote_artifacts/PWQ/step30_cpu_v1/workspace",
+    "py_compile": "passed",
+    "shell_syntax": "passed",
+    "missing_scheduler_refusal": "passed_exit_64",
+    "direct_remote_opt_in": "passed",
+    "direct_remote_visible_cpu_capacity": 192,
+    "disk_preflight_free_bytes": 118920637841408,
+    "existing_state_root_refusal": "passed"
+  },
+  "active_historical_job": {
+    "state_path": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_v5_highn_discovery_60000/run_status.json",
+    "runner_version": "step30-particle-confirmation-parallel-v1",
+    "status_at_audit": "running",
+    "completed_seed_count": 0,
+    "action_taken": "monitor_only"
+  },
+  "limitations": [
+    "The already-running v1 job has no retroactive v2 timeout or heartbeat semantics.",
+    "No new confirmation job is started until the existing v1 discovery is complete and independently accepted.",
+    "The current NumPy/SciPy particle tracker remains dcu_cpu-only; user_gpu remains blocked.",
+    "This audit records operational safety and does not change numerical convergence or competition scores."
+  ]
+}

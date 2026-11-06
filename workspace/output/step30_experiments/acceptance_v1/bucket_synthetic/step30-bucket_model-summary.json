@@ -1,0 +1,91 @@
+{
+  "manifest_version": "step30-experiment-manifest-v1",
+  "measurement_status": "known_synthetic_truth",
+  "mode": "synthetic",
+  "point_count": 140,
+  "prediction": {
+    "comparison": {
+      "hotspot": {
+        "intersection": 14,
+        "iou": 1.0,
+        "observed_count": 14,
+        "observed_threshold": 0.6240860181169348,
+        "percentile": 90.0,
+        "predicted_count": 14,
+        "predicted_threshold": 0.6228079613053554,
+        "union": 14
+      },
+      "independent_validation_set": false,
+      "maximum_depth_error": {
+        "absolute": 3.9641126772349544e-05,
+        "relative": 4.024747493873642e-05,
+        "signed": 3.9641126772349544e-05
+      },
+      "metrics_sha256": "56035a08a8796b7c9d99c4705f89b1f754bfa46ce89090ca1d7823b5ff9e1b51",
+      "n": 140,
+      "observed": {
+        "maximum_depth": 0.9849345041568486,
+        "total": 34.71556754283459
+      },
+      "official_accuracy_gate": false,
+      "predicted": {
+        "maximum_depth": 0.9849741452836209,
+        "total": 34.75390110946648
+      },
+      "provenance_note": "synthetic result; not official accuracy",
+      "quality": {
+        "gates": null,
+        "passed": true
+      },
+      "residual_distribution": {
+        "mae": 0.0059775944116799195,
+        "max": 0.02090430465460147,
+        "p50": 0.004788565486220538,
+        "p95": 0.015818772062002197,
+        "rmse": 0.0076800748989296185
+      },
+      "signed_bias": 0.000273811190227809,
+      "status": "synthetic",
+      "total_error": {
+        "absolute": 0.03833356663189136,
+        "relative": 0.0011042183477079158,
+        "signed": 0.03833356663189136
+      },
+      "total_quantity_error": {
+        "absolute": 0.03833356663189136,
+        "relative": 0.0011042183477079158,
+        "signed": 0.03833356663189136
+      },
+      "value_units": "mm",
+      "version": "step30-error-metrics-v1"
+    },
+    "error_metrics_interface": {
+      "function": "calculate_error_metrics",
+      "implementation": "external_module",
+      "used": true
+    },
+    "formula": "0.08+0.92*exp(-((x_norm-.55)^2/.055+(y_norm-.48)^2/.09))",
+    "name": "coordinate_gaussian_baseline"
+  },
+  "provenance": {
+    "depth_source": "known_synthetic_depth_field"
+  },
+  "status": "synthetic",
+  "stress_used_as_erosion_truth": false,
+  "topology": {
+    "mapping_columns": [
+      "point_id",
+      "parent_face_id"
+    ],
+    "mapping_source": "fixed_seed_generator",
+    "parent_face_count": 70
+  },
+  "truth_source": "fixed_seed_generator",
+  "version": "step30-bucket-model-experiment-v1",
+  "wear_depth_mm": {
+    "max": 0.9849345041568486,
+    "median": 0.13784849516793582,
+    "min": 0.0647224495130963,
+    "p95": 0.7546432446762719
+  }
+}

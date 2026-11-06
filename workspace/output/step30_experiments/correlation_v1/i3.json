@@ -1,0 +1,123 @@
+{
+  "version": "step30-correlation-diagnostics-v1",
+  "status": "passed",
+  "accuracy_gate": false,
+  "inputs": {
+    "hits": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c27975a35b0779a46404df6240b540723ffdc582dcac9e84eab07fa95e0030c5\\particle_hits.npz",
+    "hits_sha256": "3a348a0f56ba7a20bdd034622628533f26b611d8006f87dddad6e37473e0d2a3",
+    "summary": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\strict_v2\\c27975a35b0779a46404df6240b540723ffdc582dcac9e84eab07fa95e0030c5\\summary.json",
+    "summary_sha256": "cbeaf87a8f33cd2e245ca3c2654dd271706ef28472eab5a1528f66975c35d7ad",
+    "n_faces": 218988,
+    "n_impacts": 81
+  },
+  "counts": {
+    "exposed_faces": 76,
+    "zero_faces": 218912,
+    "exposed_fraction": 0.0003470509799623724
+  },
+  "formula_self_consistency": {
+    "n": 81,
+    "mask_fraction": 1.0,
+    "spearman_rho": 0.9999999999999999,
+    "spearman_p": 0.0,
+    "kendall_tau": 1.0,
+    "kendall_p": 3.449985376964704e-121,
+    "pearson_r": 1.0,
+    "pearson_p": 0.0,
+    "nrmse_log1p": 0.0,
+    "top10_iou": 1.0,
+    "bootstrap_ci95": [
+      0.9999999999999999,
+      1.0
+    ]
+  },
+  "comparisons": [
+    {
+      "comparison": "event_stored_vs_recalculated",
+      "n": 81,
+      "mask_fraction": 1.0,
+      "spearman_rho": 0.9999999999999999,
+      "spearman_p": 0.0,
+      "kendall_tau": 1.0,
+      "kendall_p": 3.449985376964704e-121,
+      "pearson_r": 1.0,
+      "pearson_p": 0.0,
+      "nrmse_log1p": 0.0,
+      "top10_iou": 1.0,
+      "bootstrap_ci95": [
+        0.9999999999999999,
+        1.0
+      ]
+    },
+    {
+      "comparison": "dynamic_face_vs_stored_dynamic_face",
+      "n": 218988,
+      "mask_fraction": 1.0,
+      "spearman_rho": 1.0,
+      "spearman_p": 0.0,
+      "kendall_tau": 0.9999999999999999,
+      "kendall_p": 0.0,
+      "pearson_r": 1.0,
+      "pearson_p": 0.0,
+      "nrmse_log1p": 2.462360519175657e-08,
+      "top10_iou": 1.0,
+      "bootstrap_ci95": [
+        0.9999999999999998,
+        1.0
+      ]
+    },
+    {
+      "comparison": "dynamic_face_vs_static_analytic_all_faces",
+      "n": 218988,
+      "mask_fraction": 1.0,
+      "spearman_rho": 0.01094915238917762,
+      "spearman_p": 2.992694184991951e-07,
+      "kendall_tau": 0.008939109119358989,
+      "kendall_p": 2.9989213418485073e-07,
+      "pearson_r": 0.004402767552932201,
+      "pearson_p": 0.03936756798664359,
+      "nrmse_log1p": 1.2374926566492777,
+      "top10_iou": 0.10006941019599247,
+      "bootstrap_ci95": [
+        0.006789420459838157,
+        0.015910469403637946
+      ]
+    },
+    {
+      "comparison": "dynamic_face_vs_static_analytic_exposed_only",
+      "n": 76,
+      "mask_fraction": 0.0003470509799623724,
+      "spearman_rho": 0.15217094116258315,
+      "spearman_p": 0.18943023972515188,
+      "kendall_tau": 0.09550564152688792,
+      "kendall_p": 0.22249091942456067,
+      "pearson_r": -0.027578637447055403,
+      "pearson_p": 0.8130560925144279,
+      "nrmse_log1p": 4.373135708380971,
+      "top10_iou": 0.06666666666666667,
+      "bootstrap_ci95": [
+        -0.1147917783593599,
+        0.3773333162142903
+      ]
+    },
+    {
+      "comparison": "dynamic_formula_face_vs_static_analytic_all_faces",
+      "n": 218988,
+      "mask_fraction": 1.0,
+      "spearman_rho": 0.01094915238917762,
+      "spearman_p": 2.992694184991951e-07,
+      "kendall_tau": 0.008939109119358989,
+      "kendall_p": 2.9989213418485073e-07,
+      "pearson_r": 0.004402767552932201,
+      "pearson_p": 0.03936756798664359,
+      "nrmse_log1p": 1.2374926566492777,
+      "top10_iou": 0.10006941019599247,
+      "bootstrap_ci95": [
+        0.006789420459838157,
+        0.015910469403637946
+      ]
+    }
+  ],
+  "interpretation": "Dynamic collision quantities and static analytic fields are reported separately. Correlation diagnostics do not establish measured erosion accuracy and do not pass the official <5% gate.",
+  "report_sha256": "5dcc1fa1baf8f75598ea851fab6ca587b3905a3823a939e968e62b91e6d7b263"
+}

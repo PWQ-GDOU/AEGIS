@@ -3,7 +3,7 @@
   "status": "topology_issue_resolved",
   "collision_backend": "cfd_topology",
   "face_id_namespace": "openfoam_bucket_patch",
-  "source_case": "/public/home/wenquan/pelton_bucket_jet",
+  "source_case": "remote_artifacts/wenquan/pelton_bucket_jet",
   "openfoam_version": "2412",
   "mesh_signature": "4bdb5e5a2203663a9d9c13dd384a7de471225aa1c145582b60e1a436621c877f",
   "bucket_patch": {

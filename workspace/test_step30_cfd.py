@@ -2,13 +2,24 @@
 
 from __future__ import annotations
 
+import os
+from pathlib import Path
+
 import numpy as np
 from scipy.spatial import cKDTree
 
 import step30_lagrangian_particle_tracking as s
 
 
-def main() -> None:
+def _run_production_integration() -> None:
+    si_case = Path(__file__).parent / "of_case" / "pelton_bucket_jet_si"
+    block_mesh = (si_case / "system" / "blockMeshDict").read_text()
+    omega_initial = (si_case / "0.orig" / "omega").read_text()
+    assert "scale 0.001;" in block_mesh
+    assert "radius 0.12;" in (si_case / "system" / "topoSetDict").read_text()
+    assert "uniform 697.44025;" in omega_initial
+    assert "4118640" not in omega_initial
+
     tri = np.array([[[0.0, 0.0, 0.0], [1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]])
     hit, t = s.segment_triangle_intersection(
         np.array([0.2, 0.2, 1.0]), np.array([0.2, 0.2, -1.0]), tri
@@ -71,6 +82,25 @@ def main() -> None:
     from step30_cfd_topology import load_topology_artifact, validate_topology_arrays
     native = load_topology_artifact()
     assert native["backend"] == "cfd_topology"
+    assert native["source_coordinate_units"] == "mm"
+    assert native["internal_coordinate_units"] == "mm"
+    assert native["coordinate_scale_to_mm"] == 1.0
+
+    si_field = s.load_cfd_velocity_field(s.OUTPUT_DIR, "native_si", "3000")
+    assert si_field["source_coordinate_units"] == "m"
+    assert si_field["internal_coordinate_units"] == "mm"
+    assert si_field["coordinate_scale_to_mm"] == 1000.0
+    assert si_field["n_cells"] == 424146
+    assert np.isclose(si_field["center_bounds_mm"][0][0], 10.0, atol=0.1)
+    assert si_field["speed_stats_ms"]["max"] < 500.0
+    si = load_topology_artifact(s.OUTPUT_DIR / "bucket_topology_si.npz")
+    assert si["source_coordinate_units"] == "m"
+    assert si["internal_coordinate_units"] == "mm"
+    assert si["coordinate_scale_to_mm"] == 1000.0
+    assert si["n_parent_faces"] == 74802
+    assert np.isclose(si["surface_area_m2"], 1.318275465, rtol=1e-6)
+
+    assert native["backend"] == "cfd_topology"
     assert native["face_id_namespace"] == "openfoam_bucket_patch"
     assert native["n_parent_faces"] == 74803
     assert len(native["collision_triangles_mm"]) == 179568
@@ -98,5 +128,12 @@ def main() -> None:
     print("step30 CFD regression tests passed")
 
 
+def test_production_artifacts() -> None:
+    if os.environ.get("STEP30_PRODUCTION_INTEGRATION") != "1":
+        import pytest
+        pytest.skip("set STEP30_PRODUCTION_INTEGRATION=1 to validate ignored production artifacts")
+    _run_production_integration()
+
+
 if __name__ == "__main__":
-    main()
+    _run_production_integration()

@@ -1,0 +1,118 @@
+{
+  "version": "step30-five-seed-ensemble-diagnostic-v1",
+  "status": "diagnostic_only",
+  "purpose": "post_hoc_check_of_disjoint_five_seed_ensemble_stability",
+  "not_preregistered": true,
+  "cannot_promote_numerical_stability_gate": true,
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "source_status_sha256": "1052497e68387ccb4bcb6aadbf1503cad830448b996e54a577041fa9cd43f26a",
+  "topology_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+  "aggregate_partition_sha256": "3cce7b2b8c7307fbe0ff1efd55de35105e878fc0bad9b818f579afade10d04c9",
+  "groups": [
+    {
+      "seeds": [
+        223606,
+        244949,
+        264575,
+        282842,
+        300001
+      ],
+      "total_target_mass_kg": 2.957418902175493e-07
+    },
+    {
+      "seeds": [
+        316227,
+        331662,
+        346410,
+        360555,
+        374166
+      ],
+      "total_target_mass_kg": 4.4877509629569536e-07
+    },
+    {
+      "seeds": [
+        387298,
+        400001,
+        412311,
+        424264,
+        435889
+      ],
+      "total_target_mass_kg": 3.3895004765245446e-07
+    }
+  ],
+  "pairwise": [
+    {
+      "left_seeds": [
+        223606,
+        244949,
+        264575,
+        282842,
+        300001
+      ],
+      "right_seeds": [
+        316227,
+        331662,
+        346410,
+        360555,
+        374166
+      ],
+      "area_weighted_spearman": 0.9450457701988947,
+      "mass_hotspot_iou": 1.0,
+      "js_divergence": 0.04016335246181364
+    },
+    {
+      "left_seeds": [
+        223606,
+        244949,
+        264575,
+        282842,
+        300001
+      ],
+      "right_seeds": [
+        387298,
+        400001,
+        412311,
+        424264,
+        435889
+      ],
+      "area_weighted_spearman": 0.9450457701988947,
+      "mass_hotspot_iou": 1.0,
+      "js_divergence": 0.01472602213962821
+    },
+    {
+      "left_seeds": [
+        316227,
+        331662,
+        346410,
+        360555,
+        374166
+      ],
+      "right_seeds": [
+        387298,
+        400001,
+        412311,
+        424264,
+        435889
+      ],
+      "area_weighted_spearman": 1.0000000000000002,
+      "mass_hotspot_iou": 1.0,
+      "js_divergence": 0.024792975277534636
+    }
+  ],
+  "summary": {
+    "area_weighted_spearman_median": 0.9450457701988947,
+    "area_weighted_spearman_min": 0.9450457701988947,
+    "mass_hotspot_iou_median": 1.0,
+    "mass_hotspot_iou_min": 1.0,
+    "spatial_js_divergence_median": 0.024792975277534636,
+    "spatial_js_divergence_max": 0.04016335246181364
+  },
+  "limitations": [
+    "The blocks were defined after observing the 15-run confirmation dataset.",
+    "This is an ensemble sensitivity diagnostic, not independent confirmation of a pre-registered estimator.",
+    "It cannot change v5 confirmation, competition score, or any official gate."
+  ],
+  "report_sha256": "42137ffb13f1111f88afd90a748057396c724b8607f2d6d4abc72905c78d2591"
+}

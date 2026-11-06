@@ -1,0 +1,550 @@
+{
+  "version": "step30-particle-performance-ab-audit-v1",
+  "status": "passed",
+  "baseline_dir": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_particle_performance_ab/step30_perf_ab_20260908_01/baseline/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/9a713296889dbabafb980d3d4a32657887549d46698f8bd99edc39b5b0c515d9",
+  "optimized_dir": "remote_artifacts/PWQ/step30_cpu_v1/workspace/output/step30_particle_performance_ab/step30_perf_ab_20260908_01/optimized/output/step30_runs/9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44/strict_v2/3423f4053d3e61953a7575c4a5af46000aac84fa4faf36bfb81cc45bff9e76b5",
+  "container_byte_equal": false,
+  "container_sha256": {
+    "baseline": "11d8116fbc8dab26f07e9676d6b99ab1179e8f9b61d72918003dbc79201e2e03",
+    "optimized": "839635100fb4a559e1e50a717c5ef6e4a3e2e5a0411c4d936a642b61b1cdf30d"
+  },
+  "semantic_npz": {
+    "keys_equal": true,
+    "canonical_array_digest_equal": false,
+    "canonical_array_sha256": {
+      "baseline": "4e15d275f383822b096e24ebb30af3980a821ed55fd7a981995811d20af7e88d",
+      "optimized": "2a398ae8e9e9ed7052bad787c39128b49375cdfe493348a74357e0522f677da5"
+    },
+    "arrays_equal": false,
+    "physical_arrays_equal": true,
+    "provenance_only_keys": [
+      "particle_run_id"
+    ],
+    "arrays": {
+      "ER_mansouri": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "ER_mass_ratio_face": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "Vp_ms": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "alpha_deg": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "analytic_reference_transform_sha256": {
+        "equal": true,
+        "dtype_baseline": "<U64",
+        "dtype_optimized": "<U64",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "analytic_reference_transform_version": {
+        "equal": true,
+        "dtype_baseline": "<U38",
+        "dtype_optimized": "<U38",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "artifact_manifest_file": {
+        "equal": true,
+        "dtype_baseline": "<U36",
+        "dtype_optimized": "<U36",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "artifact_manifest_sha256": {
+        "equal": true,
+        "dtype_baseline": "<U64",
+        "dtype_optimized": "<U64",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "artifact_set_id": {
+        "equal": true,
+        "dtype_baseline": "<U64",
+        "dtype_optimized": "<U64",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "bucket0_face": {
+        "equal": true,
+        "dtype_baseline": "bool",
+        "dtype_optimized": "bool",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "cfd_velocity_interpolation": {
+        "equal": true,
+        "dtype_baseline": "<U9",
+        "dtype_optimized": "<U9",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "collision_algorithm_version": {
+        "equal": true,
+        "dtype_baseline": "<U2",
+        "dtype_optimized": "<U2",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "collision_backend": {
+        "equal": true,
+        "dtype_baseline": "<U12",
+        "dtype_optimized": "<U12",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "collision_policy": {
+        "equal": true,
+        "dtype_baseline": "<U9",
+        "dtype_optimized": "<U9",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "collision_triangle_id": {
+        "equal": true,
+        "dtype_baseline": "int64",
+        "dtype_optimized": "int64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "compare_mask": {
+        "equal": true,
+        "dtype_baseline": "bool",
+        "dtype_optimized": "bool",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "coordinate_scale_to_mm": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "dhdt_face_mm_h": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "diameter_m": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "face_area_m2": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "face_centers_local_mm": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988,
+          3
+        ],
+        "shape_optimized": [
+          218988,
+          3
+        ]
+      },
+      "face_id": {
+        "equal": true,
+        "dtype_baseline": "int64",
+        "dtype_optimized": "int64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "face_id_namespace": {
+        "equal": true,
+        "dtype_baseline": "<U21",
+        "dtype_optimized": "<U21",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "face_mass_kg": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "face_normals": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988,
+          3
+        ],
+        "shape_optimized": [
+          218988,
+          3
+        ]
+      },
+      "face_target_mass_kg": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "field_time": {
+        "equal": true,
+        "dtype_baseline": "<U12",
+        "dtype_optimized": "<U12",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "gpr_index": {
+        "equal": true,
+        "dtype_baseline": "int64",
+        "dtype_optimized": "int64",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "hit_kind": {
+        "equal": true,
+        "dtype_baseline": "int8",
+        "dtype_optimized": "int8",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "hit_pos_global_mm": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          6,
+          3
+        ],
+        "shape_optimized": [
+          6,
+          3
+        ]
+      },
+      "impact_index": {
+        "equal": true,
+        "dtype_baseline": "int16",
+        "dtype_optimized": "int16",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "internal_coordinate_units": {
+        "equal": true,
+        "dtype_baseline": "<U2",
+        "dtype_optimized": "<U2",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "mesh_signature": {
+        "equal": true,
+        "dtype_baseline": "<U64",
+        "dtype_optimized": "<U64",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "model_ER_truth_face": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "model_E_final_face": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "model_dhdt_face_mm_h": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "model_dist_mm": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "parcel_id": {
+        "equal": true,
+        "dtype_baseline": "int32",
+        "dtype_optimized": "int32",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "parcel_mass_kg": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "parent_face_id": {
+        "equal": true,
+        "dtype_baseline": "int64",
+        "dtype_optimized": "int64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "particle_integrator": {
+        "equal": true,
+        "dtype_baseline": "<U23",
+        "dtype_optimized": "<U23",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "particle_mass_kg": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "particle_run_id": {
+        "equal": false,
+        "dtype_baseline": "<U64",
+        "dtype_optimized": "<U64",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "polyMesh_signature": {
+        "equal": true,
+        "dtype_baseline": "<U64",
+        "dtype_optimized": "<U64",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "position_local_mm": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6,
+          3
+        ],
+        "shape_optimized": [
+          6,
+          3
+        ]
+      },
+      "registration_distance_mm": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "sediment_mass_flux_face_kg_m2_s": {
+        "equal": true,
+        "dtype_baseline": "float32",
+        "dtype_optimized": "float32",
+        "shape_baseline": [
+          218988
+        ],
+        "shape_optimized": [
+          218988
+        ]
+      },
+      "source_coordinate_units": {
+        "equal": true,
+        "dtype_baseline": "<U1",
+        "dtype_optimized": "<U1",
+        "shape_baseline": [],
+        "shape_optimized": []
+      },
+      "time_s": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6
+        ],
+        "shape_optimized": [
+          6
+        ]
+      },
+      "velocity_ms": {
+        "equal": true,
+        "dtype_baseline": "float64",
+        "dtype_optimized": "float64",
+        "shape_baseline": [
+          6,
+          3
+        ],
+        "shape_optimized": [
+          6,
+          3
+        ]
+      }
+    }
+  },
+  "summary_tracking_equal": true,
+  "tracking": {
+    "baseline": {
+      "n_impacts": 6,
+      "intersection_hits": 6,
+      "fallback_hits": 0,
+      "hit_parcels": 2,
+      "total_injection_mass_kg": 5.8950000000000005,
+      "impact_mass_kg": 0.03537,
+      "substep_count": 2035710,
+      "termination_counts": {
+        "outside_domain": 982,
+        "no_wall_hit": 16,
+        "max_impacts": 2
+      }
+    },
+    "optimized": {
+      "n_impacts": 6,
+      "intersection_hits": 6,
+      "fallback_hits": 0,
+      "hit_parcels": 2,
+      "total_injection_mass_kg": 5.8950000000000005,
+      "impact_mass_kg": 0.03537,
+      "substep_count": 2035710,
+      "termination_counts": {
+        "outside_domain": 982,
+        "no_wall_hit": 16,
+        "max_impacts": 2
+      }
+    }
+  },
+  "near_miss_diagnostics": {
+    "baseline": 5659,
+    "optimized": 0
+  },
+  "interpretation": "A container-byte difference is not a physical-result difference. The performance switch is semantically safe only when canonical arrays and accepted-impact tracking are equal; this audit does not establish spatial convergence."
+}

@@ -1,0 +1,139 @@
+{
+  "version": "step30-particle-timestep-sensitivity-v1",
+  "status": "failed",
+  "gates": {
+    "first_parcel_jaccard_min": 0.99,
+    "first_parent_face_agreement_min": 0.99,
+    "hit_count_relative_max": 0.01,
+    "mass_weighted_speed_relative_max": 0.01,
+    "mass_weighted_angle_relative_max": 0.01,
+    "target_mass_relative_max": 0.05,
+    "erosion_p99_relative_max": 0.05
+  },
+  "shared_identity": {
+    "artifact_set_id": null,
+    "mesh_signature": "739047925a62c9a521978fdf55fb07d96dbf6ad459b194e88d70875083aa7533",
+    "field_time": "3000",
+    "solver_semantics": null,
+    "parameters_except_dt": {
+      "n_parcels": 500,
+      "n_injected": 500,
+      "collision_backend": "cfd_topology",
+      "collision_policy": "strict_v2",
+      "collision_algorithm_version": "v2",
+      "cfd_variant": "native_si",
+      "max_impacts": 3,
+      "seed": 42,
+      "max_time_s": 0.05,
+      "particle_cfl": 0.25,
+      "cfd_velocity_interpolation": "idw_k8_v1",
+      "particle_integrator": "midpoint_exponential_v2",
+      "min_substep_s": 1e-08,
+      "max_query_distance_mm": 80.0,
+      "face_fallback_distance_mm": 1.5,
+      "hit_epsilon_mm": 0.05,
+      "min_speed_ms": 0.5,
+      "max_collision_events_per_step": 8,
+      "include_gravity": false,
+      "e_normal": 0.8,
+      "e_tangent": 0.9,
+      "diameter_distribution": {
+        "type": "Rosin-Rammler",
+        "min_m": 1e-06,
+        "max_m": 0.00023,
+        "d50_m": 5e-05,
+        "exponent": 1.5
+      },
+      "rho_particle_kg_m3": 2650.0,
+      "max_accepted_cfd_speed_ms": 500.0,
+      "mass_flow_mode": "nominal",
+      "nozzle_flow_m3_s": 4.5,
+      "sediment_flow_kg_s": 5.8950000000000005,
+      "injection_window_s": 1.0,
+      "observation_window_s": 1.0,
+      "rho_wall_kg_m3": 7800.0,
+      "rho_wall_alternative_kg_m3": 7850.0
+    }
+  },
+  "runs": {
+    "coarse": {
+      "dt_s": 1e-05,
+      "impacts": 118,
+      "first_hits": 41,
+      "hit_parcels": 41,
+      "target_mass_kg": 5.510847245204786e-07,
+      "erosion_p99_mm_h": 12.558835983276367,
+      "impact_mass_kg": 3.482735716640975,
+      "Vp_mass_weighted": 43.35123869201507,
+      "angle_mass_weighted": 4.6394054408596475,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0
+    },
+    "medium": {
+      "dt_s": 5e-06,
+      "impacts": 118,
+      "first_hits": 41,
+      "hit_parcels": 41,
+      "target_mass_kg": 5.368180495679553e-07,
+      "erosion_p99_mm_h": 12.457429885864258,
+      "impact_mass_kg": 3.482735716640975,
+      "Vp_mass_weighted": 43.31477665795314,
+      "angle_mass_weighted": 4.69619722032586,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0
+    },
+    "fine": {
+      "dt_s": 2.5e-06,
+      "impacts": 118,
+      "first_hits": 41,
+      "hit_parcels": 41,
+      "target_mass_kg": 5.33315073880658e-07,
+      "erosion_p99_mm_h": 12.47211742401123,
+      "impact_mass_kg": 3.482735716640975,
+      "Vp_mass_weighted": 43.268605885995136,
+      "angle_mass_weighted": 4.6816907484230335,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0
+    }
+  },
+  "pairs": {
+    "coarse__medium": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 0.9512195121951219,
+      "hit_count_relative": 0.0,
+      "mass_weighted_speed_relative": 0.0008410840188667995,
+      "mass_weighted_angle_relative": 0.012093141919255314,
+      "target_mass_relative": 0.02588835131465009,
+      "erosion_p99_relative": 0.00807448218506429,
+      "gates": {
+        "first_parcel_jaccard": true,
+        "first_parent_face_agreement": false,
+        "hit_count_relative": true,
+        "mass_weighted_speed_relative": true,
+        "mass_weighted_angle_relative": false,
+        "target_mass_relative": true,
+        "erosion_p99_relative": true
+      },
+      "passed": false
+    },
+    "medium__fine": {
+      "first_parcel_jaccard": 1.0,
+      "first_parent_face_agreement": 1.0,
+      "hit_count_relative": 0.0,
+      "mass_weighted_speed_relative": 0.001065935819607321,
+      "mass_weighted_angle_relative": 0.003088982685829444,
+      "target_mass_relative": 0.006525443192747667,
+      "erosion_p99_relative": 0.0011776298801273563,
+      "gates": {
+        "first_parcel_jaccard": true,
+        "first_parent_face_agreement": true,
+        "hit_count_relative": true,
+        "mass_weighted_speed_relative": true,
+        "mass_weighted_angle_relative": true,
+        "target_mass_relative": true,
+        "erosion_p99_relative": true
+      },
+      "passed": true
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "version": "step30-cfd-driven-v1",
+  "model_scope": "steady single-phase OpenFOAM continuous velocity field + one-way particle post-processing; no kinematicCloud wall log",
+  "cfd": {
+    "variant": "native_baseline",
+    "prefix": "native_baseline_500_",
+    "n_cells": 424161,
+    "center_bounds_mm": [
+      [
+        10.0,
+        -178.993,
+        -418.957
+      ],
+      [
+        1397.51,
+        179.357,
+        415.005
+      ]
+    ],
+    "speed_stats_ms": {
+      "min": 0.0966728578338822,
+      "max": 214.46848948080927,
+      "median": 39.18101937349384
+    },
+    "quality_status": "passed",
+    "velocity_warning_limit_ms": 314.4
+  },
+  "geometry": {
+    "collision_backend": "cfd_topology",
+    "face_id_namespace": "openfoam_bucket_patch",
+    "mesh_signature": "4bdb5e5a2203663a9d9c13dd384a7de471225aa1c145582b60e1a436621c877f",
+    "patch_name": "bucket",
+    "source_time": "1000",
+    "n_vertices": 90816,
+    "n_collision_triangles": 179568,
+    "n_parent_faces": 74803,
+    "surface_area_m2": 1.3182751111731363,
+    "bounds_mm": [
+      [
+        420.4020080566406,
+        -180.0,
+        -418.385986328125
+      ],
+      [
+        1400.0,
+        180.01499938964844,
+        390.6109924316406
+      ]
+    ],
+    "preflight": {
+      "status": "native_topology",
+      "wall_points": 74803,
+      "wall_points_in_stl_bbox_plus_tolerance_pct": 100.0,
+      "warning": "collision and face aggregation use the same native OpenFOAM bucket patch topology"
+    }
+  },
+  "parameters": {
+    "n_parcels": 20,
+    "n_injected": 20,
+    "collision_backend": "cfd_topology",
+    "cfd_variant": "native_baseline",
+    "max_impacts": 1,
+    "seed": 42,
+    "dt_s": 0.0001,
+    "max_time_s": 0.05,
+    "output_tag": "native_baseline_smoke20",
+    "include_gravity": false,
+    "e_normal": 0.8,
+    "e_tangent": 0.9,
+    "diameter_distribution": {
+      "type": "Rosin-Rammler",
+      "min_m": 1e-06,
+      "max_m": 0.00023,
+      "d50_m": 5e-05,
+      "exponent": 1.5
+    },
+    "rho_particle_kg_m3": 2650.0,
+    "max_accepted_cfd_speed_ms": 500.0,
+    "mass_flow_mode": "nominal",
+    "nozzle_flow_m3_s": 4.5,
+    "sediment_flow_kg_s": 5.8950000000000005,
+    "injection_window_s": 1.0,
+    "observation_window_s": 1.0,
+    "rho_wall_kg_m3": 7800.0,
+    "rho_wall_alternative_kg_m3": 7850.0
+  },
+  "tracking": {
+    "n_impacts": 4,
+    "intersection_hits": 0,
+    "fallback_hits": 4,
+    "hit_parcels": 4,
+    "hit_rate_parcels_pct": 20.0,
+    "max_speed_seen_ms": 143.6766118530545,
+    "termination_counts": {
+      "no_wall_hit": 3,
+      "outside_domain": 13,
+      "max_impacts": 4
+    },
+    "hit_stats": {
+      "Vp_ms": {
+        "min": 35.44725304301392,
+        "max": 64.51431343511301,
+        "median": 39.446323183948266
+      },
+      "alpha_deg": {
+        "min": 1.1113988670968735,
+        "max": 11.169942005198477,
+        "median": 6.8593709549429365
+      },
+      "diameter_m": {
+        "min": 3.1106899162901955e-05,
+        "max": 7.294198482412148e-05,
+        "median": 5.5985741991661445e-05
+      },
+      "ER_mansouri": {
+        "min": 1.3396908726724053e-14,
+        "max": 2.72304859111237e-07,
+        "median": 2.8221791719891306e-08
+      }
+    },
+    "total_injection_mass_kg": 5.8950000000000005,
+    "impact_mass_kg": 0.9165183620390114
+  },
+  "face_erosion": {
+    "exposed_faces": 4,
+    "surface_faces": 74803,
+    "total_target_mass_kg": 3.158818936719281e-08,
+    "ER_face_stats": {
+      "max": 2.72304859111237e-07,
+      "median_exposed": 2.8221791719891306e-08
+    },
+    "mass_flux_max_kg_m2_s": 73018.56341277843,
+    "dhdt_max_mm_h": 1.6745220701105041
+  },
+  "validation": {
+    "registration_status": "passed",
+    "registration_distance_mm": {
+      "median": 3.297908708358922,
+      "p95": 5.1105568898450215,
+      "max": 6.495202113533899
+    },
+    "registration_threshold_mm": {
+      "median": 10.0,
+      "p95": 15.0
+    },
+    "mask": "bucket0 angular window + registration distance<=15mm + exposed native parent faces",
+    "n_faces_compared": 4,
+    "cfd_ER_vs_analytic_Mansouri": {
+      "n": 4,
+      "spearman_rho": -0.2,
+      "spearman_p": 0.8,
+      "pearson_r": -0.18058,
+      "pearson_p": 0.8194209127628267,
+      "nrmse_normalized": 0.64582,
+      "top10_iou": 0.0
+    },
+    "cfd_dhdt_vs_analytic_Mansouri_rate": {
+      "n": 4,
+      "spearman_rho": 0.4,
+      "spearman_p": 0.6,
+      "pearson_r": 0.99799,
+      "pearson_p": 0.0020050923810259746,
+      "nrmse_normalized": 0.03225,
+      "top10_iou": 1.0
+    }
+  },
+  "units": {
+    "position": "mm local / global",
+    "velocity": "m/s",
+    "ER": "kg target per kg sediment",
+    "face_area": "m2",
+    "dhdt": "mm/h"
+  }
+}

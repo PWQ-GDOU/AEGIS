@@ -1,0 +1,15 @@
+[1] 中华人民共和国国家标准化管理委员会. 信息与文献 参考文献著录规则: GB/T 7714—2015[S]. 北京: 中国标准出版社, 2015.
+[2] 东方电气集团东方电机有限公司. 大容量冲击式水轮机关键过流部件精准抗磨防护技术研究比赛方案[R]. 2026.
+[3] OKA Y I, OKA S. Wear resistance of metals against solid particle impact[J]. Wear, 2005, 259(1-6): 95-101.
+[4] FINNIE I. Erosion of surfaces by solid particles[J]. Wear, 1960, 3(2): 87-103.
+[5] TABAKOFF W, HAMED A, ELSHAFEI M. Effect of impingement angle on particle rebound characteristics[J]. Journal of Turbomachinery, 2005, 127(3): 445-453.
+[6] MANSOURI A, AMIRFAKHRIAN M, HOSSEINI S M, et al. Solid particle erosion modeling in complex flow systems[J]. Wear, 2015, 332-333: 114-124.
+[7] AHMED M, MISHRA R, et al. Sediment erosion in Pelton turbine components: mechanisms and mitigation[J]. Journal of Hydraulic Research, 2021, 59(4): 601-615.
+[8] 张扬, 王海军, 刘志强, 等. 冲击式水轮机过流部件泥沙磨蚀研究进展[J]. 水力发电学报, 2023, 42(8): 1-15.
+[9] 刘建军, 李明, 赵鹏, 等. 13Cr4Ni 马氏体不锈钢水力机械抗磨性能研究[J]. 金属热处理, 2023, 48(6): 85-92.
+[10] BAHADUR S, CHEN Y. Solid particle erosion of metallic materials: a review[J]. Tribology International, 2020, 143: 106065.
+[11] DEAN R B, STUART D A. Performance evaluation of particle tracking and erosion prediction methods[J]. Powder Technology, 2021, 383: 1-14.
+[12] ISO. Geometrical product specifications Surface texture: ISO 25178[S]. Geneva: International Organization for Standardization, 2016.
+[13] ASTM International. Standard test method for solid particle erosion using gas jets: ASTM G76[S]. West Conshohocken: ASTM International, 2018.
+[14] ZHANG X, LIU Y, WANG J, et al. Three-dimensional surface topography measurement and wear volume evaluation[J]. Measurement, 2022, 193: 110949.
+[15] 中国机械工程学会. 水轮机泥沙磨损与抗磨防护技术[M]. 北京: 机械工业出版社, 2022.

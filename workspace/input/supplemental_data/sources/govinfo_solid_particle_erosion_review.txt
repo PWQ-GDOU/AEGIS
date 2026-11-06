@@ -1,0 +1,4482 @@
+                                        NBS
+                                   PUBLICATIONS
+       A111   3   TTbDDb
+
+                  NBSIR 78-1575
+
+                  Erosion by Solid Particle
+                  Impact
+
+
+
+                  A. W. Ruff and S. M. Wiederhorn
+
+
+
+
+                  National Measurement Laboratory
+                  Center for Materials Science
+                  National Bureau of Standards
+
+
+
+
+                  January 1 979
+
+»                 Interim Report
+
+)
+
+
+
+
+                  Prepared for
+                  The Office of Naval Research
+-4C
+                  Department of the Navy
+ 100              Arlington, Virginia
+,U56
+ 78-1575
+ C.2
+                         DATE DUE
+
+
+
+
+    Demco, Inc. 38-293
+
+
+
+
+>
+                               ATTENTION:
+
+Please note that pages 7 and 8 are missing from this publication.
+
+
+Content that is similar to NBSIR 78-1575 has been published in the
+following source:
+
+
+A.W. Ruff and S. M. Wiederhom, Erosion by Solid Particle Impact, in:
+Treatise on Materials Science and Technology Vol. 16, ed. C.M. Preece
+                                               ,
+
+
+
+
+(Academic Press, New York, 1979) pp 69-126.
+
+
+See pages 75-77
+.
+                                                                       *9*owr Bureau of
+                                                                                          StawJard*
+
+                                                                          MAY    1 4   10?9
+
+NBSIR 78-1575
+
+
+EROSION BY SOLID PARTICLE
+IMPACT
+
+
+
+
+A. W. Ruff and S. M. Wiederhorn
+
+
+
+
+National Measurement Laboratory
+Center for Materials Science
+National Bureau of Standards
+
+
+
+
+January 1 979
+
+Interim Report
+
+
+
+
+Prepared for
+The Office of Naval Research
+Department of the Navy
+Arlington, Virginia
+
+
+
+O
+
+
+
+
+U.s. DEPARTMENT OF COMMERCE, Juanita M. Kreps, Secretary
+    Jordan J. Baruch, Assistant Secretary for Science and Technology
+NATIONAL BUREAU OF STANDARDS. Ernest Ambler, Director
+1
+EROSION BY SOLID PARTICLE IMPACT
+
+A. W. Ruff and S. M. Wiederhorn
+Center for Materials Science
+National Bureau of Standards
+Washington, D.C.  20234
+
+
+
+
+Introduction
+
+Single Particle Erosion
+
+A.   Metals
+
+     1.   Methods and Results
+     2.   Interpretations
+
+B.   Ceramics
+
+     1.   Results
+     2.   Interpretations
+
+Multiple Particle Erosion
+
+A.   Metals
+
+     1.   Methods and Results
+     2.   Interpretations
+
+B.   Ceramics
+
+     1.   Results
+     2.   Interpretations
+
+Theories of Erosion
+
+A.   Ductile Material Models
+
+B.   Brittle Material Models
+
+C.   Other Considerations
+
+Significant Parameters
+
+A.   Eroding Particle Characteristics
+
+B.   Eroded Material Characteristics
+
+C.   Environmental Effects
+
+Summary and Recommendations for Future Work
+
+References
+                         EROSION BY SOLID PARTICLE IMPACT
+
+
+                                   I .   INTRODUCTION
+
+
+     The erosion of materials by surface impact of hard particles is one
+
+of several forms of material degradation generally classified as wear.              It
+
+is by now well understood that wear is a complex phenomenon,          consisting in
+
+fact of several simultaneous and interacting processes, typically involving
+
+mechanical, chemical and material parameters as well as complex mechanisms.
+
+This complexity in many instances seems to defy simplification on the part
+
+of the experimentalist seeking to carefully separate variables and the
+
+theorist attempting to accurately model the wearing system.          However, in
+
+recent years considerable progress has been made both in gaining a basic
+
+appreciation of the significant parameters of wear and in applying          a
+
+
+materials methodology to mitigate the problems of wear.          While this Chapter
+
+will only address solid particle erosion, it is well to keep in mind that
+
+other wear processes, e.g., abrasive wear and oxidative wear, involve many
+
+similar characteristics and perhaps mechanisms.           Progress in understanding any
+
+one of these processes may be applicable to others, and to the development
+
+of more wear resistant materials and systems.
+
+     Reviews of the state of information on solid particle erosion have appeared
+
+recently in several sources (Engel, 1976; Preece and MacMillan,          197"';   Hutchings.
+
+1978; Finnie £t   a_l,    1978).     The state of earlier understanding has been
+
+adequately reviewed in several other articles (Finnie, 1960, 1972; Finnic
+
+et al,   1967; Ritter,     1963; Neilson and Gilchrist, 1968; Sheldon and Finnie.
+
+1966, a, b);   that information will not be repeated here.         Rather we wish to
+establish a framework for considering solid particle erosion, to review
+
+briefly only the central features of previous results, and to emphasize
+
+primarily the microstructural aspects of the problem.         It is this latter
+
+area that appears to us to offer promise of further understanding of erosion
+
+(and wear) processes.     Other chapters in this book will contain relevant
+
+information on microstructural and environmental effects and should be
+
+consulted for details.        The mechanics of erosion, in particular, are addressed
+
+in detail in   Chapter   1.
+
+
+     It has been very instructive we believe to examine the effects of
+
+solid particle erosion, first, on the basis of single particle impacts, and
+
+then under multiple impacting conditions.        This chapter will review briefly
+
+recent work using that format, and then describe the theoretical situation.
+
+It is hoped that the reader can thereby appreciate what is known as well as
+
+what is yet needed.      Significant parameter issues, e.g., surface temperatures
+
+and melting, strain rate effects, will then be described.         Finally, our view
+
+of the needed future emphasis in this area will be described.
+
+
+
+
+                                          2
+                         II.   SINGLE PARTICLE EROSION
+
+
+     Erosive wear of materials in practice generally involves long times
+
+of exposure under steady state conditions.      However, by its nature,
+
+solid particle erosion is a discrete, accumulative process and the
+
+single impact event is clearly worthy of as accurate an understanding
+
+as possible.    It is also clear that multiple particle effects are to
+
+be expected;    these will be treated later in the Chapter.
+
+     Single particle studies can be conducted over a wide size scale
+
+of particles,   from millimeters to micrometers, through the use of
+
+quantitative measurement methods involving optical, scanning and
+
+transmission electron microscopes.      Recent studies have produced
+
+extremely valuable information on the basic process of particle-
+
+surface impact.
+
+
+
+
+                                        3
+A.   METALS
+
+     1.    Methods and Results
+
+           Two illustrations of eroded surface structures on a ductile metal
+
+are shown in Fig. 1.      In one case discrete,       isolated impact craters are
+
+seen (Fig. la), the result of a very brief exposure time.            At longer
+
+exposure times, the more uniformly eroded surface shown in Fig. lb results.
+
+Through considerable care in designing and using experimental apparatus,
+
+one can control the important parameters of particle orientation and
+
+velocity, and quantitatively investigate single particle erosion.                 Some
+
+recent studies are described below.
+
+           Various experimental techniques have been used to cause single
+
+particles to impact on specimen surfaces under controlled conditions.
+
+Electrostatic acceleration methods were employed by Shelton et al. (1960)
+
+and Hutchings and Winter (1974) in studies of small particle erosion
+
+effects.      Explosive acceleration methods have also been reported
+
+(Hutchings and Winter, 1974), however most studies have used some type of
+
+gas-projectile gun.      In this method,       shown schematically in Fig.   2,   a
+
+single projection of one or more erosive particles against the specimen
+
+surface is carried out.     Large particles can be directly accelerated while micro-
+
+meter     sized particles are indirectly accelerated using a carrier or sabot
+
+(that does not strike or damage the specimen).            Sheldon and Kanhere (1972)
+
+used this latter method to accelerate individual particles of silicon
+
+carbide, steel and glass shot about        3   mm in diameter at various velocities
+
+from about 130m/s to 400 m/s.      Both previously eroded and un-eroded
+
+surfaces were exposed and then studied.            Erosion weight loss measurements also
+
+were made.     Observations of the impact craters showed that the displaced
+
+crater material appeared to have flowed in the direction of particle
+
+
+
+                                      4
+incidence until the material fractured at high accumulated strains.                      They
+
+noted considerable evidence of deformation adjacent to the crater in
+
+annealed material.       In previously work-hardened specimens, the forward
+
+built-up edge seemed to fracture sooner.
+
+        Hutchings and Winter (1974) studied the erosion process using
+
+large (3mm) spherical particles; they placed particular emphasis on the geometry
+
+and mechanisms of metal removal.            The characteristic deformation pattern
+
+resulting from particle impact consisted of a depression and a lip or rim
+
+of displaced material.        Figure 3a shows the impact crater morphology found
+
+in this work for a steel sphere impacting on aluminum.                  A
+
+representation of the crater cross section is shown in Fig. 3b.                   They
+
+reported that smaller particles (down to             1    ym size) produced very similar
+
+patterns of deformation for the velocities studied (about 150 m/ s to
+
+200 m/s) on specimens of copper, mild steel and aluminum.
+
+        Studies of the erosion impact craters recently carried out using
+
+      50 ym A^O^ particles have revealed similar structures (Ives and
+
+Ruff, 1978 a).     Annealed AISI type 310 stainless steel specimens and
+
+copper specimens were impacted by spherical glass particles and also by
+
+angular Al^O^    P art i c l es at a   velocity of 59 m/s.        Two exposure angles of
+
+attack, 20° and 90°, were used in order to examine different modes of
+
+material removal.      At the low angle, material was deformed and displaced
+
+from the crater into a lip at the exit end and sides.                  At 90° incidence,
+
+a more uniform lip of material around the crater was produced.                   There was
+
+considerable evidence of plastic flow within the impact crater region.
+
+Transmission electron microscopy (TEM) studies were carried out to
+
+investigate the sub-surface damage.              Figure    4   shows an impact crater in
+
+
+
+                                             5
+type 310 stainless steel produced by an irregular 50 pm Al^O^ P article
+
+that impacted at 90°angle and 59 m/s.       The surface appearance (Fig. 4a)
+
+is consistent with the shape and size of the particles.       The sub-surface
+
+damage, seen in Fig. 4b, was typical of that found at the craters.     It consisted
+
+of a high density of dislocations formed in a well defined zone around the
+
+crater, extending a few micrometers in all directions.       Some bands and groups
+
+of dislocations were observed but more usually a random tangle of disloca-
+
+tions around the crater walls was found.       There was evidence of deformation
+
+twinning in some cases, and electron diffraction studies indicated poly-
+
+crystalline regions, perhaps due to recrystallization.       The dark central
+
+region in Fig. 4b results from strong electron scattering from the
+
+deformed material adjacent to the crater wall.       Outside of the immediate
+
+crater region, the concentration of dislocations dropped sharply.       Some
+
+slip plane arrays of dislocations were identified.
+
+        Plastic strain measurements were carried out using a selected area
+
+electron channeling method (Ruff, 1976) in order to further measure the
+
+erosion damage.   This method which averages the strain over a volume of
+                          3
+material of about 10 ym       showed that plastic strains greater than about
+
+15% were associated with the impact craters in copper.       The
+
+strains decreased rapidly with distance from the crater, and decreased
+
+with depth below the original surface as determined by electrolytic removal
+
+of material.
+
+        Studies carried out using 50 ym spherical glass particles
+
+(Ives and Ruff, 1978a) produced crater geometry and deformation patterns
+
+somewhat easier to analyze.       The crater shown in Fig. 5a from a type 310
+
+stainless steel specimen produced at an attack angle of 20° and velocity
+
+
+
+
+                                      6
+    2.   Interpretations
+
+         Despite the few studies reported so far on single particle
+
+erosion, some essential features of the process have
+
+been identified.     Particle shape and orientation at contact are clearly
+
+important parameters along with particle velocity, attack angle, and
+
+particle material properties.        A difference in the characteristics of craters
+
+formed on uneroded and on previously eroded surfaces was found.           Thus, single
+
+particle experiments alone are not sufficient.         Sheldon and Kanhere (1972)
+
+also found a small difference in the velocity dependence of erosion between
+
+uneroded and previously eroded surfaces that is probably significant.
+
+These authors did observe that the displaced lip material appeared to
+
+detach earlier on previously eroded surfaces, reflecting apparently the
+
+higher strain levels in the material.
+
+         Hutchings and Winter    (   1973 ) found evidence for a critical particle
+
+velocity above which material is displaced from the crater lip.           They
+
+suggested that frictional forces between the surface and the particle may
+
+be important in the crater formation process.          Hence, the effect of
+
+environment (including surface films) on surface friction may need further
+
+consideration.     These authors (Winter and Hutchings, 1974 ) also studied
+
+angular particle impacts where a micromachining process was identified.
+
+The details depended on particle rake angle and attack angle, as well on
+
+the extent to which particle fragmentation occurred. Figure        7   shows an
+
+interesting section through an impact crater in steel where both the
+
+configuration of displaced material and the pattern of deformation in the
+
+bulk material can be seen.      Bands of local, intense shear were observed
+
+in some of   the crater lips.    Evidence for local heating leading to local
+
+
+
+
+                                            9
+thermally affected deformation has been presented (Winter and Hutchings,
+
+1975) and points up the need to consider thermal-mechanical properties of
+
+materials with regard to erosion behavior.
+
+           Transmission electron microscope studies of the damage associated
+
+with particle impact in copper and type 310 stainless steel (Ives and
+
+Ruff, 1978a) revealed a zone of high dislocation density typically a few        micro-
+
+meters thick     around an impact crater.     Strain measurements using the
+
+electron channeling method also showed a localization of damage near the
+
+craters.    Deformation twins were formed at large angular particle craters,
+
+suggesting an intense local stress, possibly imposed at a high strain rate.
+
+Experiments using a diamond pyramid indentor to form impressions revealed
+
+similar dislocation patterns as were found near the impact craters,
+
+although deformation twins were not observed at the identations.
+
+           The recent results of Hutchings (1977a, 1978) clearly establish
+
+several modes of particle impact deformation.        Particle shape was sig-
+
+nificant.      Since angular particles either displace more material into
+
+the crater lip where it becomes vulnerable to further erosion or actually
+
+detach material from the surface (depending on particle rake angle at
+
+contact)^ the erosion efficiency of angular particles relative to round
+
+particles can be explained.     In combination with these experiments,
+
+a theoretical model was developed to describe the particle interaction
+
+with the impacted surface.     Calculations of the particle position and
+
+orientation with time were in good agreement with the experimental
+
+photographs of actual impact events.        The limited range of rake angles,
+
+0°   to -17°, over which actual cutting was observed confirmed the
+
+calculations.     It was pointed out that such impact conditions are
+
+infrequent, perhaps only occurring about once out of six impacts        on a
+
+
+
+                                       10
+random basis.   Thus the crater lip formation process appears to be the
+
+dominant mode of impact damage, and loss of metal takes place primarily
+
+through subsequent impacts with the lip material.   Recent observations on
+
+debris particles recovered from eroded 1015 steel surfaces support this
+
+picture (Ruff, 1978).
+
+
+
+
+                                 11
+B.   CERAMICS
+
+     1.   Results
+
+          Erosion of ceramic materials has been generally viewed as a
+
+brittle process.    This view is based on the observation that material
+
+removal occurs mainly by chipping.    A more modern view of ceramic erosion
+
+is based on the assumption that plastic deformation plays a crucial role
+
+in the chipping process.    In this section, the microscopic processes
+
+that occur during impact of brittle materials are described.
+
+          The morphology of fractures formed in ceramic materials
+
+during impact can be divided into two classes, depending on whether the
+
+impacting particle is blunt or sharp (Lawn and Wilshaw, 1975, Lawn and
+
+Marshall, 1978).    Blunt particles, typified by spheres, result in the
+
+formation of cone-shaped cracks (Hertzian cracks)         ,   which initiate from
+
+pre-existing flaws that lie just outside the area of contact between the
+
+particle and the target surface (Fig. 8).      The entire process of Hertzian
+
+crack formation is an elastic one that can be described by linear elastic
+
+fracture mechanics.    Hertzian cracks form for a wide range of impact
+
+loads; however, as the contact forces increase above a level that is
+
+determined by the hardness of the material, plastic deformation occurs
+
+beneath the impacting particle, and a second set of cracks are observed
+
+to form normal to the impacted surface     (Fig.   9,    also see Evans and Wilshaw,
+
+1976, 1977).    This second set of cracks, termed radial, are more typical
+
+of the type that form as a result of sharp particle impact.             Their
+
+formation suggests that the same plastic processes that govern crack
+
+formation for sharp particles become active when blunt particles impact
+
+at high loading levels.    This point is clearly illustrated in the work of
+
+Evans and his colleagues (1978) who investigated the morphology of cracks formed
+
+by high velocity impact with solid particles.           Thus, the distinction
+
+
+
+
+                                      12
+between blunt and sharp particle impact is a distinction that depends on
+
+the role of plastic deformation in the impact process.          The particle
+
+velocity that characterizes the transition between the formation of Hertzian
+
+cracks and the formation of radial cracks depends on the hardness, fracture
+
+toughness, and surface structure of the target material.         In glass, for
+
+example, this transition occurs at ^30 m/s for unabraded surfaces impacted
+
+with 0.8 mm radius steel or tungsten carbide spheres (Wiederhorn and Lawn, 1977).
+
+The transition occurs at lower velocities for pre-abraded glass surfaces.
+
+                Because Hertzian cracks initiate from pre-existing surface
+
+flaws, a minimum threshold stress (corresponding to a minimum impact velocity)
+
+is required for Hertzian crack formation (Evans,       1973, Wiederhorn and Lawn,
+
+1977, Kirchner and Gruver, 1977).        The threshold stress for crack formation
+
+is governed by the radius of the impacting particle, and the fracture
+
+resistance of the material (the critical stress intensity factor)        .     The
+
+size of the flaw that initiates the Hertzian crack plays a secondary role
+
+in Hertzian crack formation        (Lawn and Langitan, 1969).
+
+
+
+
+                Impact by sharp particles (angular rather than round) results in
+
+a distinctly different type of crack pattern in the target surface.             Two
+
+types of cracks are observed:        the first type is a radial set of cracks
+
+oriented primarily perpendicular to the target surface; the second type is
+
+a   lateral set of cracks oriented primarily parallel to the target surface
+
+ (Fig.   10).     The radial set of cracks are primarily responsible for strength
+
+degradation, whereas the lateral set are responsible for erosive wear.                As
+
+can be ascertained from static indentation tests (Lawn and Swain, 1975,
+
+Evans and Wilshaw, 1976), radial cracks form during the loading portion of
+
+ the impact cycle, whereas lateral cracks form as the particle leaves the
+
+
+
+
+                                          13
+target surface.     Once radial cracks have initiated, the driving force for
+
+fracture is the wedging action of the impacting particle.                   By contrast,
+
+lateral cracks are formed as a result of residual plastic deformation at
+
+the point of contact.       Lateral cracks usually curve and propagate to the
+
+target surface, resulting in chip formation and loss of material from the
+
+target surface.
+
+            The threshold velocity for crack formation is considerably lower
+
+for sharp particles than for blunt particles.              For example, 30 mesh
+
+abrasive SiC particles (^0.6 mm sieve opening) dropped from a height of                     1   cm
+
+(velocity ^.4 m/s at contact) onto the surface of glass results in a signifi-
+
+cant decrease in strength due to crack formation (Wiederhorn and Lawn,
+
+1979).   By contrast, velocities of ^30 m/s are required for Hertzian crack
+
+formation caused by 0.4 mm diameter tungsten carbide spheres (Wiederhorn
+
+and Lawn, 1977).        Theoretical estimates of the load for radial crack forma-
+
+tion have been presented by Lawn and Evans (1977) using an elastic-plastic
+
+analysis.     They indicate that the critical load depends on both the hardness
+
+and the critical stress intensity factor of the target material.
+
+            Direct evidence for plastic flow during impact has been obtained
+
+from transmission electron microscope studies of surfaces that have been
+
+impacted with hard particles (Hockey        at    al_. ,   1978)   .   These studies were
+
+conducted on a group of brittle crystalline materials with very different
+
+properties.     Microstructural features were very similar to those observed in
+
+static indentation studies (Hockey, 1971, Hockey and Lawn, 1975).                   Dense
+
+tangles of dislocations were observed at the impact site for all materials;
+
+the density of dislocations was similar to that observed in metals.                   The
+
+dislocation and crack morphology in ceramics depended on the crystal structure.
+
+For MgO (Fig. 11)   ,    dislocation arrays propagated on (110) planes well beyond
+
+the impact area, a behavior that is consistent with the ease of deformation
+
+
+
+
+                                             14
+                                    .                                                              .
+
+
+
+
+of ionic crystals on (110) planes.                  Cracks also propagated on (110)
+
+planes in this crystal, but were contained within the dislocation arrays.
+
+Silicon and germanium, which are covalent, also exhibited dense arrays
+
+of dislocations at the contact site, but now the dislocations were
+
+tightly bound to the immediate vicinity of the contact site (Fig. 12).
+
+Cracks that were generated during impact propagated well beyond the
+
+immediate contact site often resulting in extensive surface chipping.
+
+Materials that possess partial covalent and partial ionic behavior
+
+(A^O^, SiC) exhibited       a   somewhat intermediate behavior during impact
+
+(Fig.   13).     Both dislocations and cracks propagated well beyond the
+
+contact area during impact.
+
+               Temperature has the effect of increasing dislocation mobility in
+
+crystalline materials, so that a material dependent critical temperature
+
+should exist for transition from elastic-plastic to plastic impact conditions.
+
+In an attempt to investigate temperature effects on erosion, Hockey £t al                              ,
+
+
+
+
+(1978) exposed      A^O^ crystals to erosive particles at 1000°C.                  Optical
+
+microscopy investigations of the target surface revealed little change in
+
+the erosion crack morphology:               material removal from the Al ,0    ,   surface at
+
+1000°C was still primarily by chipping (Fig. 14).                    Consistent with this
+
+observation is the fact that temperature had little effect on bulk erosion
+
+rates of   A^O^     (Hockey e£ al       ,   1978)   .    Transmission electron microscopy
+
+observations, however, did reveal a considerable increase in the relative
+
+extent of the deformation associated with impact at high temperatures.                            In
+
+
+contrast to room temperature results, the radial extent of deformation by
+
+slip at 1000°C was found to be comparable to the extent of fracture.                         In
+
+
+
+
+                                                    15
+addition, impact at 1000°C resulted in a significant increase in the amount of
+
+twinning over that occurring at room temperature.    High temperature impact
+
+resulted in numerous interactions between slip bands, twins, and grain
+
+boundaries outside of the immediate area of contact.    Nevertheless, this
+
+deformation was not sufficient to prevent chipping at the impact site.
+
+Apparently, temperatures greater than 1000°C are needed to obtain completely
+
+ductile erosion for a material such as A^O^-
+
+            The amount of cracking of ceramic materials during impact can be
+
+modified significantly by reducing the angle of impact (Hockey   e_t   al. ,
+
+1978).    At 15° impact, cracking on ceramics is largely eliminated.     The
+
+cracking that is observed is primarily of the lateral type.    Shallow
+
+residual impressions in the ceramic surface are observed (Fig. 15).        These
+
+are elongated in the direction of particle motion (in the same way as for
+
+metals) suggesting a shear deformation mechanism of erosion at low impact
+
+angles.    Indeed, examination of the contact area by transmission electron
+
+microscopy (Fig. 16) confirms the absence of cracks and the predominance of
+
+plastic deformation in the contact area.    Thus at low impact angles, ceramic
+
+materials appear to erode by plastic deformation; in this regard their behavior
+
+is similar to that found in metals.
+
+     2.     Interpretation
+
+            From the above discussion it is clear that a deeper understanding
+
+of single particle impact in ceramics requires a distinction to be made
+
+between completely elastic impact events and elastic-plastic impact events.
+
+In this section,   theories of crack formation during impact are reviewed.
+
+In succeeding sections the results of these theories are used to develop
+
+models that predict rates of erosion during multiple particle impact.
+
+
+
+
+                                       16
+          As mentioned above, impact with blunt particles requires a
+
+minimum threshold velocity for crack formation.                                              Evans (1973), and
+
+Wiederhorn and Lawn (1977) used linear elastic fracture mechanics to
+
+describe the size of the Hertzian crack formed during impact.                                                                       A quasi-
+
+static approximation is used to convert impact velocity to maximum
+
+impact force.         The kinetic energy is assumed to be completely converted
+
+into elastic energy during impact.                          The maximum impact force is then
+
+calculated from the stored elastic energy at deepest penetration of the
+
+particle into the target surface.                       The maximum impulse load, F                                                  ,
+                                                                                                                                         depends
+
+on the elastic constants of the target material and particle, and on the
+
+density, p, radius, r, and velocity, v                            ,
+                                                                          of the particle:
+                                       q
+
+                                   3          1/5           2/5           3/5       2             /5
+          F       =   [(125   7r       /48)         (E/k)             p         r       ]   v^o                                                          (1 )
+              m
+                                                                                                       2                    2
+E is Young's modulus of the target and k = 9/16 [ (l-v                                                     )   + (l-v   '
+
+                                                                                                                                )   (E/E   '   )]   is
+
+a dimensionless quantity that depends on Poissons ratio, v of the target,
+
+and v' of the particle, and on Youngs modulus, E of the target, and E' of
+
+the particle.
+
+          The critical load, F, for crack growth during impact is
+
+determined from the size of the critical flaw in the target surface.
+
+For the case of quasi-static impact, Lawn and Wilshaw (1975), and Frank
+
+and Lawn (1967) developed the requisite fracture mechanics equations for
+
+crack growth.         Because Hertzian stress fields are not homogeneous, a
+
+single, simple analytical expression cannot be derived for the critical
+
+load as a function of flaw size.                       It is,             however, possible to show that
+
+simple limit expressions can be given for very small flaws                                                              (c^.               0.01a),
+
+and for large flaws (c°                 >   0.01a) j where a is the contact radius between the
+
+sphere and the surface at maximum penetration.                                              For most practical
+
+situations, the critical load, F, is given by the large flaw approximation.
+
+
+
+
+                                                            17
+            :                                                                                                                                                                  ,
+
+
+
+
+for which Auerbach's law (1891) is valid (Lawn and Marshall, 1978); F = Ar
+
+where A is a constant that is determined by the critical stress intensity
+                                                                                                 2          *             *
+factor, K           ,
+                            of the target material (A = K                                            k/E0        ;    0       is a dimensionless,
+                c                                                                           c
+
+material constant whose values are obtained experimentally)                                                                                      .       By substituting
+
+F     into Auerbach's law, the critical velocity, v                                                              ,        is obtained for Hertzian
+
+crack formation (Wiederhorn and Lawn, 1977)
+
+                    v
+                        c
+                             -    (48/125,
+                                                  3
+                                                      )
+                                                          176
+                                                                    (k/E)
+                                                                            7/6
+                                                                                  K
+                                                                                       c
+                                                                                           5/ 3
+                                                                                                     /p
+                                                                                                          1/ 2
+                                                                                                                 r
+                                                                                                                     5/
+                                                                                                                          V           5/5
+                                                                                                                                            .                                      ( 2 )
+
+
+
+                    For particle velocities less than this critical velocity,
+
+fracture, and hence erosion, will not occur.                                                               Above v                    ,   the crack size
+
+is determined by a second equation that was derived by Roesler                                                                                            (1956)   ,    who
+
+used a Griffith type energy balance in combination with a dimensional
+
+analysis
+                             3/2
+                    F/R            = 8        K           .                                                                                                                        (3)
+                                          R       c
+
+F is the impulse load, R is the base radius of the cone crack formed
+
+during impact, and                    8       is a constant that is usually determined empirically.
+
+Substituting equation                         (1)             into equation (3)                       (i.e. F = F ),                             the following
+
+equation is obtained for the size of the cone crack that forms as a
+
+result of impact:
+                                          3               2/15              4/15 2/5 4/3                             2/3              2/3            k
+                                                                                                                                                         >\
+                    R - [(125* /48)                                 (E/k)          p             r         /B                 K             ]v                                     (4)
+                                                                                                                 R                c              o
+
+                    The cone crack radius, R, can be used to estimate strength
+
+degradation resulting from impact.                                            Assuming the effective flaw size for
+
+fracture, c^, is proportional to R, c^ =                                                    fi       R,    then strength degradation
+
+is determined by substituting Eq.                                           (4)    into the Griffith equation,
+                            1/2
+a = K /( ttc            )
+        c           f
+
+
+
+                    a -          [(48/125 „
+                                                      10 - 5 1/15
+                                                                )           (k/E)
+                                                                                       2/1
+                                                                                                 \        1/3
+                                                                                                                     K^ 7         V         /2 1/5 2/3
+                                                                                                                                                 p        r   ]v
+                                                                                                                                                                   o
+                                                                                                                                                                       - 2/5
+                                                                                                                                                                               .     (5)
+
+
+                    The validity of this approach to Hertzian crack formation has
+
+been checked recently on several ceramic materials.                                                                               Wiederhorn and Lawn
+
+    (1977) have shown that the theory predicts the effect of                                                                                particle velocity.
+
+
+                                                                              18
+particle density, and particle size on the strength of glass impacted by
+
+steel and tungsten carbide spheres.     Evans (1973) has shown that strength
+
+data obtained by Ashford (1968) on SiC is explained by the above theory.
+
+Although Kirchner and Gruver (1977) also obtained reasonable predictions
+
+of strength degradation of glass impacted with glass spheres,    they
+
+never-the-less found that the crack size formed during impact was signifi-
+
+cantly less than that calculated from theory.     From these results it can
+
+be concluded that the theory for predicting crack formation in the
+
+elastic impact situation is generally supported by experimental data.
+
+Clearly, additional work is needed to fully evaluate the theory, which
+
+does not completely account for the shape of the cracks formed on impact.
+
+Loading history appears to play some role in determining the crack
+
+shape, as evidenced by small rims that are observed to form along the
+
+edge of the Hertzian cracks as the particle leaves the surface (Chandhri
+
+and Walley,   1978).   The formation of these rims may be the result of
+
+elastic wave generation during crack formation, residual plasticity at
+
+the impact site, or rebound of the surface as the sphere leaves the
+
+target.   Despite some differences between experiment and theory, the
+
+theory does explain most major observations of spherical particle impact.
+
+           Sharp particle impact theories require a greater number of
+
+assumptions than blunt particle impact theories because plastic deforma-
+
+tion occurs during impact.     As noted by Lawn and Evans (1977) in
+
+their model for crack initiation in elastic-plastic indentation fields,
+
+crack initiation is determined by the stresses set up by the plastic
+
+zone that forms on impact.     Their model can be applied to explain crack
+
+initiation for the case of quasi-static impact.     Pre-existing flaws at
+
+the impact site are assumed to be the sources of crack formation.       These
+
+
+
+                                       19
+flaws grow as a result of the plastic stress field formed during impact.
+
+The hardness, H, and the contact radius (or an equivalent parameter), a,
+
+are convenient scaling parameters used to establish the stress in the
+
+vicinity of the flaw.             Applying fracture mechanics theory, Lawn and
+                                                                          *                                         *
+Evans derive a critical crack size,                                   c       ,   and a critical load, F                ,   for
+
+fracture, both of which depend on the hardness and critical stress
+
+intensity factor of the target material:
+                                  2                       2
+               c* =   (1.767/0        )       (K /H)
+                                                   c
+
+                                          2   4                       3
+               F* =   (54.57 a/n 0                 )    (K /H) K                   .
+                                                          c                   c
+
+
+a is a constant that depends on the indenter geometry                                                 (a =   2/tt       for a
+
+Vickers diamond pyramid indenter)                             ;   0 is a dimensionless constant that
+
+relates hardness to the maximum stress beneath an indenter;                                                   n     is another
+
+dimensionless constant that relates the depth of the maximum stress to
+
+the size of the hardness impression.                                          From equation       6   we note that
+                                                                      k
+unless a critical flaw larger than                                c           is located in the vicinity of the
+
+indenter, fracture will not occur during indentation.                                                  The critical load
+                      k
+for fracture, F           ,
+                              calculated by Lawn and Evans (1977) is shown to vary
+
+for a variety of materials,                        from 0.003 N (silicon) to 40 N (NaCl)                                    .     The
+                                               k
+value obtained for glass, F                            = 0.02N,               is considerably less than that
+
+obtained for any practical sphere size.                                                A 0.4 mm radius sphere, for
+
+example, requires a load of 98.5 N to form a crack, whereas a sphere of
+
+approximately 0.1 pm would be required to generate a crack under a load of
+           t
+%0.02 N.       Thus, the theory by Lawn and Evans demonstrates the greater
+
+sensitivity of ceramic materials to sharp particle erosion than to blunt
+
+particle erosion.
+
+               Assuming a crack can be generated during impact, it is necessary
+
+to develop a      mechanism of load transfer from the narticle to the target
+
+
+t Spheres of this radius are, of course, "sharp” from a microscopic
+point of view.
+                                                                                  20
+surface in order to estimate the final crack size resulting from the
+
+impact.         The problem of load transfer arises because a complete elastic-
+
+plastic solution of the indentation process is not available.                             Hence the
+
+rate of particle deceleration, and consequently, the change in particle
+
+momentum at the target surface is not known.                             Two models have been
+
+proposed to estimate the contact force during impact.                              In one (Wiederhorn
+
+and Lawn, 1979), the kinetic energy of the particle is assumed to be
+
+completely dissipated by plastic flow as the particle contacts the
+
+surface.            The contact force is calculated from the hardness of the
+
+target material and the maximum depth of penetration during contact.
+
+The maximum load, F^, during contact is determined by the mass, m, of
+
+the particle, the hardness, H, of the target, the particle velocity, v                             ,
+
+
+
+
+and several geometric constants that are governed by particle shape:
+
+            w         tt   1/3       2/3           4/3
+            F       ^ H          m             v                                                         (8)
+                m
+The size of the crack formed during impact is then determined by substituting
+                                       *
+Eq.   (8)       into Eq.         (3)       ,       which is tantamount to assuming that a crack
+
+formed during impact depends on the load in the same way as one formed
+
+during static indentation:
+                           4/9       2/9           8/9 „ -2/3
+            c         m          H             v       K                                                 (9)
+                r                                        c
+
+            Evans, Gulden, and Rosenblatt (1978) included dynamic effects
+
+in their calculation of the contact force during impact.                              In contrast to
+
+
+the assumptions made by Wiederhorn and Lawn (1979), plasticity as repre-
+
+sented by the hardenss is assumed to play a minor role in the fracture
+
+process.            A spherical particle is assumed to penetrate into the target
+
+surface without distortion, and the contact pressure is assumed to be
+
+ the dynamic pressure set up when the particle first hits the surface.
+
+The depth of penetration is determined from the time of contact, and the
+
+mean interface velocity, both of which are calculated from a one dimensional
+
+
+
+
+ *Eq. (3) has been shown by Lawn and Fuller (1975)                            to be valid for the formation
+ of radial cracks in brittle materials.
+
+                                                                 21
+                     :
+
+
+
+impact analogue.                                    The final expression obtained by Evans et al                     .   ,       (1978)
+
+for the contact force is considerably different from that obtained by
+
+Wiederhorn and Lawn:
+                                              2         2
+                         F                v         R       p                                                                                   (10)
+                             m
+Here R is the particle radius and                                               p   is its density.     The size of the
+
+crack formed during impact is obtained by substituting Eq.                                                        (10)       into
+             )
+Eq.    ( 3       *
+
+
+                                                                /Kj 2/3 p 2/3
+                                                            2
+                         c        -       [( v r)                               .                                                               (]])
+                              r
+
+                         By comparing Eq.                            (11) with Eq.        (9)   we see that the two theories
+
+result in different expressions for radial crack formation.                                                         However,
+                                                                                                                  -2/3
+both expressions suggest that crack formation depends on K                                                               .           The
+                                                                                                              c
+
+theory by Evans                               ejt       a_l.     suggests a stronger dependence of crack size on
+                              A/3                                                                                    8/9
+velocity                 (v           )       than does the theory by Wiederhorn and Lawn (v                                     )   .
+
+
+
+
+Furthermore, the theory by Wiederhorn and Lawn takes into account the
+
+hardness of the target material, whereas the theory by Evans                                                        et_ aj_.             does
+
+not.         Evans e£ al. compared their theory with data giving crack size as
+
+a   function of particle velocity, particle shape and size, and target
+
+properties.                       In all cases good agreement was obtained between theory and
+
+experiment.                       In a more limited but similar set of experiments on glass,
+
+Wiederhorn and Lawn also obtained good agreement between theory and
+
+experiment.                       Additional experimental data and a detailed comparison of
+
+the two theories with the data will be needed to decide which of them
+
+better describes the impact process in terms of particle/ target parameters.
+
+
+
+
+*In comparing Eq. (11) with experimental data, Evans £t al_. (1978) discovered
+a weak dependence of c  on p   Consequently, Evans et_ al_. deleted p from
+                                                                       .
+
+
+Eq. (11) for further theoretical analysis.  However since p enters the theory
+again in estimating the erosion rate, it was felt best to use Eq    (11) as it                                               .
+
+
+appears above.  As a consequence the erosion rate (Eq. (20)) based on the
+above theory differs from that published by Evans e_^ al                                                  .
+
+
+
+
+                                                                                     22
+                   ,
+
+
+
+
+             Evans, Gulden and Rosenblatt                   (   1978 ) also developed a theoretical
+
+description of lateral crack formation.                             The theory takes into account
+
+both the depth at which the lateral cracks form and the size to which
+
+they propagate.                The depth, h, at which lateral cracks form is assumed
+
+to be proportional to the plastic zone depth at full penetration of the
+
+impacting particles.                     The problem of estimating the penetration depth
+
+had been addressed for a variety of impact conditions by Goodier (1965)                                .
+
+
+
+
+Using Goodier's results and experimental data on depth of crack formation,
+
+Evans   et_ al .       (   1978 ) relate the depth of crack formation, h, to the
+
+particle size,                 r,   particle velocity, v        ,    particle density, p, and
+
+target hardness, H:
+                           2                  1/^ 2
+              (h/r)                 v (p/H)
+                                     o
+
+The size of lateral cracks formed during impact is found experimentally
+
+to be   proportional to the size of the radial cracks formed during impact.
+
+Thus, the semi-empirical model proposed by Evans                            et_ a_l. ,   (1978) provides
+
+a   quantitative description of lateral crack formation during impact.
+
+
+
+
+                                                       23
+       .
+
+
+
+
+                           III.   MULTIPLE PARTICLE EROSION
+
+
+           Technological concern with the erosion of materials involves
+
+multiple particle impacts, usually in a steady state long term
+
+regime (National Research Council, 1977).        Simple consideration of
+
+the effects of a flux of particles incident on a surface for some
+
+length of time suggests that many new, complex aspects are added to
+
+the basic problem.       These include particle impacts within the incident
+
+stream, a wide range of simultaneous attack angles, particle fragmentation,
+
+surface shielding due to rebounding particles, and particle embedding
+
+effects among others.       (Some of these effects, e.g., fragmentation and
+
+embedding also occur on single particle impact).        Clearly multiple
+
+particle erosion exposures must be conducted in order to measure
+
+meaningful erosion rates of materials for application purposes.        A
+
+second reason for such experiments would involve a search for new,
+
+significant effects due to multiple particles.        One such effect has
+
+recently emerged concerning particle embedding in the specimen surface.
+
+Another important effect is that of subsurface damage due to multiple
+
+impacts.       This section will review principally the recent work in this
+
+area
+
+
+
+
+                                           24
+A.   METALS
+
+     1.   Methods and Results
+
+          Two basic types of equipment design have been used to expose
+
+solid specimens to a stream of erosive particles.       In one design the
+
+specimen is moved at a controllable velocity, usually on a rotating arm
+
+fixture, through a slowly moving erosive stream.       The exposure may be inter-
+
+mittent but can continue for a long time period.       The relative particle-
+
+specimen velocity can be accurately determined since the principal velocity
+
+component is that of the specimen (in the laboratory system)     .   A variation
+
+on this design allows the erosive particles to be spun from a rotating disk
+
+to strike a fixed specimen.     The alternative design involves propelling a
+
+stream of particles at a fixed specimen.       The specimen may be completely
+
+immersed in the stream, or perhaps only a portion of the specimen exposed.
+
+In this scheme some method of measuring or calculating particle velocity must be
+
+used.     The particle concentration in the stream and the nature of the carrier
+
+gas (fluid) can be chosen as appropriate.       Some type of nozzle or flight tube
+
+is involved in order to properly confine the erosive stream.         Velocities of 300    s
+
+
+larger have been reported using this method (for example. Grant and Tabakoff,         1975).
+
+           Quantitative measurements of erosion rate require careful attention to
+
+the experimental system and the parameters of exposure.       For example, wear
+
+of the abrasive delivery nozzle can greatly alter the stream shape and velocity
+
+profile.      Turbulance within a flight tube or caused by the presence of the
+
+specimen itself in the stream can significantly affect particle flux and
+
+particle velocity as experienced by the test specimen.       Consideration of the
+
+particle trajectories within the incident stream, particularly near the specimen,
+
+are important (Tilly, 1969).      Since, as we shall see. the erosion rate can vary
+
+as high as the third power of the particle velocity, accurate knowledge of
+
+
+
+
+                                          25
+particle impact velocity is essential.
+
+     The variation of erosion, usually measured in mass or volume loss from
+
+the specimen per unit mass of impacting abrasive, as a function of angle of
+
+attack of the particles is shown schematically in Fig. 17 for brittle and for
+
+ductile materials.    Many workers have reported this general behavior.                      For
+
+ductile materials the peak erosion loss occurs at around 20°.                    For brittle
+
+materials the peak erosion loss occurs at around 90° (normal incidence)                      .     The
+
+dependence of erosion rate on particle velocity has been measured for many
+
+materials over at least three orders of magnitude in velocity.                     The erosion
+                                    2           3
+rate is found to increase as v           to v       in most cases   (see for example, Sheldon
+
+and Kanhere, 1972; Finnie    et_   al,    1967).      The velocity exponent has been reported
+
+not to depend on the type of material (Fig. 18), however, detailed studies have
+
+shown some dependence of the velocity exponent on attack angle (Fig. 19) and a
+
+dependence on the temperature of erosion (Fig. 20).
+
+     The dependence of erosion on particle size has also been studied by
+
+several workers.     In a detailed study, Goodwin e£ al^,             (1969) examined the erosion
+
+of steel by quartz particles over a large size range.                 As shown in Fig. 21, an
+
+increase in erosion with increasing particle size was found up to a limiting size,
+
+above which the erosion remained constant.*                 A theory explaining this result has
+
+been developed (Tilly, 1973) and will be discussed later.                  Much interest has been
+
+centered on the possible erosion effects of very small particles e.g., less than
+
+5pm in diameter.     There have been conflicting reports in the literature on the
+
+size effect for such small particles.                Recent studies have shown significant
+
+erosion of metals by particles as small as 2pm (Goebel                et_ al_,   1976)   .
+
+
+
+
+*An increase in erosion was noted for particle sizes greater than about 500pm.
+
+
+
+
+                                                       26
+         The effect of particle size as measured using flat test specimens
+
+may not be applicable in all geometries as shown by the recent work of Mills
+
+and Mason (1977)             .    In studying erosion in 90° tube bends due to the conveying
+
+of abrasive sands, they reported that depth of penetration for 70 ym particles
+
+was much greater than for 230 ym particles.                     Further a different surface
+
+morphology resulted and a different angle of maximum penetration was found.
+
+         The effects of increasing temperature on erosion have been studied in
+
+more detail in the last few years.                 The environment in which high temperature
+
+erosion takes place usually has a very significant effect on erosion rate
+
+but will not be considered here (see, however, Chapter                        8   for this question).
+
+Depending on the material being eroded, the temperature range, and the
+
+environment, different effects due to temperature have been reported (Young
+
+and Ruff, 1976).                 The results in one specific instance shown in Fig.              reveal
+
+a large increase in erosion of type 310 stainless steel on going from 25°C
+
+to 975°C.   A recent study of erosion of aluminum and type 310 stainless steel
+
+(Finnie et al.           ,   1978) also reported increased erosion for increased temperature*
+
+although a complicated dependence on erosion angle was reported (Fig. 22                          ).
+
+
+In work on other alloys, however (Smeltzer                et.    a_l . ,   1970), decreases in erosion
+
+with increasing temperature have been reported.
+
+         One material parameter that has been of particular interest in con-
+
+nection with the understanding of ductile material erosion is indentation
+
+hardness.    Numerous               correlation studies have been attempted to determine the
+
+relation of hardness to erosion rate.                 In Fig.      <0 some results due to
+
+Finnie _et _al   •   »       (1967) are shown.   Clearly the erosion rate of different
+
+ductile metals decreases as the reciprocal of material hardness.                           However,
+
+when those authors studied the effect of hardness variation for one alloy
+
+(varied through thermal treatments of a tool steel) they found little effect
+
+on erosion rate.                 Other differences between the materials studied such as the
+
+
+                                                     27
+crystal structure, slip systems, flow stress, and strain rate sensitivity,
+
+appear to be the determining parameters.     Sheldon (1977) has recently proposed
+
+that the indentation hardness of a work-hardened surface would be a more
+
+appropriate measure to utilize.
+
+       The influence of other erosion parameters such as particle concentration
+
+in the erosive stream, particle hardness, and particle strength, have only
+
+been examined in a few instances.     In the case of particle concentration,
+
+divergent findings have been reported as summarized by Uuemois and Kleis (1971).
+
+It   would seem that relative erosion (specimen mass loss divided by impacting
+
+erosive mass) should be independent of particle concentration so long as each
+
+particle event is equally effective.    At higher concentrations, where particl
+
+interference (shielding) effects occur at the specimen surface, the relative
+
+erosion should be expected to decrease and this has been reported (Uuemois and
+
+Kleis, 1975; Young and Ruff, 1977).    Only limited studies of the effects of
+
+particle hardness, strength, and frangibility on the erosion of a given particle
+
+material have been reported (Tilly, 1973; Uuemois and Kleis, 1975).       The
+
+interpretation of those results is complicated by the need for more extensive
+
+characterization of the particles before and after erosion.       Recently, Ma j i and
+
+Sheldon (1978) have studied the effects of different mechanical conditions of
+
+spherical steel shot that were used as erosive particles.       They examined the
+
+erosion of aluminum alloy tubes and flat plates using 270um shot and found
+
+considerably more erosion for brittle than for ductile shot.       Evidence for the
+
+removal of additional specimen material upon the fracture of an incident particle,
+
+so-called secondary erosion, was presented.       At elevated temperatures, the hot
+
+hardness and high temperature toughness of both the specimen and the eroding
+
+
+
+
+                                             28
+materials would be important to consider.
+
+        There has been attention given recently to the effect of particle
+
+embedding during erosion.       Further, the effects of specimen microstructure
+
+on erosion behavior has been examined.        Ives and Ruff (1978) have studied
+
+surface and subsurface erosion damage in copper exposed at room temperature
+
+and found evidence for significant particle embedding.        As seen in Fig.     2'-,
+
+
+
+the initial erosion effect involves a mass gain of the specimen due to the
+
+added particulate matter.       This results in an initial "incubation" period
+
+before the usual steady state erosion rate develops; this effect has been
+
+reported previously (Neilson and Gilchrist, 1968).         Studies of the eroded
+
+copper specimens selected after various periods of exposure revealed a layer
+
+of deformed copper and abrasive (A^O^) fragments that had developed at the
+
+surface, as seen in Fig. 25      .   In these experiments an electrodeposit of
+
+copper was used to preserve the true surface structure during the preparation
+
+of cross-sections.        Transmission electron microscopy studies of the effects
+
+of particle embedding were also reported; a region around one such particle
+
+is shown in Fig. 26   .     Embedding was more pronounced at a 90° attack angle
+
+       than at 20°, the other angle studied.         A recent study by Zahavi et al      .
+
+
+
+
+(1978) has also emphasized the occurrance of particle embedding during erosion
+
+studies of three different ductile alloys by natural sand particles.
+
+        It is possible to recover eroded material        (metal and abrasive particles)
+
+after appropriately designed experiments.         Preliminary studies have been
+
+carried out using mild steel (type 1015) specimens eroded at room temperature
+
+at 30° angle of attack using 50 ym Al^O.^ particles (Ruff, 1978).        Magnetic
+
+recovery methods      were       applied in this case to collect the metallic debris.
+
+Examples of recovered debris are shown in Fig. -         where the aggregation of
+
+
+
+
+                                             29
+individual particles is due to the impressed magnetic field used in
+
+recovery.   The eroded surface structure is also shown.     The majority
+
+of eroded metal particles are equiaxed and average about     3   ym in size.
+
+Many small metal particles were found less than   1   ym in size.    Very
+
+few examples of particles of "cutting-like" morphology (ribbon or wire-
+
+like appearance) were found.    A significant proportion of particles having
+
+a plate-like shape were seen.    A good correspondence could be achieved
+
+between the observed metallic debris morphology and certain features
+
+of the metal surface topography.    It appears that the metal debris
+
+was removed primarily from the exposed portions of surface impact
+
+crater features that were formed from plastic deformation associated
+
+with particle impacts.   From the debris size and shape it does not appear
+
+that the metal debris particles were formed in a single cutting process
+
+but perhaps after several successive impact events.      Examples were also
+
+found of abrasive particle fragments within the metallic debris clusters
+
+indicating transferred or adherent metal layers on the abrasive.        Further
+
+studies of recovered metal and abrasive debris are in progress.
+
+
+
+
+                                      30
+            .
+
+
+
+
+     2.   Interpretations
+
+          Review of the literature of erosion testing indicates many dif-
+
+ferent methods and apparatus that have been used with considerable success.
+
+Frequently, multiple particle equipment is designed with some potential
+
+application geometry in mind.          Perhaps a quantitative inter-comparison
+
+between different testing systems* would reveal some advantageous design
+
+in terms of the ability to reproduce the more critical parameters from test
+
+to test, but such information is not presently available.           It is acknowledged
+
+that considerable care must be taken in accurately measuring the many
+
+parameters of erosion testing.          Two critical experimental quantities can
+
+be mentioned here, particle velocity and particle attack angle.           Several
+
+particle velocity measurement methods have been reported; photographic
+
+(Finnie et      fiL. ,   1967), rotating disk (Ruff and Ives, 1975) and laser doppler
+
+(Goebel and Pettit, 1976).          Particle velocity calculations have also been used
+
+in place of detailed measurements in some studies.           The particle attack angle
+
+can ordinarily be measured accurately, however, for small particles (< 10 pm)
+
+flow pattern disturbances can produce large deviations from the nominal attack
+
+angle and must be considered.           Such deviations near the peak erosion angle for
+
+ductile materials can lead to significant errors.           Particle divergence within
+
+a   stream and the effect of fragmentation on impact must also be considered
+
+carefully
+
+          Results of multiple particle erosion studies on various materials have
+
+shown the effect of the principal parameters involved.           Existing theoretical
+
+
+
+
+*An inter-laboratory comparative measurement series involving solid particle
+
+erosion is presently beginning within the ASTM Committee G2 on Erosion and Wear.
+
+
+
+
+                                              31
+models and calculations that consider these results will be described in
+
+the next section.   The peak erosion angle of about 20° for ductile materials
+
+is ascribed to ploughing and cutting deformation processes with consideration
+
+also of particle fragmentation on impact.            Brittle material erosion peaks at
+
+90° incidence are related to the efficiency of crack formation around the
+
+impact crater.    The particle velocity dependence of erosion, variously measured
+                       2          3
+as proportional to v       to v       is still the subject of detailed investigation.
+
+In ductile materials the specific manner of deformation and cutting may de-
+
+termine the precise exponent value.            Recent theoretical results of Hutchings
+
+(1978) and Finnie and McFadden (1978) address this matter.
+
+        The effects of particle size on erosion rate also need further study.
+
+For example, relatively little effort has been made to study particle size
+
+distributions before and after erosion and to characterize the erosion
+
+debris. Particle fracture and fragmentation phenomena have been reported;
+
+however, the importance of such issues is not agreed upon.             Recently,
+
+Hutchings (1977) has proposed that the particle size effect (Fig. 21           )   is due
+
+to the variation in imposed strain rate on impact with particle size.
+
+        The role of embedded particles (or fragments) on steady state erosion
+
+also needs more study.       It appears that a layer of deformed metal and
+
+embedded particles forms as a result of the erosion of ductile material
+
+(Ives and Ruff,   1978).     The sizes of the embedded particles are generally
+
+much smaller than the incident particles, as a result of fragmentation
+
+upon collision at the specimen surface.             The mechanical properties of this
+
+mixed material surface layer and of the underlying material then determine
+
+the overall erosion behavior.            Characterization of the subsurface damage
+
+produced during erosion below this mixed layer is also needed.             It seems
+
+
+
+
+                                               32
+possible that in some systems a degree of protection may even result
+
+from the embedding or adhesion of incident material in this manner.
+
+     The detailed deformation and fracture processes that take place
+
+as a result of particle impact on metals are not yet adequately understood.
+
+It appears from limited studies of erosion debris   (Ruff,   1978) that,    even
+
+at low (30°) attack angles, little metal may be removed by direct cutting
+
+impacts.   Rather, plowing-type interactions producing extensive plastic
+
+deformation and displaced material create    a surface topography   (Fig.    27a)
+
+from which metal may be removed by subsequent particle impacts.      In
+
+view of the complex topography of eroded surfaces it will be necessary
+
+to further examine the theoretical models that presently describe the
+
+erosion process.
+
+     Recent studies of erosion microstructures in metals by Levy and coworkers
+
+1978) have also shown some interesting subsurface structures resulting from defori
+
+tion processes.    Erosion of an aluminum alloy specimen using spherical particles
+
+produced a surface structure comprised of rounded hills of rippled appearance.
+
+A deformed surface layer of material was found that appeared to detach
+
+from the surface by a delamination type of process.    Studies of this
+
+mechanism are reportedly continuing.
+
+
+
+
+                                       33
+B.   CERAMICS
+
+     1.         Results;
+
+                The main parameter that controls the rate of erosion of materials
+
+is the particle velocity.                  A number of studies indicate that the erosion rate
+
+can be expressed as a power function of the particle velocity.                          As with
+
+metals (Finnie et al.           ,   1967, Sheldon and Kanhere, 1977), velocity exponents
+
+generally range from %2 to ^3 (Hockey _et al_                 .   ,   1978, Sheldon 1970).   Higher
+
+exponents have, however, been reported:                   6   for glass impacted with steel spheres
+
+(Finnie, 1960); 4 for MgF£ impacted with quartz, or silicon carbide (Gulden,
+
+1978);    4    for silicon nitride impacted with quartz, or silicon carbide
+
+(Gulden, 1978).            The value obtained for the velocity exponent of               a   given
+
+material apparently bears little relation to composition or microstructure of
+
+that material.             Thus, castable refractories, which are ^30 percent porous
+
+and have a multiphase structure, exhibit the same range of velocity exponents
+
+(2.3 to 3.9, Wiederhorn              et_   aJ, 1977) as dense, relatively homogeneous ceramics
+
+such as glass, hot-pressed silicon nitride, and high density aluminum oxide
+
+(Hockey       et_   al.,   1978).    In dense ceramic materials, grain size also has
+
+little apparent effect on the velocity exponent, even though it has a
+
+significant influence on the absolute rate of erosion.                          This insensitivity to
+
+composition and structure means that the velocity exponent is not a useful
+
+indicator for evaluating microstructural effects on erosion, or distinguishing
+
+between mechanisms of erosion.
+
+                    Studies on both ceramics and metals suggest that impingement
+
+angle is a more satisfactory indicator of erosion mechanism.                          As noted
+
+earlier in this chapter, ductile materials (metals) exhibit a maximum in
+
+the erosion rate at an angle of impingement of approximately 20°                         (Fig.    17).
+
+By contrast, brittle materials (ceramics) exhibit a maximum in the
+
+
+
+
+                                                     34
+            .
+
+
+
+
+erosion rate at an angle of 90°.           This type of behavior has been used to
+
+classify materials as either brittle or ductile with regard to erosion
+
+(Bitter, 1963, Neilson and Gilchrist, 1968, Sheldon 1970).             Actually, most
+
+materials exhibit behavior that is neither completely ductile nor completely
+
+brittle, and quantitative procedures have been developed to evaluate the
+
+relative amounts of brittle and ductile erosion that occurs for a given
+
+material-particle system.         Recent studies on ceramic materials indicate
+
+a   strong contribution of ductile behavior in these primarily brittle
+
+materials
+
+                Sheldon and Finnie (1966    a)   were the first to demonstrate a
+
+ductile-to-br ittle transition in ceramic materials.            They showed that at
+
+a   fixed velocity (^150 m/s) the erosion behavior depended on the size of
+
+the impacting particle.          Studies on glass, high-density magnesium oxide,
+
+and graphite indicated brittle type of erosion behavior for 127pm
+
+silicon carbide particles, whereas a change to a more ductile type of
+
+behavior was observed when the particle size was reduced to 9pm.             This
+
+change in behavior was quite dramatic for glass, which exhibited a
+
+strong maximum in the erosion rate at an impact angle of ^25°, as illus-
+
+trated in Fig. 28.          Moreover, microscopic studies of the eroded surfaces
+
+showed that the 127pm particles produced a chipped surface topography,
+
+wherease 9pm particles produced a ripple pattern, typical of ductile
+
+erosion,     (Fig.   29).    High density aluminum oxide, on the other hand,
+
+exhibited brittle erosion behavior for all particle sizes.             These results
+
+indicate a significant effect of target material properties, even among
+
+materials that generally behave mechanically in a brittle fashion.
+
+                In a more recent discussion of the erosion behavior of materials,
+
+Sheldon (1970) noted the importance of tangential forces in the wear
+process.        For normal impact the erosion of brittle materials is propor-
+
+tional to v^, where          is the particle velocity and b is the power exponent.
+
+If   only brittle behavior were occurring at an oblique impact angle, then
+                                                                                 5
+the erosion rate, w, might be expected to be proportional to (v           sin a)*    ,
+                                                                      q
+
+where a is the impact angle.        By plotting In w as a function of In
+
+(sin a), Sheldon determined that, although the data fit straight lines, the
+
+power function b was not the same as that determined from velocity studies
+
+using normal impact angles.        He concluded from these results that tangential
+
+forces contribute to the wear of brittle materials.
+
+                In a study of the effect of temperature on erosion. Hockey    et_ a_l. ,
+
+
+(1978) also demonstrated that plastic flow processes occur during the erosion of
+
+brittle materials.        The erosion rate of glass, silicon nitride, and
+
+aluminum oxide was measured as a function of temperature and impingement
+
+angle using ^150ym silicon carbide particles as the erosion agent.
+
+Although a low angle maximum in the erosion rate was not observed in
+
+these studies, there did seem to be a significant enhancement of the
+
+erosion rate at low angles of impingement. Fig. 30.        These findings were
+
+consistent with those reported earlier by Sheldon (1970)      .   It was concluded
+
+that wear generally occurs by a mixed mode of erosion, with the ductile
+
+processes becoming increasingly more important with decreasing angle of im-
+
+pingement   .
+
+
+
+
+                The above conclusions on ductile behavior are also supported
+
+by optical and scanning microscopy studies of erosion surfaces.           Ceramic
+
+materials eroded at an impingement angle of 90° exhibit a rough, chipped
+
+surface indicative of material removal by a fracture process (Fig. 31).
+
+By contrast, erosive wear at 15° results in relatively smooth surfaces
+
+that are characterized by furrows, or wear scars, which indicate material
+
+
+
+
+                                           36
+removal by a plowing mechanism, Fig. 32.        Lateral cracks form at the
+
+margins of the wear scars, undoubtedly contributing to the wear process.
+
+This evidence for ductile erosion is consistent with single particle
+
+impact experiments (described above)   ,   which show extensive deformation
+
+in the impact area and a significant decrease in the incidence of fracture
+
+for low angles of particle impingement.
+
+       2.   Interpretation
+
+            The results presented in the previous section point to the
+
+importance of plastic deformation in the erosion process.        Subsurface
+
+plastic deformation at the impact site results in residual stresses that
+
+cause lateral crack formation and surface chipping, so that erosion
+
+appears to occur primarily by a brittle fracture process.        The role of
+
+plastic deformation, relative to fracture, is enhanced by reducing the
+
+impact load during erosion.     This can be accomplished by reducing the
+
+impact velocity, the particle size, or the angle of impingement.        When
+
+the impact load falls below a critical value, fracture does not occur,
+
+and erosion occurs by plastic deformation processes.        In this section,
+
+a   discussion is presented of the theories that have been used to explain
+
+plastic processes in ceramic materials; these theories are applied to
+
+explain effects of particle size, impingement angle and temperature on
+
+erosion.    Conditions that define the brittle to ductile transition for
+
+erosion of ceramics are also discussed.
+
+            Sheldon and Finnie (1966 a) were the first to provide a theoret-
+
+ical framework for understanding the transition from brittle to ductile
+
+erosion in ceramic materials.     For impact that can be approximated by
+
+quasi-static loading under Hertzian loading conditions, they noted that
+
+fracture of brittle materials is described by Auerbach's law.        From
+
+these relations, the condition for fracture can be expressed in terms
+
+of the maximum radius of contact and the impact load.        Plastic flow
+
+                                           37
+                                                                                                .
+
+
+
+
+during impact is determined by the impact load and the hardness of the
+
+material.              Two equations were obtained by Sheldon and Finnie (1966 a).
+
+Both related the contact load to the impact radius:                                                                one equation was
+                                            3/2                                                                                            2
+for fracture (F                   °c   a            )   ;   the other was for plastic deformation (F                                   a       )   .
+
+                            m                                                                                                      m
+At high impact loads (i.e. high particle velocities; large particle
+
+mass), the equations predict a lower load for fracture than for deforma-
+
+tion; thus fracture dominates the impact process at high impact loads.
+
+At low impact loads the reverse is true; plastic deformation dominates
+
+the impact process.                         A maximum load for ductile impact was determined by
+
+setting the equations equal to one another.                                                         Following this procedure,
+
+Sheldon and Finnie (1966 a) estimated that fracture of glass occurred when
+
+the contact radius during impact was greater than vlOym.                                                                This estimate
+
+was about one order of magnitude greater than that observed experimentally.
+
+                      A more realistic investigation of the impact problem was
+
+conducted by Evans, Gulden and Rosenblatt (1978).                                                                For sharp particle
+
+contact,              Eq.   (7)        provides a relation between the critical load
+
+for fracture and the material parameters K                                                          and H.        Evans et al.   (1978)
+                                                                                            c
+
+converted the impact load to an impact velocity using a dynamic treatment
+
+of the impact event.                            They showed that the critical velocity for fracture,
+
+v    ,    was related to K                          and H through the following equation:
+                                                c
+                                            2               3/2                                                  1/2
+          v       >   (0/4 tt)     (K           /r H              )   (1+Z /Z        )   /[ Pp (Z        /Z )]                                         (13)
+              c                         c                                    t   p                   t     p
+
+where 0 is a constant' (v0.2),                                        r     is the particle radius,                       is the
+
+particle density, and                                   and               are the elastic impedances of the target
+
+and particle respectively.                                        Although           Eq.     (13)        is only applicable
+
+to radial crack formation,                                    the dependence of the fracture threshold on K                                        ,
+
+
+
+
+H,   p,       etc., probably also applies for lateral crack formation.
+
+                      The procedure used by Evans                                    et_   al        can also be applied to the
+
+elastic-plastic theory discussed by Wiederhorn and Lawn (1977)                                                               (also
+
+
+
+
+                                                                                 38
+see Chapter 1)             to obtain the following equation for the velocity threshold:
+
+                                      1/4              2   2       3/4           1/2           3            5/2
+        v        =    (2.25Trtan^)”         (54 47/q 0
+                                               .               )         (a/m)         K               H~                      (14)
+            c                                                                              c
+
+where       n,       0 and a are constants discussed above                   (see eqn.                  6    and 7), and
+
+2\p   is the included angle of the contacting point of the impacting particle,
+
+(Wiederhorn and Lawn, 1979).                  Although these two equations are functionally
+
+different, both predict a dependence of the threshold velocity on the
+
+hardness and critical stress intensity factor of the target material,
+
+and on the size and density of the impacting particle.                                                 Both theories
+
+predict an increase in the threshold velocity for cracking as the particle
+
+size is made smaller.                  This prediction is in qualitative agreement with
+
+the data of Sheldon and Finnie discussed above (1966 a)                                            ,    which showed
+
+that a transition from brittle to ductile erosion occurs as the size of
+
+the silicon carbide particles is decreased.                                A closer comparison of
+
+theory and experiment is not possible, however, because Eq.                                                   (13) and
+
+(14)    give threshold conditions for radial crack formation.                                                 To predict
+
+threshold conditions for erosion, a similar equation would have to be
+
+derived for lateral crack formation.                           Nevertheless, it is probable that
+
+the threshold velocity for lateral crack formation has a similar dependence
+
+on target and particle properties and thus also depends on stress intensity
+
+factor, hardness, and particle size and density in a way that is similar
+
+to that given in Eq.              (13) and     (14).
+
+                      Equations (13) and (14) are useful for discussing the dependence
+
+of erosion on temperature.                   The critical stress intensity factor and the
+
+hardness are the only materials variables in Eq.                                  (13) and                  (14)   that
+
+depend on temperature; therefore, the effect of temperature on the
+
+brittle-to-ductile transition will be determined by the behavior of
+
+ these variables as the temperature is increased.
+
+                      Investigations of the effect of temperature on K.                                       suggest modest
+
+changes in K              as the temperature is increased.                       Studies on sapphire (Wiederhorn,
+
+                                                           39
+Hockey and Roberts, 1973), for example. Indicate a decrease in K                                      from
+                                                                                                  c
+                1/2                    1/2
+a-2.4   MPa-m          to ol.8 MPa-m         as the temperature is increased from room
+
+temperature to 800°C.          Similar results are obtained for chemical borosili-
+
+cate glass (C7740) and for silica glass (C7940)                        (Wiederhorn, Johnson,
+
+Diness and Heuer, 1974), which showed very little change in K                                    as the
+                                                                                         c
+
+temperature is increased from room temperature to o600°C.                              On the other hand,
+
+hot pressed silicon nitride (HS-130) exhibits a substantial change in K
+                                                                                                             c
+
+as the temperature exceeds 1200°C (Evans and Wiederhorn, 1974), but this
+
+increase in            has been shown to be strain-rate dependent.                      Thus under
+
+impact loading conditions,               has almost the same value at 1300°C as at
+
+room temperature (Mendiratta            et_ al_. ,    1977, Gonazy and Johnson, 1978).                       A
+
+similar finding was obtained on single crystal silicon for which the
+
+ductile-to-brittle transition (determined by K                         measurements) increased
+                                                               c
+
+from 'WOO°C to n-950°C as the loading rate increased from 5x10                               ^    cm/min
+          _2
+to 5x10         cm/min (St, John, 1976).             These results again suggest that for the
+
+dynamic loading conditions expected during impact, the critical stress
+
+intensity factor of ceramic materials is not dependent on temperature.
+
+                Measurements of the hardness of ceramic materials, however, do
+
+indicate a substantial decrease in hardness as the temperature is increased.
+                                                                                                             2
+The hardness of aluminum oxide, for example, decreases from ^2000 Kg/mm
+                                              2
+at room temperature to ^500 Kg/mm                 at 500°C (Westbrook, 1966)             .        Similarly,
+                                                                                   2
+the hardness of magnesium oxide decreases from                     r   v-800 Kg/mm*"   at room
+
+                                  2
+temperature to ^100 Kg/mm             at 1000°C while that of quartz decreases from
+
+                 2                                             2
+vllOO Kg/mm           at room temperature to ^200 Kg/mm                at 900°C (Westbrook,               1966)   .
+
+
+
+
+Similar results are obtained on other materials as the temperature is increased.
+
+Assuming that             remains constant as the temperature is increased, these changes
+
+
+
+
+                                                      40
+        .                                      .                        .                               .
+
+
+
+
+in the hardness would have significant effects on the ductile- to-brittle
+
+transition for erosion.                Depending on the properties of the target
+
+material, and the theory used to predict the transition velocity,
+
+expected increases in v^ at 1000°C range from 10 to 100 times that
+
+predicted at room temperature.                          These increases in v^ are of the same
+
+magnitude as would be expected if the particle size were reduced by a
+
+factor of 10, as in the experiments by Sheldon and Finnie (1966 a)
+
+Studies of the erosion of ceramic materials do not support the predicted
+
+increase in v            .   For the materials investigated, temperature appears to
+
+have a small effect on the erosion rate of dense ceramic materials (Hockey,
+
+et al       ,   1978).       Furthermore, direct examination of impact sites by
+
+transmission electron microscopy gives little indication of a significant
+
+enhancement of the plastic zone at the contact site as the temperature
+
+is increased         (Hockey, et al                ,   1978).        From this evidence we conclude
+
+that the significant parameter in                           Eq.       (13) and      (14)   is not the static
+
+hardness just discussed, but the dynamic hardness (i.e., hardness measure-
+
+ments made using impulse load conditions)
+
+                  Except for one study on soda-lime-silicate glass (Gunasekera
+
+and Hollaway, 1973), dynamic hardness measurements have not been made on
+
+ceramic materials.                The study by Gunasekera and Hollaway on soda-lime-
+
+silicate glass was conducted at room temperature using load durations
+                             -3            5
+ranging from olO                  to ol0       s.       Over this range, the hardness of freshly
+
+cleaved glass surfaces was found to increase from 0-3.5 GPa for a 10
+
+sec.    load duration to 08            .   5   GPa for a 10                 sec.   load duration.    When one
+
+considers that the impulse time for small particles impacting                                        glass
+
+surfaces is of the order of microseconds, then the importance of dynamic
+
+hardness to the erosion process becomes apparent.
+
+
+
+                                                                41
+                  Dynamic hardness measurements have been made on indium as a
+
+function of temperature (Silverio, 1963).            A ballistic pendulum was used
+                                -2
+for impact times of ^10              sec. and a falling ball for impact times of
+      -4
+^10        sec.     His study showed that for the temperature range -196°C to
+
+130°C, the hardness increased as the load duration decreased.                   For times
+           -4
+of ^10          sec., a maximum value of the hardness was approached regardless
+                                                              -4
+of the temperature.           Thus, for times less than ^10        sec.    the dynamic
+
+hardness was found to be independent of temperature.                If this result
+
+could be generalized, then the ductile-to-brittle transition for the
+
+erosion of ceramics would not depend on temperature, since neither K                     ,
+                                                                                     c
+
+nor H in Eq.         (13)   and (14) would depend on temperature.         Clearly,
+
+additional experimental work on dynamic               and H is needed to fully
+
+characterize the effect of material parameters on the erosion of ceramics.
+
+
+
+
+                                               42
+                            IV.     THEORIES OF EROSION
+
+
+
+A.   DUCTILE MATERIAL MODELS
+
+     The earliest consideration of ductile processes of erosion is due to
+
+Finnie (1960), who considered a micro-machining mechanism as a model.                        He
+
+treated the problem by assigning a plastic response character to the material
+
+through a flow stress, o^.          The trajectory of a particle cutting and removing
+
+material was calculated, and the eroded volume, V, was determined to be given
+
+by the expression:
+                                2
+                           mV
+                     V =
+                     T7
+                             o                                                (15)
+                           opra- « <“>
+
+
+
+where m is the particle mass, v             the impact velocity, K the ratio of vertical
+                                        q
+
+force to horizontal force on the particle, and d the depth of cut.                   g(ot)    is a
+
+function describing the effect of attack angle              a.   This approach was quite
+
+successful in explaining many features of solid particle erosion.                    However,
+
+quantitative discrepancies arose concerning the effect of flow stress, the
+
+velocity exponent, and the applicability of the model itself for attack angles
+
+near a = 90°.   Recent refinements of the original analysis by Finnie and
+
+McFadden (1978)^ in which the interaction force between the particle and the
+
+target surface is modif iedjhave led to velocity exponents of about 2.5, which arc
+
+more closely those found by experiment.              Earlier, Bitter (1963) considered an
+
+indentation deformation process                     to occur near a = 90°, as well as the
+
+cutting process embodied in Finnie' s model.              By considering the energies
+
+involved in these processes. Bitter was able to develop an expression to
+
+better account for erosion at all attack angles.                 This theory, as well as that
+
+
+
+
+                                               43
+                                                                                                           .
+
+
+
+
+of Nielson and Gilchrist     (1968) requires experimentally determined parameters
+
+for complete application.         Tilly (1973) has proposed a two stage mechanism
+
+of erosion recognizing explicitly that particles impacting at near-normal
+
+incidence may fragment and the fragments may subsequently erode exposed
+
+surface features.     He was able to account for a reported decrease of erosion
+
+with decreasing particle size and introduced the concept of a minimum particle
+
+size for effective erosion.
+
+        As previously described, Sheldon and Kanhere (1972) have examined the
+
+mechanism of single particle erosion of ductile materials.                      They then developed
+
+a method to describe the deformation and machining actions observed using
+
+indentation theory and an energy balance equation.                      Their results differ from
+
+previous calculations, giving the erosion volume as
+
+                              ,3                      ,3/2
+                              d     v3       ,
+                                             (p       )
+                                     o            P                                     (   16 )
+                       V
+                                             3/2
+                                         H
+
+
+where d is the (spherical) particle diameter,                        the particle density, and
+
+H the Vickers hardness value of the material.                      This theory leads to a greater
+                                                                                                   2
+velocity dependence than expected from energy arguments (proportional to v                             )
+
+
+
+
+        Recent studies by Winter and Hutchings (1975) and Hutchings (1977),
+
+1978)    into the mechanisms of single particle erosion have led to suggestions
+
+of several significant impact processes and materials parameters.                      One
+
+important mechanism they report involves adiabatic shear (thermally localized
+
+deformation)   .   Titanium in particular appeared sensitive to local thermal
+
+effects due to particle energy release.                      As a result, detachment of small meta]
+
+chips took place more frequently from the ploughed metal at the impact crater
+
+in titanium than in steel specimens similarly impacted.                      A second consideration
+
+involves the deformation strain rate applied to a material as a result of
+
+particle impact.      For small particles (<100|jm) they found that high strain
+
+
+
+
+                                                             44
+rates (e) are an important consequence of impact.          Calculations showed that
+
+e   11   (particle radius)   \ reaching values of the order of 10^ sec ^ for
+5ym particles and a velocity of the order of 100 m/sec.          Material response
+
+at such high strain rates is not well known; such data are needed for an
+
+improved understanding.        Based on single particle impact observations,
+
+Hutchings (1978) has developed a formulation of the deformation process.
+
+The two curves shown in Fig.       6   are predictions of that numerical theory using
+
+one material parameter, the indentation pressure.          The original papers should
+
+be consulted for further details.          It is an interesting feature of this theory
+
+                                                             2
+that the velocity dependence of erosion varies from v^ to slightly higher
+
+values depending on the detailed mechanism assumed.
+
+         Recent studies of eroded specimen structures that have been discussed
+
+in prior sections of this article show that erosive impact and wear are complex
+
+processes.       It would appear that results from studies currently underway may
+
+lead to new or modified erosion models involving a more accurate understanding
+
+of the physical processes involved.          An improved theoretical capability for
+
+erosion prediction should then result.
+
+
+
+
+                                             45
+B.   BRITTLE MATERIAL MODELS
+
+     Two models of erosion have been developed for brittle materials:
+
+one is based on the assumption that erosion occurs entirely by crack
+
+propagation and chipping (Sheldon and Finnie, 1966 b)   ;   the other is
+
+based on the assumption that plastic deformation contributes to the
+
+process of crack formation and surface chipping (Evans, Gulden and
+
+Rosenblatt, 1978).    Erosion rates are predicted in terms of both target
+
+(fracture toughness, hardness, flaw density, etc.) and particle (velocity,
+
+density, size, etc.) properties.     The models assume that particle impact
+
+is normal to the target surface, and that erosion is the result of
+
+cumulative damage of non-interacting, single particle impacts.            As will
+
+be shown below, these theories predict various aspects of erosion data
+
+for ceramic materials.
+
+      The model proposed by Sheldon and Finnie (1966 b) assumes that
+
+erosion occurs as the result of Hertzian contact stresses during impact.
+
+These stresses cause cracks to grow from preexisting flaws in the target
+
+surface.   The load at which crack propagation occurs is related to the
+
+distribution of surface flaws through the Weibull statistics.            The
+
+approximate area. A, of cracked material is calculated for a particle
+
+penetration depth of h, and the volume removed per impact is set
+                                                                 *
+proportional to Ah.    The final equation for the erosion rate       ,   W,    is
+
+expressed in terms of the particle size, r, the particle velocity, v                ,
+
+
+
+
+and Weibull constants, m and o   :
+
+
+
+
+                W =      rV5
+                                                                                        (17)
+
+
+
+
+*Sheldon and Finnie (1966 b) expressed their results in terms of grams
+lost per gram of impacting particle.
+
+
+
+
+                                       46
+          .
+
+
+
+
+where the exponents a and b are given by:
+
+                        a = 3(m-0. 67) / (m-2)         for round particles
+
+                        a = 3 6 (m-0. 67) / (m-2)
+                              .                        for angular particles
+
+                        b = 2. 4 (m-0. 67) /(m-2)      for either shape
+
+For particles much stiff er than the target, the constant,                                     ,   is given
+
+by:
+
+              ,         0. 8(m+l) /(m-2)       1 2 (m-0. 67) / (m-2)
+                                                .                              -2m/ (m-2)                         (18)
+              k =E                         p                           a
+                  1                                                        o
+
+
+where E is the modulus of elasticity of the target and                                  p   is the density
+
+of the particle.
+
+              Sheldon and Finnie (1966 b) compared the experimentally determined
+
+exponents, a and b, with theoretically predicted exponents and obtained
+
+satisfactory agreement for several brittle materials (glass, MgO, Al-,0^,
+
+graphite).            In a later paper, Sheldon (1970) compared experimental and
+
+theoretical value of k^ and again found reasonable agreement between
+
+theory and experiment; however, the agreement was not as good as                                       that for the
+
+exponents a and b.            Although the theory by Sheldon and Finnie (1966 b)
+
+provides a reasonable description of erosion in brittle materials, its
+
+physical basis must be questioned because it assumes Hertzian crack formation,
+
+whereas lateral crack formation is the main cause of material removal during
+
+erosion.      The recent theory by Evans              e_t   a^.   (1978) explains erosion in
+
+terms of experimental crack behavior during single particle impact
+
+events, and thus takes into account lateral crack formation during
+
+erosion
+
+                  The erosion model developed by Evans              et^        al   .   assumes that the
+
+erosion rate is proportional to the amount of material removed by each
+
+impact event.            The volume, V, lost per impact is calculated from the
+
+depth, h, of penetration and the maximum size of the lateral cracks
+
+
+
+                                                       47
+formed during impact.                     Since the lateral crack size is proportional to
+
+the radial crack size c                       ,   V is given by the following equation:
+                                          r
+
+
+                   „ ^ ire            2       ,
+                   V v                        h                                                                             (   19 )
+                                  r
+
+
+Substituting semi- empirical expressions for c                                       ,   Eq.   (11), and h,
+
+Eq.   (12),   into Eq.       (19), the following equation is obtained for the
+
+erosion rate:
+                   „ a                19/6 11/3 19/12                    -4/3       -1/4
+                   V         v                    r    p         K              H                                           (   20 )
+                                  o                                  c
+
+              The elastic-plastic theory used by Wiederhorn and Lawn (1979)
+
+can also be applied to the development of an erosion theory.                                               Assuming that
+
+the lateral crack size is proportional to the radial crack size, and that
+
+the depth of the lateral cracks is proportional to the maximum particle
+
+                             1/3              2/3 -1/3
+penetration, h     (<*   m            v          H     ), then the following expression for the
+                                          q
+
+wear rate can be derived from Eq.                          (9)       and (19):
+
+
+                                  22/9 ll/3 11/9 -4/3 1/9
+                   v « v              r         k    h                                                                          (   21 )
+                              o                              c
+
+
+              The velocity and particle size exponents of Eq                                       .   (17).   (20)   and
+
+(21) are compared with experimental data in table 1.                                           The predicted particle
+
+size exponent is approximately the same for the three theories, the exponent
+
+for the elastic theory being slightly larger than the other two.                                                 The velocity
+
+exponents for the three theories also have similar values, the elastic theory
+
+exponent (Eq.     (17)) having a value intermediate between those of the two elastic-
+
+plastic theories.            The elastic-plastic theories assume                                   the two exponents
+
+ to be independent of target and particle properties, whereas the elastic contact
+
+ theory predicts a dependence of the exponents on the Weibull parameter,
+
+m.    The elastic-plastic theories also predict a dependence of erosion rate
+
+ on target hardness and toughness, which are assumed to be the pertinent
+
+
+
+
+                                                                 48
+            .
+
+
+
+
+material        parameters for erosion.        In contrast, the elastic theory uses
+
+the Weibull constant, a       ,   and the modulus of elasticity as the pertinent
+
+material parameters.        Evans   et^ a!L.   (1978) have presented some experimental
+
+evidence to show that the erosion of ceramic materials depends on               ,
+
+
+
+
+and H in the manner described by equation 20.              Similarly, Sheldon (1970)
+
+and Sheldon and Finnie (1966b) presented evidence to support the elastic
+
+theory of erosion.        Although the erosion theories discussed above are
+
+supported by erosion data, the functional dependence of these theories
+
+on material properties differ significantly, so that additional experimental
+
+testing should enable one to differentiate among the three and provide
+
+evidence as to which one more accurately describes the erosion process.
+
+Considering the complexities of the erosion process and the simplifying
+
+assumptions used to derive models of erosion, additional theoretical and
+
+experimental work will be needed to further our understanding of brittle erosion
+
+processes
+
+
+
+
+                                                49
+             .
+
+
+
+
+c.   OTHER CONSIDERATIONS
+
+     Other processes can take place upon particle impact and should be discussed
+
+in connection with erosion mechanisms.              One involves the possibility of surface
+
+melting as       a   result of localized energy release on impact.        Smeltzer et al.   (1970)
+
+studies eroded metal specimens using replica electron microscopy and reported
+
+surface structures and metal particle shapes suggesting the occurrence of
+
+local melting.          Recently, Jennings   et_ cil.   (1976) reported observations of
+
+surface and particle morphologies that suggested melting had occurred in
+
+erosion studies of several metals at particle velocities of 145 m/s.                In addition,
+
+Christman (1977) has studies the effects of single projectile impacts on
+
+aluminum alloys.          He concludes from metallographic examination that localized
+
+deformation producing intense shear bands is a characteristic feature.                Studies
+
+of the surfaces of ejected metal chips revealed, in a few cases, structures
+
+suggesting that local melting (Fig. 33) was involved in the separation process
+
+for particle velocities of 185 m/s.            In this example, melting was localized in
+
+the immediate area where the chip separated from the specimen surface.                While
+
+high velocity particle impacts might be expected to produce such effects, this
+
+finding has not been reported by other workers in lower velocity ranges, below
+
+100 m/s.     Hutchings (1978) has estimated the expected local temperature rise
+
+based on observations of impact crater geometry.               He concludes that increases of
+
+up to 500°C could occur at velocities of 100 m/s but that actual melting would
+
+appear unlikely.          Such a phenomena would of course be more probable under
+
+conditions of high temperature erosion provided that surface films were
+
+penetrated
+
+
+
+                                                  50
+              .
+
+
+
+
+        Reports of correlations between erosion rate and other physical
+
+properties of materials have also appeared.         Ascarelli (1971) introduced
+
+a quantity "thermal pressure"      which is proportional to the product BK’AT.
+
+Here    6   is the linear thermal expansion coefficient, K is the bulk modulus,
+
+and AT the difference between the exposure temperature and the melting
+
+temperature of the material being eroded.        He reported an inverse propor-
+
+tionality of this quality with volume erosion rates of many metals.
+
+Hutchings (1975) has noted a similar correlation for the quantity              C   pAT
+
+where         is the material specific heat and p   the density.   There are not
+
+sufficient data available on alloys to test either of these correlations
+
+further, and possible mechanisms involving such parameters have not been
+
+developed
+
+        Studies of erosion at elevated temperatures have been carried out to
+
+a limited extent in recent years.       However, it has not yet proven possible
+
+to develop an adequate theory giving the temperature dependence of erosion
+
+rate.       In most cases environmental reactions also take place, producing surface
+
+films on the material or otherwise complicating the analysis.               Further
+
+experimental work will be required in relatively simple systems in order to
+
+clarify this issue.       In particular, microscopic characterization of the
+
+subsurface deformation structures should be revealing, particularly in
+
+comparison to the structures found on room temperature erosion (Ives and
+
+Ruff, 1978 a, b)     .   It is also apparent that the erosion dependence on
+
+attack angle, particle velocity and other parameters may be signif icant ly
+
+different at elevated temperatures than at 20°C (Finnie        et_ a_l. ,    1978)   .
+
+
+
+
+                                            51
+     As indicated earlier in this review, erosion is one form of material
+
+wear and as a result there may be similar processes involved in other types
+
+of wear.   In particular, two-body abrasive wear theories have previously
+
+invoked the occurrence of similar particle cutting and plowing
+
+processes (Rabinowicz, 1970) to those thought to be involved in erosion.
+
+Geometrically, however, abrasive wear involves only tangential interactions
+
+between the particles and contact surface.   Comparative studies of wear
+
+debris, wear surface and subsurface structures produced by different wear
+
+modes have not been reported, although such comparisons would be of interest.
+
+A current study of erosion and abrasion in mild steel (Ruff, 1978) has
+
+indicated some potential connections.   Figure 34 shows the structure of an
+
+abraded surface and the recovered wear debris resulting from dry, two-body
+
+abrasion using 50pm Afi^O^ particles.   These results can be compared with
+
+those from solid particle erosion shown in Fig. 27 involving the same metal
+
+using the same abrasive.   It appears that in both cases, much of the wear
+
+debris is produced from plastically displaced material associated with the
+
+impact craters and the abrasion grooves on the exposed surfaces.    Subsurface
+
+structure comparisons are being conducted for these same exposures.
+
+
+
+
+                                        52
+                        V.   SIGNIFICANT PARAMETERS
+
+
+
+     The general question of material parameters, of both eroded and eroding
+
+materials, and their effect on erosion rate is of considerable interest.
+
+Indentation hardness of the eroded material is a commonly used and yet
+
+apparently insufficient parameter.        Recent interest has turned to more
+
+thorough studies of all involved material characteristics, and hopefully
+
+some improved understanding will soon emerge.        The   additional complexities of
+
+environmental reactions and elevated temperature exposures, where surface
+
+film formation is a significant, competitive process, are presently under
+
+investigation in several laboratories.
+
+
+
+
+                                     53
+A.   ERODING PARTICLE CHARACTERISTICS
+
+     Many of the important properties of the eroding particles that determine
+
+erosion rates have been mentioned in earlier sections.       However, the relative
+
+importance of various parameters are not yet agreed upon in the literature
+
+and a listing here with brief comment seems valuable.        The particle character-
+
+istics that seem to be most important to the erosion process are as following
+
+(see also Finnie, 1972, Uuemois and Kleis, 1975):
+
+     1.   Particle shape   — For both ductile and brittle materials, more
+          effective erosion is generally found to be associated with angular
+
+          particles (Finnie, 1960).     Some basic understanding of rake angle
+
+          effects is emerging for ductile materials (Hutchings, 1977a).
+
+     2.   Particle size    — For ductile materials, relative erosion is essentially
+          independent of particle size for sizes greater than a critical
+
+          value.   Smaller sizes are less effective and a lower threshold
+
+          size (^5pm) for any erosion has been suggested.
+
+          For brittle materials, a strong
+
+          dependence of erosion rate and strength degradation on particle
+
+          size is predicted and some confirmation of these predictions
+
+          has been obtained.     Further work is required to fully
+
+          characterize the effect of particle size on the erosion of
+
+          brittle materials.
+
+     3.   Particle hardness    — For ductile solids, so long as the target
+          surface hardness is much less than the particle hardness, little
+
+          effect is expected except indirectly through particle fragmentation, or
+
+          other changes.     Theories of brittle erosion assume the particle
+
+          to be harder than the target; however, for many ceramic materials,
+
+          this assumption is not valid.        Experimental data by Gulden (1978)
+
+          suggest that particle hardness may be an important variable that
+
+
+                                          54
+          must be considered when characterizing the wear of brittle
+
+          materials.
+
+     4.   Particle frangibility     — For ductile materials, the effect of
+          particle fragmentation to provide additional erosion loss has
+
+          been described by Tilly (1973) and recently studied by Maji and
+
+          Sheldon (1978)   .   The increased erosion potential of abrasives
+
+          due to water     or impurity content may derive from an altered
+
+          tendency to fragment (Uuemois and Kleis, 1975).       Particle
+
+          frangibility has not been considered as variable in the erosion
+
+          of brittle materials, although it is known to occur in these
+
+          materials (Evans and Wilshaw, 1977).
+
+B.   ERODED MATERIAL CHARACTERISTICS
+
+     Many of the material parameters considered for the erosion behavior of
+
+materials are equally involved in other modes of wear.       These include:
+
+     1.   Surface hardness     — the        single parameter most often chosen to
+
+          describe ductile material erosion rate variation (see Fig. 13).
+
+          Within one alloy system, indentation hardness is frequently not a
+
+          valid parameter to describe erosion differences.       However,
+
+          Sheldon (1977) has suggested that fully abraded surface hardness
+
+          may be a more suitable quantity.       As noted in this review, dynamic
+
+          hardness is probably the more appropriate variable for character-
+
+          izing the erosion of either ductile       or brittle materials.
+
+     2.   Strain-rate sensitivity      — recent single particle studies on metals
+          (Winter and Hutchings, 1975; Hutchings, 1977) indicate that the
+
+          high strain rates associated with particle erosion may lead to
+
+          different deformation modes in different materials.       This
+
+          material characteristic has not been examined thoroughly
+
+          for either ductile      or brittle materials.
+
+
+
+
+                                            55
+3.   Grain orientation and grain size effects   — no systematic
+     studies of the details of these characteristics are available
+
+     for solid particle erosion processes.    However, Preece   ejt   al _.   (1978)
+
+     have recently studied such microstructural effects on cavitation
+
+     erosion.
+
+4.   Surface thermal parameters   — correlations between erosion rates
+     on the one hand, and thermal conductivities and specific heats on
+
+     the other hand, have been noted, but detailed explanations are
+
+     not available.
+
+5.   Toughness    — Because brittle materials erode by elastic-
+     plastic processes, the dynamic toughness (dynamic K-^) plays
+
+     an important role in the wear of brittle materials.     Measurements
+
+     of dynamic        are needed, both to rank brittle materials and to
+
+     develop a better understanding of the process of brittle erosion.
+
+
+
+
+                                     56
+c.   ENVIRONMENTAL EFFECTS
+
+     Some remaining significant considerations are;
+
+     1.   Impact energy release, surface heating and possible local
+
+          melting   — temperature effects on deformation may be
+          important in many cases.   Otherwise thermal effects may
+
+          only be significant for high temperature erosion.
+
+     2.   Abrasive bonding to the eroded surface    — the possibility of
+          chemical reaction and bonding to the eroded surface has been
+
+          noted in the literature for high temperature erosion processes.
+
+          This effect can significantly effect the erosion rate, offering
+
+          protection from mechanical damage at the possible expense of
+
+          chemical attack on the exposed surface.
+
+     3.   Atmospheric reaction   — the formation of substantial films on
+          exposed surfaces due to chemical reaction would be expected
+
+          in actual elevated temperature exposures.    It has been reported
+
+          that such films can alter erosion rates, particularly for
+
+          smaller particle sizes that are of the same order as the film
+
+          thickness.   This factor is discussed in Chapter   7.
+
+
+
+
+                                          57
+                      VI.   SUMMARY AND RECOMMENDATIONS
+
+
+
+     The aim of this review has been to examine briefly the current state
+
+of information on solid particle erosion phenomena.     Most recently, care-
+
+ful studies of single particle impact processes and of the micro-
+
+structure of the impacted, deformed region have produced new information
+
+that suggest basic erosion mechanisms.     It is clear that except for the
+
+simplest conditions, many different processes are involved; plastic defor-
+
+mation over a wide range of strain rates, thermal effects, crack growth,
+
+environmental effects, and others.    However, an improved understanding of
+
+the important aspects of the erosion problem seems to be emerging.      That
+
+understanding should greatly aid materials designers, even though some
+
+applications problems may always require empirical and statistically based
+
+approaches.   Analytical prediction capability of erosion rates under
+
+small variation of conditions may reasonably be expected in the near future.
+
+     In a rapidly developing field it is difficult to recommend detailed
+
+areas for concentrated activity.     New information is accumulating too
+
+rapidly for useful recommendations at this time.     However, some areas can
+
+be mentioned that either have lacked much attention or have yielded such
+
+valuable information as to be worthy of continued examination.
+
+     These would include:
+
+     — the dynamic effects of impact on materials
+     — the response of complex material microstructures to impact
+     — the effects of substantial surface films on erosion
+     — the role of material toughness and plastic flow properties
+     — the effect of environment on erosion
+
+                                         58
+Acknowledgements
+
+     Discussions with several staff members at NBS, particularly B. Hockey
+
+and L. K. Ives, on the subject of materials erosion are gratefully acknow-
+
+ledged.   One of the authors (SMW) gratefully acknowledges support of the
+
+Office of Naval Research.
+
+
+
+
+                                       59
+Table   1.    Comparison of velocity and particle size exponents for
+              various brittle erosion theories
+
+
+                                     ,       a           b
+                                 w = k r         v
+                                                     o
+
+
+                Theory                   a                          b
+
+             Elastic (Eq.(17))      ^4-4.2                   %2.6 ~
+
+             Elastic-Plastic         3.7                            3.2
+                (E q . ( 20) )
+
+
+             Elastic-Plastic         3.7                            2.4
+                (Eq. (21))
+
+             Experiment             3-4                         2    -
+          .                                 .                                                                  .       .                                      .
+
+
+
+
+                                                 REFERENCES
+
+Ascarelli, P.           (1971).     Army Materials and Mechanics Research Center
+
+Report No. TR-71-47.
+
+
+Ashford, J. P.            (1968), Special Ceramics - 4                                ,    The British Ceramic Research
+
+Association (Stoke-on-Trent)
+
+
+Auerbach, F.        s   (1891), Ann. Phys. Chem.                     ,       43   ,       61.
+
+
+Bitter, J. G. A.              (1963).   Wear 6, 5-21, and                                 6_,    169-190.
+
+
+Chaudhri      ,
+                  M. M.   ,
+                              and Walley,       S.       M.   ,
+                                                                   (1978), Fracture Mechanics of Ceramics - 3.
+
+Flaws and Testing, Plenum Press (New York).
+
+
+Christman, T. K.              (1977).   Thesis, Ohio State University.                                                          P.   Shewmon,
+
+Advisor
+
+
+Engel, P. A.            (1976).     Impact Wear of Materials, Elsevier, N.Y.
+
+
+Evans, A. G.,            (1973), J. Am. Ceram.                    Soc    .    56      ,
+                                                                                            405-9.
+
+
+Evans, A. G. and Wiederhorn,                    S.       M.       (1974), J                     Mat   .       Sci          ,   9,    270-278.
+
+
+Evans, A. G. and Wilshaw, T. R.                      ,    (1976), Acta Met. 24                                     ,       939-56.
+
+
+Evans, A. G. and Wilshaw, T. R. ,                         (1977), J               .       Mat    .    Sci          ,       12 , 97-116.
+
+
+Evans, A. G., Gulden, M. E., and Rosenblatt, M. E.                                                        ,    (1978), Proc              .    Roy   .   Soc       .
+
+
+
+
+in press.
+
+
+Finnie, I.         (1960), Wear 3, 87-103.
+
+
+Finnie, I., Wolak, J. and Kabil, Y.                                (1967). J. of Materials 2, 682-700.
+
+
+Finnie,       I.   (1972).        Wear 19, 81-90.
+
+
+Finnie,       I.   (1978).        Proceedings of the ASTM Symposium                                                    " Erosi on:           Pr even t ion
+
+and Useful Applications ," STP 664.
+                  ,,                                                               .                                     .                            .
+
+
+
+
+Goebel, J. A. and Pettit, F. S.                                     (1976).    Pratt and Whitney Report No.
+
+75-200-7107-3.                     See also Walker, D.A., Williams, M.C., and House, R.D.                                                          (1975).
+
+Proceedings of the Minnesota Symposium on Laser Anemometry.                                                                  (U.       Michigan)
+
+
+Goebel, J. A. Pettit, F.                              S.   and Spriggs, D. R.                  (1976).            Pratt and Whitney
+
+Report No. 75-200-7107-4.
+
+
+Gonczy, S. T. and Johnson, D. L.                                     (1978), Fracture Mechanics of Ceramics -                                         3 ,
+
+
+Flaws and Testing                   ,    Plenum Press (New York)
+
+
+Goodier, J. W.                 (1965), Proceedings of the Seventh-Hypervelocity Impact
+
+Symposium     ,        3^,    215.
+
+
+Goodwin, J. E., Sage, W.                          ,
+                                                       and Tilly, G. P.                (1969).                Proc.     Inst. Mech. Engrs.
+
+184   ,
+          279-292.
+
+
+Grant, G. and Tabakoff, W.                                 (1975), J. Aircraft 12                    ,
+                                                                                                          471-478.
+
+
+Gunasekera,              S.    P.       and Holloway, D. G.                 (1973) Phys.                  Chem. Glasses            ,
+                                                                                                                                        14 ,      45-52.
+
+
+Gulden, M. E.,                 (1978), Proceedings of the ASTM Symposium, "Erosion                                                      :
+
+
+
+
+Prevention and Useful Applications," STP 664.
+
+
+Hockey, B. J.,                 (1971), J. Amer                  .   Ceram. Soc         54_,    223.
+
+
+Hockey, B. J., and Lawn, B. R.                                  ,   (1975), J. Mails.                    Sci.    10 ,    1275.
+
+
+Hockey, B. J., Wiederhorn, S. M. and Johnson, H.,                                                        (1978), Fracture Mechanics
+
+of Ceramics - 3, Flaws and Testing , Plenum Press (New York)
+
+
+Hutchings,             I.     M.    and Winter, R. E.                    (1974).        Wear 27           ,
+                                                                                                               121-128.
+
+
+Hutchings,             I.     M. and Winter, R.                     E.   (1975). J. Phys. D: Appl. Phys. ,                                  8^,    8-14.
+
+
+Hutchings,             I.     M.    (1977a).               Int. J. Mech,       Sci.           19 ,       45-52.
+
+
+Hutchings              I.     M.    (1977b).               J.   Phys. D: Appl. Phys.                      10,    179-183.
+
+
+Hutchings              I.     M.        (1978).        Proceedings of the ASTM Symposium "Erosion:
+
+Prevention and Useful Application," STP 664.
+
+Ives, L. K.                  (1977). J. Engrg. Matls. and Tech ., Trans ASME 99, 126-132
+
+Ives, L. K. and Ruff, A. W.                                 (1978a).       Wear 46        ,
+                                                                                               149-162.
+                                                           .                                                          .                   .
+
+
+
+
+Ives, L. K. and Ruff, A. W.          (1978b).        Proceedings of the ASTM Symposium
+
+"Erosion:     Prevention and Useful Applications"                          ,   STP 664.
+
+
+Kirchner, H. P. and Gruver, R. M. , (1977), Mat. Sci. and Engr.                                                       ,       28 ,    153-60.
+
+
+Langitan, F. B., and Lawn,          B.    R. ,   (1970), J. Appl. Phys. 41 , 3357.
+
+
+Lawn, B. R. and Swain, M. V.,             (1975), J. Mater. Sci.                         ,        10 ,         113.
+
+
+Lawn, B. R. and Wilshaw, T. R.             (1975), J. Mater. Sci. , 10                                     ,
+                                                                                                                1049-81.
+
+
+Lawn, B.R., and Fuller, E.R.         ,    (1975), J. Mater. Sci.                         ,        10 ,         2016-24.
+
+
+Lawn, B. R.   ,
+                  and Evans, A. G. ,       (1977), J. Mater. Sci.                             ,       12 ,      2195-99.
+
+
+Lawn, B. R. and Marshall, D. B.             ,    (1978), Fracture Mechanics of Ceramics                                                       -   3 ,
+
+
+Flaws and Testing      ,    Plenum Press (New York)
+
+
+Levy, A. V.       (1978), Private Communication.
+
+
+Maji, J. and Sheldon, G. L.          (1978).         Proceedings of ASTM Symposium
+
+"Erosion:     Prevention and Useful Applications ",                             STP 664.
+
+
+Mendiratta, M. G., Wimmer, J., Bransky, J.                     (1977), J                  .       Mat      .    Sci       ,    12 ,       212-214
+
+
+Mills, D. and Mason, J. S.          (1977).        Wear 44     ,       311-328.
+
+
+National Research Council (1977).                  Erosion Control in Energy Systems                                                  ,    pp.22S
+
+
+Neilson, J. H. and Gilchrist, A.                 (1968).   Wear 11                  ,
+                                                                                        111-122.
+
+
+Preece, C. M. and Macmillan, N. H.                 (1977). Ann. Review of Materials Science
+
+
+Preece, C.M., Vaidya, S., and Dakshiramoorthy                          ,       S.       (1978), Proceedings of
+
+ASTM Symposium "Erosion:           Prevention and Useful Applications ", STP Po4
+
+
+Rabinowicz, E.       (1965).     Friction and Wear of Materials                                   ,       J.    Wiley and Sons,                    N
+
+
+
+Roesler, F. C.       (1956) Proc. Phys. Soc., London, Sect. B                                         ,    69 ,   981-92.
+
+
+Ruff, A. W. and Ives, L. K.              (1975).     Wear 35       ,       195-199.
+
+
+Ruff, A. W.       (1976).     Wear 40, 59-74.
+                                                                                                                   .
+
+
+
+
+Ruff, A.W.    (1978).             International Conference on Fundamentals of Tribology                                    ,
+
+
+
+
+MJT, Cambridge, Mass.                Also unpublished work.
+
+
+
+
+Sheldon, G. L.          (1970). Trans. ASME:           J.   Basic Engr ., 92 , 619-26.
+
+
+Sheldon, G. L.          (1977).        J.   Engrg. Matls. and Tech. , Trans ASME 99                     ,
+                                                                                                             133-137.
+
+
+Sheldon, G. L., and Finnie, I.                   (1966a) Trans ASME:              Journal of Engineering
+
+for Industry , 88 , 387-92.
+
+
+Sheldon, G. L. and Finnie, I., (1966b) Trans. ASME;                                Journal of Engineering
+
+for Industry      ,    88   ,
+                                393-400.
+
+
+Sheldon, G. L., and Kanhere, A.                   (1972).        Wear 21    ,
+                                                                                195-208.
+
+
+Shelton, H.   ,
+                      Hendricks, C. D. and Weuker            ,    R.   F.   (1960).       J. Appl.          Fhys       ,
+
+
+
+
+31, 1243.
+
+
+Silverio, A.          (1963) Ph.D. Dissertation, Cambridge, reported in The Friction
+
+and Lubrication of Solids - II , by F. E. Bowden and D. Tabor, Oxford University
+
+Press, 1964.
+
+
+St.   John, C.        (1975) Phil. Mag. , 32, 1193-1212.
+
+
+Smeltzer, C. E.         ,       Gulden, M. E. , and Compton, W. A.               (1970).         J.   Basic Engrg .,
+
+Trans ASME    92_,      639-654.
+
+
+Tilly, G. P.          (1969).        Wear 14, 63-79.
+
+
+Tilly, G. P.          (1973). Wear 23, 87-96.
+
+
+Uuemois, H. and Kleis, I.                   (1975).   Wear 31     ,    359-371.
+
+
+Westbrook, J. H.                (1966), Rev. Hautes Temper, et Refract.               ,    _3,    47-57.
+
+
+Westbrook, J. H. and Conrad, H., editors,                         (1973), The Science of Hardness
+
+Testing and Its Research Applications                   .   American Society of Metals, Metals
+
+Park, Ohio.
+        .                                                                                        .                          .
+
+
+
+
+Wiederhorn,       S.   M. , Hockey, B. J. , and Roberts, D. E.                        (1973), Phil            .       Mag       ,
+                                                                                                                                    28 ,
+
+783-96.
+
+
+
+Wiederhorn,       S.   M., Johnson, H., Diness, A. M., and Heuer                           ,   A. H.         (1974),
+
+J.    Am.   Ceram. Soc      .   57 ,   336-41.
+
+
+
+Wiederhorn,       S.   M.   ,   and Lawn, B. R.       (1977), J   .   Am. Ceram. Soc                 ,
+                                                                                                         60   ,
+                                                                                                                      451-8.
+
+
+
+Wiederhorn,       S.   M. ,     Fuller, E. R.    ,   Jr., Bukowski, J. M.              ,   and Robbins, C. R.
+
+(1977), Trans ASME Journal of Engineering Materials and Technology                                                ,    99   ,
+
+
+
+
+143-46.
+
+
+
+Wiederhorn,       S.   M. , and Lawn, B. R.           (1979), J. Amer        .       Ceram. Soc.         ,    January/Februu:
+issue
+
+Winter, R. E. and Hutchings, I. M.                    (1974).     Wear 29        ,
+                                                                                      181-194.
+
+
+Young, J. P. and Ruff, A. W.                 (1977).     J.   Engrg    .   Mails, and Tech, Trans ASME                                 .
+
+
+
+
+99,    121-125.
+
+
+Zahavi, J., Wagner, H. J., and Posnansky, A.                          (1978).          Proceedings of ASTM
+
+Symposium "Erosion:                Prevention and Useful Applications ," STP 664.
+                             .
+
+
+
+
+                                            FIGURE CAPTIONS
+
+
+
+Fig. 1   .   (a)   Erosion impact craters on steel surface.            (Ives   e^t   al. ,
+
+             1975).
+
+             (b)   AISI 310 steel surface after erosion at 25°C at 40 m/s.
+
+             (Ives , 1976)
+
+Fig.   2 .   Schematic diagram of particle accelerator device.             (Ives and
+
+             Ruff, 1978a).
+
+Fig.   3.    (a)   Damage in aluminum caused by        3   min. steel sphere impacting
+
+             at 18.5°, 220 m/s.        (Hutchings and Winter, 1974).
+
+             (b)     Section through crater formed at 40°, 270 m/s.             (Hutchings
+
+             and Winter, 1975).
+
+Fig. 4   .   Impact craters in 310 stainless steel produced by 50ym Al^O^
+
+             particles at 59 m/s.         (a)   SEM and (b)    TEM micrographs of
+
+             crater produced at 90° attack angle.             (Ives and Ruff, 1978a).
+
+Fig. 5   .   (a)     Impact crater in 310 stainless steel produced by 50ym glass
+
+             sphere at 20° attack angle at 59 m/s.
+
+             (b)     Dislocation arrangement at rim of impact crater above.
+
+             (Ives and Ruff, 1978a).
+
+Fig.   6 .   Indentation volume for 30° impact on steel.             Lines are theoretical
+
+             (see text).         (Hutchings, 1978).
+
+Fig.   7 .   (a)     Impact geometry and crater produced in steel.             Velocity and
+
+             rake angle are shown.
+
+             (b)     Etched section of the crater above.            Note   the clear boundarv
+
+             between the deformed and undeformed material.             (Winter and Hutchings.
+
+             1974)    .
+                                .   .   .       .
+
+
+
+
+Fig.   8.    Schematic diagram of the type of damage that occurs when a
+
+             sphere is pressed against the surface of a brittle material
+
+             (Lawn and Wilshaw, 1975)
+
+
+Fig.   9.    Fracture damage resulting when a sphere is pressed against
+
+             a   glass surface (Courtesy of K. Phillips, Reported by Lawn
+
+             and Wilshaw, 1975)
+
+
+Fig.   10.   Schematic diagram of crack growth during sharp particle impact.
+
+             + sign indicates loading;              -    sign indicates unloading.                          (Lawn
+
+             and Swain, 1975)
+
+
+Fig.   11.   Impact site in MgO produced by 65 pm A^O^ particles at a
+
+             velocity of 90 m/s and 90° impact angle TEM micrograph demonstra-
+
+             ting dense tangles of dislocations at the impact site (Hockey
+
+             et al. ,   1978)
+
+
+Fig.   12.   Impact site in Si produced by 65 ym A^O^ particles at a velocity
+
+             of 90 m/s and 90° impact angles.                          Although most of the deformed
+
+             region has chipped out of the specimen surface, the TEM micro-
+
+             graph reveals residual dislocations and cracks associated with
+
+             the impact site (Hockey            et_     ad   .   ,   1978)   .
+
+
+
+
+Fig.   13.   Impact site in SiC produced by 150 ym SiC particles at a velocity
+
+             of 94 m/s and a 90° impact angle.                         (Courtesy of Hockey).
+
+
+Fig-   14.   Optical micrograph showing normal impact damage in Al^O^ produced
+
+             at   (2)   25°C and    (b)     1000°C.          (Hockey et al          .   ,   1978).
+
+
+Fig. 15.     Optical micrograph showing a series of shallow surface impressions
+
+             produced in     A^O^ by 15° impingement.                            (Hockey      et^   al. ,   1978).
+
+
+Fig.   16.   Transmission electron micrograph in SiC by 15° impingement:.                                            Absence:
+
+
+             of cracks and presence of dislocations confirm fully plastic nature
+
+             of   impact event (Hockey          et_ cil . ,          1978)   .
+                                               .            .        ..                                         .
+
+
+
+
+Fig. 17.     Schematic representation of erosion rate on attack angle,                                       (Ives
+
+             and Ruff, 1978a).
+
+Fig.   18.   Influence of velocity on erosion for different materials (Goodwin
+
+             et.   al, ,   1969).
+
+Fig.   19.   Collected erosion measurements on copper.                                     (Ives and Ruff, 1978b).
+
+Fig.   20.   Velocity dependence of erosion at 975°C and 25°C.                                     (Ives, 1977).
+
+Fig.   21.   Influence of particle size on erosion of an 11 percent chromium
+
+             steel (Goodwin et        .   al       ,   1969)
+
+Fig.   22.   Erosion of 1100-0 Aluminum at a velocity of 30.5 m/s as a function
+
+             of impingement angle and temperature.                                     Homologous temperature       =
+
+
+             T/T(melting)     .     (Finnie et          .       al        ,   1978).
+
+Fig. 23.     Volume removal as a function of VHN for metals eroded at a=20 deg
+
+             and velocities of 250 and 450 ft/sec.                                     (No data were taken for
+
+             nickel at 450 ft/sec.)                    All metals except cadmium were in annealed
+
+             condition.       (Finnie et           .   al       ,    1967).
+
+Fig.   24.   Copper specimen mass change for accumulated exposures.                                        (Ives
+
+             and Ruff,      1978b).
+
+Fig.   25.   Cross section of copper surfaces eroded at 90° and 20 m/s
+
+             (a)   induction period            (b)      steady state.                   (Ives and Ruff,    1978b).
+
+Fig.   26.   Al^O^ particle embedded in copper surface eroded at                                    90"'   and 60       rr   s.
+
+
+             (Ives and Ruff,         1978a).
+
+Fig.   27.   Scanning             electron micrographs of (a) the surface of eroded 101^
+
+             steel and (b) steel debris particles recovered after erosion at
+
+             40 m/s and 30° attack angle using 50pm A1,0,.                                     (Ruff,   197S)
+                          .
+
+
+
+
+Fig.   28.   Weight loss from plate glass as a function of impingement angle, a,
+
+             and particle size (Sheldon and Finnie, 1968a).
+
+
+Fig.   29.   Surface of plate glass after erosion by silicon carbide particles
+
+             at an angle of 30° and a velocity of ^150 m/s (Sheldon and Finnie,
+
+             1968a)
+
+
+Fig.   30.   Erosive wear of hot-pressed silicon nitride as a function of
+
+             impingement angle.           Curves represent erosion dependence for
+
+             purely brittle behavior (Hockey               e_t     al.   ,   1978).
+
+
+Fig.   31.   Scanning electron micrograph of surface morphology of sintered
+
+             aluminum oxide after erosion at 1000°C, 90° impingement (Hockey
+
+             et_   al. ,      1978)   .
+
+
+
+
+Fig.   32.   Furrow formation in sintered aluminum oxide eroded at 1000°C, 15°
+
+             impingement (Hockey          et_ al^. ,   1978)   .
+
+
+
+
+Fig.   33.   Surface morphology on eroded aluminum alloy chips.                       (Christman,
+
+             1977)    .
+
+
+
+
+Fig.   34.   Scanning electron micrographs of                  (a)   the surface of abraded
+
+             1015 steel and (b) steel debris particles recovered after wear
+
+             under dry conditions at 2.2 N load.                     (Ruff, 1978).
+                    .           .                                                l
+
+
+
+
+Fig.   1.   (a)     Erosion impact craters on steel surface.   (Ives   ot_   a       .
+
+
+
+
+            1975)
+
+            (b)     AISI 310 steel surface after erosion at 15°C at 40 m             s
+
+
+            (Ives   ,
+                        1976)
+                                    Specimen
+                                               P   m
+                            Particles —
+
+
+
+                                    Sobot -
+
+
+
+                                    Rupture
+                                      Disk
+
+
+
+
+                          Compressed
+                              Gas
+
+
+
+
+Fig   2 .   Schematic diagram of particle accelerator device.   (Ives and
+
+            Ruff   ,
+                       1978a)   .
+                                                                                        -1
+
+
+
+
+Fig.   3.   (a)   Damage in aluminum caused by   3   min. steel sphere impact ing
+
+            at 18.5°, 220 m/s.   (Hutchings and Winter    ,   1 Q 74) .
+
+
+
+            (b)   Section through crater formed at 40°    ,   270 m/s.    (Hutch ings
+
+            and Winter, 1975).
+
+                                                                                         U
+ig.   4 .   Impact craters in 310 stainless steel produced by      "’Ov.m
+
+
+
+            particles at 59 m/s.   (a)   SEM and (b)    TEM micrographs of
+
+            crater produced at 90° attack angle.       (Ives and Rut   t   ,   ba''   .
+Fig. 5.   (a)   Impact crater in 310 stainless steel produced by 50 in glass
+
+          sphere at 20° attack angle at 59 m/s.
+
+          (b)   Dislocation arrangement at rim of impact crater above.
+
+          (Ives and Ruff, 1978a).
+
+
+                                                                               d
+Fig. 6.   Indentation volume for 30° impact on steel.   Lines are theoretical
+
+          (see text).   (Hutchings, 1978).
+                              \+— 5   mm'H
+
+
+
+
+Fig.   7.   (a)   Impact geometry and crater produced in steel.   Velocity and
+
+            rake angle are shown.
+
+            (b)   Etched section of the crater above.   Observe the clear boundary
+
+            between the deformed and undeformed material.    (Winter and Hutchings,   0   4^.
+                                                .
+
+
+
+
+Fig.   8.   Schematic diagram of the type of damage that occurs when
+
+            a sphere is pressed against the surface of a brittle
+
+            material (Lawn and Wilshaw, 1975)
+                               .
+
+
+
+
+                   (A)
+
+
+
+
+                   (B)
+
+
+
+
+                   (C)
+
+
+
+
+                   (D)
+
+
+
+
+9.   Fracture damage resulting when a sphere is pressed against
+
+     a glass surface (Courtesy of K. Phillips, Reported by
+
+     Lawn and Wilshaw, 1975)
+                                                            (d)
+
+
+
+
+                                                            (e)
+
+
+
+
+                                                            (f)
+
+
+
+
+Fig.   10.   Schematic diagram of crack growth during sharp particle
+
+             impact.   + sign indicates loading; - sign indicates unloading.
+
+             (Lawn and Swain,   1975).
+Fig.   11.   Impact site in MgO produced by 150 pm SiC particles at a velocity
+
+             of 90 m/s and 90°   impact angle TEM micrograph demonstrating dense
+
+             tangles of dislocations at the impact site (Hockey   ejt   a_l.
+Fig.         Impact site in Si produced by 90 pm Al o
+                                                      0^ particles at a velocity
+       12.
+
+             of 90 m/ s and 90°        impact angles.   Although most of the deformed
+
+             region has chipped out of the specimen surface, the TEM micro-
+
+             graph reveals residual dislocations associated with the impact
+
+             site (Hockey   e^.   al   .   ,   1978)
+Fig.   13.   Impact site in SiC produced by 150 pm SiC particles at a voice it.
+
+             of 94 m/s and a 90°   impact angle.   (Courtesy of Hockey).
+Fig.   14.   Normal impact damage in Al^O^ produced at   (a)   25°C and (b)   1000°C.
+
+             (Hockey jrt _al.   ,   1978)
+                                                        .
+
+
+
+
+Fig.   1 5.     Optical micrograph showing a series of shallow surface impressions
+
+                produced in Al^O^ by 15° impingement                 (Hockey   et.   al_   .   ,   1978)   .
+
+
+
+
+                                                                  beneath shallow
+  F ig.   16.     Transmission electron micrograph showing region
+                                                         15° impingement.                             Absence
+                  surface impressions produced in SiC by
+
+                  of cracks and presence of dislocations confirm tullv
+                                                                       plastic natai
+
+                  of impact event   (Hockey   et   a1       »
+                                                                19/8).
+L
+                     o
+                     cn
+
+                           (Ive
+
+
+
+
+                           angle,
+
+
+
+
+                           attack
+
+
+
+
+                             on
+
+
+
+
+                            rate
+
+
+
+
+                     0)
+                     o»    erosion
+
+
+
+
+                     c
+                 <
+                     JC
+                          of
+                     o
+                     o
+                 <
+
+                          representation
+
+
+
+
+                          Schematic
+
+
+
+
+                 o
+                 o
+9|Dy   uojsojg
+Fig.   18.   Influence of velocity on erosion for different materials
+
+             et.   al.,   1969).
+J
+                                                                            i                                                                         .
+
+
+
+
+                                     T     T    T    T        i    i    — r
+                                                                        i         i   i   i   r   i   t   1   1   1   1   1   iri   m
+
+
+
+                      IxlO
+
+
+
+
+               ,
+
+
+
+        Abrassive
+
+
+
+
+       /Mass
+
+
+
+
+         mg
+                    IxlO"                                                                                                               ti
+                                                                                                                                        i
+                                                                                                                                        i
+       Loss,                                                                                                                            r
+                                                                                                                                        f
+
+       Moss
+
+
+
+
+                           -2
+                    IxlO        h
+
+
+
+
+                           -3
+                    IxlO
+                                10                  50                      100               150             200
+
+                                               Velocity   ,
+                                                                  m/s
+
+
+
+
+Fig.   19.            Collected erosion measurements on copper.                       (Ives and Ruff.                                        l^'Sb)
+                                               ,
+
+
+
+
+                                                   x   o a   90° impact
+
+
+
+
+Fig.   21.   Influence of particle size on erosion of an 11 percent chre   :
+
+
+
+
+             steel (Goodwin e t   .   a1   .           1969).
+                                            H
+
+
+
+
+                                                  II
+
+
+
+                              o            U
+                                           P
+                              <J)          3
+                                          U_1
+
+
+                                           CT3
+                                                 temperature
+
+
+
+
+                                    co     C/5
+
+
+                                    LJ     3
+                                    UJ     cn
+                                    QC
+                                    CO
+                                           6
+                                    UJ    m
+                                    Q     o
+                                          co
+                                                 Homologous
+
+
+
+
+                                           O
+                              o UJ         So
+                              co
+                                    UJ
+                                    CO     u
+                                           o
+                                    2     —
+                                           o
+                                    OL     >
+                                           CO     temperature.
+
+
+
+
+                                    Lt.    CO
+
+                                    o      E
+                                           3
+                                    UJ     C
+                                                 and
+                                    _J
+                              O     CO
+                              ro
+
+                                    <     O
+                                                 angle
+
+
+
+
+                                          o I
+
+
+
+
+                                          o
+                              in
+                                                 impingement
+
+
+
+
+                              O
+                                           OT
+                                           o
+                                           i_
+                                          u      of
+                              O
+                                          n
+                                          CNI
+
+
+
+g _0I
+      * (0 !S 1M   V/IV1MU)
+                                   .
+
+
+
+
+Volume removal as a function of VHN for metals eroded at x=-0 dec
+
+and velocities of 250 and 450 ft/sec.               (No data were taken tor
+
+
+nickel at 450 ft/sec.)        All metals except cadmium were in annealed
+
+condition.   (Finnie   et .   a1       ,   1967).
+Fig.   24.   Copper specimen mass change for accumulated exposures.   (I vo
+
+
+             and Ruff,   1978b).
+                                                                                                  .
+
+
+
+
+Fig.   25.   Cross section of copper surfaces eroded        .it   90   "   and 20 m   s
+
+
+             (a)   induction period   (b)   steady state.   (Ives and Ruff,           1°   Sb''
+(Ives and Ruff,   1978a).
+Scanning     electron micrographs of (a) the sui ace
+                                                 t        ot   eroc.cc.
+
+
+steel and (b) steel debris particles recovered after erosion
+                                                             at
+
+
+AO m/s and 30° attack angle using 50lim Al^O,.   (Ruff,    1^7S).
+                                              ANGLE   oc   ,   degrees
+
+
+
+
+Fig.   28.     Weight loss   from plate glass as a function of impingement angle,
+
+               and particle size (Sheldon and Finnie, 1968a).
+
+
+
+
+  Fig.   29.     Surface of plate glass after erosion by 1000 mesh grit silicon
+
+                 carbide particles at an angle of 10° and                a   velocity of   ISO ~
+
+                 width of field   M   .   7   mm (Sheldon and Finnie, 19b8a).
+.
+    (g/g)
+
+
+
+
+    RATE
+
+
+
+
+    EROSION
+
+
+
+
+                                                                   ANCLE OF IMPINGEMENT.   .
+
+                 ANCLE OF IMPINGEMENT, n
+                            a                                                 b
+
+
+
+Fig. 30.      Erosive wear of hot-pressed silicon nitride as a function of
+
+              impingement angle.           Curves represent erosion dependence for
+
+              purely brittle behavior (Hockey et al., 1978).
+*\
+
+
+
+
+     Fig.   31.   Scanning electron micrograph of surface morphology of sintered
+
+                  aluminum oxide after erosion at 1000°C, 90° impingement (Hockey
+o
+                  et al. ,   1978)
+w
+
+
+
+
+*
+
+
+
+
+    Fig. 32.   Furrow formation in sintered aluminum oxide, eroded at   10.W,
+               15°   impingement (Hockey   et^ aJL. ,   1978)   .
+Fig.   33.   Surface morphology on eroded aluminum alloy chips.   (Chi'irU
+
+
+             1977)   .
+Fig.   34.   Scanning electron micrographs of (a) the surface of abraded
+
+             1015 steel and (b) steel debris particles recovered after
+
+             wear under dry conditions at 2.2 N load.   (Ruff,   1978).
+    NBS-1 14A (REV. 7-73)
+
+           U.'_    DEPT. OF COMM.              1.   PUBLICATION OR REPORT NO.               2.   Gov’t Accession            3.                A
+                                                                                                                                      pient's Accession
+                                                                                                                                  Recipient’s           No.
+       BIBLIOGRAPHIC DATA                                   78-1575                              No.
+              SHEET
+    4. TITLE AND SUBTITLE                                                                                                   5.    Publication Date
+
+                                                                                                                                     January 1979
+             Erosion by Solid Particle Impact                                                                               6.    Performing Organization Code
+
+
+
+    7.    AUTHOR(S)                                                                                                         8.    Performing Organ. Report No.
+                      Ruff and S. M. Wiederhorn
+                         A.    W.
+    9. PERFORMING ORGANIZATION NAME AND ADDRESS                                                                             10. Project/Taslc/Torlc Uni-    No.
+
+                              NATIONAL BUREAU OF STANDARDS                                                                               564Q134
+                              DEPARTMENT OF COMMERCE                                                                        11.   Contract/Grant No.
+                              WASHINGTON, D.C. 20234
+
+    12. Sponsoring Organization        Name and Complete Address (Street      ,
+                                                                                  City, State,   ZIP)                       13.   Type of Report & Period
+                                                                                                                                  Covered
+
+
+                                                                                                                            14.   Sponsoring Agency C
+
+
+    15.   SUPPLEMENTARY NOTES
+
+
+
+    16.   ABSTRACT (A 200-word or less factual summary of most significant information.                       If document   includes a significant
+          bibliography or literature survey, mention it here.)
+                                                                             (NOT TO BE PUBLISHED)
+       A review of the methods and findings associated with solid particle impact erosior
+    of metals and ceramics is presented.  Modern theories of particle erosion and critical!
+    reviewed experimental observations are brought together and compared.  Conclusions
+    regarding the present state of understanding of erosion are given.
+
+
+
+
+    17.   KEY WORDS (six to twelve entries; alphabetical order; capitalize only the first letter of the first kev nerd ur.tess ’ e~e
+          name; separated by semicolons
+
+
+     Abrasives; ceramics; erosion; impact; metals; particle erosion; wear.
+
+          AVAILABILITY                                                                                  19.   SECURITY CL ASS                21.   NO. OF P \CF:
+    18.                                         QQj Unlimited
+                                                                                                              (THIS REPORT!
+
+                  For Official Distribution.        Do Not Release to NT1S
+                                                                                                              UNCI ASSIEIEP
+                  Order From Sup. of Doc., U.S. Government Printing Office                              20.    SECURITY CLASS             tt;
+                                                                                                                                            22. Pace
+                  Washington, D.C. 20402, SD Cat. No, Cl 3                                                     (THIS PAGE)
+           [~X] Order   From National Technical Information Service (N 1 1S1
+                  Springfield, Virginia 22151                                                                 UNCLASSIFIED
+
+
+i
+‘
+
+
+
+
+t
+
+
+
+
+>
+

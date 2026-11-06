@@ -1,0 +1,215 @@
+{
+  "version": "step30-cfd-driven-v1",
+  "artifact_identity": null,
+  "model_scope": "single-phase OpenFOAM continuous velocity field + one-way particle post-processing; no kinematicCloud wall log",
+  "cfd": {
+    "variant": "native_si",
+    "prefix": "native_si_0.8684190921_",
+    "field_time": "0.8684190921",
+    "n_cells": 837972,
+    "center_bounds_mm": [
+      [
+        5.005341,
+        -290.00153,
+        -540.0
+      ],
+      [
+        1590.0,
+        290.0,
+        540.0
+      ]
+    ],
+    "source_coordinate_units": "m",
+    "internal_coordinate_units": "mm",
+    "coordinate_scale_to_mm": 1000.0,
+    "artifact_manifest_file": "native_si_manifest_0.8684190921.json",
+    "artifact_manifest_sha256": "f44162883a41e3f89846164364e8c898621bc46a4a72e4e23cd65d81b70626b7",
+    "analytic_reference_transform": {
+      "file": "authoritative_bucket_reference_transform_v1.json",
+      "sha256": "c525d98ba763839ada728401c3a52da0d88f45fe293a9d3d558af27bc2632c47",
+      "version": "step30-analytic-reference-transform-v1",
+      "convention": "row-vector: global_mm = local_mm @ R + translation_mm",
+      "source_geometry_sha256": "181eb659091f187e1286ca27b689d654a83b5522b28d6f39aceaa4ebc3fc38ca"
+    },
+    "polyMesh_signature": "5b401242fdea449fdcbb9ba2f01ea9d98b05a50718f161a27e842a2e4dd93f27",
+    "speed_stats_ms": {
+      "min": 0.0011268946968697082,
+      "max": 221.28267804463704,
+      "median": 29.412114573738872
+    },
+    "quality_status": "passed",
+    "velocity_warning_limit_ms": 314.4,
+    "solver_semantics": null
+  },
+  "geometry": {
+    "collision_backend": "cfd_topology",
+    "face_id_namespace": "openfoam_bucket_patch",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "patch_name": "bucket",
+    "source_time": "0.8684190921",
+    "field_time": "0.8684190921",
+    "source_coordinate_units": "m",
+    "internal_coordinate_units": "mm",
+    "coordinate_scale_to_mm": 1000.0,
+    "n_vertices": 218990,
+    "n_collision_triangles": 437976,
+    "n_parent_faces": 218988,
+    "surface_area_m2": 0.932961002108641,
+    "bounds_mm": [
+      [
+        43.46799850463867,
+        -187.9819929599762,
+        -406.25301003456116
+      ],
+      [
+        421.34401202201843,
+        172.0850020647049,
+        402.14699506759644
+      ]
+    ],
+    "preflight": {
+      "status": "native_topology",
+      "wall_points": 218988,
+      "wall_points_in_stl_bbox_plus_tolerance_pct": 100.0,
+      "warning": "collision and face aggregation use the same native OpenFOAM bucket patch topology"
+    }
+  },
+  "parameters": {
+    "n_parcels": 500,
+    "n_injected": 500,
+    "collision_backend": "cfd_topology",
+    "collision_policy": "strict_v2",
+    "collision_algorithm_version": "v2",
+    "cfd_variant": "native_si",
+    "max_impacts": 3,
+    "seed": 57721,
+    "dt_s": 1e-05,
+    "max_time_s": 0.05,
+    "particle_cfl": 0.25,
+    "cfd_velocity_interpolation": "idw_k8_v1",
+    "particle_integrator": "midpoint_exponential_v2",
+    "strict_max_substep_s": 1e-05,
+    "min_substep_s": 1e-08,
+    "max_query_distance_mm": 80.0,
+    "face_fallback_distance_mm": 1.5,
+    "hit_epsilon_mm": 0.05,
+    "min_speed_ms": 0.5,
+    "max_collision_events_per_step": 8,
+    "output_tag": "perf_v2",
+    "include_gravity": false,
+    "e_normal": 0.8,
+    "e_tangent": 0.9,
+    "diameter_distribution": {
+      "type": "Rosin-Rammler",
+      "min_m": 1e-06,
+      "max_m": 0.00023,
+      "d50_m": 5e-05,
+      "exponent": 1.5,
+      "sampling_contract": "mass_stratified_v1"
+    },
+    "psd_sampling": "mass_stratified_v1",
+    "rho_particle_kg_m3": 2650.0,
+    "max_accepted_cfd_speed_ms": 500.0,
+    "mass_flow_mode": "nominal",
+    "nozzle_flow_m3_s": 4.5,
+    "sediment_flow_kg_s": 5.8950000000000005,
+    "injection_window_s": 1.0,
+    "observation_window_s": 1.0,
+    "rho_wall_kg_m3": 7800.0,
+    "rho_wall_alternative_kg_m3": 7850.0
+  },
+  "tracking": {
+    "n_impacts": 26,
+    "intersection_hits": 26,
+    "fallback_hits": 0,
+    "near_miss_diagnostics": 28298,
+    "collision_event_limit_count": 0,
+    "substep_count": 1028781,
+    "physical_strict_hit_ratio": 1.0,
+    "hit_parcels": 15,
+    "hit_rate_parcels_pct": 3.0,
+    "max_speed_seen_ms": 126.12110123636938,
+    "termination_counts": {
+      "outside_domain": 487,
+      "no_wall_hit": 10,
+      "max_impacts": 3
+    },
+    "hit_stats": {
+      "Vp_ms": {
+        "min": 17.64714077743387,
+        "max": 55.61997519960829,
+        "median": 36.32542179089777
+      },
+      "alpha_deg": {
+        "min": 1.914294678128333,
+        "max": 48.911179138285355,
+        "median": 15.92792852978378
+      },
+      "diameter_m": {
+        "min": 6.389200539818238e-05,
+        "max": 0.00023,
+        "median": 9.626397068174147e-05
+      },
+      "ER_mansouri": {
+        "min": 2.576968160816297e-12,
+        "max": 3.1516486865072564e-05,
+        "median": 1.0277701587726218e-06
+      }
+    },
+    "total_injection_mass_kg": 5.8950000000000005,
+    "impact_mass_kg": 0.30654000000000003
+  },
+  "face_erosion": {
+    "exposed_faces": 23,
+    "surface_faces": 218988,
+    "total_target_mass_kg": 2.196861087997505e-06,
+    "ER_face_stats": {
+      "max": 3.0440090772456276e-05,
+      "median_exposed": 4.942822220889689e-07
+    },
+    "mass_flux_max_kg_m2_s": 7954.542257780398,
+    "dhdt_max_mm_h": 102.54437120839198
+  },
+  "validation": {
+    "registration_status": "passed",
+    "registration_distance_mm": {
+      "median": 3.4349572727924964,
+      "p95": 5.180667002629746,
+      "max": 7.088873503814087
+    },
+    "registration_threshold_mm": {
+      "median": 10.0,
+      "p95": 15.0
+    },
+    "mask": "bucket0 angular window + registration distance<=15mm + exposed native parent faces",
+    "n_faces_compared": 18,
+    "cfd_ER_vs_analytic_Mansouri": {
+      "n": 18,
+      "spearman_rho": -0.29117,
+      "spearman_p": 0.24108895033279595,
+      "pearson_r": -0.51479,
+      "pearson_p": 0.028810443306616623,
+      "nrmse_normalized": 0.65269,
+      "top10_iou": 0.0
+    },
+    "cfd_dhdt_vs_analytic_Mansouri_rate": {
+      "n": 18,
+      "spearman_rho": -0.33247,
+      "spearman_p": 0.17765122812837666,
+      "pearson_r": -0.48738,
+      "pearson_p": 0.04021218000186014,
+      "nrmse_normalized": 0.63722,
+      "top10_iou": 0.0
+    }
+  },
+  "units": {
+    "position": "mm local / global",
+    "velocity": "m/s",
+    "ER": "kg target per kg sediment",
+    "face_area": "m2",
+    "dhdt": "mm/h",
+    "source_coordinate_units": "m",
+    "internal_coordinate_units": "mm",
+    "coordinate_scale_to_mm": 1000.0
+  }
+}

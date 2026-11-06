@@ -1,0 +1,189 @@
+{
+  "version": "step30-native-si-comparison-v3",
+  "accepted": true,
+  "artifact_identity": {
+    "artifact_set_id": "9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44",
+    "artifact_set_manifest": "workspace/output\\step30_runs\\9a8a8ddff60401622622454b18853917f1e4c7a9504c92833f5e90824b3dea44\\artifact_set_manifest.json",
+    "artifact_set_manifest_verified": true,
+    "i1_particle_run_id": "c3d50c39a0df680d9c79b3b7aaa73712f54b7588b5d53b94489c45e7b4d81aab",
+    "i3_particle_run_id": "c27975a35b0779a46404df6240b540723ffdc582dcac9e84eab07fa95e0030c5"
+  },
+  "final_cfd": {
+    "variant": "native_si",
+    "field_time": "0.8684190921",
+    "solver_semantics": {
+      "application": "pimpleFoam",
+      "mode": "urans",
+      "field_statistic": "time_mean",
+      "tracking_velocity_object": "UMean",
+      "averaging_window": {
+        "start_time": "0.7844336016",
+        "end_time": "0.8684190921",
+        "sample_count": 20523
+      }
+    },
+    "n_cells": 837972,
+    "source_coordinate_units": "m",
+    "internal_coordinate_units": "mm",
+    "coordinate_scale_to_mm": 1000.0,
+    "speed_stats_ms": {
+      "min": 0.0011268946968697082,
+      "max": 221.28267804463704,
+      "median": 29.412114573738872
+    },
+    "solver_assessment": {
+      "assessment_type": "urans_time_mean_sampling",
+      "solver_log": "pimpleFoam_0.8684190921.log",
+      "end_time": "0.8684190921",
+      "averaging_window": {
+        "start_time": "0.7844336016",
+        "end_time": "0.8684190921",
+        "sample_count": 20523
+      },
+      "previous_mean_field_change": {
+        "previous_time": "0.8680083057",
+        "field_relative_l2": {
+          "UMean": 0.00016925379972722874,
+          "pMean": 0.00015993476239902125,
+          "kMean": 0.00018120702702710559,
+          "omegaMean": 9.541983264350299e-05
+        },
+        "bulk_speed_relative_change_pct": {
+          "median": 0.0011102734475734407,
+          "p95": 2.3230293595176724e-05,
+          "p99": 9.935828457665568e-05,
+          "max": 0.006827961364013424
+        },
+        "max_bulk_speed_relative_change_pct": 0.006827961364013424
+      },
+      "simple_convergence_marker_applied": false,
+      "validation_report": {
+        "file": "urans_validation_0.8684190921.json",
+        "sha256": "be935daddff386d03856c00e89adae82791febf7d2b9e6e44256bc8b6e2dc829",
+        "gates": {
+          "max_co_below_0p5": true,
+          "no_turbulence_bounding": true,
+          "no_fatal_or_nonfinite_log": true,
+          "twenty_flow_through_window": true,
+          "mean_field_relative_l2_below_1e3": true,
+          "force_late_mean_change_below_1pct": true,
+          "flux_late_mean_change_below_1pct": true,
+          "flux_imbalance_below_1e4": true,
+          "probe_late_mean_change_below_1pct": true,
+          "mean_speed_below_500_ms": true,
+          "all_mean_fields_finite": true
+        }
+      },
+      "steady_rejection_evidence": {
+        "file": "steady_fixed_point_assessment.json",
+        "sha256": "5778a38bbc6634ad9422fe262d3b205934c5f1033070382c8ce76ab6aab308f4",
+        "accepted_as_steady_fixed_point": false
+      },
+      "extended_burnin_rejection_evidence": {
+        "file": "extended_burnin_rejected_gate.json",
+        "sha256": "771449d21767aa0d972b3c0ff8ee3f02cd8c4057bd6600d3887a4d8350efbef5",
+        "accepted_as_clean_window": false
+      },
+      "status": "sampling_window_validated"
+    }
+  },
+  "topology": {
+    "artifact_version": "step30-native-openfoam-topology-v3",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "n_parent_faces": 218988,
+    "n_collision_triangles": 437976,
+    "surface_area_m2": 0.932961002108641,
+    "bounds_mm": [
+      [
+        43.46799850463867,
+        -187.9819929599762,
+        -406.25301003456116
+      ],
+      [
+        421.34401202201843,
+        172.0850020647049,
+        402.14699506759644
+      ]
+    ]
+  },
+  "runs": {
+    "strict_native_si_i1": {
+      "field_time": "0.8684190921",
+      "max_impacts": 1,
+      "n_parcels": 2000,
+      "impacts": 32,
+      "hit_rate_pct": 1.6,
+      "strict_intersections": 32,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0,
+      "impact_mass_kg": 0.07804027059939386,
+      "total_target_mass_kg": 2.079142156852854e-07,
+      "max_dhdt_mm_h": 7.199468734334929,
+      "spearman_er_vs_analytic": -0.51709,
+      "top10_iou": 0.0
+    },
+    "strict_native_si_i3": {
+      "field_time": "0.8684190921",
+      "max_impacts": 3,
+      "n_parcels": 2000,
+      "impacts": 81,
+      "hit_rate_pct": 1.6,
+      "strict_intersections": 81,
+      "fallback_hits": 0,
+      "physical_strict_hit_ratio": 1.0,
+      "impact_mass_kg": 0.16949303504792168,
+      "total_target_mass_kg": 9.043723214907451e-07,
+      "max_dhdt_mm_h": 70.50579775063179,
+      "spearman_er_vs_analytic": -0.12695,
+      "top10_iou": 0.07692
+    }
+  },
+  "first_impact_match": {
+    "matching_first_impact_parcels": 32,
+    "parent_face_agreement": 1.0,
+    "collision_triangle_agreement": 1.0,
+    "max_position_delta_mm": 0.0
+  },
+  "quality_gates": {
+    "zero_fallback_hits": true,
+    "physical_strict_hit_ratio_is_one": true,
+    "zero_collision_event_limit_terminations": true,
+    "strict_v2_policy": true,
+    "native_si": true,
+    "same_immutable_artifact_set": true,
+    "output_hashes_verified": true,
+    "i1_i3_first_impacts_identical": true,
+    "max_cfd_speed_below_500_ms": true,
+    "registration_passed_i1": true,
+    "registration_passed_i3": true,
+    "solver_evidence": {
+      "field_statistic": "time_mean",
+      "assessment_type": "urans_time_mean_sampling",
+      "averaging_window": {
+        "start_time": "0.7844336016",
+        "end_time": "0.8684190921",
+        "sample_count": 20523
+      },
+      "sample_count_positive": true,
+      "validation_report_gates": {
+        "max_co_below_0p5": true,
+        "no_turbulence_bounding": true,
+        "no_fatal_or_nonfinite_log": true,
+        "twenty_flow_through_window": true,
+        "mean_field_relative_l2_below_1e3": true,
+        "force_late_mean_change_below_1pct": true,
+        "flux_late_mean_change_below_1pct": true,
+        "flux_imbalance_below_1e4": true,
+        "probe_late_mean_change_below_1pct": true,
+        "mean_speed_below_500_ms": true,
+        "all_mean_fields_finite": true
+      },
+      "previous_mean_field_change_available": true,
+      "simple_convergence_marker_applied": false
+    }
+  },
+  "legacy_reference": {
+    "status": "not_requested"
+  },
+  "interpretation": "The compared runs use the same immutable native-SI CFD/topology artifact and strict swept intersections. Solver evidence is interpreted according to steady-snapshot or URANS time-mean semantics."
+}

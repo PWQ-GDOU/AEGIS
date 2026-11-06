@@ -1,0 +1,311 @@
+{
+  "version": "si-unit-provenance-v3",
+  "openfoam_version": "2412",
+  "source_case": "remote_artifacts/wenquan/pelton_bucket_open_si_authoritative_urans_v1",
+  "source_time": "0.8684190921",
+  "solver_semantics": {
+    "application": "pimpleFoam",
+    "mode": "urans",
+    "field_statistic": "time_mean",
+    "tracking_velocity_object": "UMean",
+    "averaging_window": {
+      "start_time": "0.7844336016",
+      "end_time": "0.8684190921",
+      "sample_count": 20523
+    }
+  },
+  "artifact_manifest": {
+    "file": "native_si_manifest_0.8684190921.json",
+    "version": "step30-native-si-manifest-v2",
+    "sha256": "f44162883a41e3f89846164364e8c898621bc46a4a72e4e23cd65d81b70626b7"
+  },
+  "source_coordinate_units": "m",
+  "internal_coordinate_units": "mm",
+  "coordinate_scale_to_mm": 1000.0,
+  "velocity_units": "m/s",
+  "pressure_field_units": "m2/s2 (kinematic pressure)",
+  "reference_density_kg_m3": 1000.0,
+  "turbulence_units": {
+    "k": "m2/s2",
+    "omega": "1/s"
+  },
+  "wall_shear_stress_field_units": "m2/s2 (kinematic wall shear stress)",
+  "topology": {
+    "artifact": "bucket_topology_v3_0.8684190921.npz",
+    "artifact_sha256": "8c240be058604fa7d6ca5e24a50061f7cec8dd17386c35dd9c964877922efa5f",
+    "artifact_version": "step30-native-openfoam-topology-v3",
+    "mesh_signature_algorithm": "sha256-vtk-triangulation-source-units-points-triangles-parent-ids-v3",
+    "mesh_signature": "6deee6829c1c3ea5c9c8cb13bbfc6fb257f590b7432432dadbd94126e10507dd",
+    "patch_name": "bucket",
+    "n_parent_faces": 218988,
+    "n_collision_triangles": 437976,
+    "surface_area_m2": 0.932961002108641,
+    "bounds_mm": [
+      [
+        43.46799850463867,
+        -187.9819929599762,
+        -406.25301003456116
+      ],
+      [
+        421.34401202201843,
+        172.0850020647049,
+        402.14699506759644
+      ]
+    ],
+    "polyMesh_signature": {
+      "algorithm": "sha256-filename-content-boundary-faces-neighbour-owner-points-v1",
+      "signature": "5b401242fdea449fdcbb9ba2f01ea9d98b05a50718f161a27e842a2e4dd93f27"
+    }
+  },
+  "fields": {
+    "field_statistic": "time_mean",
+    "objects": {
+      "velocity": "UMean",
+      "pressure": "pMean",
+      "turbulence_kinetic_energy": "kMean",
+      "specific_dissipation_rate": "omegaMean",
+      "wall_shear_stress": "wallShearStressMean"
+    },
+    "n_cells": 837972,
+    "UMean_speed_ms": {
+      "min": 0.0011268946968697082,
+      "p01": 0.5524238877727945,
+      "median": 29.412114573738872,
+      "p95": 106.80976100878331,
+      "p99": 119.13883695436782,
+      "max": 221.28267804463704,
+      "finite": true,
+      "n": 837972
+    },
+    "pMean_kinematic_m2_s2": {
+      "min": -11351.147,
+      "p01": -1465.938074,
+      "median": -81.7586315,
+      "p95": 1042.6581999999996,
+      "p99": 3757.5440530000146,
+      "max": 6439.984,
+      "finite": true,
+      "n": 837972
+    },
+    "pMean_Pa_at_rho_1000": {
+      "min": -11351147.0,
+      "p01": -1465938.0739999998,
+      "median": -81758.6315,
+      "p95": 1042658.1999999997,
+      "p99": 3757544.0530000147,
+      "max": 6439984.0,
+      "finite": true,
+      "n": 837972
+    },
+    "kMean_m2_s2": {
+      "min": 6.9298135e-07,
+      "p01": 3.0298864530000003e-06,
+      "median": 12.40174,
+      "p95": 87.6126776,
+      "p99": 191.51111800000004,
+      "max": 1044.3844,
+      "finite": true,
+      "n": 837972
+    },
+    "omegaMean_s-1": {
+      "min": 0.63299811,
+      "p01": 3.213116727,
+      "median": 5228.90075,
+      "p95": 24704.024599999993,
+      "p99": 45195.26187000003,
+      "max": 153576.34,
+      "finite": true,
+      "n": 837972
+    },
+    "bucket_wallShearStressMean_kinematic_m2_s2": {
+      "min": 0.002861097261171945,
+      "p01": 0.04097581699423897,
+      "median": 2.3274498562406007,
+      "p95": 12.001637930467618,
+      "p99": 13.118002060197165,
+      "max": 54.73140949076349,
+      "finite": true,
+      "n": 218988
+    },
+    "bucket_wallShearStressMean_Pa_at_rho_1000": {
+      "min": 2.861097261171945,
+      "p01": 40.97581699423897,
+      "median": 2327.4498562406006,
+      "p95": 12001.63793046762,
+      "p99": 13118.002060197166,
+      "max": 54731.409490763486,
+      "finite": true,
+      "n": 218988
+    },
+    "bucket_wall_faces": 218988
+  },
+  "physical_inputs": {
+    "jet_velocity_ms": [
+      104.8,
+      0.0,
+      0.0
+    ],
+    "jet_speed_ms": 104.8,
+    "jet_radius_m": 0.12,
+    "jet_diameter_m": 0.24,
+    "water_kinematic_viscosity_m2_s": 1e-06,
+    "reynolds_number": 25152000.0,
+    "dynamic_pressure_Pa_at_rho_1000": 5491519.999999999,
+    "turbulence_intensity": 0.05,
+    "turbulence_length_scale_m": 0.016800000003009432,
+    "inlet_k_m2_s2": 41.1864,
+    "inlet_omega_s-1": 697.44025,
+    "blockMesh_scale": 0.001,
+    "status": "passed"
+  },
+  "physical_checks": {
+    "max_speed_quality_limit_ms": 500.0,
+    "max_speed_quality_status": true,
+    "bucket_face_count_matches_topology": true,
+    "all_field_values_finite": true
+  },
+  "convergence": {
+    "assessment_type": "urans_time_mean_sampling",
+    "solver_log": "pimpleFoam_0.8684190921.log",
+    "end_time": "0.8684190921",
+    "averaging_window": {
+      "start_time": "0.7844336016",
+      "end_time": "0.8684190921",
+      "sample_count": 20523
+    },
+    "previous_mean_field_change": {
+      "previous_time": "0.8680083057",
+      "field_relative_l2": {
+        "UMean": 0.00016925379972722874,
+        "pMean": 0.00015993476239902125,
+        "kMean": 0.00018120702702710559,
+        "omegaMean": 9.541983264350299e-05
+      },
+      "bulk_speed_relative_change_pct": {
+        "median": 0.0011102734475734407,
+        "p95": 2.3230293595176724e-05,
+        "p99": 9.935828457665568e-05,
+        "max": 0.006827961364013424
+      },
+      "max_bulk_speed_relative_change_pct": 0.006827961364013424
+    },
+    "simple_convergence_marker_applied": false,
+    "validation_report": {
+      "file": "urans_validation_0.8684190921.json",
+      "sha256": "be935daddff386d03856c00e89adae82791febf7d2b9e6e44256bc8b6e2dc829",
+      "gates": {
+        "max_co_below_0p5": true,
+        "no_turbulence_bounding": true,
+        "no_fatal_or_nonfinite_log": true,
+        "twenty_flow_through_window": true,
+        "mean_field_relative_l2_below_1e3": true,
+        "force_late_mean_change_below_1pct": true,
+        "flux_late_mean_change_below_1pct": true,
+        "flux_imbalance_below_1e4": true,
+        "probe_late_mean_change_below_1pct": true,
+        "mean_speed_below_500_ms": true,
+        "all_mean_fields_finite": true
+      }
+    },
+    "steady_rejection_evidence": {
+      "file": "steady_fixed_point_assessment.json",
+      "sha256": "5778a38bbc6634ad9422fe262d3b205934c5f1033070382c8ce76ab6aab308f4",
+      "accepted_as_steady_fixed_point": false
+    },
+    "extended_burnin_rejection_evidence": {
+      "file": "extended_burnin_rejected_gate.json",
+      "sha256": "771449d21767aa0d972b3c0ff8ee3f02cd8c4057bd6600d3887a4d8350efbef5",
+      "accepted_as_clean_window": false
+    },
+    "status": "sampling_window_validated"
+  },
+  "mesh": {
+    "status": "Mesh OK",
+    "points": 1079525,
+    "faces": 2755379,
+    "cells": 837972,
+    "max_skewness": 2.7861559
+  },
+  "source_files": {
+    "bucket_vtp": {
+      "file": "bucket_0.8684190921_si.vtp",
+      "sha256": "c27b5d14644231f5232e136623a69aff57c547f8cfdca05cbde73776b40e8d10"
+    },
+    "si_stl": {
+      "file": "single_bucket_target_authoritative_local_m.stl",
+      "sha256": "181eb659091f187e1286ca27b689d654a83b5522b28d6f39aceaa4ebc3fc38ca"
+    },
+    "polyMesh_boundary": {
+      "file": "polyMesh_boundary_0.8684190921.txt",
+      "sha256": "a0c19af46fe0afb9229d1d7c13204acf851d089188b0373907a310a56456fdca"
+    },
+    "controlDict": {
+      "file": "controlDict_0.8684190921",
+      "sha256": "c521f372e2968cccaefc06a4c84d266527ffb0c53bd851ab57927fd6a6926e89"
+    },
+    "fvSolution": {
+      "file": "fvSolution_0.8684190921",
+      "sha256": "bf18305eb69c5e97804e529e7d049b23fe737be3b351cf0ad063a16c71d67661"
+    },
+    "fvSchemes": {
+      "file": "fvSchemes_0.8684190921",
+      "sha256": "15f3df24a98bb1f56cdfebc3b6b8f23cb52425d0f527a76548db8e6640ef1c59"
+    },
+    "blockMeshDict": {
+      "file": "blockMeshDict",
+      "sha256": "6c210a56076c50ae617bb36e688c86699e59f57ee82b4262e4b8db7c4542179d"
+    },
+    "snappyHexMeshDict": {
+      "file": "snappyHexMeshDict",
+      "sha256": "20f243237baa8d3095a45a3d040b989fca6230698c02484146a3b156c17978fa"
+    },
+    "topoSetDict": {
+      "file": "topoSetDict",
+      "sha256": "5f4fe86e35c430876c2838792c031a2ea6b5505ebee92295d9bb4e81d947710c"
+    },
+    "transportProperties": {
+      "file": "transportProperties",
+      "sha256": "21769d91940dcdd438303f185a7c90bdb319a2308fc5fc8304bbf2eb0d2e258a"
+    },
+    "turbulenceProperties": {
+      "file": "turbulenceProperties",
+      "sha256": "6df384d904139243910d0b7d485ad2168c0166ffe09c511cc0f2f9cc4c12098c"
+    },
+    "initial_U": {
+      "file": "initial_U",
+      "sha256": "38d0b01a78271c6cbb64cecc761d3b26694577517eceeafe6f21aa3015bb25ec"
+    },
+    "initial_k": {
+      "file": "initial_k",
+      "sha256": "a0421d6c9bed1f1ae073de9f4b6a6626abf4319a0929b86fdf680588791e35e3"
+    },
+    "initial_omega": {
+      "file": "initial_omega",
+      "sha256": "88d1f4e8485f1d5bad1182ed1fe3cfdcc27eebdb152f51965719662f8aa4fc0a"
+    },
+    "solver_log": {
+      "file": "pimpleFoam_0.8684190921.log",
+      "sha256": "d9f0574b4e784ec0a6492dc110ce464c52079b5ec7a3624968f8a5a3e4ff3530"
+    },
+    "checkMesh_log": {
+      "file": "checkMesh_0.8684190921.log",
+      "sha256": "f310c102f9ceefad958cdf1c221aa662a04ee2c184404be7f7d1217a15d70663"
+    },
+    "urans_validation": {
+      "file": "urans_validation_0.8684190921.json",
+      "sha256": "be935daddff386d03856c00e89adae82791febf7d2b9e6e44256bc8b6e2dc829"
+    },
+    "steady_assessment": {
+      "file": "steady_fixed_point_assessment.json",
+      "sha256": "5778a38bbc6634ad9422fe262d3b205934c5f1033070382c8ce76ab6aab308f4"
+    },
+    "extended_burnin_rejection": {
+      "file": "extended_burnin_rejected_gate.json",
+      "sha256": "771449d21767aa0d972b3c0ff8ee3f02cd8c4057bd6600d3887a4d8350efbef5"
+    }
+  },
+  "si_stl": {
+    "file": "single_bucket_target_authoritative_local_m.stl",
+    "sha256": "181eb659091f187e1286ca27b689d654a83b5522b28d6f39aceaa4ebc3fc38ca"
+  }
+}

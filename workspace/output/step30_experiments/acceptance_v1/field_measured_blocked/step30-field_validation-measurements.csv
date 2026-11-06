@@ -1,0 +1,2 @@
+status,blocked_reason
+blocked,invalid measured field input: field mode needs --depth-field or both --original-points and --worn-points

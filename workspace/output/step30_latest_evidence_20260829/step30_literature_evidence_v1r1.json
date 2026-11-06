@@ -1,0 +1,176 @@
+{
+  "version": "step30-literature-evidence-v1",
+  "status": "provisional",
+  "sources": [
+    {
+      "citation": {
+        "source_id": "rai_2017_wear",
+        "title": "Hydro-abrasive erosion in Pelton buckets: Classification and field study",
+        "journal": "Wear",
+        "year": 2017,
+        "doi": "10.1016/j.wear.2017.08.016"
+      },
+      "source": {
+        "container_kind": "bibliographic_index",
+        "path": "参考文献\\main.pdf",
+        "url": null,
+        "sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad",
+        "bytes": 2190023,
+        "hash_verified": true
+      },
+      "claims": [],
+      "source_status": "bibliographic_only",
+      "source_sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad"
+    },
+    {
+      "citation": {
+        "source_id": "rai_2019_analytical",
+        "title": "Analytical modelling and mechanism of hydro-abrasive erosion in pelton buckets",
+        "journal": "Wear",
+        "year": 2019,
+        "doi": "10.1016/j.wear.2019.203003"
+      },
+      "source": {
+        "container_kind": "bibliographic_index",
+        "path": "参考文献\\main.pdf",
+        "url": null,
+        "sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad",
+        "bytes": 2190023,
+        "hash_verified": true
+      },
+      "claims": [],
+      "source_status": "bibliographic_only",
+      "source_sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad"
+    },
+    {
+      "citation": {
+        "source_id": "leguizamon_2019_multiscale",
+        "title": "Multiscale Simulation of the Hydroabrasive Erosion of a Pelton Bucket: Bridging Scales to Improve the Accuracy",
+        "journal": "International Journal of Turbomachinery, Propulsion and Power",
+        "year": 2019,
+        "doi": "10.3390/ijtpp4020009"
+      },
+      "source": {
+        "container_kind": "bibliographic_index",
+        "path": "参考文献\\main.pdf",
+        "url": null,
+        "sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad",
+        "bytes": 2190023,
+        "hash_verified": true
+      },
+      "claims": [],
+      "source_status": "bibliographic_only",
+      "source_sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad"
+    },
+    {
+      "citation": {
+        "source_id": "messa_2019_injector",
+        "title": "Hydro-abrasive erosion in Pelton turbine injectors: A numerical study",
+        "journal": "Renewable Energy",
+        "year": 2019,
+        "doi": "10.1016/j.renene.2018.06.064"
+      },
+      "source": {
+        "container_kind": "bibliographic_index",
+        "path": "参考文献\\main.pdf",
+        "url": null,
+        "sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad",
+        "bytes": 2190023,
+        "hash_verified": true
+      },
+      "claims": [],
+      "source_status": "bibliographic_only",
+      "source_sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad"
+    },
+    {
+      "citation": {
+        "source_id": "ge_2021_bucket",
+        "title": "Experimental and Numerical studies on Opening and Velocity Influence on Sediment Erosion of Pelton Turbine Buckets",
+        "journal": "Renewable Energy",
+        "year": 2021,
+        "doi": "10.1016/j.renene.2021.04.072"
+      },
+      "source": {
+        "container_kind": "bibliographic_index",
+        "path": "参考文献\\main.pdf",
+        "url": null,
+        "sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad",
+        "bytes": 2190023,
+        "hash_verified": true
+      },
+      "claims": [],
+      "source_status": "bibliographic_only",
+      "source_sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad"
+    },
+    {
+      "citation": {
+        "source_id": "fahrni_2025_defects",
+        "title": "Efficiency Testing of Pelton Turbines with Artificial Defects—Part 1: Buckets",
+        "journal": "Energies",
+        "year": 2025,
+        "doi": "10.3390/en18112716"
+      },
+      "source": {
+        "container_kind": "bibliographic_index",
+        "path": "参考文献\\main.pdf",
+        "url": null,
+        "sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad",
+        "bytes": 2190023,
+        "hash_verified": true
+      },
+      "claims": [],
+      "source_status": "bibliographic_only",
+      "source_sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad"
+    },
+    {
+      "citation": {
+        "source_id": "pelton_erosion_review_2023",
+        "title": "Sediment Erosion on Pelton Turbines: A Review",
+        "journal": "Chinese Journal of Mechanical Engineering",
+        "year": 2023,
+        "doi": "10.1186/s10033-023-00880-y"
+      },
+      "source": {
+        "container_kind": "bibliographic_index",
+        "path": "参考文献\\main.pdf",
+        "url": null,
+        "sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad",
+        "bytes": 2190023,
+        "hash_verified": true
+      },
+      "claims": [],
+      "source_status": "bibliographic_only",
+      "source_sha256": "9b4a17388536f69d5cfe1fa9cd783ef45bc79ab015f336870590cdf678729aad"
+    }
+  ],
+  "source_count": 7,
+  "claim_count": 0,
+  "quantitative_claim_count": 0,
+  "qualitative_claim_count": 0,
+  "bibliographic_only_source_count": 7,
+  "model_prior_bindings": {
+    "oka": {
+      "implementation": "step30_material_model_calibration.oka_volume_mm3_per_kg",
+      "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+    },
+    "finnie": {
+      "implementation": "step30_material_model_calibration.finnie_volume_mm3_per_kg",
+      "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+    },
+    "tabakoff": {
+      "implementation": "step30_material_model_calibration.tabakoff_volume_mm3_per_kg",
+      "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+    },
+    "mansouri": {
+      "implementation": "step30_material_model_calibration.mansouri_mass_ratio_kg_per_kg",
+      "evidence_status": "bibliographic_only_pending_original_source_page_binding"
+    }
+  },
+  "blockers": [],
+  "quantitative_anchor_policy": "No 3%/5% geometry fraction, model coefficient, material range, or concentration range is usable without hash-bound original text plus page and figure/table/section locator.",
+  "dec_transfer_policy": "Literature evidence cannot be converted into DEC dimensions, DEC face-wise truth, or an official spatial-accuracy assertion.",
+  "official_accuracy_gate": false,
+  "official_reference_gate": false,
+  "fem_gate": "blocked",
+  "evidence_sha256": "0832724c76f89715cf9624b62092d2257d30f9ee78c62bebeb991a7808e2ecb2"
+}
