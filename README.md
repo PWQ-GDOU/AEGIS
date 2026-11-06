@@ -17,20 +17,41 @@ By combining high-fidelity **OpenFOAM** Computational Fluid Dynamics (CFD) simul
 *   **OpenFOAM Topology Alignment:** Custom scripts to precisely align Step30 collision data with native OpenFOAM bucket topology for accurate erosion mapping.
 *   **Multi-Year Data Synthesis:** Leverages comprehensive structural and operational datasets (`DecPelton2024` and `DecPelton2026`) to capture long-term degradation trends.
 *   **Industrial Impact:** Directly addresses a real-world engineering bottleneck in hydropower generation, reducing maintenance costs for mega-watt class turbines.
-
-## 🏗️ System Architecture & Repository Structure
+## System Architecture & Repository Structure
 
 ```text
 AEGIS/
-├── DecPelton2024/          # Historical dataset: 150MW class Pelton turbine R&D data package
-├── DecPelton2026/          # Updated dataset: Latest 2026 turbine geometry and operation data
-├── workspace/              # ★ Core Development Workspace
-│   ├── cfd_preprocessing/  # OpenFOAM mesh generation & particle trajectory extraction
-│   ├── ml_models/          # Surrogate models for erosion prediction (XGBoost, PINNs)
-│   └── evaluation/         # Error analysis and visualization of erosion contours
-├── .gitignore              # Excludes heavy raw data and proprietary DEC files
-└── README.md               # Project documentation
+├── DecPelton2024/          # Historical dataset: 150MW Pelton turbine R&D data
+├── DecPelton2026/          # Updated dataset: 2026 turbine geometry & operation data
+├── workspace/              # Core step-by-step engineering pipeline
+│   ├── step01-step09/      # Geometry, STL, Bezier, baseline validation
+│   ├── step10-step19/      # CFD config, OpenFOAM, GPR, particle tracking
+│   ├── step20-step29/      # Validation, degradation, CFD/GPR alignment
+│   ├── step30/             # Competition core (100+ files, v1-v5, FEM, SI, collision)
+│   ├── step31/             # Hydraulic performance, CFD monitor
+│   ├── test_step30_*.py    # 50+ unit tests
+│   ├── remote/             # DCU / GPU remote sbatch scripts
+│   ├── output/             # JSON reports, erosion maps, sensitivity
+│   ├── templates/          # Step30 protocol manifest templates
+│   ├── schemas/            # JSON schema for Step30 protocol
+├── report_build/           # Final report build artifacts
+├── DecPelton competition brief.pdf  (original, SHA-identical across 7 branches)
+├── STEP30_LATEST_BACKUP_20260829.md
+├── MIGRATION_MANIFEST_20260821.txt
+├── MIGRATION_README.md
+├── PATH_PORTABILITY_POLICY.md
+├── CHATGPT_HANDOFF_PROMPT.md
+├── .gitignore / .gitattributes
+├── README.md
 ```
+
+**Branch consolidation (2026-11-06):** 6 auxiliary branches (`backup/*`,
+`codex/*`, `fix/*`, `simulation`) consolidated into a single `main`.
+The complete Step30 engineering pipeline (200+ Python scripts, 5 versions,
+test suite, remote execution, report_build) came from the latest
+`codex/step30-complete-relative-sync-20260913`. Raw datasets
+`DecPelton2024/` and `DecPelton2026/` had identical SHA across all 7
+branches (never modified). README.md text preserved from pre-existing `main`.
 
 ## 🔬 Methodology (The Grey-Box Approach)
 
